@@ -7,9 +7,25 @@ logger = logging.getLogger("sdo.backend.descriptors.mordred")
 
 try:
     from rdkit import Chem
+    import numpy
+    # NumPy 2.x compatibility monkeypatch for old mordred library
+    if not hasattr(numpy, "product"):
+        numpy.product = numpy.prod
+
+    import collections
+    import collections.abc
+    # Python 3.10+ compatibility monkeypatches for old mordred library
+    collections.MutableMapping = collections.abc.MutableMapping
+    collections.Iterable = collections.abc.Iterable
+    collections.Sequence = collections.abc.Sequence
+    collections.Mapping = collections.abc.Mapping
+    collections.Callable = collections.abc.Callable
+    collections.MutableSequence = collections.abc.MutableSequence
+
     from mordred import Calculator, descriptors  # type: ignore[import-untyped]
     MORDRED_AVAILABLE = True
-except ImportError:
+except Exception as e:
+    logger.warning(f"Failed to import mordred: {e}")
     MORDRED_AVAILABLE = False
 
 

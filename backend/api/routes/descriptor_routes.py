@@ -15,6 +15,21 @@ def list_descriptors():
     rdkit_descs = [name for name, _ in Descriptors._descList]
     mordred_descs = []
     try:
+        import numpy
+        # NumPy 2.x compatibility monkeypatch for old mordred library
+        if not hasattr(numpy, "product"):
+            numpy.product = numpy.prod
+
+        import collections
+        import collections.abc
+        # Python 3.10+ compatibility monkeypatches for old mordred library
+        collections.MutableMapping = collections.abc.MutableMapping
+        collections.Iterable = collections.abc.Iterable
+        collections.Sequence = collections.abc.Sequence
+        collections.Mapping = collections.abc.Mapping
+        collections.Callable = collections.abc.Callable
+        collections.MutableSequence = collections.abc.MutableSequence
+
         from mordred import Calculator, descriptors
         calc = Calculator(descriptors, ignore_3D=False)
         mordred_descs = [str(d) for d in calc.descriptors]
