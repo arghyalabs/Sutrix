@@ -4,8 +4,10 @@ export interface JobTelemetry {
   progress_pct: number;
   eta_seconds: number;
   compounds_per_sec: number;
+  items_per_sec?: number;       // backend renames this — accept both
   elapsed_seconds: number;
   phase: string;
+  stage_label?: string;         // alias used in some broadcast paths
   logs: string[];
 }
 

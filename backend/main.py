@@ -52,6 +52,20 @@ app.include_router(modeling_router)
 
 memory_guard = MemoryGuard()
 
+# ── Health Check ─────────────────────────────────────────────────────────────
+@app.get("/api/health")
+async def api_health():
+    """Lightweight health probe for load balancers, Playwright, and monitoring."""
+    import psutil
+    return {
+        "status": "ok",
+        "version": "4.0",
+        "engine": "SUTRIX",
+        "ram_pct": psutil.virtual_memory().percent,
+        "cpu_pct": psutil.cpu_percent(interval=None),
+    }
+
+
 @app.on_event("startup")
 async def startup_event():
     logger.info("SUTRIX Pipeline Engine launching...")

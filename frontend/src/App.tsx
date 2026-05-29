@@ -229,8 +229,9 @@ const App: React.FC = () => {
         setUploadMessage('Parsing dataset...');
         // Result arrives via WebSocket JOB_COMPLETED
       } else {
-        // Fallback: legacy sync response
-        setDataset(res.filename, res.parquet_path, res.row_count, res.columns, res.preview);
+        // Fallback: legacy sync response (backend always returns job_id now)
+        const legacy = res as any;
+        setDataset(res.filename, legacy.parquet_path ?? '', legacy.row_count ?? 0, legacy.columns ?? [], legacy.preview ?? []);
         setIsUploadProcessing(false);
         toast.success('Dataset ingested.');
       }
@@ -255,7 +256,8 @@ const App: React.FC = () => {
         // Result arrives via WebSocket JOB_COMPLETED
       } else {
         // Legacy sync fallback
-        setDataset(res.filename, res.parquet_path, res.row_count, res.columns, res.preview);
+        const legacy = res as any;
+        setDataset(res.filename, legacy.parquet_path ?? '', legacy.row_count ?? 0, legacy.columns ?? [], legacy.preview ?? []);
         setIsUploadProcessing(false);
         toast.success('Demo dataset loaded.');
       }
