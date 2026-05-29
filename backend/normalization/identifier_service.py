@@ -47,7 +47,7 @@ class ChemicalIdentifierService:
             
         return "name"
 
-    def resolve(self, identifier: str, id_type: str = None) -> Dict[str, Any]:
+    def resolve(self, identifier: str, id_type: str = None, skip_online: bool = False) -> Dict[str, Any]:
         """
         Resolves an input identifier to a standardized identity object:
         1. Input Type Detection
@@ -149,7 +149,7 @@ class ChemicalIdentifierService:
             except Exception:
                 pass
 
-        if not resolved_smiles:
+        if not resolved_smiles and not skip_online:
             try:
                 comp_list = []
                 if id_type == "cid":

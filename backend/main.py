@@ -7,7 +7,7 @@ import zipfile
 import io
 from typing import Dict, Any, List
 from fastapi import FastAPI, UploadFile, File, Form, WebSocket, WebSocketDisconnect, HTTPException
-from fastapi.responses import StreamingResponse
+from fastapi.responses import StreamingResponse, FileResponse
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 import multiprocessing
@@ -70,7 +70,12 @@ async def api_health():
 async def startup_event():
     logger.info("SUTRIX Pipeline Engine launching...")
     from backend.logging.logger import initialize_sentry
+    from backend.database.session import init_db
+    
     initialize_sentry()
+    
+    # Ensure database schema is initialized
+    init_db()
 
     # Inject WS broadcaster into pipeline manager
     from backend.core.pipeline_task_manager import pipeline_manager
@@ -356,10 +361,10 @@ async def api_segregate_download(client_id: str):
                     zip_entry_path = f"{result.root_path}/{rel_path}/{filename}" if rel_path else f"{result.root_path}/{filename}"
                     zipf.writestr(zip_entry_path, file_buffer.getvalue())
                     
-        zip_buffer.seek(0)
+        from fastapi import Response
         filename = f"SDO_Raw_Segregation_{client_id}.zip"
-        return StreamingResponse(
-            zip_buffer,
+        return Response(
+            content=zip_buffer.getvalue(),
             media_type="application/zip",
             headers={"Content-Disposition": f"attachment; filename={filename}"}
         )
@@ -382,7 +387,10 @@ async def api_compliance_report(client_id: str):
         seg_stats = context.segmentation_results or {}
         variance_summary = None
         if context.active_segregation_result:
-            variance_summary = context.active_segregation_result.variance_summary
+            if isinstance(context.active_segregation_result, dict):
+                variance_summary = context.active_segregation_result.get("variance_summary")
+            else:
+                variance_summary = getattr(context.active_segregation_result, "variance_summary", None)
             
         dedup_stats_dict = None
         if "dedup_stats" in seg_stats and seg_stats["dedup_stats"]:
@@ -404,9 +412,10 @@ async def api_compliance_report(client_id: str):
             dedup_stats=dedup_stats_dict,
         )
         
+        from fastapi import Response
         filename = f"Scientific_Audit_Report_{client_id}.pdf"
-        return StreamingResponse(
-            pdf_io,
+        return Response(
+            content=pdf_io.getvalue(),
             media_type="application/pdf",
             headers={"Content-Disposition": f"attachment; filename={filename}"}
         )
@@ -418,9 +427,8 @@ async def api_compliance_report(client_id: str):
 async def api_compliance_download(client_id: str):
     try:
         context = registry.get_context(client_id)
-        result = context.active_segregation_result
-        if not result:
-            raise HTTPException(status_code=404, detail="No segregation result found in session context. Map columns and run segregation first.")
+        if not context.active_lineage:
+            raise HTTPException(status_code=404, detail="No lineage found in session context. Map columns and run segregation first.")
             
         df = context.load_slice()
         
@@ -431,8 +439,13 @@ async def api_compliance_download(client_id: str):
         
         # 2. Recover stats
         seg_stats = context.segmentation_results or {}
-        variance_summary = result.variance_summary
-            
+        variance_summary = None
+        if context.active_segregation_result:
+            if isinstance(context.active_segregation_result, dict):
+                variance_summary = context.active_segregation_result.get("variance_summary")
+            else:
+                variance_summary = getattr(context.active_segregation_result, "variance_summary", None)
+
         dedup_stats_dict = None
         if "dedup_stats" in seg_stats and seg_stats["dedup_stats"]:
             d = seg_stats["dedup_stats"]
@@ -442,23 +455,6 @@ async def api_compliance_download(client_id: str):
                 "duplicates_removed": d["duplicates_removed"],
                 "duplicate_groups": d["duplicate_groups"],
             }
-        
-        # 3. Generate hyperlinked excel index, manifest, and PDF report
-        from backend.exports.index_generator import MasterIndexGenerator
-        index_gen = MasterIndexGenerator()
-        
-        manifest_json = index_gen.generate_from_segregation_result(
-            result=result,
-            session_id=client_id,
-            file_hash="snappy_parquet_hash",
-            audit_score=report.quality_score,
-            dataset_name=f"dataset_{client_id}",
-            dedup_stats=dedup_stats_dict,
-            variance_summary=variance_summary,
-        )
-        
-        consistency_score = variance_summary.consistency_score if variance_summary else None
-        master_index_io = index_gen.generate_excel_index(result, consistency_score=consistency_score)
         
         from backend.exports.pdf_generator import AuditPDFGenerator
         pdf_gen = AuditPDFGenerator()
@@ -470,32 +466,128 @@ async def api_compliance_download(client_id: str):
             dedup_stats=dedup_stats_dict,
         )
         
-        # 4. Assemble compliance memory ZIP
+        # 3. Assemble compliance ZIP using new HierarchyEngine
+        import zipfile
+        import json
+        import pandas as pd
+        import xlsxwriter
+        import re
+        import urllib.parse
+        import io
+        import os
+
+        engine = context.hierarchy_engine
+        lineage = context.active_lineage
+        
         zip_buffer = io.BytesIO()
-        with zipfile.ZipFile(zip_buffer, "w", zipfile.ZIP_DEFLATED) as zipf:
-            # Root metadata artifacts
-            zipf.writestr(f"{result.root_path}/manifest.json", manifest_json)
-            zipf.writestr(f"{result.root_path}/Master_Index.xlsx", master_index_io.getvalue())
-            zipf.writestr(f"{result.root_path}/Scientific_Audit_Report.pdf", pdf_io.getvalue())
+        
+        REL_MAP = { ">=": "GTE", "<=": "LTE", "=": "EQ", ">": "GT", "<": "LT" }
+        def sanitize_folder_name(name: str) -> str:
+            for op, safe_str in REL_MAP.items():
+                name = name.replace(op, safe_str)
+            name = re.sub(r'[<>:"/\\|?*]', '_', name)
+            return name.strip()
+
+        with zipfile.ZipFile(zip_buffer, "w", compression=zipfile.ZIP_DEFLATED) as zf:
+            zf.writestr("Scientific_Audit_Report.pdf", pdf_io.getvalue())
             
-            # Segregated excel files
-            for leaf in result.leaf_nodes:
-                rel_path = leaf['path']
-                filename = leaf['filename']
-                file_buffer = leaf.get('buffer')
-                if file_buffer:
-                    zip_entry_path = f"{result.root_path}/{rel_path}/{filename}" if rel_path else f"{result.root_path}/{filename}"
-                    zipf.writestr(zip_entry_path, file_buffer.getvalue())
+            manifest = {
+                "client_id": client_id,
+                "total_nodes": lineage.get("total_nodes", 0),
+                "max_depth": lineage.get("max_depth", 0),
+                "root_id": lineage.get("root_id", "root"),
+                "nodes": [
+                    {
+                        "id": n.get("id"),
+                        "path": n.get("path", ""),
+                        "filter_col": n.get("filter_col", ""),
+                        "filter_val": n.get("filter_val", ""),
+                        "row_count": n.get("row_count", 0),
+                        "is_leaf": n.get("is_leaf", False),
+                        "level": n.get("level", 0),
+                    }
+                    for n in lineage.get("nodes", [])
+                ],
+            }
+            zf.writestr("manifest.json", json.dumps(manifest, indent=2, ensure_ascii=False))
+
+            nodes_added = 0
+            leaf_records = []
+
+            for node_id, detail in engine.node_details.items():
+                metadata = detail.get("metadata", {}) if isinstance(detail.get("metadata"), dict) else {}
+                node_path = metadata.get("path", node_id)
+                is_leaf = metadata.get("is_leaf", False)
+
+                folder_parts = [sanitize_folder_name(p) for p in str(node_path).split(" > ")]
+                folder_path = "/".join(folder_parts) + "/"
+
+                export_dir = detail.get("_export_dir")
+                node_df = None
+
+                if is_leaf and export_dir:
+                    if os.path.isfile(os.path.join(export_dir, "dataset.parquet")):
+                        try:
+                            node_df = pd.read_parquet(os.path.join(export_dir, "dataset.parquet"))
+                        except Exception: pass
+                    if node_df is None and os.path.isfile(os.path.join(export_dir, "dataset.csv")):
+                        try:
+                            node_df = pd.read_csv(os.path.join(export_dir, "dataset.csv"))
+                        except Exception: pass
+
+                if node_df is not None:
+                    # Export directly to XLSX for final user
+                    excel_data = io.BytesIO()
+                    node_df.to_excel(excel_data, index=False, engine="openpyxl")
+                    zf.writestr(folder_path + "data.xlsx", excel_data.getvalue())
                     
-        zip_buffer.seek(0)
+                    if export_dir and os.path.isfile(os.path.join(export_dir, "dataset.parquet")):
+                        with open(os.path.join(export_dir, "dataset.parquet"), "rb") as pf:
+                            zf.writestr(folder_path + "data.parquet", pf.read())
+
+                    nodes_added += 1
+                    
+                    leaf_records.append({
+                        "filename": "data.xlsx",
+                        "rel_path": folder_path.rstrip("/"),
+                        "records": len(node_df),
+                        "compounds": metadata.get("unique_compounds", 0)
+                    })
+
+            if leaf_records:
+                excel_buf = io.BytesIO()
+                workbook = xlsxwriter.Workbook(excel_buf, {'in_memory': True})
+                worksheet = workbook.add_worksheet("Master Index")
+                header_format = workbook.add_format({'bold': True, 'bg_color': '#002147', 'font_color': 'white', 'border': 1})
+                link_format = workbook.add_format({'font_color': 'blue', 'underline': 1})
+                
+                headers = ["File Name", "Relative Path", "Records", "Compounds", "Link"]
+                for col_num, header in enumerate(headers):
+                    worksheet.write(0, col_num, header, header_format)
+                worksheet.set_column('A:A', 20)
+                worksheet.set_column('B:B', 50)
+                
+                for row_num, leaf in enumerate(leaf_records, start=1):
+                    worksheet.write_string(row_num, 0, leaf["filename"])
+                    worksheet.write_string(row_num, 1, leaf["rel_path"])
+                    worksheet.write_number(row_num, 2, leaf["records"])
+                    worksheet.write_number(row_num, 3, leaf["compounds"])
+                    full_rel_path = f'{leaf["rel_path"]}/{leaf["filename"]}'
+                    encoded_path = urllib.parse.quote(full_rel_path, safe='/')
+                    worksheet.write_url(row_num, 4, f"external:{encoded_path}", link_format, string="Open File")
+                    
+                workbook.close()
+                zf.writestr("Master_Index.xlsx", excel_buf.getvalue())
+                
+        from fastapi import Response
         filename = f"SDO_Compliance_{client_id}.zip"
-        return StreamingResponse(
-            zip_buffer,
+        return Response(
+            content=zip_buffer.getvalue(),
             media_type="application/zip",
             headers={"Content-Disposition": f"attachment; filename={filename}"}
         )
     except Exception as e:
-        logger.error(f"Compliance package download failed: {e}")
+        logger.error(f"Compliance package download failed: {e}", exc_info=True)
         raise HTTPException(status_code=500, detail=str(e))
 
 # ── 7. WEBSOCKET ──────────────────────────────────────
@@ -589,16 +681,163 @@ async def api_job_poll(job_id: str):
     Returns status + result so the UI can hydrate without WebSocket delivery."""
     from backend.core.pipeline_task_manager import pipeline_manager
     job = pipeline_manager.get_job(job_id)
-    if not job:
-        raise HTTPException(status_code=404, detail="Job not found")
-    return {
-        "job_id":   job.job_id,
-        "status":   job.status.value if hasattr(job.status, 'value') else job.status,
-        "progress": job.progress_pct,
-        "result":   job.result or {},
-        "error":    job.error,
-    }
+    if job:
+        return {
+            "job_id":   job.job_id,
+            "status":   job.status.value if hasattr(job.status, 'value') else job.status,
+            "progress": job.progress_pct,
+            "result":   job.result or {},
+            "error":    job.error,
+        }
 
+    # Fallback to checking segregation/enrichment jobs in job_registry
+    from backend.workers.queue_executor import job_registry
+    from backend.core.workspace_registry import registry
+    qjob = job_registry.get_job(job_id)
+    if qjob:
+        status = qjob.get("status")
+        result_payload = {}
+        if status == "COMPLETED":
+            # Find the context that owns this job to get the lineage tree
+            for cid, ctx in registry.workspaces.items():
+                if getattr(ctx, "active_job_id", None) == job_id:
+                    if hasattr(ctx, "active_lineage") and ctx.active_lineage:
+                        result_payload["lineage"] = ctx.active_lineage
+                    break
+        # Pull live telemetry from the in-memory tracker if job is still running
+        from backend.workers.queue_executor import active_tracker
+        tracker_data = {}
+        live_tracker = active_tracker.get(job_id)
+        if live_tracker:
+            tracker_data = live_tracker.calculate_telemetry(live_tracker.rows_processed)
+
+        return {
+            "job_id": job_id,
+            "status": status,
+            "progress": qjob.get("progress", 0),
+            "speed": qjob.get("compounds_per_sec", tracker_data.get("items_per_sec", 0)),
+            "eta": qjob.get("eta_seconds", tracker_data.get("eta_seconds", 0)),
+            "phase": tracker_data.get("phase", ""),
+            "logs": tracker_data.get("logs", []),
+            "result": result_payload,
+            "error": qjob.get("error")
+        }
+
+    raise HTTPException(status_code=404, detail="Job not found")
+
+
+@app.get("/api/jobs/{client_id}/download_enriched_parquet")
+async def api_download_enriched_parquet(client_id: str, job_id: str = None):
+    from backend.workers.task_manager import TaskManager
+    from backend.core.workspace_registry import registry
+    import os
+    
+    path = None
+    if job_id:
+        try:
+            status = TaskManager.query_status(job_id)
+            if status:
+                path = status.get("result_path")
+        except Exception:
+            pass
+            
+    if not path:
+        context = registry.get_context(client_id)
+        path = context.descriptor_dataframe_path or context.parquet_path
+        
+    if not path or not os.path.exists(path):
+        raise HTTPException(status_code=404, detail="Enriched dataset not found")
+        
+    return FileResponse(
+        path=path,
+        media_type="application/octet-stream",
+        filename=os.path.basename(path)
+    )
+
+@app.get("/api/jobs/{client_id}/compound_preview")
+async def api_compound_preview(client_id: str, query: str, job_id: str = None):
+    from backend.workers.task_manager import TaskManager
+    from backend.core.workspace_registry import registry
+    from backend.api.routes.modeling_routes import _resolve_columns
+    from backend.core.pipeline_controller import _sanitize_for_json
+    import os
+    import pandas as pd
+    import numpy as np
+    
+    path = None
+    if job_id:
+        try:
+            status = TaskManager.query_status(job_id)
+            if status:
+                path = status.get("result_path")
+        except Exception:
+            pass
+            
+    context = registry.get_context(client_id)
+    if not path:
+        path = context.descriptor_dataframe_path or context.parquet_path
+        
+    if not path or not os.path.exists(path):
+        raise HTTPException(status_code=404, detail="Enriched dataset not found")
+        
+    try:
+        df = pd.read_parquet(path)
+        query_lower = query.lower()
+        
+        # Determine search columns
+        mappings = context.mappings or {}
+        smiles_col, val_col, unit_col, ep_col, descriptor_cols = _resolve_columns(df, mappings)
+        
+        # Search by SMILES or object columns (e.g. Chemical_Name, CAS)
+        str_cols = df.select_dtypes(include=['object', 'string']).columns.tolist()
+        
+        match_idx = -1
+        for col in str_cols:
+            if match_idx != -1: break
+            # exact match first, then substring
+            matches = df[col].astype(str).str.lower()
+            exact = matches == query_lower
+            if exact.any():
+                match_idx = exact.idxmax()
+                break
+            contains = matches.str.contains(query_lower, na=False)
+            if contains.any():
+                match_idx = contains.idxmax()
+                break
+                
+        if match_idx == -1:
+            return {"found": False, "message": f"Compound '{query}' not found in the dataset."}
+            
+        row = df.loc[match_idx]
+        
+        # Extract meta
+        meta = {
+            "SMILES": row[smiles_col] if smiles_col and smiles_col in row else "N/A",
+            "Target Endpoint": f"{row[val_col]} {row[unit_col] if unit_col and unit_col in row else ''}".strip() if val_col and val_col in row else "N/A",
+            "Matched Name/ID": row[str_cols[0]] if str_cols else "Unknown" # Best guess name
+        }
+        
+        # Extract top dynamic descriptors
+        descs = {}
+        for d in descriptor_cols:
+            val = row[d]
+            if pd.notnull(val) and abs(val) > 0.0001:
+                descs[d] = float(val)
+                
+        # Sort and take top 15 most prominent for visualization
+        sorted_descs = dict(sorted(descs.items(), key=lambda item: abs(item[1]), reverse=True)[:15])
+        
+        result = {
+            "found": True,
+            "meta": meta,
+            "descriptors": [{"name": k, "value": v} for k, v in sorted_descs.items()]
+        }
+        
+        return _sanitize_for_json(result)
+        
+    except Exception as e:
+        logger.error(f"Failed to query compound: {e}", exc_info=True)
+        raise HTTPException(status_code=500, detail="Error searching dataset")
 
 
 # ── SYSTEM TELEMETRY ───────────────────────────────────────

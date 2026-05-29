@@ -4,7 +4,7 @@
 # Licensed under the PolyForm Noncommercial License 1.0.0.
 # -----------------------------------------------------------------------------
 import logging
-from concurrent.futures import ProcessPoolExecutor, as_completed
+from concurrent.futures import ThreadPoolExecutor, as_completed
 from typing import List, Dict, Any, Callable, Optional
 from backend.parallel.chunk_scheduler import determine_optimal_scheduler_limits, split_into_batches
 from backend.parallel.rdkit_worker import calculate_batch_worker
@@ -19,8 +19,12 @@ def calculate_descriptors_multiprocess(
     selected_descriptors: List[str] = None
 ) -> Dict[str, Dict[str, Any]]:
     """
-    Orchestrates CPU-bound descriptor calculations using a ProcessPoolExecutor.
-    Splits compound lists into adaptive batches to bypass Python's GIL.
+    Orchestrates CPU-bound descriptor calculations.
+    
+    Uses ThreadPoolExecutor (GIL-releasing via RDKit C++ internals) as the
+    primary engine because ProcessPoolExecutor is unreliable when spawned
+    from within an asyncio thread-pool executor on Windows (bootstrap error).
+    Falls back to synchronous calculation if threading also fails.
     """
     results = {}
     if not smiles_list:
@@ -28,19 +32,20 @@ def calculate_descriptors_multiprocess(
 
     total_count = len(smiles_list)
     
-    # 1. Determine optimal concurrency settings based on CPU cores & live RAM
+    # Determine optimal concurrency settings
     workers, chunk_size = determine_optimal_scheduler_limits(total_count)
     
-    # 2. Slice dataset into sub-batches
+    # Split dataset into sub-batches
     chunks = split_into_batches(smiles_list, chunk_size)
-    logger.info(f"Submitting {len(chunks)} parallel execution chunks to ProcessPoolExecutor (Workers={workers})")
+    logger.info(f"Submitting {len(chunks)} chunks to ThreadPoolExecutor (Workers={workers}, selected={selected_descriptors})")
     
     completed_compounds = 0
-    
-    # 3. Spin up ProcessPoolExecutor
-    # Note: Using fork/spawn safely on Windows/Linux environments
+
+    # ── Primary: ThreadPoolExecutor ───────────────────────────────────────────
+    # RDKit's C++ core releases the GIL during heavy computation, so threads
+    # give real parallelism without the Windows multiprocessing bootstrap issue.
     try:
-        with ProcessPoolExecutor(max_workers=workers) as executor:
+        with ThreadPoolExecutor(max_workers=workers) as executor:
             future_to_chunk = {
                 executor.submit(calculate_batch_worker, chunk, include_mordred, mode, selected_descriptors): chunk
                 for chunk in chunks
@@ -50,20 +55,17 @@ def calculate_descriptors_multiprocess(
                 chunk = future_to_chunk[future]
                 try:
                     chunk_results = future.result()
-                    # Aggregate results
                     for smiles, res in chunk_results:
                         results[smiles] = res
                 except Exception as e:
-                    logger.error(f"Process worker crashed while calculating chunk: {str(e)}")
-                    # Fault tolerance: Populate errors for compounds in the crashed chunk
+                    logger.error(f"Thread worker crashed for chunk: {str(e)}")
                     for smiles in chunk:
                         results[smiles] = {
                             "success": False,
-                            "error": f"PROCESS_CRASHED: {str(e)}",
+                            "error": f"THREAD_CRASHED: {str(e)}",
                             "data": {}
                         }
                 
-                # Update progress counter dynamically
                 completed_compounds += len(chunk)
                 if progress_callback:
                     try:
@@ -72,15 +74,13 @@ def calculate_descriptors_multiprocess(
                         logger.warning(f"Error in progress callback: {cb_err}")
                         
     except Exception as pool_err:
-        logger.error(f"Critical error setting up ProcessPoolExecutor: {pool_err}")
-        # Fallback to synchronous loop if pool creation fails (fail-safe fallback)
-        logger.info("Executing fail-safe synchronous descriptor processing...")
+        logger.error(f"ThreadPoolExecutor failed: {pool_err}. Falling back to synchronous calculation.")
+        # ── Final fallback: synchronous single-threaded loop ──────────────────
+        from backend.parallel.rdkit_worker import compute_smiles_descriptors
         for smiles in smiles_list:
             try:
-                from backend.parallel.rdkit_worker import compute_smiles_descriptors
-                results[smiles] = compute_smiles_descriptors(smiles, include_mordred, mode)
+                results[smiles] = compute_smiles_descriptors(smiles, include_mordred, mode, selected_descriptors)
             except Exception as fe:
                 results[smiles] = {"success": False, "error": f"FALLBACK_FAILED: {fe}", "data": {}}
                 
     return results
-

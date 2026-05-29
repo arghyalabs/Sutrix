@@ -62,15 +62,29 @@ async def process_enrichment_task(job_id: str, payload: Dict[str, Any]):
         unique_names_to_resolve = [n for n in unique_names_to_resolve if n]
 
     resolve_list = list(set(unique_smiles_in_df + unique_names_to_resolve))
+    total_to_resolve = len(resolve_list) if len(resolve_list) > 0 else 1
     
     # Initialize phase 1 progress tracking
-    tracker = ProgressTracker(job_id, len(resolve_list) if len(resolve_list) > 0 else 1)
+    tracker = ProgressTracker(job_id, total_to_resolve)
     active_tracker[job_id] = tracker
     
-    tracker.log(f"🧬 Starting Phase 1: Chemical Identity Resolution for {len(resolve_list)} unique inputs...")
+    loop = asyncio.get_running_loop()
+
+    # ── Helper: send real-time broadcast immediately ─────────────────────────
+    async def _broadcast_progress(progress_pct: int, phase_label: str, logs_override=None):
+        """Sends a PROGRESS message and immediately updates the job registry."""
+        job_registry.update_job(job_id, progress=progress_pct)
+        tel = tracker.calculate_telemetry(tracker.rows_processed)
+        tel["progress_pct"] = progress_pct
+        tel["phase"] = phase_label
+        if logs_override:
+            tel["logs"] = logs_override
+        await ws_broadcaster.broadcast({"job_id": job_id, "type": "PROGRESS", "data": tel})
+
+    tracker.log(f"🧬 Starting Phase 1: Chemical Identity Resolution for {total_to_resolve} unique inputs...")
+    await _broadcast_progress(1, "🔍 Phase 1: Identity Resolution")
     
     from backend.normalization.identifier_service import ChemicalIdentifierService
-    id_service = ChemicalIdentifierService()
     
     resolved_mapping = {} # input_string -> canonical_smiles
     resolved_smiles_set = set()
@@ -78,37 +92,60 @@ async def process_enrichment_task(job_id: str, payload: Dict[str, Any]):
     import os
     completed_resolutions = 0
     if resolve_list:
-        for val in resolve_list:
-            # Check for cancellation before processing each compound
-            current_job = job_registry.get_job(job_id)
-            if current_job and current_job.get("status") == "CANCELLED":
-                tracker.log("🛑 Job execution aborted by cancellation instruction.")
-                del active_tracker[job_id]
-                clean_memory()
-                return
-                
+        from concurrent.futures import ThreadPoolExecutor, as_completed
+        import multiprocessing
+        import threading
+        
+        max_workers = min(16, multiprocessing.cpu_count() * 2)
+        skip_online = len(resolve_list) > 500
+        
+        if skip_online:
+            tracker.log("⚠️ Large dataset (>500 unique compounds) detected. Online PubChem resolution disabled to prevent API rate-limiting. Using local cache and offline RDKit parser only.")
+            
+        tracker.log(f"🧬 Resolving chemical identities in parallel using {max_workers} threads...")
+        
+        lock = threading.Lock()
+        
+        def resolve_worker(val):
             try:
-                res = id_service.resolve(val)
-                if res.get("canonical_smiles"):
-                    cs = res["canonical_smiles"]
-                    resolved_mapping[val] = cs
-                    resolved_smiles_set.add(cs)
-                else:
-                    tracker.log(f"⚠️ Resolution failed for: '{val}' ({res.get('status') or 'not found'})")
+                # Separate ChemicalIdentifierService instance per thread for SQLite thread-safety
+                local_service = ChemicalIdentifierService()
+                return val, local_service.resolve(val, skip_online=skip_online)
             except Exception as e:
-                tracker.log(f"⚠️ Exception during resolution of '{val}': {e}")
+                return val, {"status": "error", "error": str(e)}
+
+        with ThreadPoolExecutor(max_workers=max_workers) as executor:
+            futures = {executor.submit(resolve_worker, val): val for val in resolve_list}
+            
+            for future in as_completed(futures):
+                current_job = job_registry.get_job(job_id)
+                if current_job and current_job.get("status") == "CANCELLED":
+                    tracker.log("🛑 Job execution aborted by cancellation instruction.")
+                    del active_tracker[job_id]
+                    clean_memory()
+                    return
+                    
+                val, res = future.result()
                 
-            completed_resolutions += 1
-            if tracker.should_broadcast():
-                tel = tracker.calculate_telemetry(completed_resolutions)
-                tel["phase"] = "🔍 Phase 1: Identity Resolution"
-                # Map progress to 0-35%
-                mapped_progress = int((completed_resolutions / len(resolve_list)) * 35)
-                _speed = tel.get("compounds_per_sec") or tel.get("items_per_sec", 0.0)
-                _eta   = tel.get("eta_seconds", 0.0)
-                job_registry.update_job(job_id, progress=mapped_progress, eta=_eta, speed=_speed)
-                tel["progress_pct"] = mapped_progress
-                await ws_broadcaster.broadcast({"job_id": job_id, "type": "PROGRESS", "data": tel})
+                with lock:
+                    if res.get("canonical_smiles"):
+                        cs = res["canonical_smiles"]
+                        resolved_mapping[val] = cs
+                        resolved_smiles_set.add(cs)
+                    else:
+                        if len(resolve_list) < 100:
+                            tracker.log(f"⚠️ Resolution failed for: '{val}' ({res.get('status') or 'not found'})")
+                            
+                    completed_resolutions += 1
+                    tracker.rows_processed = completed_resolutions
+                    
+                    # Throttle WebSocket broadcasts for large datasets to avoid flooding WS connections
+                    if completed_resolutions % max(1, len(resolve_list) // 50) == 0 or completed_resolutions == len(resolve_list):
+                        mapped_progress = max(1, int((completed_resolutions / len(resolve_list)) * 35))
+                        asyncio.run_coroutine_threadsafe(
+                            _broadcast_progress(mapped_progress, f"🔍 Phase 1: Resolved {completed_resolutions}/{len(resolve_list)}"),
+                            loop
+                        )
 
     # Fill empty smiles values in the dataframe using the resolved mapping
     for idx, row in df.iterrows():
@@ -141,6 +178,7 @@ async def process_enrichment_task(job_id: str, payload: Dict[str, Any]):
     tracker.log(f"✓ Identity resolution phase complete. Resolved {total_compounds} unique canonical SMILES structures.")
     tracker.log(f"🧬 Initializing advanced offline descriptors calculations...")
     tracker.log(f"⚙️ Profile: '{mode.upper()}' | Extended Mordred: {include_mordred}")
+    await _broadcast_progress(35, "✅ Phase 1 Complete — Starting Cache Lookup")
     
     cache = ScientificDescriptorCache()
     cached_results = {}
@@ -172,41 +210,36 @@ async def process_enrichment_task(job_id: str, payload: Dict[str, Any]):
 
     tracker.log(f"✓ Cache scan completed: {cache_hits} hits (skipped calculations), {len(smiles_to_calculate)} misses scheduled for CPU calculations.")
     
-    # Update client with initial cache outcomes (map progress to 35-50%)
-    telemetry = tracker.calculate_telemetry(cache_hits)
-    mapped_progress = 35 + int((cache_hits / total_compounds) * 15) if total_compounds > 0 else 50
-    job_registry.update_job(job_id, progress=mapped_progress, eta=telemetry["eta_seconds"], speed=telemetry["compounds_per_sec"])
-    telemetry["progress_pct"] = mapped_progress
-    telemetry["phase"] = "⚗️ Phase 2: Cache Processing"
-    await ws_broadcaster.broadcast({"job_id": job_id, "type": "PROGRESS", "data": telemetry})
+    # Broadcast Phase 2 completion — 50%
+    await _broadcast_progress(50, f"⚗️ Phase 2 Complete — Cache: {cache_hits} hits, {len(smiles_to_calculate)} to calculate")
 
-    # 4. Phase 3: Isolated Multiprocess Calculations (ProcessPoolExecutor)
+    # 4. Phase 3: ThreadPool Descriptor Calculations
     calculation_results = {}
     if smiles_to_calculate:
-        tracker.log(f"⚗️ Starting Phase 3: Spawning isolated CPU worker process pools...")
+        tracker.log(f"⚗️ Starting Phase 3: Computing descriptors for {len(smiles_to_calculate)} compounds...")
+        await _broadcast_progress(52, f"⚗️ Phase 3: Computing {len(smiles_to_calculate)} descriptors...")
         
         # Get active running loop in main event thread to safe-schedule async broadcasts from executor threads
         loop = asyncio.get_running_loop()
 
-        # Async progress wrapper to push counts over sockets
+        # Progress callback called by ThreadPoolExecutor workers — posts directly to job_registry
+        # and schedules WS broadcast on main asyncio loop via run_coroutine_threadsafe
         def process_pool_callback(completed_count, total_count):
             cur_job = job_registry.get_job(job_id)
             if cur_job and cur_job.get("status") == "CANCELLED":
                 raise Exception("JOB_CANCELLED")
                 
             total_processed = cache_hits + completed_count
-            tracker.log(f"Processed {total_processed}/{total_compounds} total compounds...")
-            
-            # Broadcast telemetry over websocket channel
+            # Map progress to 52-88% — always update job_registry for HTTP polling
+            m_prog = 52 + int((completed_count / max(total_count, 1)) * 36)
+            job_registry.update_job(job_id, progress=m_prog)
+
+            # Throttle WebSocket broadcasts to avoid flooding
             if tracker.should_broadcast():
+                tracker.rows_processed = total_processed
                 tel = tracker.calculate_telemetry(total_processed)
-                # Map progress to 50-90%
-                m_prog = 50 + int((completed_count / len(smiles_to_calculate)) * 40)
-                _speed = tel.get("compounds_per_sec") or tel.get("items_per_sec", 0.0)
-                _eta   = tel.get("eta_seconds", 0.0)
-                job_registry.update_job(job_id, progress=m_prog, eta=_eta, speed=_speed)
                 tel["progress_pct"] = m_prog
-                tel["phase"] = "⚗️ Phase 3: Subprocess calculations"
+                tel["phase"] = f"⚗️ Phase 3: {total_processed}/{total_compounds} compounds calculated"
                 asyncio.run_coroutine_threadsafe(
                     ws_broadcaster.broadcast({"job_id": job_id, "type": "PROGRESS", "data": tel}),
                     loop
@@ -220,7 +253,8 @@ async def process_enrichment_task(job_id: str, payload: Dict[str, Any]):
                 smiles_to_calculate,
                 mode,
                 include_mordred,
-                process_pool_callback
+                process_pool_callback,
+                payload.get("selected_descriptors")
             )
             
             # Write new calculation data back to sqlite cache

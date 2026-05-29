@@ -20,4 +20,9 @@ export const modelingApi = {
     );
     return data;
   },
+
+  getEmbedding: async (clientId: string): Promise<any> => {
+    const { data } = await apiClient.get(`/api/modeling/${clientId}/embedding`);
+    return data;
+  },
 };

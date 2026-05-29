@@ -32,11 +32,16 @@ export function useWebSocket(clientId: string): UseWebSocketReturn {
   const activeJobIdRef = useRef<string | null>(null);
   const reconnectTimeoutRef = useRef<any>(null);
   const reconnectAttemptsRef = useRef(0);
+  const pollingIntervalRef = useRef<any>(null);
 
   const disconnect = useCallback(() => {
     if (socketRef.current) {
       socketRef.current.close();
       socketRef.current = null;
+    }
+    if (pollingIntervalRef.current) {
+      clearInterval(pollingIntervalRef.current);
+      pollingIntervalRef.current = null;
     }
     setIsConnected(false);
   }, []);
@@ -66,6 +71,41 @@ export function useWebSocket(clientId: string): UseWebSocketReturn {
           icon: '🔌',
           style: { background: '#0B132B', color: '#06B6D4', border: '1px solid rgba(6, 182, 212, 0.2)' }
         });
+
+        // HTTP Fallback Polling — updates progress bar even when WS messages are throttled
+        if (pollingIntervalRef.current) clearInterval(pollingIntervalRef.current);
+        pollingIntervalRef.current = setInterval(async () => {
+          if (!activeJobIdRef.current) return;
+          try {
+            const res = await fetch(`/api/jobs/${activeJobIdRef.current}`);
+            if (res.ok) {
+              const data = await res.json();
+              const status = data.status;
+
+              if (status === 'RUNNING' || status === 'QUEUED') {
+                // Always update progress from job registry — this is our reliable source
+                if (typeof data.progress === 'number') setProgress(data.progress);
+                if (typeof data.progress_pct === 'number') setProgress(data.progress_pct);
+                if (data.speed != null) setSpeed(data.speed);
+                if (data.eta != null) setEta(data.eta);
+                if (data.phase) setPhase(data.phase);
+              } else if (status === 'COMPLETED' && data.result) {
+                // Simulate WS JOB_COMPLETED message
+                const fakeEvent = {
+                  data: JSON.stringify({ type: 'JOB_COMPLETED', job_id: activeJobIdRef.current, data: data.result })
+                };
+                if (socketRef.current?.onmessage) socketRef.current.onmessage(fakeEvent as any);
+              } else if (status === 'FAILED') {
+                const fakeEvent = {
+                  data: JSON.stringify({ type: 'JOB_FAILED', job_id: activeJobIdRef.current, error: data.error || 'Job failed' })
+                };
+                if (socketRef.current?.onmessage) socketRef.current.onmessage(fakeEvent as any);
+              }
+            }
+          } catch (e) {
+            // Ignore fetch errors during polling
+          }
+        }, 800); // Poll every 800ms for smooth progress updates
       };
 
       ws.onmessage = (event) => {
@@ -206,6 +246,7 @@ export function useWebSocket(clientId: string): UseWebSocketReturn {
     return () => {
       if (socketRef.current) socketRef.current.close();
       if (reconnectTimeoutRef.current) clearTimeout(reconnectTimeoutRef.current);
+      if (pollingIntervalRef.current) clearInterval(pollingIntervalRef.current);
     };
   }, [clientId]);
 

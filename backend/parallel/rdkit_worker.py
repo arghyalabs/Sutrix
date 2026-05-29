@@ -63,9 +63,8 @@ def compute_smiles_descriptors(smiles: str, include_mordred: bool = False, mode:
         except Exception:
             pass
 
-        # Validate results and prune NaNs
-        expected_keys = list(DESCRIPTOR_FUNCTIONS.keys())
-        validated_data = validate_descriptors(raw_descriptors, required_keys=expected_keys)
+        # Validate results and prune NaNs — only validate keys that were actually computed
+        validated_data = validate_descriptors(raw_descriptors, required_keys=None)
         
         for k in ["CanonicalSMILES", "IsomericSMILES", "InChIKey", "MolecularFormula"]:
             if k in raw_descriptors:

@@ -205,7 +205,7 @@ export const DataAnalysisWorkspace: React.FC = () => {
         </p>
         <button
           onClick={() => useWorkspaceStore.getState().setActiveTab('hierarchy')}
-          className="mt-8 flex items-center gap-2 px-6 py-3 rounded-xl bg-gradient-to-r from-cyan-500 to-violet-500 text-white font-bold text-sm shadow-[0_0_20px_rgba(34,211,238,0.3)] hover:shadow-[0_0_30px_rgba(34,211,238,0.5)] transition-all"
+          className="mt-8 flex items-center gap-2 px-6 py-3 rounded-xl bg-white text-black font-bold text-sm shadow-[0_4px_14px_rgba(255,255,255,0.15)] hover:shadow-[0_6px_20px_rgba(255,255,255,0.25)] transition-all hover:-translate-y-0.5 active:translate-y-0"
         >
           Go to Hierarchy Builder <ChevronRight className="w-4 h-4" />
         </button>
@@ -262,8 +262,7 @@ export const DataAnalysisWorkspace: React.FC = () => {
         <div className="shrink-0 p-4 border-t border-white/[0.06]">
           <button
             onClick={() => useWorkspaceStore.getState().setActiveTab('enrichment')}
-            className="w-full flex items-center justify-center gap-2 py-3 rounded-xl bg-gradient-to-r from-cyan-500 to-violet-500 text-white font-bold text-sm
-              shadow-[0_0_20px_rgba(34,211,238,0.25)] hover:shadow-[0_0_30px_rgba(34,211,238,0.4)] transition-all"
+            className="w-full flex items-center justify-center gap-2 py-3 rounded-xl bg-white text-black font-bold text-sm shadow-[0_4px_14px_rgba(255,255,255,0.15)] hover:shadow-[0_6px_20px_rgba(255,255,255,0.25)] hover:-translate-y-0.5 active:translate-y-0 transition-all disabled:opacity-50 disabled:cursor-not-allowed"
           >
             Continue to Descriptor Enrichment <ChevronRight className="w-4 h-4" />
           </button>

@@ -10,6 +10,7 @@ import {
 import { modelingApi } from '../../services/modelingApi';
 import toast from 'react-hot-toast';
 import type { ModelingAnalysis } from '../../types';
+import { ChemicalSpace3D } from './ChemicalSpace3D';
 
 // ─── Shared Plotly config & layout base ────────────────────────────────────
 const PC = { responsive: true, displaylogo: false, modeBarButtonsToRemove: ['sendDataToCloud'] as any };
@@ -220,8 +221,7 @@ const EmptyState: React.FC<{ onRun: () => void }> = ({ onRun }) => (
       onClick={onRun}
       whileHover={{ scale: 1.02 }}
       whileTap={{ scale: 0.98 }}
-      className="flex items-center gap-2.5 px-7 py-3 rounded-xl bg-gradient-to-r from-cyan-500 to-violet-600 
-        text-white text-sm font-semibold shadow-lg shadow-cyan-500/15 hover:shadow-cyan-500/30 transition-shadow"
+      className="flex items-center gap-2.5 px-7 py-3 rounded-xl bg-white text-black text-sm font-semibold shadow-[0_4px_14px_rgba(255,255,255,0.15)] hover:shadow-[0_6px_20px_rgba(255,255,255,0.25)] transition-all hover:-translate-y-0.5 active:translate-y-0"
     >
       <Zap className="w-4 h-4" /> Run AI Analysis
     </motion.button>
@@ -243,6 +243,16 @@ const ModelingReadinessWorkspace: React.FC<Props> = ({
 }) => {
   const [exportLoading, setExportLoading] = useState<string | null>(null);
   const [openRisk, setOpenRisk] = useState<string | null>(null);
+  const [embeddingData, setEmbeddingData] = useState<any[]>([]);
+  const [isFullscreen, setIsFullscreen] = useState(false);
+
+  useEffect(() => {
+    if (clientId && modelingAnalysis) {
+      modelingApi.getEmbedding(clientId).then(res => {
+        if (res && res.points) setEmbeddingData(res.points);
+      }).catch(err => console.error("Failed to fetch embedding", err));
+    }
+  }, [clientId, modelingAnalysis]);
 
   const handleExport = useCallback(async (format: 'json' | 'csv' | 'xlsx') => {
     setExportLoading(format);
@@ -351,6 +361,20 @@ const ModelingReadinessWorkspace: React.FC<Props> = ({
             )}
           </div>
         </section>
+
+        {/* ── 3D Chemical Space Visualization ──────────────────────────── */}
+        {embeddingData.length > 0 && (
+          <section className="relative z-10">
+            <SectionHeader title="3D QSAR Intelligence Environment" subtitle="Interactive chemical space visualization aligned with OECD Principles" icon={Layers} />
+            <div className={`transition-all duration-500 ease-in-out ${isFullscreen ? 'fixed inset-0 z-50 bg-[#050B14]' : 'h-[600px] rounded-2xl overflow-hidden shadow-2xl shadow-cyan-900/20 border border-white/[0.05]'}`}>
+              <ChemicalSpace3D 
+                data={embeddingData} 
+                isFullscreen={isFullscreen} 
+                onToggleFullscreen={() => setIsFullscreen(!isFullscreen)} 
+              />
+            </div>
+          </section>
+        )}
 
         {/* ── Visualization Grid ───────────────────────────────────────── */}
         <section>

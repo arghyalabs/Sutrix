@@ -2,6 +2,7 @@ import React, { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
 import { ArrowRight, ExternalLink } from 'lucide-react';
 import { LogoLoader } from '../ui/SUTRIXLogo';
+import { useWorkspaceStore } from '../../store/useWorkspaceStore';
 
 interface FinalCTAProps {
   onLaunch: () => void;
@@ -10,6 +11,7 @@ interface FinalCTAProps {
 export const FinalCTA: React.FC<FinalCTAProps> = ({ onLaunch }) => {
   const ref = useRef<HTMLDivElement>(null);
   const inView = useInView(ref, { once: true, margin: '-60px' });
+  const hasActiveSession = useWorkspaceStore(state => !!state.filename);
 
   return (
     <section
@@ -58,7 +60,7 @@ export const FinalCTA: React.FC<FinalCTAProps> = ({ onLaunch }) => {
               onClick={onLaunch}
               className="group flex items-center gap-2.5 px-8 py-4 rounded-lg bg-white text-black font-semibold text-sm transition-all hover:-translate-y-0.5 active:translate-y-0 shadow-[0_4px_14px_rgba(255,255,255,0.15)] hover:shadow-[0_6px_20px_rgba(255,255,255,0.25)]"
             >
-              Launch Workspace
+              {hasActiveSession ? 'Continue Workflow' : 'Launch Workspace'}
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </button>
             <a

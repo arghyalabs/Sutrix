@@ -4,6 +4,8 @@
 # Licensed under the PolyForm Noncommercial License 1.0.0.
 # -----------------------------------------------------------------------------
 import logging
+import math
+import numpy as np
 import pandas as pd
 from typing import Dict, Any, List
 
@@ -16,6 +18,27 @@ from backend.processing.readiness_engine import DatasetReadinessScorer, Scientif
 
 logger = logging.getLogger("sdo.core.pipeline")
 parquet_engine = ParquetEngine()
+
+
+def _sanitize_for_json(obj):
+    """Recursively converts all numpy scalars and NaN/Inf to JSON-safe Python native types."""
+    if isinstance(obj, dict):
+        return {k: _sanitize_for_json(v) for k, v in obj.items()}
+    if isinstance(obj, (list, tuple)):
+        return [_sanitize_for_json(v) for v in obj]
+    if isinstance(obj, (np.integer,)):
+        return int(obj)
+    if isinstance(obj, (np.floating,)):
+        v = float(obj)
+        return None if (math.isnan(v) or math.isinf(v)) else v
+    if isinstance(obj, np.bool_):
+        return bool(obj)
+    if isinstance(obj, np.ndarray):
+        return _sanitize_for_json(obj.tolist())
+    if isinstance(obj, float):
+        return None if (math.isnan(obj) or math.isinf(obj)) else obj
+    return obj
+
 
 class ScientificPipelineController:
     """Single Source of Truth for Scientific Orchestration Sequence."""
@@ -359,6 +382,7 @@ class ScientificPipelineController:
                 }
 
             results = await loop.run_in_executor(None, _do_readiness)
+            results = _sanitize_for_json(results)  # convert all numpy scalars before JSON serialisation
             context.readiness_results = results
             context.add_trace("readiness")
             context.flush_memory()

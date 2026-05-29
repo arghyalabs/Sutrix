@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight, ChevronRight, Activity, Network, Zap, GitBranch, Database, ShieldCheck } from 'lucide-react';
 import { LogoLoader } from '../ui/SUTRIXLogo';
+import { useWorkspaceStore } from '../../store/useWorkspaceStore';
 
 interface HeroSectionProps {
   onLaunch: () => void;
@@ -16,6 +17,8 @@ const SCIENTIFIC_CAPABILITIES = [
 ];
 
 export const HeroSection: React.FC<HeroSectionProps> = ({ onLaunch }) => {
+  const hasActiveSession = useWorkspaceStore(state => !!state.filename);
+
   return (
     <section className="relative min-h-[92vh] flex flex-col w-full bg-[#03060d] overflow-hidden font-sans">
       
@@ -50,10 +53,10 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onLaunch }) => {
           transition={{ duration: 0.6 }}
           className="flex items-center gap-4"
         >
-          <LogoLoader size="w-9 h-9" compact />
+          <LogoLoader size="w-14 h-14" compact />
           <div className="flex flex-col leading-none pt-1">
-            <span className="font-extrabold tracking-[0.2em] text-[15px] text-white">SUTRIX</span>
-            <span className="text-[7.5px] font-semibold tracking-[0.15em] text-white/40 uppercase mt-0.5">
+            <span className="font-extrabold tracking-[0.2em] text-2xl text-white">SUTRIX</span>
+            <span className="text-[10px] font-semibold tracking-[0.15em] text-white/50 uppercase mt-1">
               Scientific Data Engineering
             </span>
           </div>
@@ -73,7 +76,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onLaunch }) => {
       </header>
 
       {/* ── Main Content (45/55 Split) ── */}
-      <div className="relative z-10 flex-1 flex flex-col lg:flex-row items-center justify-between px-6 lg:px-24 w-full max-w-[1800px] mx-auto mt-20 lg:mt-0 pb-12">
+      <div className="relative z-10 flex-1 flex flex-col lg:flex-row items-center justify-between px-6 lg:px-24 w-full max-w-[1800px] mx-auto pt-32 lg:pt-28 pb-12">
         
         {/* ── Left Side: Typography (45%) ── */}
         <div className="w-full lg:w-[45%] flex flex-col justify-center space-y-7 order-2 lg:order-1 pt-8 lg:pt-0 pb-8 lg:pb-0">
@@ -125,7 +128,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onLaunch }) => {
               onClick={onLaunch}
               className="group relative flex items-center gap-3 px-8 py-3.5 rounded-lg bg-white text-black font-semibold text-sm transition-all hover:-translate-y-0.5 active:translate-y-0 shadow-[0_4px_14px_rgba(255,255,255,0.15)] hover:shadow-[0_6px_20px_rgba(255,255,255,0.25)]"
             >
-              Enter Workspace
+              {hasActiveSession ? 'Continue Workflow' : 'Enter Workspace'}
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </button>
             
@@ -155,10 +158,14 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onLaunch }) => {
                   <stop offset="0%" stopColor="rgba(139,92,246,0.4)" />
                   <stop offset="100%" stopColor="rgba(139,92,246,0.0)" />
                 </linearGradient>
+                <linearGradient id="lineGradTop" gradientUnits="userSpaceOnUse" x1="50" y1="50" x2="50" y2="15">
+                  <stop offset="0%" stopColor="rgba(34,211,238,0.4)" />
+                  <stop offset="100%" stopColor="rgba(34,211,238,0.0)" />
+                </linearGradient>
               </defs>
               
               {/* Connector Lines to the 5 nodes */}
-              <motion.path d="M 50 50 L 50 15" stroke="url(#lineGradWhite)" strokeWidth="0.5" strokeDasharray="2,2" fill="none" initial={{ pathLength: 0 }} animate={{ pathLength: 1 }} transition={{ duration: 1.5, delay: 0.6 }} />
+              <motion.path d="M 50 50 L 50 15" stroke="url(#lineGradTop)" strokeWidth="0.5" strokeDasharray="2,2" fill="none" initial={{ pathLength: 0 }} animate={{ pathLength: 1 }} transition={{ duration: 1.5, delay: 0.6 }} />
               <motion.path d="M 50 50 L 90 40" stroke="url(#lineGradWhite)" strokeWidth="0.5" strokeDasharray="2,2" fill="none" initial={{ pathLength: 0 }} animate={{ pathLength: 1 }} transition={{ duration: 1.5, delay: 0.7 }} />
               <motion.path d="M 50 50 L 75 85" stroke="url(#lineGradWhite)" strokeWidth="0.5" strokeDasharray="2,2" fill="none" initial={{ pathLength: 0 }} animate={{ pathLength: 1 }} transition={{ duration: 1.5, delay: 0.8 }} />
               <motion.path d="M 50 50 L 25 85" stroke="url(#lineGradWhite2)" strokeWidth="0.5" strokeDasharray="2,2" fill="none" initial={{ pathLength: 0 }} animate={{ pathLength: 1 }} transition={{ duration: 1.5, delay: 0.9 }} />

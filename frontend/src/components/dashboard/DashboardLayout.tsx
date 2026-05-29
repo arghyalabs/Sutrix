@@ -22,6 +22,7 @@ interface DashboardLayoutProps {
   activeTab: string;
   setActiveTab: (tab: string) => void;
   onExit: () => void;
+  onGoHome: () => void;
   onOpenLicense: () => void;
   telemetryData?: {
     ram_usage_pct: number;
@@ -35,6 +36,7 @@ export const DashboardLayout: React.FC<DashboardLayoutProps> = ({
   activeTab,
   setActiveTab,
   onExit,
+  onGoHome,
   onOpenLicense,
   telemetryData = { ram_usage_pct: 42, fps: 60, active_jobs_count: 0 }
 }) => {
@@ -61,15 +63,15 @@ export const DashboardLayout: React.FC<DashboardLayoutProps> = ({
         {/* Floating Sidebar */}
         <motion.aside
           initial={false}
-          animate={{ width: collapsed ? 72 : 240 }}
-          className="relative flex flex-col glass-elevated my-4 ml-4 rounded-2xl shrink-0 z-20 overflow-hidden"
+          animate={{ width: collapsed ? 88 : 280 }}
+          className="relative flex flex-col glass-elevated my-4 ml-4 mr-4 rounded-2xl shrink-0 z-20 overflow-hidden"
           onHoverStart={() => setCollapsed(false)}
           onHoverEnd={() => setCollapsed(true)}
         >
           {/* Header */}
-          <div className="flex items-center h-20 px-3 border-b border-white/[0.06] shrink-0 gap-3">
-            <div className="shrink-0">
-              <LogoLoader size="w-10 h-10" compact />
+          <div className="flex items-center h-24 px-4 border-b border-white/[0.06] shrink-0 gap-4">
+            <div className="shrink-0 cursor-pointer" onClick={onGoHome}>
+              <LogoLoader size="w-14 h-14" compact />
             </div>
             <AnimatePresence>
               {!collapsed && (
@@ -79,8 +81,8 @@ export const DashboardLayout: React.FC<DashboardLayoutProps> = ({
                   exit={{ opacity: 0, x: -10 }}
                   className="whitespace-nowrap min-w-0"
                 >
-                  <p className="font-extrabold tracking-[0.2em] text-base text-white leading-none">SUTRIX</p>
-                  <p className="text-[8px] font-semibold tracking-[0.15em] text-white/25 uppercase mt-0.5">SDO Platform</p>
+                  <p className="font-extrabold tracking-[0.2em] text-2xl text-white leading-none">SUTRIX</p>
+                  <p className="text-[10px] font-semibold tracking-[0.15em] text-white/40 uppercase mt-1">SDO Platform</p>
                 </motion.div>
               )}
             </AnimatePresence>
@@ -96,6 +98,7 @@ export const DashboardLayout: React.FC<DashboardLayoutProps> = ({
                   id={`sidebar-tab-${item.id}`}
                   onClick={() => setActiveTab(item.id)}
                   className={`w-full flex items-center h-12 rounded-xl transition-all duration-200 group relative
+                    ${collapsed ? 'justify-center' : 'justify-start'}
                     ${isActive ? 'bg-white/[0.08] text-white' : 'text-secondary hover:bg-white/[0.04] hover:text-white'}
                   `}
                 >
@@ -152,7 +155,9 @@ export const DashboardLayout: React.FC<DashboardLayoutProps> = ({
           <div className="p-3 border-t border-white/[0.06] space-y-1 shrink-0">
             <button 
               onClick={onOpenLicense}
-              className="w-full flex items-center h-12 rounded-xl text-secondary hover:bg-white/[0.04] hover:text-white transition-colors"
+              className={`w-full flex items-center h-12 rounded-xl text-secondary hover:bg-white/[0.04] hover:text-white transition-colors
+                ${collapsed ? 'justify-center' : 'justify-start'}
+              `}
             >
               <div className="w-12 h-12 flex items-center justify-center shrink-0"><Scale className="w-5 h-5 text-cyan-400" /></div>
               <AnimatePresence>
@@ -168,7 +173,9 @@ export const DashboardLayout: React.FC<DashboardLayoutProps> = ({
             </button>
             <button 
               onClick={onExit}
-              className="w-full flex items-center h-12 rounded-xl text-rose-500/80 hover:bg-rose-500/10 hover:text-rose-500 transition-colors"
+              className={`w-full flex items-center h-12 rounded-xl text-rose-500/80 hover:bg-rose-500/10 hover:text-rose-500 transition-colors
+                ${collapsed ? 'justify-center' : 'justify-start'}
+              `}
             >
               <div className="w-12 h-12 flex items-center justify-center shrink-0"><LogOut className="w-5 h-5" /></div>
               <AnimatePresence>

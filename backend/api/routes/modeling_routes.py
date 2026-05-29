@@ -15,6 +15,7 @@ from fastapi.responses import StreamingResponse
 
 from backend.api.validators.request_validator import BaseClientPayload
 from backend.core.workspace_registry import registry
+from backend.core.pipeline_controller import _sanitize_for_json
 
 # Existing engines (already built)
 from backend.processing.readiness_engine import (
@@ -35,6 +36,7 @@ from backend.intelligence.dataset_health import DatasetHealthIntelligence
 from backend.core.modeling_risk_engine import assess_modeling_risks
 from backend.core.model_recommender import recommend_models
 from backend.core.feature_engineering_advisor import advise_features
+from backend.core.readiness_embedding_engine import ReadinessEmbeddingEngine
 
 logger = logging.getLogger("sdo.api.modeling")
 router = APIRouter(prefix="/api/modeling", tags=["modeling"])
@@ -514,6 +516,7 @@ async def run_modeling_analysis(payload: BaseClientPayload):
         },
     }
 
+    result = _sanitize_for_json(result)
     _results_cache[client_id] = result
     ctx.readiness_results = {"modeling_analysis": result}
     return result
@@ -532,6 +535,12 @@ async def get_modeling_results(client_id: str):
 
     raise HTTPException(status_code=404, detail="No analysis results found. Run /api/modeling/analyze first.")
 
+@router.get("/{client_id}/embedding")
+async def get_modeling_embedding(client_id: str):
+    """Returns 3D embedding data for the Readiness Workspace visualization."""
+    engine = ReadinessEmbeddingEngine()
+    return engine.get_embedding_payload(client_id)
+
 
 @router.post("/{client_id}/export")
 async def export_modeling_report(client_id: str, format: str = "json"):
@@ -542,9 +551,10 @@ async def export_modeling_report(client_id: str, format: str = "json"):
     result = _results_cache[client_id]
 
     if format == "json":
+        from fastapi import Response
         content = json.dumps(result, indent=2, default=str)
-        return StreamingResponse(
-            io.BytesIO(content.encode()),
+        return Response(
+            content=content.encode(),
             media_type="application/json",
             headers={"Content-Disposition": f"attachment; filename=sdo_modeling_report_{client_id}.json"},
         )
@@ -564,8 +574,9 @@ async def export_modeling_report(client_id: str, format: str = "json"):
         df_out = pd.DataFrame(rows)
         buf = io.StringIO()
         df_out.to_csv(buf, index=False)
-        return StreamingResponse(
-            io.BytesIO(buf.getvalue().encode()),
+        from fastapi import Response
+        return Response(
+            content=buf.getvalue().encode(),
             media_type="text/csv",
             headers={"Content-Disposition": f"attachment; filename=sdo_modeling_report_{client_id}.csv"},
         )
@@ -592,9 +603,9 @@ async def export_modeling_report(client_id: str, format: str = "json"):
             models_df = pd.DataFrame(result.get("models", []))
             if not models_df.empty:
                 models_df[["algorithm", "category", "suitability_score", "expected_robustness", "scientific_reasoning"]].to_excel(writer, sheet_name="Model Recommendations", index=False)
-        buf.seek(0)
-        return StreamingResponse(
-            buf,
+        from fastapi import Response
+        return Response(
+            content=buf.getvalue(),
             media_type="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
             headers={"Content-Disposition": f"attachment; filename=sdo_modeling_report_{client_id}.xlsx"},
         )

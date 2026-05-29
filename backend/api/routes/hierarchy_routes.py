@@ -204,9 +204,10 @@ async def export_node(
     if fmt == "json":
         import json
         public_detail = {k: v for k, v in detail.items() if not k.startswith("_")}
+        from fastapi import Response
         json_bytes = json.dumps(public_detail, ensure_ascii=False, indent=2).encode("utf-8")
-        return StreamingResponse(
-            io.BytesIO(json_bytes),
+        return Response(
+            content=json_bytes,
             media_type="application/json",
             headers={
                 "Content-Disposition": f'attachment; filename="node_{node_id}.json"'
@@ -479,8 +480,9 @@ async def _stream_parquet_as_format(
             detail=f"Cannot generate '{fmt}' from parquet fallback for node '{node_id}'.",
         )
 
-    return StreamingResponse(
-        buf,
+    from fastapi import Response
+    return Response(
+        content=buf.getvalue(),
         media_type=mime,
         headers={
             "Content-Disposition": f'attachment; filename="node_{node_id}.{fmt}"'

@@ -324,10 +324,7 @@ export const DescriptorEnrichment: React.FC<DescriptorEnrichmentProps> = ({
             <button
               onClick={handleRunEnrichment}
               disabled={selectedDescriptors.length === 0}
-              className="w-full flex items-center justify-center gap-2.5 px-6 py-3.5 rounded-xl
-                bg-gradient-to-r from-cyan-500 to-violet-500 text-white font-bold text-sm
-                shadow-[0_0_24px_rgba(34,211,238,0.3)] hover:shadow-[0_0_32px_rgba(34,211,238,0.45)]
-                transition-all disabled:opacity-50 disabled:grayscale disabled:cursor-not-allowed"
+              className="w-full flex items-center justify-center gap-2 py-3.5 mt-auto rounded-xl bg-white text-black font-bold text-sm shadow-[0_4px_14px_rgba(255,255,255,0.15)] hover:shadow-[0_6px_20px_rgba(255,255,255,0.25)] hover:-translate-y-0.5 active:translate-y-0 transition-all disabled:opacity-50 disabled:cursor-not-allowed"
             >
               <Play className="w-4 h-4 fill-current" />
               Run ({selectedDescriptors.length} descriptors)
@@ -349,7 +346,7 @@ export const DescriptorEnrichment: React.FC<DescriptorEnrichmentProps> = ({
                 bg-emerald-500 text-void font-bold text-sm
                 shadow-[0_0_20px_rgba(16,185,129,0.3)] hover:bg-emerald-400 transition-all"
             >
-              Assemble Dataset <ChevronRight className="w-4 h-4" />
+              Next Step <ChevronRight className="w-4 h-4" />
             </button>
           ) : null}
         </div>
@@ -432,7 +429,7 @@ export const DescriptorEnrichment: React.FC<DescriptorEnrichmentProps> = ({
                     <div className="p-5 rounded-2xl bg-emerald-500/[0.08] border border-emerald-500/20">
                       <p className="text-emerald-400 font-bold text-sm mb-1">✓ Job Complete</p>
                       <p className="text-white/40 text-xs mb-4">
-                        All descriptors have been calculated. Click below to assemble the enriched dataset.
+                        The descriptor calculation is done, you can download the enriched data from the export section.
                       </p>
                       <button
                         onClick={handleFetchEnrichmentResults}
@@ -440,7 +437,7 @@ export const DescriptorEnrichment: React.FC<DescriptorEnrichmentProps> = ({
                           bg-emerald-500 text-void font-bold text-sm
                           hover:bg-emerald-400 transition-all"
                       >
-                        Assemble Enriched Dataset <ChevronRight className="w-4 h-4" />
+                        Next Step <ChevronRight className="w-4 h-4" />
                       </button>
                     </div>
                   </motion.div>

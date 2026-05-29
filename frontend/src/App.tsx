@@ -485,21 +485,7 @@ const App: React.FC = () => {
       
       setDataset(d.job_id + '.parquet', d.parquet_path, d.total_rows, d.columns, d.preview);
       
-      const auditToast = toast.loading('Running AI readiness analysis...');
-      try {
-        const modelingResult = await modelingApi.runAnalysis(clientId);
-        setModelingAnalysis(modelingResult);
-        toast.success('AI Analysis complete!', { id: auditToast });
-      } catch {
-        // Fallback to legacy readiness
-        try {
-          const auditRes = await readinessApi.evaluateReadiness(clientId);
-          setReadiness(auditRes as any);
-          toast.success('Readiness audit complete.', { id: auditToast });
-        } catch {
-          toast.dismiss(auditToast);
-        }
-      }
+
       setActiveTab('readiness');
     } catch (error: any) {
       toast.error(error.response?.data?.detail || 'Failed to fetch results');
@@ -623,6 +609,7 @@ const App: React.FC = () => {
         activeTab={activeTab}
         setActiveTab={setActiveTab}
         onExit={handleExit}
+        onGoHome={() => setHasLaunched(false)}
         onOpenLicense={() => setIsLicenseModalOpen(true)}
         telemetryData={mockTelemetry}
       >

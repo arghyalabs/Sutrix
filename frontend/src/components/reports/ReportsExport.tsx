@@ -4,6 +4,7 @@ import { Download, FileText, Archive, ArrowRight, RotateCcw, GitBranch, FolderOp
 import { hierarchyApi } from '../../services/hierarchyApi';
 import { useWorkspaceStore } from '../../store/useWorkspaceStore';
 import { SUTRIXLogo } from '../ui/SUTRIXLogo';
+import { CompoundPreview } from './CompoundPreview';
 
 interface ReportsExportProps {
   clientId: string;
@@ -34,7 +35,7 @@ export const ReportsExport: React.FC<ReportsExportProps> = ({
 
   const downloadZipUrl = `${API_BASE}/api/compliance/${clientId}/download`;
   const downloadPdfUrl = `${API_BASE}/api/compliance/${clientId}/report`;
-  const downloadParquetUrl = activeJobId ? `${API_BASE}/api/jobs/${clientId}/result?job_id=${activeJobId}` : '#';
+  const downloadParquetUrl = activeJobId ? `${API_BASE}/api/jobs/${clientId}/download_enriched_parquet?job_id=${activeJobId}` : '#';
 
   // Load hierarchy tree if available
   useEffect(() => {
@@ -75,7 +76,65 @@ export const ReportsExport: React.FC<ReportsExportProps> = ({
         </p>
       </div>
 
+      {/* FINAL OUTPUT: Enriched Dataset */}
+      <motion.div
+        initial={{ opacity: 0, y: 10 }}
+        animate={{ opacity: 1, y: 0 }}
+        className="glass p-8 rounded-2xl border-2 border-cyan-500/50 bg-cyan-500/5 relative overflow-hidden shadow-[0_0_40px_rgba(6,182,212,0.15)]"
+      >
+        <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-cyan-400 to-violet-500" />
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-6">
+          <div className="flex items-start gap-4">
+            <div className="w-14 h-14 rounded-2xl bg-cyan-500/20 flex items-center justify-center shrink-0">
+              <Download className="w-7 h-7 text-cyan-400" />
+            </div>
+            <div>
+              <div className="flex items-center gap-2 mb-1">
+                <h2 className="text-white font-bold text-lg">Final Enriched Dataset (QSAR Ready)</h2>
+                {activeJobId ? (
+                  <span className="px-2 py-0.5 rounded-full bg-emerald-500/20 text-emerald-400 text-[10px] font-bold uppercase tracking-wider">
+                    Ready
+                  </span>
+                ) : (
+                  <span className="px-2 py-0.5 rounded-full bg-white/10 text-white/40 text-[10px] font-bold uppercase tracking-wider">
+                    Pending
+                  </span>
+                )}
+              </div>
+              <p className="text-white/60 text-sm max-w-xl leading-relaxed">
+                Snappy-compressed Parquet matrix containing all selected molecular descriptors and topology fingerprints. This is your final, optimized dataset ready for AI/QSAR modeling.
+              </p>
+            </div>
+          </div>
+          
+          <div className="shrink-0">
+            {activeJobId ? (
+              <a
+                href={downloadParquetUrl}
+                download
+                className="flex items-center gap-2 px-8 py-4 rounded-xl bg-cyan-500 hover:bg-cyan-400 text-void font-bold shadow-[0_0_20px_rgba(6,182,212,0.4)] hover:shadow-[0_0_30px_rgba(6,182,212,0.6)] transition-all hover:-translate-y-0.5"
+              >
+                <Download className="w-5 h-5" />
+                Download Enriched Dataset
+              </a>
+            ) : (
+              <button
+                disabled
+                className="flex items-center gap-2 px-8 py-4 rounded-xl bg-white/[0.04] text-white/30 font-bold cursor-not-allowed border border-white/[0.06]"
+              >
+                <AlertCircle className="w-5 h-5 opacity-50" />
+                Run Enrichment First
+              </button>
+            )}
+          </div>
+        </div>
+      </motion.div>
+
+      {/* Data Verification / Compound Preview */}
+      <CompoundPreview clientId={clientId} activeJobId={activeJobId} />
+
       {/* Section 1: Hierarchy Export */}
+
       <motion.div
         initial={{ opacity: 0, y: 10 }}
         animate={{ opacity: 1, y: 0 }}
@@ -147,10 +206,7 @@ export const ReportsExport: React.FC<ReportsExportProps> = ({
               </div>
               <button
                 onClick={() => hierarchyApi.exportAll(clientId)}
-                className="flex items-center gap-2.5 px-5 py-2.5 rounded-xl
-                  bg-gradient-to-r from-cyan-500 to-violet-500 text-white font-bold text-sm
-                  shadow-[0_0_20px_rgba(34,211,238,0.25)] hover:shadow-[0_0_28px_rgba(34,211,238,0.4)]
-                  transition-all"
+                className="flex items-center gap-2 px-6 py-2.5 rounded-xl bg-white text-black font-bold text-sm shadow-[0_4px_14px_rgba(255,255,255,0.15)] hover:shadow-[0_6px_20px_rgba(255,255,255,0.25)] hover:-translate-y-0.5 active:translate-y-0 transition-all"
               >
                 <Download className="w-4 h-4" />
                 Download Full Hierarchy ZIP
@@ -173,77 +229,34 @@ export const ReportsExport: React.FC<ReportsExportProps> = ({
         )}
       </motion.div>
 
-      {/* Section 2: Enriched Dataset */}
+      {/* Section 2: PDF Audit */}
       <motion.div
         initial={{ opacity: 0, y: 10 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.05 }}
-        className="grid md:grid-cols-2 gap-5"
+        className="glass p-6 rounded-2xl group hover:border-violet-500/20 transition-all border border-white/[0.06]"
       >
-        {/* Enriched Parquet */}
-        <div className="glass p-6 rounded-2xl group hover:border-cyan-500/20 transition-all border border-white/[0.06]">
-          <div className="flex items-center gap-3 mb-4">
-            <div className="w-10 h-10 rounded-xl bg-cyan-500/10 flex items-center justify-center">
-              <Download className="w-5 h-5 text-cyan-400" />
-            </div>
-            <div>
-              <h3 className="text-white font-bold text-sm">Enriched Dataset</h3>
-              <p className="text-white/40 text-xs">Descriptor-enriched Parquet matrix</p>
-            </div>
-            {activeJobId ? (
-              <CheckCircle className="w-4 h-4 text-emerald-400 ml-auto" />
-            ) : (
-              <AlertCircle className="w-4 h-4 text-white/20 ml-auto" />
-            )}
+        <div className="flex items-center gap-3 mb-4">
+          <div className="w-10 h-10 rounded-xl bg-violet-500/10 flex items-center justify-center">
+            <FileText className="w-5 h-5 text-violet-400" />
           </div>
-          <p className="text-xs text-white/40 mb-4 leading-relaxed">
-            Snappy-compressed Parquet with all molecular descriptors and topology fingerprints optimized for AI/QSAR.
-          </p>
-          {activeJobId ? (
-            <a
-              href={downloadParquetUrl}
-              download
-              className="flex items-center justify-between w-full px-4 py-2.5 rounded-xl
-                bg-white/[0.04] text-white text-xs font-semibold
-                hover:bg-cyan-500/10 hover:text-cyan-400 transition-colors"
-            >
-              Download Parquet Matrix <ArrowRight className="w-4 h-4" />
-            </a>
-          ) : (
-            <button
-              disabled
-              className="flex items-center justify-between w-full px-4 py-2.5 rounded-xl
-                bg-white/[0.02] text-white/20 text-xs font-semibold cursor-not-allowed"
-            >
-              Enrichment Required <ArrowRight className="w-4 h-4 opacity-30" />
-            </button>
-          )}
-        </div>
-
-        {/* PDF Audit */}
-        <div className="glass p-6 rounded-2xl group hover:border-violet-500/20 transition-all border border-white/[0.06]">
-          <div className="flex items-center gap-3 mb-4">
-            <div className="w-10 h-10 rounded-xl bg-violet-500/10 flex items-center justify-center">
-              <FileText className="w-5 h-5 text-violet-400" />
-            </div>
-            <div>
-              <h3 className="text-white font-bold text-sm">Scientific Audit Report</h3>
-              <p className="text-white/40 text-xs">OECD compliance PDF</p>
-            </div>
+          <div>
+            <h3 className="text-white font-bold text-sm">Scientific Audit Report</h3>
+            <p className="text-white/40 text-xs">OECD compliance PDF</p>
           </div>
-          <p className="text-xs text-white/40 mb-4 leading-relaxed">
-            Comprehensive PDF documenting OECD curation compliance, Unit-Endpoint anomalies, and biological variance auditing.
-          </p>
-          <a
-            href={downloadPdfUrl}
-            download
-            className="flex items-center justify-between w-full px-4 py-2.5 rounded-xl
-              bg-white/[0.04] text-white text-xs font-semibold
-              hover:bg-violet-500/10 hover:text-violet-400 transition-colors"
-          >
-            Download PDF Report <ArrowRight className="w-4 h-4" />
-          </a>
         </div>
+        <p className="text-xs text-white/40 mb-4 leading-relaxed">
+          Comprehensive PDF documenting OECD curation compliance, Unit-Endpoint anomalies, and biological variance auditing.
+        </p>
+        <a
+          href={downloadPdfUrl}
+          download
+          className="flex items-center justify-between w-full px-4 py-2.5 rounded-xl
+            bg-white/[0.04] text-white text-xs font-semibold
+            hover:bg-violet-500/10 hover:text-violet-400 transition-colors"
+        >
+          Download PDF Report <ArrowRight className="w-4 h-4" />
+        </a>
       </motion.div>
 
       {/* Section 3: Compliance Package */}
