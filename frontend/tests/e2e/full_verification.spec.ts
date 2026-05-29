@@ -292,6 +292,19 @@ test.describe('5. Hierarchy Builder', () => {
     const execBtn = page.getByRole('button', { name: /Execute|Build Hierarchy|Cleansing/i }).first();
     await expect(execBtn).toBeVisible({ timeout: 10000 });
 
+    const isDisabled = await execBtn.isDisabled();
+    if (isDisabled) {
+      const columnBtn = page.locator('.border-r button').filter({ hasText: /Species|Endpoint|Duration|Chemical|Value/i }).first();
+      const fallbackBtn = page.locator('.border-r button').nth(1);
+      
+      if (await columnBtn.isVisible().catch(() => false)) {
+        await columnBtn.click();
+      } else {
+        await fallbackBtn.click();
+      }
+    }
+    await expect(execBtn).toBeEnabled({ timeout: 5000 });
+
     // Intercept the segregate request
     const [req, res] = await Promise.all([
       page.waitForRequest(r => r.url().includes('/api/segregate'), { timeout: 15000 }),
@@ -318,7 +331,17 @@ test.describe('5. Hierarchy Builder', () => {
     await step_confirmMapping(page);
     await step_executeHierarchy(page);
 
-    // Verify charts rendered
+    // Transition to Analysis tab
+    const continueBtn = page.getByRole('button', { name: /Continue to Analysis/i }).first();
+    if (await continueBtn.isVisible({ timeout: 5000 }).catch(() => false)) {
+      await continueBtn.click();
+    } else {
+      // Fallback: click tab directly
+      const analysisTab = page.locator('button', { hasText: /Analysis|Charts/i }).first();
+      if (await analysisTab.isVisible()) await analysisTab.click();
+    }
+
+    // Verify charts rendered in analysis tab
     await expect(
       page.locator('text=/Composition|Distribution|pie|bar/i').first()
     ).toBeVisible({ timeout: 30000 });
