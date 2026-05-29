@@ -43,15 +43,15 @@ class ScientificPipelineController:
 
             import asyncio
             loop = asyncio.get_running_loop()
+            workspace_id = context.workspace_id  # snapshot before thread
 
-            # Run ALL blocking CPU/IO work in a thread so the event loop is never blocked
             def _do_ingest():
                 engine = FileIngestionEngine()
                 result = engine.ingest(temp_path, file_bytes=file_bytes)
                 if not result.success or result.primary_df is None:
                     raise ValueError(" | ".join(result.errors))
                 optimized_df = downcast_dataframe(result.primary_df)
-                parquet_path = parquet_engine.convert_dataframe_to_parquet(optimized_df, f"ingested_{context.workspace_id}")
+                parquet_path = parquet_engine.convert_dataframe_to_parquet(optimized_df, f"ingested_{workspace_id}")
                 row_count = len(optimized_df)
                 col_names = list(optimized_df.columns)
                 preview_data = optimized_df.head(10).fillna("").to_dict(orient="records")
@@ -59,6 +59,7 @@ class ScientificPipelineController:
 
             optimized_df, parquet_path, row_count, col_names, preview_data = await loop.run_in_executor(None, _do_ingest)
 
+            # Apply context mutations on the async side (never inside thread)
             context.parquet_path = parquet_path
             context.dataframe_cache = optimized_df
             context.add_trace("ingest")
@@ -80,31 +81,52 @@ class ScientificPipelineController:
             import asyncio
             loop = asyncio.get_running_loop()
 
+            # Snapshot inputs before entering thread
+            current_path = context.parquet_path
+            current_df = context.dataframe_cache
+            workspace_id = context.workspace_id
+
             def _do_curate():
-                df = context.load_slice()
+                # Load df from cache or parquet
+                if current_df is not None:
+                    df = current_df
+                elif current_path and os.path.exists(current_path):
+                    import pandas as pd
+                    df = pd.read_parquet(current_path)
+                else:
+                    raise ValueError(f"No parquet source for {workspace_id}")
+
+                dropped = False
+                new_path = current_path
                 if columns_to_drop:
                     cols_existing = [c for c in columns_to_drop if c in df.columns]
                     if cols_existing:
                         df = df.drop(columns=cols_existing)
-                        pp = parquet_engine.convert_dataframe_to_parquet(df, f"curated_{context.workspace_id}")
-                        context.parquet_path = pp
-                        context.dataframe_cache = df
-                        context.add_trace("curate")
+                        new_path = parquet_engine.convert_dataframe_to_parquet(df, f"curated_{workspace_id}")
+                        dropped = True
                 return (
+                    df,
+                    new_path,
+                    dropped,
                     len(df),
                     list(df.columns),
                     df.head(10).fillna("").to_dict(orient="records"),
-                    context.parquet_path,
                 )
 
-            row_count, col_names, preview_data, parquet_path = await loop.run_in_executor(None, _do_curate)
+            df, new_path, dropped, row_count, col_names, preview_data = await loop.run_in_executor(None, _do_curate)
+
+            # Apply context mutations on the async side (thread-safe)
+            if dropped:
+                context.parquet_path = new_path
+                context.dataframe_cache = df
+                context.add_trace("curate")
 
             return {
                 "success": True,
                 "row_count": row_count,
                 "columns": col_names,
                 "preview": preview_data,
-                "parquet_path": parquet_path
+                "parquet_path": new_path,
             }
 
     @staticmethod
@@ -114,9 +136,22 @@ class ScientificPipelineController:
             import asyncio
             loop = asyncio.get_running_loop()
 
+            # Snapshot thread-safe inputs
+            current_path = context.parquet_path
+            current_df = context.dataframe_cache
+            workspace_id = context.workspace_id
+
             def _do_mapping():
-                df = context.load_slice()
+                if current_df is not None:
+                    df = current_df.copy()  # copy needed since we mutate
+                elif current_path and os.path.exists(current_path):
+                    import pandas as pd
+                    df = pd.read_parquet(current_path)
+                else:
+                    raise ValueError(f"No parquet source for {workspace_id}")
+
                 final_mappings = mappings.copy()
+                new_path = current_path
 
                 val_col = next((k for k, v in mappings.items() if v == 'value'), None)
                 if val_col and val_col in df.columns:
@@ -144,38 +179,38 @@ class ScientificPipelineController:
 
                     final_mappings[f"{val_col}_numeric"] = 'value'
                     final_mappings[f"{val_col}_qualifier"] = 'qualifier'
-
-                    has_unit_mapping = any(v == 'unit' for v in mappings.values())
-                    if not has_unit_mapping:
+                    if not any(v == 'unit' for v in mappings.values()):
                         final_mappings[f"{val_col}_unit"] = 'unit'
                     final_mappings[val_col] = 'none'
 
-                    # SMILES canonicalization
                     from backend.core.scientific_runtime import ScientificRuntime
                     smiles_col = next((k for k, v in final_mappings.items() if v in ['canonical_smiles', 'smiles']), None)
                     if smiles_col and smiles_col in df.columns:
                         df[smiles_col] = df[smiles_col].astype(str).apply(ScientificRuntime.canonicalize_smiles)
 
-                    parquet_path = parquet_engine.convert_dataframe_to_parquet(df, f"mapped_{context.workspace_id}")
-                    context.parquet_path = parquet_path
-                    context.dataframe_cache = df
-
-                context.mappings = final_mappings
-                context.add_trace("mapping")
+                    new_path = parquet_engine.convert_dataframe_to_parquet(df, f"mapped_{workspace_id}")
 
                 from backend.core.ecotox.ecotox_classifier import EcotoxClassifier
                 dataset_type = EcotoxClassifier.classify_dataset_type(list(df.columns), final_mappings)
                 warnings = EcotoxClassifier.validate_toxicological_safety(final_mappings, list(df.columns))
 
-                return {
-                    "success": True,
-                    "mappings": final_mappings,
-                    "columns": list(df.columns),
-                    "dataset_type": dataset_type,
-                    "warnings": warnings,
-                }
+                return df, new_path, final_mappings, list(df.columns), dataset_type, warnings
 
-            return await loop.run_in_executor(None, _do_mapping)
+            df, new_path, final_mappings, col_names, dataset_type, warnings = await loop.run_in_executor(None, _do_mapping)
+
+            # Apply ALL context mutations on the async side
+            context.parquet_path = new_path
+            context.dataframe_cache = df
+            context.mappings = final_mappings
+            context.add_trace("mapping")  # THIS is what was missing
+
+            return {
+                "success": True,
+                "mappings": final_mappings,
+                "columns": col_names,
+                "dataset_type": dataset_type,
+                "warnings": warnings,
+            }
 
     @staticmethod
     async def perform_segmentation(
