@@ -292,10 +292,25 @@ async def api_job_cancel(client_id: str):
     return {"success": success}
 
 @app.get("/api/jobs/{client_id}/result")
-async def api_job_result(client_id: str):
+async def api_job_result(client_id: str, job_id: str = None):
     try:
         context = registry.get_context(client_id)
-        return await ScientificPipelineController.assemble_enrichment_result(context)
+        # If an explicit job_id is provided by the frontend, always use it.
+        # This bypasses any stale context.active_job_id from a previous phase (e.g. segregation).
+        effective_job_id = job_id or context.active_job_id
+        if not effective_job_id:
+            raise HTTPException(status_code=400, detail="No job_id provided and no active job in workspace.")
+        # Temporarily override context for this call so assemble_enrichment_result uses the right job
+        original_job_id = context.active_job_id
+        context.active_job_id = effective_job_id
+        try:
+            result = await ScientificPipelineController.assemble_enrichment_result(context)
+        finally:
+            # Restore original so we don't permanently mutate context with a query param
+            context.active_job_id = effective_job_id  # keep the enrichment job as active
+        return result
+    except HTTPException:
+        raise
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
 

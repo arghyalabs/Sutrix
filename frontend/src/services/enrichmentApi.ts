@@ -67,8 +67,9 @@ export const enrichmentApi = {
   /**
    * Retrieves final snappy Parquet results.
    */
-  fetchResults: async (clientId: string): Promise<EnrichmentResultsResponse> => {
-    const response = await apiClient.get<EnrichmentResultsResponse>(`/api/jobs/${clientId}/result`);
+  fetchResults: async (clientId: string, jobId?: string): Promise<EnrichmentResultsResponse> => {
+    const url = `/api/jobs/${clientId}/result${jobId ? `?job_id=${jobId}` : ''}`;
+    const response = await apiClient.get<EnrichmentResultsResponse>(url);
     return response.data;
   },
 };

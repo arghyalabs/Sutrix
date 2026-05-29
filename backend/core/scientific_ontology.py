@@ -110,9 +110,16 @@ SCIENTIFIC_VARIABLES: Dict[str, Dict[str, Any]] = {
         "category": "physicochemical",
         "label": "Molecular Weight"
     },
+    "value": {
+        "aliases": ["value", "potency", "result", "measurement", "response", "endpoint_value", "endpoint value", "measured_value"],
+        "regex": [],
+        "priority": 85,
+        "category": "bioactivity",
+        "label": "Endpoint Value / Potency"
+    },
     "endpoint": {
         "aliases": [
-            "ic50", "ec50", "lc50", "ld50", "noael", "loael", "mic", "gi50", 
+            "endpoint", "ic50", "ec50", "lc50", "ld50", "noael", "loael", "mic", "gi50", 
             "cc50", "ac50", "ki", "kd", "km", "ic90", "ec10", "ec20", "ec90", 
             "bmd", "bmdl", "benchmarkdose", "ed50", "td50", "tgi", "auc", 
             "cmax", "tmax", "cl", "clearance", "halflife", "bioavailability", 
@@ -170,7 +177,7 @@ SCIENTIFIC_VARIABLES: Dict[str, Dict[str, Any]] = {
         "aliases": [
             "exposure_time", "incubation_time", "duration", "observation_period", 
             "exposure duration", "incubation", "study_length", "treatment_period", 
-            "timepoint", "hours", "hr", "h", "days", "d", "weeks", "months", "time"
+            "timepoint", "hours", "hr", "h", "days", "d", "weeks", "months", "time", "exposure_duration"
         ],
         "regex": [],
         "priority": 85,
@@ -237,6 +244,27 @@ SCIENTIFIC_VARIABLES: Dict[str, Dict[str, Any]] = {
         "priority": 70,
         "category": "metadata",
         "label": "GHS Hazard Classification"
+    },
+    "test_type": {
+        "aliases": ["test_type", "test type", "study design", "study_type", "experiment_type", "assay design"],
+        "regex": [],
+        "priority": 80,
+        "category": "metadata",
+        "label": "Test Type / Study Design"
+    },
+    "assay_type": {
+        "aliases": ["assay_type", "assay type", "assay_format", "test format"],
+        "regex": [],
+        "priority": 80,
+        "category": "metadata",
+        "label": "Assay Type"
+    },
+    "ph": {
+        "aliases": ["ph", "acidity", "hydrogen ion concentration"],
+        "regex": [],
+        "priority": 80,
+        "category": "metadata",
+        "label": "pH"
     }
 }
 

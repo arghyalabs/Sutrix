@@ -144,6 +144,17 @@ export const useWorkspaceStore = create<WorkspaceState>()(
           activeTab: 'ingest',
         }),
     }),
-    { name: 'sdo-workspace-storage' }
+    { 
+      name: 'sdo-workspace-storage-v2',
+      version: 2,
+      migrate: (persistedState: any, version: number) => {
+        // Always clear stale job tracking state across versions
+        return {
+          ...persistedState,
+          activeJobId: '',
+          activeJobType: null,
+        };
+      },
+    }
   )
 );

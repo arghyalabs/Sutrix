@@ -113,9 +113,9 @@ async function step_executeHierarchy(page: Page) {
   await expect(execBtn).toBeEnabled({ timeout: 5000 });
   await execBtn.click();
 
-  // Wait for hierarchy completion — can take up to 60s
+  // Wait for hierarchy completion - can take up to 60s
   await expect(
-    page.locator('text=/Composition|hierarchy complete|nodes|Download.*ZIP/i').first()
+    page.locator('text=/Segregation Complete|Download.*ZIP/i').first()
   ).toBeVisible({ timeout: 90000 });
 }
 

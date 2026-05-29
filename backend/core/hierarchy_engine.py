@@ -232,10 +232,6 @@ class HierarchyEngine:
                 except Exception as e:
                     logger.warning(f"CSV write failed for node {node_id}: {e}")
 
-            # SDF only when SMILES present
-            if smiles_col and smiles_col in df_slice.columns:
-                self._write_sdf(df_slice, smiles_col, os.path.join(out_dir, "dataset.sdf"))
-
             if node_id in self.node_details:
                 self.node_details[node_id]["_export_dir"] = out_dir
 

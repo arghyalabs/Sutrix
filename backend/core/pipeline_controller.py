@@ -287,8 +287,10 @@ class ScientificPipelineController:
                 raise ValueError(f"Job results unavailable. Status: {status['status']}")
                 
             res_path = status["result_path"]
-            if not res_path or res_path == "Lineage Engine":
+            if res_path == "Lineage Engine":
                 raise ValueError("Enriched output parquet file not found. The active job appears to be a segregation job. Please re-run enrichment.")
+            elif not res_path:
+                raise ValueError("Enriched output parquet file not found. The job completed but no result path was saved. This can happen if no resolvable compounds were found in the dataset.")
                 
             # Update source of truth to the new enriched parquet
             context.parquet_path = res_path

@@ -126,7 +126,10 @@ async def process_enrichment_task(job_id: str, payload: Dict[str, Any]):
     
     if total_compounds == 0:
         # Trivial success (no compounds resolved to calculate)
-        job_registry.update_job(job_id, status="COMPLETED", progress=100)
+        os.makedirs("uploads/parquet", exist_ok=True)
+        parquet_path = f"uploads/parquet/enriched_dataset_{job_id}.parquet"
+        df.to_parquet(parquet_path, compression="SNAPPY", index=False)
+        job_registry.update_job(job_id, status="COMPLETED", progress=100, result_path=parquet_path)
         await ws_broadcaster.broadcast({"job_id": job_id, "type": "JOB_COMPLETED"})
         del active_tracker[job_id]
         clean_memory()

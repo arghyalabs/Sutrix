@@ -34,7 +34,7 @@ export const ReportsExport: React.FC<ReportsExportProps> = ({
 
   const downloadZipUrl = `${API_BASE}/api/compliance/${clientId}/download`;
   const downloadPdfUrl = `${API_BASE}/api/compliance/${clientId}/report`;
-  const downloadParquetUrl = activeJobId ? `${API_BASE}/api/jobs/${clientId}/result` : '#';
+  const downloadParquetUrl = activeJobId ? `${API_BASE}/api/jobs/${clientId}/result?job_id=${activeJobId}` : '#';
 
   // Load hierarchy tree if available
   useEffect(() => {

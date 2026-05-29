@@ -72,7 +72,9 @@ export const DescriptorEnrichment: React.FC<DescriptorEnrichmentProps> = ({
 }) => {
   const { activeJobType, selectedDescriptors, setSelectedDescriptors } = useWorkspaceStore();
   const isRunning = socket.jobStatus === 'RUNNING' && activeJobType === 'enrichment';
-  const isCompleted = socket.jobStatus === 'COMPLETED' && activeJobType === 'enrichment';
+  // isCompleted requires socket to have actually received COMPLETED this session (progress===100)
+  // This prevents the Assemble button from reappearing after workspace re-entry from stale persisted state
+  const isCompleted = socket.jobStatus === 'COMPLETED' && activeJobType === 'enrichment' && socket.progress === 100;
 
   const [rdkitAvailable, setRdkitAvailable] = useState<string[]>([]);
   const [mordredAvailable, setMordredAvailable] = useState<string[]>([]);

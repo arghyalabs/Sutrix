@@ -440,6 +440,39 @@ async def _stream_parquet_as_format(
         json_str = df.to_json(orient="records", date_format="iso")
         buf.write(json_str.encode("utf-8"))
         buf.seek(0)
+    elif fmt == "sdf":
+        try:
+            from rdkit import Chem
+            from rdkit.Chem import SDWriter
+            # Find a smiles column
+            smiles_cols = [c for c in df.columns if c.lower() in ["smiles", "canonical_smiles", "qsar_ready_smiles"]]
+            if not smiles_cols:
+                raise ValueError("No SMILES column found for SDF export")
+            smiles_col = smiles_cols[0]
+            
+            # Write to a string buffer then to bytes buffer
+            import io as sys_io
+            str_buf = sys_io.StringIO()
+            writer = SDWriter(str_buf)
+            prop_cols = [c for c in df.columns if c != smiles_col]
+            import numpy as np
+            for _, row in df.iterrows():
+                smiles_val = row.get(smiles_col, "")
+                if not smiles_val or not isinstance(smiles_val, str):
+                    continue
+                mol = Chem.MolFromSmiles(str(smiles_val).strip())
+                if mol is None:
+                    continue
+                for prop_col in prop_cols:
+                    val = row.get(prop_col)
+                    if val is not None and not (isinstance(val, float) and np.isnan(val)):
+                        mol.SetProp(str(prop_col), str(val))
+                writer.write(mol)
+            writer.close()
+            buf.write(str_buf.getvalue().encode("utf-8"))
+            buf.seek(0)
+        except Exception as e:
+            raise HTTPException(status_code=422, detail=f"SDF export failed: {e}")
     else:
         raise HTTPException(
             status_code=422,

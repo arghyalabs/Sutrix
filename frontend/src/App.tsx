@@ -216,6 +216,9 @@ const App: React.FC = () => {
     setHasLaunched(false);
     socket.resetSocketState();
     resetWorkspace();
+    // Explicitly clear stale job state so re-entry doesn't fire assembly calls
+    useWorkspaceStore.getState().setActiveJobId('');
+    useWorkspaceStore.getState().setActiveJobType(null);
   };
 
   const handleIngestFile = useCallback(async (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -235,7 +238,53 @@ const App: React.FC = () => {
         setUploadEta(res.eta_seconds || 0);
         setUploadStage('PARSING');
         setUploadMessage('Parsing dataset...');
-        // Result arrives via WebSocket JOB_COMPLETED
+        // Primary: WebSocket JOB_COMPLETED. Fallback: poll /api/jobs/{id} in case WS missed event.
+        const apiBase = import.meta.env.VITE_API_URL || 'http://127.0.0.1:8000';
+        const jobId = res.job_id;
+        const poll = async () => {
+          for (let i = 0; i < 15; i++) {
+            await new Promise(r => setTimeout(r, 2000));
+            if (useWorkspaceStore.getState().rowCount > 0) return; // WS delivered
+            try {
+              const r2 = await fetch(`${apiBase}/api/jobs/${jobId}`);
+              if (!r2.ok) continue;
+              const job = await r2.json();
+              if (job.status === 'COMPLETED' && job.result?.row_count > 0) {
+                const d = job.result;
+                setDataset(d.filename || file.name, d.parquet_path, d.row_count, d.columns, d.preview ?? []);
+                
+                // Auto-infer schema on fallback
+                if (d.columns?.length) {
+                  mappingApi.inferSchema(d.columns).then(schemaRes => {
+                    const aiMappings: any = {};
+                    const inferenceDetails: any = {};
+                    schemaRes.mappings.forEach((m: any) => {
+                      aiMappings[m.column] = m.mapped_to;
+                      inferenceDetails[m.column] = { confidence: m.confidence, reasons: m.reasons };
+                    });
+                    setMappings(aiMappings);
+                    const store = useWorkspaceStore.getState();
+                    if (store.setMappingIntelligence) store.setMappingIntelligence(inferenceDetails);
+                  }).catch(() => {
+                    const fallback: any = {};
+                    d.columns.forEach((c: string) => { fallback[c] = 'none'; });
+                    setMappings(fallback);
+                  });
+                }
+                setIsUploadProcessing(false);
+                setUploadProgress(100);
+                toast.success('Dataset ingested and workspace ready!');
+                return;
+              }
+              if (job.status === 'FAILED') {
+                setIsUploadProcessing(false);
+                toast.error(`Ingestion failed: ${job.error}`);
+                return;
+              }
+            } catch { /* WS will deliver */ }
+          }
+        };
+        poll();
       } else {
         // Fallback: legacy sync response (backend always returns job_id now)
         const legacy = res as any;
@@ -276,6 +325,25 @@ const App: React.FC = () => {
               if (job.status === 'COMPLETED' && job.result?.row_count > 0) {
                 const d = job.result;
                 setDataset(d.filename || res.filename, d.parquet_path, d.row_count, d.columns, d.preview ?? []);
+                
+                // Auto-infer schema on fallback
+                if (d.columns?.length) {
+                  mappingApi.inferSchema(d.columns).then(schemaRes => {
+                    const aiMappings: any = {};
+                    const inferenceDetails: any = {};
+                    schemaRes.mappings.forEach((m: any) => {
+                      aiMappings[m.column] = m.mapped_to;
+                      inferenceDetails[m.column] = { confidence: m.confidence, reasons: m.reasons };
+                    });
+                    setMappings(aiMappings);
+                    const store = useWorkspaceStore.getState();
+                    if (store.setMappingIntelligence) store.setMappingIntelligence(inferenceDetails);
+                  }).catch(() => {
+                    const fallback: any = {};
+                    d.columns.forEach((c: string) => { fallback[c] = 'none'; });
+                    setMappings(fallback);
+                  });
+                }
                 setIsUploadProcessing(false);
                 setUploadProgress(100);
                 toast.success('Dataset ingested and workspace ready!');
@@ -394,10 +462,17 @@ const App: React.FC = () => {
   const handleFetchEnrichmentResults = async () => {
     try {
       const storeState = useWorkspaceStore.getState();
-      if (!storeState.activeJobId) return;
+      if (!storeState.activeJobId) {
+        toast.error('No enrichment job found. Please run enrichment first.');
+        return;
+      }
+      if (storeState.activeJobType !== 'enrichment') {
+        toast.error('The last job was not an enrichment job. Please run enrichment first.');
+        return;
+      }
       
       const toastId = toast.loading('Assembling enriched parquet...');
-      const d = await enrichmentApi.fetchResults(clientId);
+      const d = await enrichmentApi.fetchResults(clientId, storeState.activeJobId);
       toast.success('Enrichment matrix loaded.', { id: toastId });
       
       setDataset(d.job_id + '.parquet', d.parquet_path, d.total_rows, d.columns, d.preview);

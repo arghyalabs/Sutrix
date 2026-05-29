@@ -119,22 +119,47 @@ class WorkspaceRegistry:
     def __init__(self, ttl_seconds: int = 3600):
         self.workspaces: Dict[str, PipelineContext] = {}
         self.ttl_seconds = ttl_seconds
-        
+        # Throttle state-file mtime checks: store last-checked timestamp per workspace
+        # so we never hit the filesystem more than once every 5 seconds per workspace.
+        self._last_mtime_check: Dict[str, float] = {}
+        self._MTIME_CHECK_INTERVAL = 5.0  # seconds
+
     def get_context(self, workspace_id: str) -> PipelineContext:
+        from backend.core.session_state_manager import session_manager
+
         if workspace_id not in self.workspaces:
+            # Workspace not in memory at all — load from disk
             try:
-                from backend.core.session_state_manager import session_manager
                 loaded_ctx = session_manager.load_session(workspace_id)
                 if loaded_ctx:
                     self.workspaces[workspace_id] = loaded_ctx
-                    return loaded_ctx
-            except Exception as e:
-                logger.error(f"Error checking session restore for {workspace_id}: {e}")
-            
-            self.workspaces[workspace_id] = PipelineContext(workspace_id=workspace_id)
+            except Exception:
+                pass
+            if workspace_id not in self.workspaces:
+                self.workspaces[workspace_id] = PipelineContext(workspace_id=workspace_id)
+        else:
+            # Workspace is in memory. Only re-check disk if enough time has passed.
+            now = time.time()
+            last_check = self._last_mtime_check.get(workspace_id, 0.0)
+            if now - last_check >= self._MTIME_CHECK_INTERVAL:
+                self._last_mtime_check[workspace_id] = now
+                try:
+                    state_path = session_manager.get_state_file_path(workspace_id)
+                    if os.path.exists(state_path):
+                        mtime = os.path.getmtime(state_path)
+                        # If the file was modified more recently than last_accessed,
+                        # another process updated the session — reload it.
+                        if mtime > self.workspaces[workspace_id].last_accessed + 0.5:
+                            loaded_ctx = session_manager.load_session(workspace_id)
+                            if loaded_ctx:
+                                self.workspaces[workspace_id] = loaded_ctx
+                except Exception:
+                    pass  # Non-critical; keep using in-memory context
+
         context = self.workspaces[workspace_id]
         context.touch()
         return context
+
 
     def cleanup_expired(self):
         """Removes abandoned sessions to prevent memory leaks."""

@@ -8,13 +8,12 @@ export default defineConfig({
     chunkSizeWarningLimit: 2000,
     rollupOptions: {
       output: {
-        manualChunks: {
-          // Split heavyweight charting + UI libs into separate chunks
-          'vendor-react': ['react', 'react-dom', 'react-router-dom'],
-          'vendor-charts': ['recharts', 'plotly.js'],
-          'vendor-flow': ['@xyflow/react', 'reactflow'],
-          'vendor-ui': ['framer-motion', 'lucide-react'],
-          'vendor-data': ['axios', 'zustand'],
+        manualChunks: (id: string) => {
+          if (id.includes('node_modules/react') || id.includes('node_modules/react-dom')) return 'vendor-react';
+          if (id.includes('node_modules/recharts') || id.includes('node_modules/plotly')) return 'vendor-charts';
+          if (id.includes('node_modules/@xyflow') || id.includes('node_modules/reactflow')) return 'vendor-flow';
+          if (id.includes('node_modules/framer-motion') || id.includes('node_modules/lucide-react')) return 'vendor-ui';
+          if (id.includes('node_modules/axios') || id.includes('node_modules/zustand')) return 'vendor-data';
         }
       }
     }

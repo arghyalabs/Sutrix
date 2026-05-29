@@ -65,7 +65,7 @@ class FuzzyMatcher:
                 score = FuzzyMatcher.compute_similarity(normalized_input, alias)
                 # Exact prefix/suffix matching bonus
                 if normalized_input == alias:
-                    score = 1.0
+                    return standard_key, 1.0
                 elif alias in normalized_input.split(" "):
                     score = min(1.0, score + 0.2)
                 
