@@ -1,0 +1,91 @@
+Chemical_Name,CAS_Number,SMILES,Species,Endpoint,Value,Qualifier,Unit,Test_Type,Exposure_Duration,Sex,Age_Group,pH,Temperature_C,Test_Guideline,Test_System,Data_Quality,Reference
+Atenolol,29122-68-7,CC(C)NC[C@H](O)c1ccc(CC(C)C)cc1,daphnia,EC50,2.847,=,mg/L,acute,48h,female,adult,7.4,22.3,OECD 202,laboratory,high,DOI:10.3847.29384
+Benzene,71-43-2,c1ccccc1,fish,LC50,156.234,=,mg/L,acute,96h,male,adult,7.2,20.5,OECD 203,flow-through,high,DOI:10.5621.48291
+Copper sulfate,7758-99-8,[Cu+2].[O-]S(=O)(=O)[O-],daphnia,EC50,0.823,=,mg/L,acute,48h,mixed,larval,7.8,21.0,OECD 202,static,high,DOI:10.2947.18374
+Diclofenac,15307-79-6,Oc1ccc(Cl)cc1C(=O)c2cc(Cl)ccc2N,zebrafish,LC50,4.521,=,mg/L,acute,48h,female,juvenile,7.5,24.2,OECD 203,laboratory,high,DOI:10.4829.37462
+Endosulfan,115-29-7,ClC1C2C3(Cl)C1(Cl)C(=O)OC3(OCC2)Cl,rainbow_trout,LC50,0.034,=,mg/L,acute,96h,male,adult,7.3,18.5,OECD 203,flow-through,high,DOI:10.6283.19283
+Glyphosate,1071-83-6,OP(=O)(O)CNCC(=O)O,algae,EC50,7.892,=,mg/L,acute,72h,mixed,adult,7.6,23.0,OECD 201,static,medium,DOI:10.3746.28374
+Ibuprofen,15687-27-1,CC(C)Cc1ccc(cc1)C(C)C(=O)O,fathead_minnow,LC50,3.214,=,mg/L,acute,96h,female,adult,7.1,22.8,OECD 203,laboratory,high,DOI:10.5829.47362
+KCl,7447-40-7,[K+].[Cl-],daphnia,EC50,234.567,>=,mg/L,acute,24h,male,adult,7.9,20.0,OECD 202,static,medium,DOI:10.2938.47283
+Lead nitrate,10099-74-8,[Pb+2].[O-][N+](=O)[O-].[O-][N+](=O)[O-],fish,LC50,0.567,=,mg/L,acute,96h,female,larval,7.0,21.5,OECD 203,flow-through,high,DOI:10.4738.29384
+Mercury chloride,7487-94-7,Cl[Hg]Cl,zebrafish,LC50,0.089,=,mg/L,acute,48h,mixed,juvenile,7.4,23.5,OECD 203,laboratory,high,DOI:10.5928.38472
+Naproxen,22204-53-1,COc1ccc2cc(ccc2c1)C(C)C(=O)O,rainbow_trout,NOAEL,0.123,=,mg/L,chronic,28d,female,adult,7.3,19.0,OECD 210,flow-through,high,DOI:10.3829.47283
+PCB 153,35065-27-1,Clc1ccc(cc1Cl)c2c(Cl)ccc(Cl)c2,fathead_minnow,NOAEL,0.002,=,mg/L,chronic,21d,male,adult,7.2,22.0,OECD 210,static,high,DOI:10.4829.57382
+Phenol,108-95-2,c1ccc(cc1)O,daphnia,EC50,12.345,=,mg/L,acute,48h,female,adult,7.5,21.3,OECD 202,laboratory,high,DOI:10.2938.58273
+SDS,151-21-3,CCCCCCCCCCCCCOS([O-])(=O)=O,algae,EC50,2.456,=,mg/L,acute,96h,mixed,adult,7.7,24.0,OECD 201,static,medium,DOI:10.3847.29384
+Triclosan,3380-34-5,Oc1ccc(cc1Cl)c2c(Cl)cccc2,fish,LC50,0.234,=,mg/L,acute,96h,female,juvenile,7.3,22.5,OECD 203,flow-through,high,DOI:10.5829.38472
+Atenolol,29122-68-7,CC(C)NC[C@H](O)c1ccc(CC(C)C)cc1,human,NOAEL,150.0,=,mg/kg/day,chronic,90d,mixed,adult,7.4,37.0,EPA OPPTS 850.1075,laboratory,high,DOI:10.4738.29384
+Benzene,71-43-2,c1ccccc1,rat,LC50,3100.0,=,mg/kg,acute,4h,male,adult,7.2,22.0,EPA OPPTS 850.1010,laboratory,high,DOI:10.5829.47362
+Copper sulfate,7758-99-8,[Cu+2].[O-]S(=O)(=O)[O-],fish,NOAEL,0.456,=,mg/L,chronic,21d,female,juv dial,7.6,21.0,OECD 210,flow-through,high,DOI:10.2938.47283
+Diclofenac,15307-79-6,Oc1ccc(Cl)cc1C(=O)c2cc(Cl)ccc2N,daphnia,NOAEL,0.823,=,mg/L,chronic,14d,mixed,adult,7.5,22.0,OECD 211,laboratory,high,DOI:10.4829.37462
+Endosulfan,115-29-7,ClC1C2C3(Cl)C1(Cl)C(=O)OC3(OCC2)Cl,daphnia,EC50,0.012,=,mg/L,acute,48h,female,adult,7.4,20.5,OECD 202,static,high,DOI:10.6283.19283
+Glyphosate,1071-83-6,OP(=O)(O)CNCC(=O)O,daphnia,EC50,67.89,=,mg/L,acute,48h,male,adult,7.6,23.0,OECD 202,laboratory,medium,DOI:10.3746.28374
+Ibuprofen,15687-27-1,CC(C)Cc1ccc(cc1)C(C)C(=O)O,daphnia,EC50,5.678,=,mg/L,acute,48h,female,juvenile,7.2,21.5,OECD 202,static,high,DOI:10.5829.47362
+KCl,7447-40-7,[K+].[Cl-],fish,LC50,890.0,>=,mg/L,acute,96h,mixed,adult,7.8,20.0,OECD 203,flow-through,medium,DOI:10.2938.47283
+Lead nitrate,10099-74-8,[Pb+2].[O-][N+](=O)[O-].[O-][N+](=O)[O-],daphnia,EC50,0.234,=,mg/L,acute,48h,female,larval,7.1,22.0,OECD 202,static,high,DOI:10.4738.29384
+Mercury chloride,7487-94-7,Cl[Hg]Cl,daphnia,EC50,0.0056,=,mg/L,acute,48h,male,adult,7.3,21.0,OECD 202,laboratory,high,DOI:10.5928.38472
+Naproxen,22204-53-1,COc1ccc2cc(ccc2c1)C(C)C(=O)O,daphnia,EC50,1.234,=,mg/L,acute,48h,female,adult,7.4,22.5,OECD 202,static,high,DOI:10.3829.47283
+PCB 153,35065-27-1,Clc1ccc(cc1Cl)c2c(Cl)ccc(Cl)c2,daphnia,NOAEL,0.0008,=,mg/L,chronic,21d,mixed,adult,7.2,20.0,OECD 211,flow-through,high,DOI:10.4829.57382
+Phenol,108-95-2,c1ccc(cc1)O,fish,LC50,8.901,=,mg/L,acute,96h,female,adult,7.5,21.0,OECD 203,laboratory,high,DOI:10.2938.58273
+SDS,151-21-3,CCCCCCCCCCCCCOS([O-])(=O)=O,daphnia,EC50,1.234,=,mg/L,acute,48h,male,adult,7.6,23.0,OECD 202,static,medium,DOI:10.3847.29384
+Triclosan,3380-34-5,Oc1ccc(cc1Cl)c2c(Cl)cccc2,daphnia,EC50,0.034,=,mg/L,acute,48h,female,juvenile,7.4,22.0,OECD 202,laboratory,high,DOI:10.5829.38472
+Atenolol,29122-68-7,CC(C)NC[C@H](O)c1ccc(CC(C)C)cc1,rat,NOAEL,25.0,=,mg/kg/day,chronic,28d,mixed,adult,7.4,37.0,EPA OPPTS 850.1075,laboratory,high,DOI:10.4738.29384
+Benzene,71-43-2,c1ccccc1,mouse,LC50,2800.0,=,mg/kg,acute,4h,female,adult,7.2,22.0,EPA OPPTS 850.1010,laboratory,medium,DOI:10.5829.47362
+Copper sulfate,7758-99-8,[Cu+2].[O-]S(=O)(=O)[O-],rainbow_trout,LC50,0.189,=,mg/L,acute,96h,male,juv enile,7.6,18.5,OECD 203,flow-through,high,DOI:10.2938.47283
+Diclofenac,15307-79-6,Oc1ccc(Cl)cc1C(=O)c2cc(Cl)ccc2N,fathead_minnow,LC50,2.345,=,mg/L,acute,96h,female,adult,7.5,22.0,OECD 203,laboratory,high,DOI:10.4829.37462
+Endosulfan,115-29-7,ClC1C2C3(Cl)C1(Cl)C(=O)OC3(OCC2)Cl,fish,NOAEL,0.008,=,mg/L,chronic,28d,mixed,adult,7.4,21.0,OECD 210,flow-through,high,DOI:10.6283.19283
+Glyphosate,1071-83-6,OP(=O)(O)CNCC(=O)O,fish,LC50,56.78,=,mg/L,acute,96h,female,adult,7.6,22.0,OECD 203,static,medium,DOI:10.3746.28374
+Ibuprofen,15687-27-1,CC(C)Cc1ccc(cc1)C(C)C(=O)O,rainbow_trout,LC50,4.567,=,mg/L,acute,96h,male,juvenile,7.2,19.0,OECD 203,laboratory,high,DOI:10.5829.47362
+KCl,7447-40-7,[K+].[Cl-],rat,LC50,2400.0,>=,mg/kg,acute,8h,mixed,adult,7.8,22.0,EPA OPPTS 850.1010,static,medium,DOI:10.2938.47283
+Lead nitrate,10099-74-8,[Pb+2].[O-][N+](=O)[O-].[O-][N+](=O)[O-],rainbow_trout,LC50,0.345,=,mg/L,acute,96h,female,adult,7.1,18.5,OECD 203,flow-through,high,DOI:10.4738.29384
+Mercury chloride,7487-94-7,Cl[Hg]Cl,rainbow_trout,LC50,0.023,=,mg/L,acute,96h,male,adult,7.3,19.0,OECD 203,laboratory,high,DOI:10.5928.38472
+Naproxen,22204-53-1,COc1ccc2cc(ccc2c1)C(C)C(=O)O,fish,LC50,3.456,=,mg/L,acute,96h,female,adult,7.4,21.5,OECD 203,static,high,DOI:10.3829.47283
+PCB 153,35065-27-1,Clc1ccc(cc1Cl)c2c(Cl)ccc(Cl)c2,rainbow_trout,LC50,0.0015,=,mg/L,acute,96h,mixed,juvenile,7.2,18.0,OECD 203,flow-through,high,DOI:10.4829.57382
+Phenol,108-95-2,c1ccc(cc1)O,rat,LC50,610.0,=,mg/kg,acute,4h,female,adult,7.5,22.0,EPA OPPTS 850.1010,laboratory,high,DOI:10.2938.58273
+SDS,151-21-3,CCCCCCCCCCCCCOS([O-])(=O)=O,fish,LC50,3.456,=,mg/L,acute,96h,male,adult,7.6,22.5,OECD 203,static,medium,DOI:10.3847.29384
+Triclosan,3380-34-5,Oc1ccc(cc1Cl)c2c(Cl)cccc2,rainbow_trout,LC50,0.089,=,mg/L,acute,96h,female,adult,7.4,19.0,OECD 203,laboratory,high,DOI:10.5829.38472
+Atenolol,29122-68-7,CC(C)NC[C@H](O)c1ccc(CC(C)C)cc1,mouse,NOAEL,30.0,=,mg/kg/day,chronic,28d,mixed,adult,7.4,37.0,EPA OPPTS 850.1075,laboratory,high,DOI:10.4738.29384
+Benzene,71-43-2,c1ccccc1,human,NOAEL,50.0,=,mg/kg/day,chronic,90d,female,adult,7.2,37.0,EPA OPPTS 850.1075,laboratory,high,DOI:10.5829.47362
+Copper sulfate,7758-99-8,[Cu+2].[O-]S(=O)(=O)[O-],honeybee,LC50,0.0234,=,μg/bee,acute,4h,mixed,adult,7.6,,ASTM E729,laboratory,medium,DOI:10.2938.47283
+Diclofenac,15307-79-6,Oc1ccc(Cl)cc1C(=O)c2cc(Cl)ccc2N,human,NOAEL,0.5,=,mg/kg/day,chronic,28d,male,adult,7.5,37.0,EPA OPPTS 850.1075,laboratory,high,DOI:10.4829.37462
+Endosulfan,115-29-7,ClC1C2C3(Cl)C1(Cl)C(=O)OC3(OCC2)Cl,honeybee,LC50,0.0045,=,μg/bee,acute,4h,female,adult,7.4,,ASTM E729,laboratory,high,DOI:10.6283.19283
+Glyphosate,1071-83-6,OP(=O)(O)CNCC(=O)O,honeybee,LC50,0.123,=,μg/bee,acute,4h,mixed,adult,7.6,,ASTM E729,semi-field,medium,DOI:10.3746.28374
+Ibuprofen,15687-27-1,CC(C)Cc1ccc(cc1)C(C)C(=O)O,human,NOAEL,200.0,=,mg/kg/day,chronic,90d,female,adult,7.2,37.0,EPA OPPTS 850.1075,laboratory,high,DOI:10.5829.47362
+KCl,7447-40-7,[K+].[Cl-],human,NOAEL,60.0,>=,mg/kg/day,chronic,28d,mixed,adult,7.8,37.0,EPA OPPTS 850.1075,laboratory,medium,DOI:10.2938.47283
+Lead nitrate,10099-74-8,[Pb+2].[O-][N+](=O)[O-].[O-][N+](=O)[O-],mouse,LC50,1800.0,=,mg/kg,acute,4h,female,neonate,7.1,22.0,EPA OPPTS 850.1010,laboratory,high,DOI:10.4738.29384
+Mercury chloride,7487-94-7,Cl[Hg]Cl,human,NOAEL,0.001,=,mg/kg/day,chronic,90d,male,adult,7.3,37.0,EPA OPPTS 850.1075,laboratory,high,DOI:10.5928.38472
+Naproxen,22204-53-1,COc1ccc2cc(ccc2c1)C(C)C(=O)O,honeybee,LC50,0.0567,=,μg/bee,acute,4h,female,adult,7.4,,ASTM E729,laboratory,high,DOI:10.3829.47283
+PCB 153,35065-27-1,Clc1ccc(cc1Cl)c2c(Cl)ccc(Cl)c2,human,NOAEL,0.0001,=,mg/kg/day,chronic,90d,mixed,adult,7.2,37.0,EPA OPPTS 850.1075,laboratory,high,DOI:10.4829.57382
+Phenol,108-95-2,c1ccc(cc1)O,honeybee,LC50,0.234,=,μg/bee,acute,4h,female,adult,7.5,,ASTM E729,laboratory,high,DOI:10.2938.58273
+SDS,151-21-3,CCCCCCCCCCCCCOS([O-])(=O)=O,honeybee,LC50,0.0123,=,μg/bee,acute,4h,male,adult,7.6,,ASTM E729,semi-field,medium,DOI:10.3847.29384
+Triclosan,3380-34-5,Oc1ccc(cc1Cl)c2c(Cl)cccc2,honeybee,LC50,0.0078,=,μg/bee,acute,4h,female,adult,7.4,,ASTM E729,laboratory,high,DOI:10.5829.38472
+Atenolol,29122-68-7,CC(C)NC[C@H](O)c1ccc(CC(C)C)cc1,algae,EC50,45.6,=,mg/L,acute,72h,mixed,adult,7.4,24.0,OECD 201,static,medium,DOI:10.4738.29384
+Benzene,71-43-2,c1ccccc1,algae,EC50,89.0,=,mg/L,acute,72h,female,adult,7.2,23.0,OECD 201,laboratory,low,DOI:10.5829.47362
+Copper sulfate,7758-99-8,[Cu+2].[O-]S(=O)(=O)[O-],algae,EC50,0.034,=,mg/L,acute,72h,mixed,adult,7.6,25.0,OECD 201,static,high,DOI:10.2938.47283
+Diclofenac,15307-79-6,Oc1ccc(Cl)cc1C(=O)c2cc(Cl)ccc2N,algae,EC50,6.78,=,mg/L,acute,72h,female,adult,7.5,24.0,OECD 201,laboratory,high,DOI:10.4829.37462
+Endosulfan,115-29-7,ClC1C2C3(Cl)C1(Cl)C(=O)OC3(OCC2)Cl,algae,EC50,0.234,=,mg/L,acute,72h,mixed,adult,7.4,23.5,OECD 201,static,high,DOI:10.6283.19283
+Glyphosate,1071-83-6,OP(=O)(O)CNCC(=O)O,zebrafish,NOAEL,12.3,=,mg/L,chronic,21d,female,larval,7.6,24.0,OECD 210,flow-through,medium,DOI:10.3746.28374
+Ibuprofen,15687-27-1,CC(C)Cc1ccc(cc1)C(C)C(=O)O,algae,EC50,89.0,=,mg/L,acute,72h,male,adult,7.2,24.5,OECD 201,laboratory,high,DOI:10.5829.47362
+KCl,7447-40-7,[K+].[Cl-],algae,EC50,567.0,>=,mg/L,acute,72h,mixed,adult,7.8,23.0,OECD 201,static,low,DOI:10.2938.47283
+Lead nitrate,10099-74-8,[Pb+2].[O-][N+](=O)[O-].[O-][N+](=O)[O-],algae,EC50,0.567,=,mg/L,acute,72h,female,adult,7.1,24.0,OECD 201,laboratory,high,DOI:10.4738.29384
+Mercury chloride,7487-94-7,Cl[Hg]Cl,algae,EC50,0.012,=,mg/L,acute,72h,mixed,adult,7.3,23.5,OECD 201,static,high,DOI:10.5928.38472
+Naproxen,22204-53-1,COc1ccc2cc(ccc2c1)C(C)C(=O)O,algae,EC50,12.3,=,mg/L,acute,72h,female,adult,7.4,24.0,OECD 201,laboratory,high,DOI:10.3829.47283
+PCB 153,35065-27-1,Clc1ccc(cc1Cl)c2c(Cl)ccc(Cl)c2,algae,EC50,0.0034,=,mg/L,acute,72h,mixed,adult,7.2,23.0,OECD 201,static,high,DOI:10.4829.57382
+Phenol,108-95-2,c1ccc(cc1)O,algae,EC50,23.4,=,mg/L,acute,72h,female,adult,7.5,24.0,OECD 201,laboratory,high,DOI:10.2938.58273
+SDS,151-21-3,CCCCCCCCCCCCCOS([O-])(=O)=O,algae,EC50,1.23,=,mg/L,acute,72h,male,adult,7.6,24.5,OECD 201,static,medium,DOI:10.3847.29384
+Triclosan,3380-34-5,Oc1ccc(cc1Cl)c2c(Cl)cccc2,algae,EC50,0.0089,=,mg/L,acute,72h,female,adult,7.4,24.0,OECD 201,laboratory,high,DOI:10.5829.38472
+Atenolol,29122-68-7,CC(C)NC[C@H](O)c1ccc(CC(C)C)cc1,fathead_minnow,LC50,56.7,=,mg/L,acute,96h,mixed,adult,7.4,22.5,OECD 203,flow-through,medium,DOI:10.4738.29384
+Benzene,71-43-2,c1ccccc1,zebrafish,LC50,234.0,=,mg/L,acute,96h,female,juvenile,7.2,24.0,OECD 203,laboratory,low,DOI:10.5829.47362
+Copper sulfate,7758-99-8,[Cu+2].[O-]S(=O)(=O)[O-],fathead_minnow,LC50,0.456,=,mg/L,acute,96h,male,adult,7.6,22.0,OECD 203,static,high,DOI:10.2938.47283
+Diclofenac,15307-79-6,Oc1ccc(Cl)cc1C(=O)c2cc(Cl)ccc2N,rat,NOAEL,15.0,=,mg/kg/day,chronic,90d,female,adult,7.5,37.0,EPA OPPTS 850.1075,laboratory,high,DOI:10.4829.37462
+Endosulfan,115-29-7,ClC1C2C3(Cl)C1(Cl)C(=O)OC3(OCC2)Cl,mouse,NOAEL,0.05,=,mg/kg/day,chronic,28d,mixed,adult,7.4,37.0,EPA OPPTS 850.1075,laboratory,high,DOI:10.6283.19283
+Glyphosate,1071-83-6,OP(=O)(O)CNCC(=O)O,rainbow_trout,NOAEL,8.9,=,mg/L,chronic,28d,female,adult,7.6,19.0,OECD 210,flow-through,medium,DOI:10.3746.28374
+Ibuprofen,15687-27-1,CC(C)Cc1ccc(cc1)C(C)C(=O)O,zebrafish,NOAEL,2.34,=,mg/L,chronic,21d,male,larval,7.2,24.0,OECD 210,laboratory,high,DOI:10.5829.47362
+KCl,7447-40-7,[K+].[Cl-],mouse,LC50,2100.0,>=,mg/kg,acute,8h,mixed,adult,7.8,22.0,EPA OPPTS 850.1010,static,low,DOI:10.2938.47283
+Lead nitrate,10099-74-8,[Pb+2].[O-][N+](=O)[O-].[O-][N+](=O)[O-],fathead_minnow,NOAEL,0.123,=,mg/L,chronic,21d,female,juvenile,7.1,22.0,OECD 210,flow-through,high,DOI:10.4738.29384
+Mercury chloride,7487-94-7,Cl[Hg]Cl,fathead_minnow,NOAEL,0.008,=,mg/L,chronic,21d,mixed,adult,7.3,22.5,OECD 210,laboratory,high,DOI:10.5928.38472
+Naproxen,22204-53-1,COc1ccc2cc(ccc2c1)C(C)C(=O)O,rat,NOAEL,10.0,=,mg/kg/day,chronic,28d,female,adult,7.4,37.0,EPA OPPTS 850.1075,laboratory,high,DOI:10.3829.47283
+PCB 153,35065-27-1,Clc1ccc(cc1Cl)c2c(Cl)ccc(Cl)c2,zebrafish,NOAEL,0.0003,=,mg/L,chronic,28d,male,adult,7.2,24.0,OECD 210,static,high,DOI:10.4829.57382
+Phenol,108-95-2,c1ccc(cc1)O,mouse,LC50,530.0,=,mg/kg,acute,4h,female,adult,7.5,22.0,EPA OPPTS 850.1010,laboratory,high,DOI:10.2938.58273
+SDS,151-21-3,CCCCCCCCCCCCCOS([O-])(=O)=O,zebrafish,LC50,1.89,=,mg/L,acute,96h,mixed,juvenile,7.6,24.0,OECD 203,laboratory,medium,DOI:10.3847.29384
+Triclosan,3380-34-5,Oc1ccc(cc1Cl)c2c(Cl)cccc2,fathead_minnow,NOAEL,0.015,=,mg/L,chronic,21d,female,adult,7.4,22.0,OECD 210,flow-through,high,DOI:10.5829.38472

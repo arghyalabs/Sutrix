@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+N-Nonanoyl 4-hydroxy-3-methoxybenzylamide,EFSA AFC,2008,2263,Human health,not reported,Unspecified,Not reported,,NOEL,=,8.4,mg/kg bw/day,not reported,not reported,8.4,=,,True

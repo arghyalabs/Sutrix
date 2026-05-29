@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Methoxyfenozide metabolite (RH-131154),EFSA,2017,2987,Ecotox (water compartment),acute toxicity,Harlequin fly,Not reported,2.0,EC50,=,71.0,mg/L,mortality,,71.0,=,,True

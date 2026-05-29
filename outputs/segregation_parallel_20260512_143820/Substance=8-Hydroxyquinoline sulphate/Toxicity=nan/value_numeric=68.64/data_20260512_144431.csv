@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+8-Hydroxyquinoline sulphate,EFSA,2016,2835,Ecotox (soil compartment),acute toxicity,Honey bee,oral: unspecified,,LD50,>,68.64,µg/piece,mortality,,68.64,=,,True

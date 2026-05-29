@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Halauxifen-methyl,EFSA,2014,2751,Ecotox (water compartment),chronic/long term toxicity,Swollen duckweed,Not reported,7.0,EC50,=,2.13,mg/L,mortality,,2.13,=,,True

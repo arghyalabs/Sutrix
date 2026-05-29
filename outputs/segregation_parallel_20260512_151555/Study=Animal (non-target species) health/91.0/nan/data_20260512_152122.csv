@@ -1,0 +1,3 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready,PubChem_CID,PubChem_MW,PubChem_CanonicalSMILES,PubChem_InChIKey,PubChem_Ambiguous,PubChem_Candidate_CIDs,PubChem_Error
+CID_6322,EFSA FEEDAP,2007,160,Animal (non-target species) health,subchronic,Rat,Not reported,91.0,NOAEL,=,3.131,mg/kg bw/day,no adverse effect observed at single/highest dose,,3.131,=,,True,6322,174.2,,ODKSFYDXXFIFQN-BYPYZUCNSA-N,False,,
+CID_9507,EFSA FEEDAP,2010,209,Animal (non-target species) health,subchronic,Rat,oral: gavage,91.0,NOAEL,=,709.0,mg/kg bw/day,no adverse effect observed at single/highest dose,,709.0,=,,True,9507,426.4,,UKHWDRMMMYWSFL-UHFFFAOYSA-N,False,,

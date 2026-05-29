@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Pyridaben,EFSA,2010,1218,Human health,chronic/long term toxicity,Rat,Not reported,730.0,NOAEL,=,1.1,mg/kg bw/day,body weight,systemic,1.1,=,,True

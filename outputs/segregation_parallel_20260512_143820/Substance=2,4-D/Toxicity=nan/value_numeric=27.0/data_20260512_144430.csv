@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+"2,4-D",EFSA,2014,2555,Ecotox (soil compartment),not reported,Lettuce,Not reported,,ER50,=,27.0,g/ha,seedling emergence,,27.0,=,,True

@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Pethoxamid metabolite (MET-100),EFSA,2017,2995,Ecotox (water compartment),acute toxicity,Pseudokirchneriella subcapitata,Not reported,,EC50,>,97.4,mg/L,growth,,97.4,=,,True

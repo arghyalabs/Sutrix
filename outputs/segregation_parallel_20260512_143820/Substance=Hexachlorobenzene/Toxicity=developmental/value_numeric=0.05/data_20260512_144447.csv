@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Hexachlorobenzene,EFSA CONTAM,2006,72,Animal (target species) health,reproduction toxicity,American mink,oral: feed,,LOAEL,=,0.05,mg/kg bw/day,mortality,developmental,0.05,=,,True

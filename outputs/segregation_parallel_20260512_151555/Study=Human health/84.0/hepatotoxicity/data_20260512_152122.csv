@@ -1,0 +1,12 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready,PubChem_CID,PubChem_MW,PubChem_CanonicalSMILES,PubChem_InChIKey,PubChem_Ambiguous,PubChem_Candidate_CIDs,PubChem_Error
+"Basic cupric carbonate, monohydrate",EFSA FEEDAP,2015,2631,Human health,study with volunteers,Human,oral: unspecified,84.0,NOAEL,=,10.0,mg/day,clinical chemistry,hepatotoxicity,10.0,=,,True,,,,,False,,Not Found
+Copper (total),EFSA FEEDAP,2012,2158,Human health,study with volunteers,Human,Not reported,84.0,NOAEL,=,10.0,mg/day,clinical chemistry,hepatotoxicity,10.0,=,,True,,,,,False,,Not Found
+Copper (total),EFSA FEEDAP,2013,2191,Human health,study with volunteers,Human,Not reported,84.0,NOAEL,=,10.0,mg/day,clinical chemistry,hepatotoxicity,10.0,=,,True,,,,,False,,Not Found
+Copper (total),EFSA FEEDAP,2014,2535,Human health,study with volunteers,Human,oral: unspecified,84.0,NOAEL,=,10.0,mg/day,clinical chemistry,hepatotoxicity,10.0,=,,True,,,,,False,,Not Found
+Copper chelate of L-lysinate-HCl,EFSA FEEDAP,2014,2535,Human health,study with volunteers,Human,oral: unspecified,84.0,NOAEL,=,10.0,mg/day,clinical chemistry,hepatotoxicity,10.0,=,,True,,,,,False,,Not Found
+CID_164827,EFSA FEEDAP,2015,2631,Human health,study with volunteers,Human,oral: unspecified,84.0,NOAEL,=,10.0,mg/day,clinical chemistry,hepatotoxicity,10.0,=,,True,164827,79.55,,KKCXRELNMOYFLS-UHFFFAOYSA-N,False,,
+"Cupric acetate, monohydrate",EFSA FEEDAP,2015,2631,Human health,study with volunteers,Human,oral: unspecified,84.0,NOAEL,=,10.0,mg/day,clinical chemistry,hepatotoxicity,10.0,=,,True,,,,,False,,Not Found
+"Cupric chelate of amino acids, hydrate",EFSA FEEDAP,2015,2631,Human health,study with volunteers,Human,oral: unspecified,84.0,NOAEL,=,10.0,mg/day,clinical chemistry,hepatotoxicity,10.0,=,,True,,,,,False,,Not Found
+"Cupric chelate of glycine, hydrate",EFSA FEEDAP,2015,2631,Human health,study with volunteers,Human,oral: unspecified,84.0,NOAEL,=,10.0,mg/day,clinical chemistry,hepatotoxicity,10.0,=,,True,,,,,False,,Not Found
+CID_26342,EFSA FEEDAP,2015,2631,Human health,study with volunteers,Human,oral: unspecified,84.0,NOAEL,=,10.0,mg/day,clinical chemistry,hepatotoxicity,10.0,=,,True,26342,170.48,,MPTQRFCYZCXJFQ-UHFFFAOYSA-L,False,,
+CID_24462,EFSA FEEDAP,2015,2631,Human health,study with volunteers,Human,oral: unspecified,84.0,NOAEL,=,10.0,mg/day,clinical chemistry,hepatotoxicity,10.0,=,,True,24462,159.61,,ARUVKPQLZAKDPS-UHFFFAOYSA-L,False,,

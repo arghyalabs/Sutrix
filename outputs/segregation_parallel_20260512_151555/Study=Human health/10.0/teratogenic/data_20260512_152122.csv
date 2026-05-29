@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready,PubChem_CID,PubChem_MW,PubChem_CanonicalSMILES,PubChem_InChIKey,PubChem_Ambiguous,PubChem_Candidate_CIDs,PubChem_Error
+CID_996,EFSA CEF,2013,2220,Human health,reproduction toxicity,Rat,oral: gavage,10.0,NOAEL,=,120.0,mg/kg bw,development,teratogenic,120.0,=,,True,996,94.11,,ISWSIDIOOBJBQZ-UHFFFAOYSA-N,False,,

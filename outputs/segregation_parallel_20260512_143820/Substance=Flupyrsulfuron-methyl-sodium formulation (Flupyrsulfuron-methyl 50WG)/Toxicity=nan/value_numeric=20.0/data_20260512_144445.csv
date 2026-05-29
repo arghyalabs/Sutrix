@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Flupyrsulfuron-methyl-sodium formulation (Flupyrsulfuron-methyl 50WG),EFSA,2014,2571,Ecotox (soil compartment),not reported,Typhlodromus pyri,Not reported,,LR50,>,20.0,g/ha,mortality,,20.0,=,,True

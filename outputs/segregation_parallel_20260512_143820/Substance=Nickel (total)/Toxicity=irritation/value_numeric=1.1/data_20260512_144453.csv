@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Nickel (total),EFSA CONTAM,2015,2612,Human health,acute toxicity,Human,oral: capsule,,BMDL10,=,1.1,µg/kg bw,clinical signs,irritation,1.1,=,,True

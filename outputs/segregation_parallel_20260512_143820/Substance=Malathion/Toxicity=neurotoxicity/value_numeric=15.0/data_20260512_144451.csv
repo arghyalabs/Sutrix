@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Malathion,EFSA,2009,1190,Human health,acute toxicity,Human,oral: unspecified,,NOAEL,>,15.0,mg/kg bw/day,clinical chemistry,neurotoxicity,15.0,=,,True

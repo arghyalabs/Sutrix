@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Salinomycin sodium,EFSA CONTAM,2008,89,Animal (non-target species) health,acute toxicity,Cat,oral: feed,,dose level,>=,16.0,mg/kg,neurology,neurotoxicity,16.0,=,,True

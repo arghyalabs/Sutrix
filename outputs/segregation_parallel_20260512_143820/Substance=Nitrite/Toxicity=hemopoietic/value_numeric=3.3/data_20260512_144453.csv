@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Nitrite,EFSA CONTAM,2009,108,Animal (target species) health,not reported,Pig,oral: feed,,NOAEL,=,3.3,mg/kg bw/day,haematology,hemopoietic,3.3,=,,True

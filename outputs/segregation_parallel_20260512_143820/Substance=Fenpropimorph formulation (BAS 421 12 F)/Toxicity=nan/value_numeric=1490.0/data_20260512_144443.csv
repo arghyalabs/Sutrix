@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Fenpropimorph formulation (BAS 421 12 F),EFSA,2008,1126,Ecotox (soil compartment),not reported,Pardosa sp.,Not reported,,dose level,=,1490.0,g/ha,food consumption,,1490.0,=,,True

@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+"Octane-1,8-dithiol",EFSA AFC,2009,2318,Human health,subchronic,Rat,oral: feed,90.0,NOAEL,=,0.705,mg/kg bw/day,no adverse effect observed at single/highest dose,,0.705,=,,True

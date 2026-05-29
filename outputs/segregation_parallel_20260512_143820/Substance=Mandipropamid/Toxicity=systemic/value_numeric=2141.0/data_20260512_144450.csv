@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Mandipropamid,EFSA,2012,1350,Animal (non-target species) health,short-term toxicity,Bobwhite quail,oral: feed,,LC50,>,2141.0,mg/kg bw/day,mortality,systemic,2141.0,=,,True

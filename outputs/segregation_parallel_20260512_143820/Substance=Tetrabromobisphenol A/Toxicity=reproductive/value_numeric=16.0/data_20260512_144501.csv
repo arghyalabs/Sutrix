@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Tetrabromobisphenol A,EFSA CONTAM,2011,584,Human health,reproduction toxicity,Rat,oral: feed,,BMDL10,=,16.0,mg/kg bw/day,clinical chemistry,reproductive,16.0,=,,True

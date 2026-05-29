@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Prohexadione-calcium formulation (REGALIS),EFSA,2010,1211,Ecotox (soil compartment),not reported,Typhlodromus pyri,Not reported,,LR50,>,7500.0,g/ha,mortality,,7500.0,=,,True

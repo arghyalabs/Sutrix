@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Camphechlor,EFSA CONTAM,2005,64,Animal (target species) health,reproduction toxicity,Chicken,oral: feed,210.0,LOEL,=,0.05,mg/kg bw/day,morphology,musclo-skeletal,0.05,=,,True

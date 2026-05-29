@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+bis-(2-Methyl-3-furyl) tetrasulfide,EFSA CEF,2010,2051,Human health,subchronic,Rat,oral: feed,90.0,NOAEL,=,0.56,mg/kg bw/day,no adverse effect observed at single/highest dose,,0.56,=,,True

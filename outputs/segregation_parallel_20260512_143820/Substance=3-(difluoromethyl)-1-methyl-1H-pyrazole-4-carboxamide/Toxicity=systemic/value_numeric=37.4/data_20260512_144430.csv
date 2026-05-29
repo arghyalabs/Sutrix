@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+3-(difluoromethyl)-1-methyl-1H-pyrazole-4-carboxamide,EFSA,2019,3299,Human health,subchronic,Rat,Not reported,28.0,NOAEL,=,37.4,mg/kg bw/day,body weight,systemic,37.4,=,,True

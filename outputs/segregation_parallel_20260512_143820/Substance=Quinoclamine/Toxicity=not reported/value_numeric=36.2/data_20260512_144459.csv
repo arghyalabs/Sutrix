@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Quinoclamine,EFSA,2007,1110,Animal (non-target species) health,chronic/long term toxicity,Bird,Not reported,,NOAEL,=,36.2,mg/kg bw/day,not reported,not reported,36.2,=,,True

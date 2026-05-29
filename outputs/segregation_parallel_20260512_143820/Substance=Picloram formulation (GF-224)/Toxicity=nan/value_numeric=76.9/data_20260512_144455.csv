@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Picloram formulation (GF-224),EFSA,2009,1201,Ecotox (soil compartment),not reported,Soybean,Not reported,,ER50,=,76.9,ml/ha,other,,76.9,=,,True

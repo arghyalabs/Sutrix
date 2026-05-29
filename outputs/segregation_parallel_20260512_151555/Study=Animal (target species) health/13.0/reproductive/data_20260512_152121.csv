@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready,PubChem_CID,PubChem_MW,PubChem_CanonicalSMILES,PubChem_InChIKey,PubChem_Ambiguous,PubChem_Candidate_CIDs,PubChem_Error
+CID_713,EFSA FEEDAP,2020,3571,Animal (target species) health,reproduction toxicity,Rabbit,oral: gavage,13.0,NOAEL,=,34.0,mg/kg bw/day,reproduction,reproductive,34.0,=,,True,713,45.041,,ZHNUHDYFZUAESO-UHFFFAOYSA-N,False,,

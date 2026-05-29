@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Acrinathrin,EFSA,2013,2434,Ecotox (soil compartment),not reported,Typhlodromus pyri,Not reported,,LR50,=,0.006,g/ha,mortality,,0.006,=,,True

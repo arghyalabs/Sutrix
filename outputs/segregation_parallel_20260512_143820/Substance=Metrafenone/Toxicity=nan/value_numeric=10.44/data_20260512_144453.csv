@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Metrafenone,EFSA,2006,1069,Ecotox (soil compartment),chronic/long term toxicity,Earthworm,Not reported,,NOEC,=,10.44,mg/kg,not reported,,10.44,=,,True

@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Bromoxynil octanoate,EFSA,2017,2962,Ecotox (soil compartment),not reported,Monocots,Not reported,,ER50,=,11.1,g/ha,other,,11.1,=,,True

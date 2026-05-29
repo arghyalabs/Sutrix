@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Nitrate,EFSA CONTAM,2010,112,Human health,chronic/long term toxicity,Rat,Not reported,730.0,NOEL,=,370.0,mg/kg bw/day,growth,developmental,370.0,=,,True

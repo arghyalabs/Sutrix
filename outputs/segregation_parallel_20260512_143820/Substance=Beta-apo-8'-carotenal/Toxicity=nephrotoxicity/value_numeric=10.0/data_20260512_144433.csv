@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Beta-apo-8'-carotenal,EFSA ANS,2012,489,Human health,subchronic,Rat,oral: unspecified,91.0,LOAEL,=,10.0,mg/kg bw/day,histopathology non neoplastic,nephrotoxicity,10.0,=,,True

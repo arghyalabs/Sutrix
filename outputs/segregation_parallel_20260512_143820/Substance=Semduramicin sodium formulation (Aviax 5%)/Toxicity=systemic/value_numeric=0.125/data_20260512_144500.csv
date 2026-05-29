@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Semduramicin sodium formulation (Aviax 5%),EFSA FEEDAP,2018,3088,Human health,chronic/long term toxicity,Rat,oral: feed,730.0,NOAEL,=,0.125,mg/kg bw/day,clinical chemistry,systemic,0.125,=,,True

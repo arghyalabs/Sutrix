@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Desethyl-hydroxy-terbuthylazine,EFSA,2011,1279,Human health,reproduction toxicity,Rabbit,Not reported,,NOAEL,=,0.8,mg/kg bw/day,clinical signs,systemic,0.8,=,,True

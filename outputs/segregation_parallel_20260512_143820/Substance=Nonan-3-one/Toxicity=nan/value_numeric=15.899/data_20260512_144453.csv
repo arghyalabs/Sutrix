@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Nonan-3-one,EFSA FEEDAP,2015,2700,Ecotox (water compartment),acute toxicity,Green alga,Not reported,,EC50,=,15.899,mg/L,mortality,,15.899,=,,True

@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Methyl isothiocyanate,EFSA,2011,2741,Animal (non-target species) health,chronic/long term toxicity,Rat,oral: drinking water,730.0,NOAEL,=,0.44,mg/kg bw/day,haematology,hemopoietic,0.44,=,,True

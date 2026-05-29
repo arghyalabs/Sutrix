@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+2-Propionylpyrrole,EFSA CEF,2015,2600,Human health,subchronic,Rat,oral: gavage,90.0,NOAEL,=,48.0,mg/kg bw/day,haematology,hemopoietic,48.0,=,,True

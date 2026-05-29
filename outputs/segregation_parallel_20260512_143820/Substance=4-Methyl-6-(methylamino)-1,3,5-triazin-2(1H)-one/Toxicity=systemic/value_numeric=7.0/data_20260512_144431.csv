@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+"4-Methyl-6-(methylamino)-1,3,5-triazin-2(1H)-one",EFSA,2017,2981,Human health,subchronic,Rat,oral: unspecified,90.0,NOAEL,=,7.0,mg/kg bw/day,body weight,systemic,7.0,=,,True

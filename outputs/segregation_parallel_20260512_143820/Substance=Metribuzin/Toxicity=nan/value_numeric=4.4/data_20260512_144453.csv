@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Metribuzin,EFSA,2006,1096,Ecotox (water compartment),chronic/long term toxicity,Rainbow trout,Not reported,95.0,NOEC,=,4.4,mg/L,growth,,4.4,=,,True

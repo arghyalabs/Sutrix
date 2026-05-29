@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Epoxidised soybean oil,EFSA AFC,2004,357,Human health,chronic/long term toxicity,Rat,oral: feed,730.0,NOAEL,=,140.0,mg/kg bw/day,organ weights,systemic,140.0,=,,True

@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Pirimicarb,EFSA,2005,1057,Animal (non-target species) health,reproduction toxicity,Rat,Not reported,,NOEC,=,81.8,mg/kg bw/day,not reported,not reported,81.8,=,,True

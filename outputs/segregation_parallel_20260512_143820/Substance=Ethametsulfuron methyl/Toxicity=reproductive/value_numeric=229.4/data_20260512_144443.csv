@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Ethametsulfuron methyl,EFSA,2014,2437,Animal (non-target species) health,reproduction toxicity,Japanese quail,Not reported,42.0,NOAEL,=,229.4,mg/kg bw/day,reproduction,reproductive,229.4,=,,True

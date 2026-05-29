@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Cobalt sulphate heptahydrate,EFSA FEEDAP,2012,612,Human health,study with volunteers,Human,oral: unspecified,22.0,LOAEL,ca.,1.0,mg/kg bw/day,haematology,hemopoietic,1.0,=,,True

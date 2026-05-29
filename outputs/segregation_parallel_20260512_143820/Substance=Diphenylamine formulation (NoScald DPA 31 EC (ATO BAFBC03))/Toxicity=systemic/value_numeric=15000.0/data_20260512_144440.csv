@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Diphenylamine formulation (NoScald DPA 31 EC (ATO BAFBC03)),EFSA,2012,1302,Animal (non-target species) health,acute toxicity,Rabbit,oral: unspecified,,LD50,>,15000.0,mg/kg bw/day,mortality,systemic,15000.0,=,,True

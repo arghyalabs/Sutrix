@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Mesotrione,EFSA,2016,2787,Ecotox (soil compartment),not reported,Typhlodromus pyri,Not reported,,ER50,>,150.0,g/ha,mortality,,150.0,=,,True

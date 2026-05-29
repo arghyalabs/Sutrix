@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Azaspiracids,EFSA CONTAM,2008,125,Human health,study with volunteers,Human,Not reported,,LOAEL,=,1.9,mg/kg bw/day,clinical signs,systemic,1.9,=,,True

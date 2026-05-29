@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Menthol,EFSA FEEDAP,2016,2822,Animal (target species) health,chronic/long term toxicity,Rat,oral: feed,721.0,NOAEL,=,375.0,mg/kg bw/day,histopathology neoplastic,systemic,375.0,=,,True

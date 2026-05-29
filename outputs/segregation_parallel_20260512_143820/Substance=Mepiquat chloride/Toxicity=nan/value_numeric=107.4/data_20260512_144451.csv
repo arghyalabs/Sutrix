@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Mepiquat chloride,EFSA,2008,1128,Ecotox (soil compartment),acute toxicity,Honey bee,oral: unspecified,,LD50,>,107.4,µg/piece,mortality,,107.4,=,,True

@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Bentonite,EFSA FEEDAP,2012,609,Animal (target species) health,chronic/long term toxicity,Rainbow trout,Not reported,90.0,dose level,=,25000.0,mg/kg,body weight,,25000.0,=,,True

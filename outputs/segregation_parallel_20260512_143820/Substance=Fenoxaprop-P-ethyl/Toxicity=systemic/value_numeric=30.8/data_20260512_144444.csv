@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Fenoxaprop-P-ethyl,EFSA,2007,1114,Animal (non-target species) health,reproduction toxicity,Bobwhite quail,Not reported,,NOEC,=,30.8,mg/kg bw/day,mortality,systemic,30.8,=,,True

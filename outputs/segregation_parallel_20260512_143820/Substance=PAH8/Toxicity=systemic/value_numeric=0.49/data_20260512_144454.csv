@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+PAH8,EFSA CONTAM,2008,77,Human health,chronic/long term toxicity,Mouse,oral: feed,730.0,BMDL10,=,0.49,mg/kg bw/day,histopathology neoplastic,systemic,0.49,=,,True

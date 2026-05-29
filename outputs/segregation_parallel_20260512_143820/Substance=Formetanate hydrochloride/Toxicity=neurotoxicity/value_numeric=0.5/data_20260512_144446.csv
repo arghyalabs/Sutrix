@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Formetanate hydrochloride,EFSA,2006,1080,Human health,other,Rat,oral: gavage,28.0,NOAEL,=,0.5,mg/kg bw/day,clinical chemistry,neurotoxicity,0.5,=,,True

@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Silthiofam amide acid,EFSA,2016,2867,Ecotox (soil compartment),acute toxicity,Tiger worm,Not reported,14.0,LC50,>,460.5,mg/kg,mortality,,460.5,=,,True

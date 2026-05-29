@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Aflatoxin M1,EFSA CONTAM,2020,3497,Human health,chronic/long term toxicity,Rat,oral: feed,735.0,BMDL10,=,0.4,µg/kg bw/day,histopathology neoplastic,hepatotoxicity,0.4,=,,True

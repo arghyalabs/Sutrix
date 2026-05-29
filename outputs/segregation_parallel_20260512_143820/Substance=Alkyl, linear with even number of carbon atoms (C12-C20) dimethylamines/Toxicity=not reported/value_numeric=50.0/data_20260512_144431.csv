@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+"Alkyl, linear with even number of carbon atoms (C12-C20) dimethylamines",EFSA AFC,2007,325,Human health,reproduction toxicity,Unspecified,Not reported,,NOAEL,=,50.0,mg/kg bw/day,not reported,not reported,50.0,=,,True

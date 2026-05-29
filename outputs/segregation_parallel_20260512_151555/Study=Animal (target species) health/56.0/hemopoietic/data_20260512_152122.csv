@@ -1,0 +1,3 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready,PubChem_CID,PubChem_MW,PubChem_CanonicalSMILES,PubChem_InChIKey,PubChem_Ambiguous,PubChem_Candidate_CIDs,PubChem_Error
+Copper chelate of hydroxy analogue of methionine,EFSA FEEDAP,2009,174,Animal (target species) health,subchronic,Chicken,oral: feed,56.0,dose level,=,75.0,mg/kg,clinical chemistry,hemopoietic,75.0,=,,True,,,,,False,,Not Found
+CID_11591339,EFSA FEEDAP,2004,266,Animal (target species) health,subchronic,Chicken,oral: feed,56.0,dose level,=,6.0,mg/kg,haematology,hemopoietic,6.0,=,,True,11591339,495.6,,SJUWEPZBTXEUMU-LIOBNPLQSA-N,False,,

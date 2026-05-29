@@ -1,0 +1,5 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready,PubChem_CID,PubChem_MW,PubChem_CanonicalSMILES,PubChem_InChIKey,PubChem_Ambiguous,PubChem_Candidate_CIDs,PubChem_Error
+Basic cobaltous carbonate monohydrate,EFSA FEEDAP,2012,612,Human health,study with volunteers,Human,oral: unspecified,22.0,LOAEL,ca.,1.0,mg/kg bw/day,haematology,hemopoietic,1.0,=,,True,,,,,False,,Not Found
+Cobalt (total),EFSA FEEDAP,2012,612,Human health,study with volunteers,Human,oral: unspecified,22.0,LOAEL,ca.,1.0,mg/kg bw/day,haematology,hemopoietic,1.0,=,,True,,,,,False,,Not Found
+CID_61372,EFSA FEEDAP,2012,612,Human health,study with volunteers,Human,oral: unspecified,22.0,LOAEL,ca.,1.0,mg/kg bw/day,haematology,hemopoietic,1.0,=,,True,61372,249.08,,ZBYYWKJVSFHYJL-UHFFFAOYSA-L,False,,
+CID_61444,EFSA FEEDAP,2012,612,Human health,study with volunteers,Human,oral: unspecified,22.0,LOAEL,ca.,1.0,mg/kg bw/day,haematology,hemopoietic,1.0,=,,True,61444,281.11,,MEYVLGVRTYSQHI-UHFFFAOYSA-L,False,,

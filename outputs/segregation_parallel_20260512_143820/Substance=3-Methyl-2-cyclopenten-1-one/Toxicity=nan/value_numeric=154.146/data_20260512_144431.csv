@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+3-Methyl-2-cyclopenten-1-one,EFSA FEEDAP,2016,2822,Ecotox (water compartment),acute toxicity,Green alga,Not reported,,EC50,=,154.146,mg/L,mortality,,154.146,=,,True

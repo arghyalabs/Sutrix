@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Indoxacarb metabolite (IN-JT333),EFSA,2018,3026,Animal (non-target species) health,acute toxicity,Rat,Not reported,,LC50,=,52.0,mg/kg bw,mortality,systemic,52.0,=,,True

@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Methylmercury,EFSA CONTAM,2008,44,Animal (target species) health,subchronic,Sheep,oral: feed,59.0,LOAEL,=,0.225,mg/kg bw/day,neurology,neurotoxicity,0.225,=,,True

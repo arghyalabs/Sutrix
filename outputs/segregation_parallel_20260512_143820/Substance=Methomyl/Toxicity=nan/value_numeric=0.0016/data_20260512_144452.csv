@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Methomyl,EFSA,2009,1178,Ecotox (water compartment),chronic/long term toxicity,Daphnia magna,Not reported,21.0,NOEC,=,0.0016,mg/L,not reported,,0.0016,=,,True

@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Dichlorprop-P-2-ethylhexyl,EFSA,2018,3110,Human health,chronic/long term toxicity,Mouse,oral: feed,540.0,NOAEL,=,6.0,mg/kg bw/day,neurology,nephrotoxicity,6.0,=,,True

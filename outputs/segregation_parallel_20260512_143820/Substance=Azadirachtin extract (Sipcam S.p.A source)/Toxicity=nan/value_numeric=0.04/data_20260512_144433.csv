@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Azadirachtin extract (Sipcam S.p.A source),EFSA,2018,3120,Ecotox (water compartment),chronic/long term toxicity,Brown trout,Not reported,28.0,NOEC,=,0.04,mg/L,growth,,0.04,=,,True

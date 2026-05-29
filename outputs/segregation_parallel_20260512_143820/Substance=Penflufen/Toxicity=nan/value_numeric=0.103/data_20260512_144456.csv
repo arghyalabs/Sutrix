@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Penflufen,EFSA,2016,2880,Ecotox (water compartment),acute toxicity,Common carp,Not reported,4.0,LC50,=,0.103,mg/L,mortality,,0.103,=,,True

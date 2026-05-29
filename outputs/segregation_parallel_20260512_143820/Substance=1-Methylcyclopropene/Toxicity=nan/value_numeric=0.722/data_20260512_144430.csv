@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+1-Methylcyclopropene,EFSA,2018,3112,Ecotox (water compartment),acute toxicity,Daphnia magna,Not reported,2.0,EC50,>,0.722,mg/L,mobility,,0.722,=,,True

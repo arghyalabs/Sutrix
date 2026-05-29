@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Chromafenozide,EFSA,2013,2433,Ecotox (soil compartment),chronic/long term toxicity,Tiger worm,Not reported,56.0,NOEC,=,49.0,mg/kg,reproduction,,49.0,=,,True

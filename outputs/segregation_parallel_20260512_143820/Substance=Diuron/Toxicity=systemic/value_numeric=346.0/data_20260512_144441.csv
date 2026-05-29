@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Diuron,EFSA,2005,2763,Animal (non-target species) health,short-term toxicity,Bobwhite quail,oral: feed,5.0,LC50,=,346.0,mg/kg bw/day,mortality,systemic,346.0,=,,True

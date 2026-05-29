@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+"4,15-Diacetoxyscirpenol",EFSA CONTAM,2018,3154,Human health,study with volunteers,Human,intraveneous,,NOAEL,=,32.0,µg/kg bw,other,systemic,32.0,=,,True

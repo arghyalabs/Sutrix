@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Ametoctradin formulation (BAS 651 00 F),EFSA,2012,1349,Animal (non-target species) health,acute toxicity,Mallard duck,oral: unspecified,,LD50,>,545.0,mg/kg bw,mortality,systemic,545.0,=,,True

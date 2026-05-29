@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Fluazifop-P-butyl,EFSA,2012,1352,Ecotox (water compartment),chronic/long term toxicity,Mysid shrimp,Not reported,28.0,NOEC,=,0.0477,mg/L,reproduction,,0.0477,=,,True

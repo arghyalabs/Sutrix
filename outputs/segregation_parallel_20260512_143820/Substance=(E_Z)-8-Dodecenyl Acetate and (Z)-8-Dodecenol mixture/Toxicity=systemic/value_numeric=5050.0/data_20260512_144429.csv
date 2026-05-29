@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+(E/Z)-8-Dodecenyl Acetate and (Z)-8-Dodecenol mixture,EFSA,2014,2438,Animal (non-target species) health,acute toxicity,Rat,oral: unspecified,,LD50,>,5050.0,mg/kg bw,mortality,systemic,5050.0,=,,True

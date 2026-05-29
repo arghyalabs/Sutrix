@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Trichlorfon,EFSA,2006,1085,Ecotox (soil compartment),not reported,Aphidius rhopalosiphi,Not reported,,LR50,=,0.519,g/ha,mortality,,0.519,=,,True

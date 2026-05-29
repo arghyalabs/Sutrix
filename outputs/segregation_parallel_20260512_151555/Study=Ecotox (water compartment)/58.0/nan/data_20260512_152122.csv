@@ -1,0 +1,3 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready,PubChem_CID,PubChem_MW,PubChem_CanonicalSMILES,PubChem_InChIKey,PubChem_Ambiguous,PubChem_Candidate_CIDs,PubChem_Error
+CID_56608859,EFSA,2018,3131,Ecotox (water compartment),chronic/long term toxicity,Rainbow trout,Not reported,58.0,NOEC,=,0.0042,µg/L,growth,,0.0042,=,,True,56608859,434.3,,QQODLKZGRKWIFG-RUTXASTPSA-N,False,,
+CID_56608859,EFSA PPR,2020,3532,Ecotox (water compartment),chronic/long term toxicity,Rainbow trout,Not reported,58.0,NOEC,=,0.0042,µg/L,growth,,0.0042,=,,True,56608859,434.3,,QQODLKZGRKWIFG-RUTXASTPSA-N,False,,

@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Salinomycin sodium,EFSA FEEDAP,2017,2902,Human health,chronic/long term toxicity,Dog,oral: feed,365.0,NOAEL,=,0.5,mg/kg bw/day,neurology,neurotoxicity,0.5,=,,True

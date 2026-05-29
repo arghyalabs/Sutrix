@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Acrinathrin,EFSA,2010,1257,Animal (non-target species) health,reproduction toxicity,Rat,Not reported,,NOAEL,=,9.4,mg/kg bw/day,reproduction,reproductive,9.4,=,,True

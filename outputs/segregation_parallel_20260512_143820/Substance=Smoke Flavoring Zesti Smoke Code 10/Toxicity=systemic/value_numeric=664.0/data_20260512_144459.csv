@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Smoke Flavoring Zesti Smoke Code 10,EFSA CEF,2011,2107,Human health,subchronic,Rat,oral: feed,90.0,NOAEL,=,664.0,mg/kg bw/day,body weight,systemic,664.0,=,,True

@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready,PubChem_CID,PubChem_MW,PubChem_CanonicalSMILES,PubChem_InChIKey,PubChem_Ambiguous,PubChem_Candidate_CIDs,PubChem_Error
+Brominated phenols and their derivatives,EFSA CONTAM,2012,601,Human health,reproduction toxicity,Rat,oral: gavage,48.0,NOAEL,=,100.0,mg/kg bw/day,body weight,systemic,100.0,=,,True,,,,,False,,Not Found

@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+2-Acetylpyrrole,EFSA CEF,2018,3044,Human health,subchronic,Rat,oral: unspecified,90.0,NOAEL,=,48.0,µg/kg bw/day,histopathology neoplastic,endocrine,48.0,=,,True

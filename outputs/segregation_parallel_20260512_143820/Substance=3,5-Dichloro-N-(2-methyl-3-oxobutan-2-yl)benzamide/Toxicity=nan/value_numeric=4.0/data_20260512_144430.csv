@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+"3,5-Dichloro-N-(2-methyl-3-oxobutan-2-yl)benzamide",EFSA,2016,2844,Ecotox (water compartment),acute toxicity,Daphnia magna,Not reported,,EC50,>,4.0,mg/L,not reported,,4.0,=,,True

@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Betaine,EFSA NDA,2017,3007,Human health,chronic/long term toxicity,Rat,oral: feed,364.0,BMDL05,=,131.0,mg/kg bw,haematology,hemopoietic,131.0,=,,True

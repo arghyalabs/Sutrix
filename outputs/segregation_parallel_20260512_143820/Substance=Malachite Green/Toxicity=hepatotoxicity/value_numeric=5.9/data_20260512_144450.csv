@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Malachite Green,EFSA CONTAM,2016,2860,Human health,short-term toxicity,Rat,oral: feed,28.0,BMDL05,=,5.9,mg/kg bw/day,organ weights,hepatotoxicity,5.9,=,,True

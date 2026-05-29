@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Zeta-cypermethrin,EFSA,2009,1162,Human health,chronic/long term toxicity,Dog,oral: unspecified,730.0,NOAEL,=,7.5,mg/kg bw/day,neurology,neurotoxicity,7.5,=,,True

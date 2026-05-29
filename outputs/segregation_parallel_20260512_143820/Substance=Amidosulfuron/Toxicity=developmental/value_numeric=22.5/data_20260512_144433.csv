@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Amidosulfuron,EFSA,2008,1109,Animal (non-target species) health,reproduction toxicity,Rat,Not reported,,NOEC,=,22.5,mg/kg bw/day,organ weights,developmental,22.5,=,,True

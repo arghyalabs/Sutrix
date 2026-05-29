@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Aluminium chloride,EFSA,2010,1260,Ecotox (water compartment),acute toxicity,Ctenodrilus serratus,Not reported,4.0,EC50,=,0.48,mg/L,mortality,,0.48,=,,True

@@ -1,0 +1,3 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready,PubChem_CID,PubChem_MW,PubChem_CanonicalSMILES,PubChem_InChIKey,PubChem_Ambiguous,PubChem_Candidate_CIDs,PubChem_Error
+CID_16212175,EFSA FEEDAP,2011,211,Human health,subchronic,Rabbit,oral: feed,84.0,NOAEL,=,11.0,mg/kg bw/day,reproduction,reproductive,11.0,=,,True,16212175,370.7,,LTWIBTYLSRDGHP-HCURTGQUSA-N,False,,
+CID_16212175,EFSA FEEDAP,2019,3175,Human health,subchronic,Rabbit,oral: feed,84.0,NOAEL,=,11.0,mg/kg bw/day,reproduction,reproductive,11.0,=,,True,16212175,370.7,,LTWIBTYLSRDGHP-HCURTGQUSA-N,False,,

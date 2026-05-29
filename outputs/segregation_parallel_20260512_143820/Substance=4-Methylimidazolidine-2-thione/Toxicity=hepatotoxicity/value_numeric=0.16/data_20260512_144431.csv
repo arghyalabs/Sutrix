@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+4-Methylimidazolidine-2-thione,EFSA,2016,2881,Human health,chronic/long term toxicity,Mouse,Not reported,,NOAEL,=,0.16,mg/kg bw/day,histopathology neoplastic,hepatotoxicity,0.16,=,,True

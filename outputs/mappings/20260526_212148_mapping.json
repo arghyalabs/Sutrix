@@ -1,0 +1,292 @@
+{
+  "dataset_id": "20260526_212148",
+  "mappings": [
+    {
+      "user_column": "CAS Number",
+      "scientific_variable": "cas_number",
+      "method": "auto"
+    },
+    {
+      "user_column": "Chemical Name",
+      "scientific_variable": "chemical_id",
+      "method": "auto"
+    },
+    {
+      "user_column": "Chemical Grade",
+      "scientific_variable": "chemical_id",
+      "method": "auto"
+    },
+    {
+      "user_column": "Chemical Analysis",
+      "scientific_variable": "chemical_id",
+      "method": "auto"
+    },
+    {
+      "user_column": "Chemical Purity Mean Op",
+      "scientific_variable": "chemical_id",
+      "method": "auto"
+    },
+    {
+      "user_column": "Chemical Purity Mean(%)",
+      "scientific_variable": "chemical_id",
+      "method": "auto"
+    },
+    {
+      "user_column": "Chemical Purity Min Op",
+      "scientific_variable": "chemical_id",
+      "method": "auto"
+    },
+    {
+      "user_column": "Chemical Purity Min(%)",
+      "scientific_variable": "chemical_id",
+      "method": "auto"
+    },
+    {
+      "user_column": "Chemical Purity Max Op",
+      "scientific_variable": "chemical_id",
+      "method": "auto"
+    },
+    {
+      "user_column": "Chemical Purity Max(%)",
+      "scientific_variable": "chemical_id",
+      "method": "auto"
+    },
+    {
+      "user_column": "Species Scientific Name",
+      "scientific_variable": "species",
+      "method": "auto"
+    },
+    {
+      "user_column": "Species Common Name",
+      "scientific_variable": "species",
+      "method": "auto"
+    },
+    {
+      "user_column": "Species Group",
+      "scientific_variable": "species",
+      "method": "auto"
+    },
+    {
+      "user_column": "Organism Lifestage",
+      "scientific_variable": "species",
+      "method": "auto"
+    },
+    {
+      "user_column": "Organism Age Mean Op",
+      "scientific_variable": "species",
+      "method": "auto"
+    },
+    {
+      "user_column": "Organism Age Mean",
+      "scientific_variable": "species",
+      "method": "auto"
+    },
+    {
+      "user_column": "Organism Age Min Op",
+      "scientific_variable": "species",
+      "method": "auto"
+    },
+    {
+      "user_column": "Organism Age Min",
+      "scientific_variable": "species",
+      "method": "auto"
+    },
+    {
+      "user_column": "Organism Age Max Op",
+      "scientific_variable": "species",
+      "method": "auto"
+    },
+    {
+      "user_column": "Organism Age Max",
+      "scientific_variable": "species",
+      "method": "auto"
+    },
+    {
+      "user_column": "Age Units",
+      "scientific_variable": "unit",
+      "method": "auto"
+    },
+    {
+      "user_column": "Number of Doses",
+      "scientific_variable": "value",
+      "method": "auto"
+    },
+    {
+      "user_column": "Conc 1 Units (Standardized)",
+      "scientific_variable": "unit",
+      "method": "auto"
+    },
+    {
+      "user_column": "Conc 2 Units (Standardized)",
+      "scientific_variable": "unit",
+      "method": "auto"
+    },
+    {
+      "user_column": "Conc 3 Units (Standardized)",
+      "scientific_variable": "unit",
+      "method": "auto"
+    },
+    {
+      "user_column": "Effect",
+      "scientific_variable": "endpoint",
+      "method": "auto"
+    },
+    {
+      "user_column": "Effect Measurement",
+      "scientific_variable": "endpoint",
+      "method": "auto"
+    },
+    {
+      "user_column": "Endpoint",
+      "scientific_variable": "endpoint",
+      "method": "auto"
+    },
+    {
+      "user_column": "Response Site",
+      "scientific_variable": "species",
+      "method": "auto"
+    },
+    {
+      "user_column": "Observed Duration Mean Op (Days)",
+      "scientific_variable": "rat",
+      "method": "auto"
+    },
+    {
+      "user_column": "Observed Duration Mean (Days)",
+      "scientific_variable": "rat",
+      "method": "auto"
+    },
+    {
+      "user_column": "Observed Duration Min Op (Days)",
+      "scientific_variable": "rat",
+      "method": "auto"
+    },
+    {
+      "user_column": "Observed Duration Min (Days)",
+      "scientific_variable": "rat",
+      "method": "auto"
+    },
+    {
+      "user_column": "Observed Duration Max Op (Days)",
+      "scientific_variable": "rat",
+      "method": "auto"
+    },
+    {
+      "user_column": "Observed Duration Max (Days)",
+      "scientific_variable": "rat",
+      "method": "auto"
+    },
+    {
+      "user_column": "Observed Duration Units (Days)",
+      "scientific_variable": "rat",
+      "method": "auto"
+    },
+    {
+      "user_column": "BCF 1 Value Op",
+      "scientific_variable": "bcf",
+      "method": "auto"
+    },
+    {
+      "user_column": "BCF 1 Value",
+      "scientific_variable": "bcf",
+      "method": "auto"
+    },
+    {
+      "user_column": "BCF 1 Min Op",
+      "scientific_variable": "bcf",
+      "method": "auto"
+    },
+    {
+      "user_column": "BCF 1 Min",
+      "scientific_variable": "bcf",
+      "method": "auto"
+    },
+    {
+      "user_column": "BCF 1 Max Op",
+      "scientific_variable": "bcf",
+      "method": "auto"
+    },
+    {
+      "user_column": "BCF 1 Max",
+      "scientific_variable": "bcf",
+      "method": "auto"
+    },
+    {
+      "user_column": "BCF 1 Unit",
+      "scientific_variable": "bcf",
+      "method": "auto"
+    },
+    {
+      "user_column": "BCF 2 Value Op",
+      "scientific_variable": "bcf",
+      "method": "auto"
+    },
+    {
+      "user_column": "BCF 2 Value",
+      "scientific_variable": "bcf",
+      "method": "auto"
+    },
+    {
+      "user_column": "BCF 2 Min Op",
+      "scientific_variable": "bcf",
+      "method": "auto"
+    },
+    {
+      "user_column": "BCF 2 Min",
+      "scientific_variable": "bcf",
+      "method": "auto"
+    },
+    {
+      "user_column": "BCF 2 Max Op",
+      "scientific_variable": "bcf",
+      "method": "auto"
+    },
+    {
+      "user_column": "BCF 2 Max",
+      "scientific_variable": "bcf",
+      "method": "auto"
+    },
+    {
+      "user_column": "BCF 2 Unit",
+      "scientific_variable": "bcf",
+      "method": "auto"
+    },
+    {
+      "user_column": "BCF 3 Value Op",
+      "scientific_variable": "bcf",
+      "method": "auto"
+    },
+    {
+      "user_column": "BCF 3 Value",
+      "scientific_variable": "bcf",
+      "method": "auto"
+    },
+    {
+      "user_column": "BCF 3 Min Op",
+      "scientific_variable": "bcf",
+      "method": "auto"
+    },
+    {
+      "user_column": "BCF 3 Min",
+      "scientific_variable": "bcf",
+      "method": "auto"
+    },
+    {
+      "user_column": "BCF 3 Max Op",
+      "scientific_variable": "bcf",
+      "method": "auto"
+    },
+    {
+      "user_column": "BCF 3 Max",
+      "scientific_variable": "bcf",
+      "method": "auto"
+    },
+    {
+      "user_column": "BCF 3 Unit",
+      "scientific_variable": "bcf",
+      "method": "auto"
+    }
+  ],
+  "created_at": "2026-05-26T21:22:13.717351",
+  "version": "1.0"
+}

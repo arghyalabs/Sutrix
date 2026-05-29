@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+BAS 610 06 F,EFSA,2016,2894,Ecotox (soil compartment),not reported,Typhlodromus pyri,Not reported,,LR50,>,6750.0,g/ha,mortality,,6750.0,=,,True

@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Phosmet,EFSA,2021,3934,Ecotox (water compartment),chronic/long term toxicity,Pseudokirchneriella subcapitata,Not reported,3.0,EC50,=,73.9,µg/L,growth,,73.9,=,,True

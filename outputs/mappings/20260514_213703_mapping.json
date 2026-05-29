@@ -1,0 +1,72 @@
+{
+  "dataset_id": "20260514_213703",
+  "mappings": [
+    {
+      "user_column": "Substance",
+      "scientific_variable": "chemical_id",
+      "method": "auto"
+    },
+    {
+      "user_column": "Study",
+      "scientific_variable": "duration",
+      "method": "auto"
+    },
+    {
+      "user_column": "TestType",
+      "scientific_variable": "=",
+      "method": "auto"
+    },
+    {
+      "user_column": "Species",
+      "scientific_variable": "species",
+      "method": "auto"
+    },
+    {
+      "user_column": "DurationDays",
+      "scientific_variable": "rat",
+      "method": "auto"
+    },
+    {
+      "user_column": "Endpoint",
+      "scientific_variable": "endpoint",
+      "method": "auto"
+    },
+    {
+      "user_column": "qualifier",
+      "scientific_variable": "qualifier",
+      "method": "auto"
+    },
+    {
+      "user_column": "value",
+      "scientific_variable": "value",
+      "method": "auto"
+    },
+    {
+      "user_column": "unit",
+      "scientific_variable": "unit",
+      "method": "auto"
+    },
+    {
+      "user_column": "Toxicity",
+      "scientific_variable": "endpoint",
+      "method": "auto"
+    },
+    {
+      "user_column": "value_qualifier",
+      "scientific_variable": "value",
+      "method": "manual"
+    },
+    {
+      "user_column": "value_unit",
+      "scientific_variable": "unit",
+      "method": "manual"
+    },
+    {
+      "user_column": "value_qsar_ready",
+      "scientific_variable": "=",
+      "method": "manual"
+    }
+  ],
+  "created_at": "2026-05-14T22:26:21.247119",
+  "version": "1.0"
+}

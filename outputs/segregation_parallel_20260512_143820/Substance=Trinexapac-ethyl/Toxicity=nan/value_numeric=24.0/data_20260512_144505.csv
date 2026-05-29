@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Trinexapac-ethyl,EFSA,2006,1068,Ecotox (soil compartment),not reported,Cucumber,Not reported,,NOEC,>,24.0,g/ha,other,,24.0,=,,True

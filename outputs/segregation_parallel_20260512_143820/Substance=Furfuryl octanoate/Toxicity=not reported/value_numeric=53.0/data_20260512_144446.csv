@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Furfuryl octanoate,EFSA AFC,2009,2265,Human health,subchronic,Rat,oral: feed,91.0,NOEL,=,53.0,mg/kg bw/day,not reported,not reported,53.0,=,,True

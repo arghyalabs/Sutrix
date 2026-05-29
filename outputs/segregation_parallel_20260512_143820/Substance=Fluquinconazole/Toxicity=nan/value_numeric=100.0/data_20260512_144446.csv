@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Fluquinconazole,EFSA,2011,1288,Ecotox (soil compartment),acute toxicity,Honey bee,oral: unspecified,2.0,LD50,>,100.0,µg/piece,mortality,,100.0,=,,True

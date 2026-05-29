@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Dicopper chloride trihydroxide,EFSA,2018,3032,Ecotox (soil compartment),not reported,Typhlodromus pyri,Not reported,,LR50,>,14890.0,g/ha,mortality,,14890.0,=,,True

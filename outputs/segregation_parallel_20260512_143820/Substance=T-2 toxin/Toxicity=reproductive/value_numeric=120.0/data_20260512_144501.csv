@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+T-2 toxin,EFSA CONTAM,2011,585,Animal (target species) health,short-term toxicity,Chicken,oral: feed,24.0,LOAEL,=,120.0,µg/kg bw/day,reproduction,reproductive,120.0,=,,True

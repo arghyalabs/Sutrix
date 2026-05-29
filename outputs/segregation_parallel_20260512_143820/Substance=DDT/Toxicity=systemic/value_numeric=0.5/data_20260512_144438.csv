@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+DDT,EFSA CONTAM,2006,73,Animal (target species) health,subchronic,Chicken,oral: feed,57.0,LOAEL,=,0.5,mg/kg bw/day,clinical chemistry,systemic,0.5,=,,True

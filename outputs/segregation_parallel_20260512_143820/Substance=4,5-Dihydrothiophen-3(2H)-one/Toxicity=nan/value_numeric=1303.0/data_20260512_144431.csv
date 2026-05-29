@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+"4,5-Dihydrothiophen-3(2H)-one",EFSA FEEDAP,2016,2819,Ecotox (water compartment),acute toxicity,Green alga,Not reported,,EC50,=,1303.0,mg/L,mortality,,1303.0,=,,True

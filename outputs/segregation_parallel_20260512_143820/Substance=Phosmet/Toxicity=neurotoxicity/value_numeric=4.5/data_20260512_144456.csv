@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Phosmet,EFSA,2006,1084,Human health,acute toxicity,Rat,Not reported,,NOAEL,=,4.5,mg/kg bw,clinical chemistry,neurotoxicity,4.5,=,,True

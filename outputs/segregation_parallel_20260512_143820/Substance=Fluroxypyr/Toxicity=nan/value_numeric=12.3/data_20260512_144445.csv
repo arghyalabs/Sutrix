@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Fluroxypyr,EFSA,2011,1287,Ecotox (water compartment),acute toxicity,Swollen duckweed,Not reported,14.0,LC50,=,12.3,mg/L,frond number,,12.3,=,,True

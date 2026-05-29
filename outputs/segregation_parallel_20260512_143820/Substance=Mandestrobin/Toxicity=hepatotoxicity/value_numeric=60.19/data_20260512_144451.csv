@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Mandestrobin,EFSA,2015,2640,Human health,reproduction toxicity,Rat,Not reported,,LOAEL,=,60.19,mg/kg bw/day,organ weights,hepatotoxicity,60.19,=,,True

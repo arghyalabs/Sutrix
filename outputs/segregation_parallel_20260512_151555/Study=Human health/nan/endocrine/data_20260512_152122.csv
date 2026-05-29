@@ -1,0 +1,4 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready,PubChem_CID,PubChem_MW,PubChem_CanonicalSMILES,PubChem_InChIKey,PubChem_Ambiguous,PubChem_Candidate_CIDs,PubChem_Error
+CID_1639,EFSA,2014,2542,Human health,reproduction toxicity,Rat,Not reported,,NOAEL,=,0.12,mg/kg bw/day,morphology,endocrine,0.12,=,,True,1639,84.08,,KLSJWNVTNUYHDU-UHFFFAOYSA-N,False,,
+CID_86355,EFSA,2010,1210,Human health,reproduction toxicity,Rat,Not reported,,NOAEL,=,9.6,mg/kg bw/day,organ weights,endocrine,9.6,=,,True,86355,424.4,,MAHPNPYYQAIOJN-UHFFFAOYSA-N,False,,
+CID_11493665,EFSA,2012,1307,Human health,reproduction toxicity,Rat,Not reported,,NOAEL,=,20.3,mg/kg bw/day,organ weights,endocrine,20.3,=,,True,11493665,331.4,,UTOHZQYBSYOOGC-UHFFFAOYSA-N,False,,

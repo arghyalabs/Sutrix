@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Dicamba,EFSA,2011,1276,Ecotox (soil compartment),not reported,Typhlodromus pyri,Not reported,,LR50,=,232.6,g/ha,mortality,,232.6,=,,True

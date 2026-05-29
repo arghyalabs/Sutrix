@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Nifursol,EFSA CONTAM,2015,2663,Human health,not reported,Unspecified,Not reported,,BMDL05,=,11.0,mg/kg bw/day,organ weights,hepatotoxicity,11.0,=,,True

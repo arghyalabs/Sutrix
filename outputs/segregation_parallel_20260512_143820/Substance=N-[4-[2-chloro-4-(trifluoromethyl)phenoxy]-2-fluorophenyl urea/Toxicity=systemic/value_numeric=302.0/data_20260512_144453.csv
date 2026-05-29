@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+N-[4-[2-chloro-4-(trifluoromethyl)phenoxy]-2-fluorophenyl urea,EFSA,2011,1286,Animal (non-target species) health,acute toxicity,Rat,oral: unspecified,,LD50,=,302.0,mg/kg bw/day,mortality,systemic,302.0,=,,True

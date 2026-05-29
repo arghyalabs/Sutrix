@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Pencycuron,EFSA,2010,1248,Animal (non-target species) health,reproduction toxicity,Japanese quail,Not reported,56.0,NOEL,>=,122.1,mg/kg bw/day,reproduction,reproductive,122.1,=,,True

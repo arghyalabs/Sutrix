@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready,PubChem_CID,PubChem_MW,PubChem_CanonicalSMILES,PubChem_InChIKey,PubChem_Ambiguous,PubChem_Candidate_CIDs,PubChem_Error
+CID_17748,EFSA,2007,1110,Ecotox (water compartment),chronic/long term toxicity,Harlequin fly,Not reported,24.0,NOEC,=,0.063,mg/L,reproduction,,0.063,=,,True,17748,207.61,,OBLNWSCLAYSJJR-UHFFFAOYSA-N,False,,

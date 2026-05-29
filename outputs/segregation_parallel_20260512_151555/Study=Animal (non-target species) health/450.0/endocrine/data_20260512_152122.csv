@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready,PubChem_CID,PubChem_MW,PubChem_CanonicalSMILES,PubChem_InChIKey,PubChem_Ambiguous,PubChem_Candidate_CIDs,PubChem_Error
+CID_1639,EFSA,2014,2542,Animal (non-target species) health,reproduction toxicity,Mallard duck,Not reported,450.0,NOEC,=,16.0,mg/kg bw/day,morphology,endocrine,16.0,=,,True,1639,84.08,,KLSJWNVTNUYHDU-UHFFFAOYSA-N,False,,

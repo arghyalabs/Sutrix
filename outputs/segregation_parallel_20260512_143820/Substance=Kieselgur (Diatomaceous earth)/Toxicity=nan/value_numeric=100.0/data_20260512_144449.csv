@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Kieselgur (Diatomaceous earth),EFSA PPR,2020,3530,Ecotox (water compartment),acute toxicity,Scenedesmus subspicatus,Not reported,3.0,EC50,>,100.0,mg/L,growth,,100.0,=,,True

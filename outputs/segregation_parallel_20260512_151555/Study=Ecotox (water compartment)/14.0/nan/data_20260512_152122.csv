@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready,PubChem_CID,PubChem_MW,PubChem_CanonicalSMILES,PubChem_InChIKey,PubChem_Ambiguous,PubChem_Candidate_CIDs,PubChem_Error
+CID_9942117,EFSA,2017,2929,Ecotox (water compartment),not reported,Swollen duckweed,Not reported,14.0,EC50,>,0.08,mg/L,other,,0.08,=,,True,9942117,74.08,,QMLWSAXEQSBAAQ-UHFFFAOYSA-N,False,,

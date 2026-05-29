@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Chlorpyrifos,EFSA,2011,1273,Animal (non-target species) health,acute toxicity,Bird,oral: unspecified,,LD50,=,122.0,mg/kg,mortality,systemic,122.0,=,,True

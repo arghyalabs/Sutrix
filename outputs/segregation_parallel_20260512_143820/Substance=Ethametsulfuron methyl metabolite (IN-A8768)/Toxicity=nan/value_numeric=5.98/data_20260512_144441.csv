@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Ethametsulfuron methyl metabolite (IN-A8768),EFSA,2014,2545,Ecotox (water compartment),chronic/long term toxicity,Swollen duckweed,Not reported,7.0,EC50,=,5.98,mg/L,frond number,,5.98,=,,True

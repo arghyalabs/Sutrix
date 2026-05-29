@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+"2,6,6-Trimethylcyclohexa-1,3-diene-1-carbaldehyde",EFSA CEF,2014,2561,Human health,subchronic,Rat,Not reported,90.0,NOEL,=,10.0,mg/kg bw/day,not reported,not reported,10.0,=,,True

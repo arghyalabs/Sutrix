@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Cypermethrin,EFSA,2009,1162,Animal (non-target species) health,acute toxicity,Mallard duck,oral: unspecified,,LD50,>,10248.0,mg/kg bw/day,mortality,systemic,10248.0,=,,True

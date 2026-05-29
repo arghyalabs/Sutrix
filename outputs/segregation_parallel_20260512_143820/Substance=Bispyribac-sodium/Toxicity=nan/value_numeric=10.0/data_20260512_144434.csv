@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Bispyribac-sodium,EFSA,2010,1224,Ecotox (water compartment),chronic/long term toxicity,Great pond snail,Not reported,41.0,NOEC,>=,10.0,mg/L,not reported,,10.0,=,,True

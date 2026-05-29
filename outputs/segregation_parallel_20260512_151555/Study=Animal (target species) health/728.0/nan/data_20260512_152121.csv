@@ -1,0 +1,3 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready,PubChem_CID,PubChem_MW,PubChem_CanonicalSMILES,PubChem_InChIKey,PubChem_Ambiguous,PubChem_Candidate_CIDs,PubChem_Error
+CID_525,EFSA FEEDAP,2014,2452,Animal (target species) health,chronic/long term toxicity,Dog,Not reported,728.0,dose level,=,50000.0,mg/kg,no adverse effect observed,,50000.0,=,,True,525,134.09,,BJEPYKJPYRNKOW-UHFFFAOYSA-N,False,,
+Sodium malate and calcium malate mixture,EFSA FEEDAP,2014,2452,Animal (target species) health,chronic/long term toxicity,Dog,Not reported,728.0,dose level,=,50000.0,mg/kg,no adverse effect observed,,50000.0,=,,True,,,,,False,,Not Found

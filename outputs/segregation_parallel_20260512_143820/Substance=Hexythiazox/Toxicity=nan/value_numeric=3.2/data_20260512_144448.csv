@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Hexythiazox,EFSA,2010,1240,Ecotox (water compartment),acute toxicity,Bluegill,Not reported,4.0,LC50,=,3.2,mg/L,mortality,,3.2,=,,True

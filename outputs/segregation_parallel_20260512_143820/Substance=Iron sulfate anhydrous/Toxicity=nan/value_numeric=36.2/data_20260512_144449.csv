@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Iron sulfate anhydrous,EFSA,2012,1320,Ecotox (water compartment),acute toxicity,Anabaena variabilis,Not reported,3.0,EC50,=,36.2,mg/L,biomass,,36.2,=,,True

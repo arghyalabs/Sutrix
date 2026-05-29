@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Xanthan gum,EFSA ANS,2017,2971,Human health,study with volunteers,Human,oral: unspecified,10.0,dose level,=,214.0,mg/kg bw/day,no adverse effect observed at single/highest dose,,214.0,=,,True

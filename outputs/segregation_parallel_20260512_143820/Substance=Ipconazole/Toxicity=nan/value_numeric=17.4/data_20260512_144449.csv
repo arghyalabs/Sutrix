@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Ipconazole,EFSA,2013,2216,Ecotox (soil compartment),chronic/long term toxicity,Typhlodromus pyri,Not reported,7.0,LR50,=,17.4,g/ha,mortality,,17.4,=,,True

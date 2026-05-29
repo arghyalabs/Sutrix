@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready,PubChem_CID,PubChem_MW,PubChem_CanonicalSMILES,PubChem_InChIKey,PubChem_Ambiguous,PubChem_Candidate_CIDs,PubChem_Error
+CID_4873,EFSA FAF,2019,3238,Human health,study with volunteers,Human,oral: unspecified,28.0,dose level,=,40.0,mg/kg bw/day,no adverse effect observed at single/highest dose,,40.0,=,,True,4873,74.55,,WCUXLLCKKVVCTQ-UHFFFAOYSA-M,False,,

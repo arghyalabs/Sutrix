@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Flutianil formulation (Flutianil 5% EC),EFSA,2014,2548,Ecotox (soil compartment),chronic/long term toxicity,Folsomia candida,Not reported,,NOEC,=,6.0,mg/kg,not reported,,6.0,=,,True

@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Dichlorprop-P,EFSA,2006,1063,Ecotox (soil compartment),not reported,Onion,Not reported,,ER50,=,45.7,g/ha,other,,45.7,=,,True

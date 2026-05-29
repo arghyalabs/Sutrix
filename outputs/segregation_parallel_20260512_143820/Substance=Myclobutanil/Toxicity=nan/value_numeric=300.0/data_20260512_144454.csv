@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Myclobutanil,EFSA,2010,1223,Ecotox (soil compartment),not reported,Onion,Not reported,,dose level,=,300.0,g/ha,seedling emergence,,300.0,=,,True

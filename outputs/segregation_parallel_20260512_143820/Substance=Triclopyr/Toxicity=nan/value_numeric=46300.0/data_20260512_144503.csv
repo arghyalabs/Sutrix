@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Triclopyr,EFSA,2006,1067,Ecotox (water compartment),chronic/long term toxicity,not reported,Not reported,,conc. Level,=,46300.0,µg/L,not reported,,46300.0,=,,True

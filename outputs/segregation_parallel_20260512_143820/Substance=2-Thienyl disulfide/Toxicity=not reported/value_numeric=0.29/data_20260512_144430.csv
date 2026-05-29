@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+2-Thienyl disulfide,EFSA CEF,2013,2379,Human health,not reported,Unspecified,Not reported,,NOAEL,=,0.29,mg/kg bw/day,not reported,not reported,0.29,=,,True

@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Tebufenpyrad,EFSA,2009,1158,Ecotox (soil compartment),acute toxicity,Honey bee,dermal,2.0,LD50,>,6.7,µg/piece,mortality,,6.7,=,,True

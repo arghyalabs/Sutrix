@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Pendimethalin,EFSA,2016,2791,Animal (non-target species) health,acute toxicity,Rodents,Not reported,,LD50,=,3927.0,mg/kg bw/day,mortality,systemic,3927.0,=,,True

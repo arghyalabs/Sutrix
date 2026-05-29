@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Cobalt(II) derivatives,EFSA FEEDAP,2009,260,Human health,chronic/long term toxicity,Human,Not reported,365.0,LOAEL,=,1.0,mg/kg,haematology,hemopoietic,1.0,=,,True

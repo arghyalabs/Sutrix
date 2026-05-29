@@ -1,0 +1,13 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready,PubChem_CID,PubChem_MW,PubChem_CanonicalSMILES,PubChem_InChIKey,PubChem_Ambiguous,PubChem_Candidate_CIDs,PubChem_Error
+CID_91752,EFSA,2006,1079,Human health,chronic/long term toxicity,Rat,Not reported,730.0,NOAEL,=,0.045,mg/kg bw/day,neurology,neurotoxicity,0.045,=,,True,91752,270.4,,KXRPCFINVWWFHQ-UHFFFAOYSA-N,False,,
+CID_91752,EFSA,2009,1181,Human health,chronic/long term toxicity,Rat,Not reported,730.0,NOAEL,=,0.045,mg/kg bw/day,clinical chemistry,neurotoxicity,0.045,=,,True,91752,270.4,,KXRPCFINVWWFHQ-UHFFFAOYSA-N,False,,
+CID_2730,EFSA,2014,2492,Human health,chronic/long term toxicity,Rat,Not reported,730.0,NOAEL,=,0.1,mg/kg bw/day,clinical chemistry,neurotoxicity,0.1,=,,True,2730,350.6,,SBPBAQFWLVIOKP-UHFFFAOYSA-N,False,,
+CID_2730,EFSA,2015,2660,Human health,chronic/long term toxicity,Rat,Not reported,730.0,NOAEL,=,0.1,mg/kg bw/day,clinical chemistry,neurotoxicity,0.1,=,,True,2730,350.6,,SBPBAQFWLVIOKP-UHFFFAOYSA-N,False,,
+CID_3039,EFSA PPR,2006,767,Human health,chronic/long term toxicity,Rat,oral: feed,730.0,NOAEL,=,100.0,mg/kg bw/day,other,neurotoxicity,100.0,=,,True,3039,220.97,,OEBRKCOSUFCWJD-UHFFFAOYSA-N,False,,
+CID_3289,EFSA,2006,1077,Human health,chronic/long term toxicity,Rat,Not reported,730.0,NOAEL,=,0.04,mg/kg bw/day,neurology,neurotoxicity,0.04,=,,True,3289,242.3,,VJYFKVYYMZPMAB-UHFFFAOYSA-N,False,,
+CID_31200,EFSA,2006,1070,Human health,chronic/long term toxicity,Rat,oral: feed,730.0,NOAEL,=,0.5,mg/kg bw/day,neurology,neurotoxicity,0.5,=,,True,31200,277.24,,ZNOLGFHPUIJIMJ-UHFFFAOYSA-N,False,,
+CID_3352,EFSA,2006,1076,Human health,chronic/long term toxicity,Rat,Not reported,730.0,NOAEL,=,0.02,mg/kg bw/day,clinical signs,neurotoxicity,0.02,=,,True,3352,437.1,,ZOCSXAVNDGMNBV-UHFFFAOYSA-N,False,,
+CID_4004,EFSA,2006,1074,Human health,chronic/long term toxicity,Rat,Not reported,730.0,NOAEL,=,29.0,mg/kg bw/day,neurology,neurotoxicity,29.0,=,,True,4004,330.4,,JXSJBGJIGXNWCI-UHFFFAOYSA-N,False,,
+CID_4004,EFSA,2009,1190,Human health,chronic/long term toxicity,Rat,Not reported,730.0,NOAEL,=,29.0,mg/kg bw/day,clinical chemistry,neurotoxicity,29.0,=,,True,4004,330.4,,JXSJBGJIGXNWCI-UHFFFAOYSA-N,False,,
+CID_4618,EFSA,2006,1094,Human health,chronic/long term toxicity,Rat,Not reported,730.0,NOAEL,=,0.03,mg/kg bw/day,clinical chemistry,neurotoxicity,0.03,=,,True,4618,246.3,,PMCVMORKVPSKHZ-UHFFFAOYSA-N,False,,
+CID_12901,EFSA,2021,3934,Human health,chronic/long term toxicity,Rat,Not reported,730.0,NOAEL,=,1.8,mg/kg bw/day,clinical chemistry,neurotoxicity,1.8,=,,True,12901,317.3,,LMNZTLDVJIUSHT-UHFFFAOYSA-N,False,,

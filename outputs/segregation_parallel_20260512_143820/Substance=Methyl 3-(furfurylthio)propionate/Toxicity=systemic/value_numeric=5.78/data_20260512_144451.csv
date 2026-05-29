@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Methyl 3-(furfurylthio)propionate,EFSA CEF,2011,2110,Human health,subchronic,Rat,oral: feed,90.0,NOAEL,=,5.78,mg/kg bw/day,clinical chemistry,systemic,5.78,=,,True

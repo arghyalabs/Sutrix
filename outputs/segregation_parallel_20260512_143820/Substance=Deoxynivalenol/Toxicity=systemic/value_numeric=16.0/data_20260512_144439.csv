@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Deoxynivalenol,EFSA CONTAM,2017,2991,Animal (target species) health,short-term toxicity,Sheep,oral: feed,28.0,NOAEL,=,16.0,mg/kg,food consumption,systemic,16.0,=,,True

@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Pirimicarb,EFSA,2005,1057,Ecotox (soil compartment),chronic/long term toxicity,Marmalade hoverfly,Not reported,28.0,LR50,=,14.6,g/ha,mortality,,14.6,=,,True

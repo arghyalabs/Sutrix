@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Trifloxystrobin metabolite (NOA 413161),EFSA,2017,3012,Human health,short-term toxicity,Rat,Not reported,28.0,NOAEL,=,150.0,mg/kg bw/day,clinical chemistry,systemic,150.0,=,,True

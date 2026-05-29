@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Zinc phosphide,EFSA,2010,1222,Ecotox (water compartment),acute toxicity,Scenedesmus subspicatus,Not reported,3.0,EC50,=,0.00821,mg/L,biomass,,0.00821,=,,True

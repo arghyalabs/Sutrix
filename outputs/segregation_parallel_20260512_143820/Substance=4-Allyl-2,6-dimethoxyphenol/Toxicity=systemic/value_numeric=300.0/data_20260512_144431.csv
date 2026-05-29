@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+"4-Allyl-2,6-dimethoxyphenol",EFSA FEEDAP,2011,145,Animal (target species) health,subchronic,Rat,Not reported,90.0,NOAEL,=,300.0,mg/kg bw/day,clinical chemistry,systemic,300.0,=,,True

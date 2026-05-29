@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Nicarbazin,EFSA FEEDAP,2010,209,Ecotox (soil compartment),not reported,Common oat,Not reported,,NOEC,=,8.0,mg/kg,growth,,8.0,=,,True

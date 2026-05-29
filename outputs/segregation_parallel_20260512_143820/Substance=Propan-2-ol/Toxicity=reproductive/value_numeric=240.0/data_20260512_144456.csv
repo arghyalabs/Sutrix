@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Propan-2-ol,EFSA CONTAM,2012,602,Human health,reproduction toxicity,Rabbit,oral: gavage,13.0,NOAEL,=,240.0,mg/kg bw/day,mortality,reproductive,240.0,=,,True

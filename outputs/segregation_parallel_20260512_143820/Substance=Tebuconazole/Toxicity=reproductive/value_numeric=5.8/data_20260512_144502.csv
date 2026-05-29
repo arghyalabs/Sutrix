@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Tebuconazole,EFSA,2014,2436,Animal (non-target species) health,reproduction toxicity,Bobwhite quail,oral: feed,,NOEL,=,5.8,mg/kg bw/day,reproduction,reproductive,5.8,=,,True

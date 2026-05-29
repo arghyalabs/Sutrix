@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+"3,6-dichloropyridine-2-carboxylic acid",EFSA,2018,3116,Animal (non-target species) health,acute toxicity,Mallard duck,oral: unspecified,,LD50,=,1465.0,mg/kg bw/day,mortality,systemic,1465.0,=,,True

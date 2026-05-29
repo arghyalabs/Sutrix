@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Beauvericin,EFSA CONTAM,2014,2546,Animal (target species) health,not reported,Turkey,Not reported,,NOAEL,=,136.0,µg/kg bw/day,not reported,not reported,136.0,=,,True

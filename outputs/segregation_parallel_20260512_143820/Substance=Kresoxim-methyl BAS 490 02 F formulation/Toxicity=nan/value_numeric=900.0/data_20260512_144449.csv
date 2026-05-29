@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Kresoxim-methyl BAS 490 02 F formulation,EFSA,2010,1262,Ecotox (soil compartment),acute toxicity,Typhlodromus pyri,Not reported,7.0,LR50,>,900.0,g/ha,mortality,,900.0,=,,True

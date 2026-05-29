@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Carnauba wax,EFSA ANS,2012,496,Human health,reproduction toxicity,Rat,oral: unspecified,,NOAEL,=,670.0,mg/kg bw/day,no adverse effect observed at single/highest dose,,670.0,=,,True

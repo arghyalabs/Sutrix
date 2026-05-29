@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Dodemorph acetate,EFSA,2008,1139,Ecotox (soil compartment),not reported,Typhlodromus pyri,Not reported,,dose level,=,660.0,g/ha,mortality,,660.0,=,,True

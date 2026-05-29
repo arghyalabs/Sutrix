@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Fipronil,EFSA,2013,2361,Ecotox (soil compartment),acute toxicity,Honey bee,dermal,,LD50,=,0.00593,µg/piece,mortality,,0.00593,=,,True

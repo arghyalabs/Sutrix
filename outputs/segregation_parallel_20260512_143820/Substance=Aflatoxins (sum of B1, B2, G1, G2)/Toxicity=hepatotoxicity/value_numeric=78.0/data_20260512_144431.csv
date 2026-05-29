@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+"Aflatoxins (sum of B1, B2, G1, G2)",EFSA CONTAM,2007,57,Human health,study with volunteers,Human,oral: feed,,BMDL01,=,78.0,ng/kg bw/day,histopathology neoplastic,hepatotoxicity,78.0,=,,True

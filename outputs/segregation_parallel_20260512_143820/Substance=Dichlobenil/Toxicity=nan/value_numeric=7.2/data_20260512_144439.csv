@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Dichlobenil,EFSA,2010,1227,Ecotox (water compartment),acute toxicity,Rainbow trout,Not reported,4.0,LC50,=,7.2,mg/L,mortality,,7.2,=,,True

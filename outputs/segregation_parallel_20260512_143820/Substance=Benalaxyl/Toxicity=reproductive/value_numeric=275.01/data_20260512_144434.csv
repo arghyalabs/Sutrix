@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Benalaxyl,EFSA,2013,2202,Animal (non-target species) health,reproduction toxicity,Rat,Not reported,,NOAEL,=,275.01,mg/kg,reproduction,reproductive,275.01,=,,True

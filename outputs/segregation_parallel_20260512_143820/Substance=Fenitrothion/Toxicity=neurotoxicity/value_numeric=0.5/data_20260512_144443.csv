@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Fenitrothion,EFSA,2006,1070,Human health,chronic/long term toxicity,Rat,oral: feed,730.0,NOAEL,=,0.5,mg/kg bw/day,neurology,neurotoxicity,0.5,=,,True

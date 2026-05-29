@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Essential oil from Origanum vulgare subsp. hirtum (Link) letsw. var. Vulkan,EFSA FEEDAP,2019,3251,Animal (target species) health,subchronic,Cattle,oral: feed,56.0,dose level,=,690.0,mg/kg,no adverse effect observed at single/highest dose,,690.0,=,,True

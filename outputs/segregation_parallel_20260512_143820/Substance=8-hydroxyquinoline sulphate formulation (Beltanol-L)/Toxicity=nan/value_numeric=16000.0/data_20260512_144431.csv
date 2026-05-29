@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+8-hydroxyquinoline sulphate formulation (Beltanol-L),EFSA,2016,2835,Ecotox (soil compartment),acute toxicity,Typhlodromus pyri,Not reported,7.0,LR50,>,16000.0,ml/ha,mortality,,16000.0,=,,True

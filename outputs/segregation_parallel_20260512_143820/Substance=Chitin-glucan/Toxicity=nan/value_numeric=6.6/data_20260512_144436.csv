@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Chitin-glucan,EFSA NDA,2010,27,Human health,subchronic,Rat,oral: feed,91.0,NOAEL,ca.,6.6,g/kg bw/day,no adverse effect observed at single/highest dose,,6.6,=,,True

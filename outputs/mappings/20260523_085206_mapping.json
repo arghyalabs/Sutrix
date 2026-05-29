@@ -1,0 +1,62 @@
+{
+  "dataset_id": "20260523_085206",
+  "mappings": [
+    {
+      "user_column": "Substance",
+      "scientific_variable": "chemical_id",
+      "method": "auto"
+    },
+    {
+      "user_column": "Smiles",
+      "scientific_variable": "canonical_smiles",
+      "method": "auto"
+    },
+    {
+      "user_column": "Study",
+      "scientific_variable": "duration",
+      "method": "auto"
+    },
+    {
+      "user_column": "TestType",
+      "scientific_variable": "study_type",
+      "method": "auto"
+    },
+    {
+      "user_column": "Species",
+      "scientific_variable": "species",
+      "method": "auto"
+    },
+    {
+      "user_column": "DurationDays",
+      "scientific_variable": "rat",
+      "method": "auto"
+    },
+    {
+      "user_column": "Endpoint",
+      "scientific_variable": "endpoint",
+      "method": "auto"
+    },
+    {
+      "user_column": "qualifier",
+      "scientific_variable": "qualifier",
+      "method": "auto"
+    },
+    {
+      "user_column": "value",
+      "scientific_variable": "value",
+      "method": "auto"
+    },
+    {
+      "user_column": "unit",
+      "scientific_variable": "unit",
+      "method": "auto"
+    },
+    {
+      "user_column": "Toxicity",
+      "scientific_variable": "endpoint",
+      "method": "auto"
+    }
+  ],
+  "created_at": "2026-05-23T08:52:59.746084",
+  "version": "1.0"
+}

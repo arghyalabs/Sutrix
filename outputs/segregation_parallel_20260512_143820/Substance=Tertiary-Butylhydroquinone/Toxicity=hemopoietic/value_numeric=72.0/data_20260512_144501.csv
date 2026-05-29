@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Tertiary-Butylhydroquinone,EFSA ANS,2016,2735,Human health,chronic/long term toxicity,Dog,oral: feed,819.0,NOAEL,=,72.0,mg/kg bw/day,clinical chemistry,hemopoietic,72.0,=,,True

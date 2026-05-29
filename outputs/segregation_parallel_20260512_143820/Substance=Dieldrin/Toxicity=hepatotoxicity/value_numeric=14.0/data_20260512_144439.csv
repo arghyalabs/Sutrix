@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Dieldrin,EFSA CONTAM,2005,69,Animal (target species) health,chronic/long term toxicity,Rainbow trout,oral: feed,240.0,LOEL,=,14.0,µg/kg bw/day,clinical chemistry,hepatotoxicity,14.0,=,,True

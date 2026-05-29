@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Pirimiphos-methyl,EFSA,2005,1058,Human health,subchronic,Rat,Not reported,91.0,NOAEL,=,2.1,mg/kg bw/day,clinical signs,neurotoxicity,2.1,=,,True

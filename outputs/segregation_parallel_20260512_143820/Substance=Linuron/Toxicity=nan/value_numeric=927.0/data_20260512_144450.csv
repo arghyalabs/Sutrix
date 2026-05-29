@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Linuron,EFSA,2016,2843,Ecotox (soil compartment),not reported,Poecilus cupreus,Not reported,19.0,LR50,>,927.0,g/ha,mortality,,927.0,=,,True

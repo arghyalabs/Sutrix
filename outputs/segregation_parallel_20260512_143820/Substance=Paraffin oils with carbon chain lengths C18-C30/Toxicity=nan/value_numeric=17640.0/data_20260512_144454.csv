@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Paraffin oils with carbon chain lengths C18-C30,EFSA,2009,1175,Ecotox (soil compartment),acute toxicity,Aphidius rhopalosiphi,Not reported,2.0,NOEL,=,17640.0,g/ha,not reported,,17640.0,=,,True

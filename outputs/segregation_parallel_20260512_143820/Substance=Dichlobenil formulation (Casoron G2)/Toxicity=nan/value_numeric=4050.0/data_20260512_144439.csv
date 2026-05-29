@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Dichlobenil formulation (Casoron G2),EFSA,2010,1227,Ecotox (soil compartment),not reported,Aleochara bilineata,Not reported,,dose level,=,4050.0,g/ha,mortality,,4050.0,=,,True

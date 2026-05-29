@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Opium alkaloids,EFSA CONTAM,2011,113,Human health,study with volunteers,Human,oral: unspecified,,LOEL,=,31.7,µg/kg bw,neurology,neurotoxicity,31.7,=,,True

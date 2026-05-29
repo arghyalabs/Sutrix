@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Methyl triazole-F8426,EFSA,2016,2866,Animal (non-target species) health,subchronic,Rat,Not reported,90.0,NOAEL,=,0.666,mg/kg bw/day,not reported,not reported,0.666,=,,True

@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+"(RS)-2,4-dinitro-6-(octan-2-yl)phenyl (2 E/Z)-but-2-enoate",EFSA,2014,2435,Human health,reproduction toxicity,Rabbit,Not reported,,NOAEL,=,12.0,mg/kg bw/day,food consumption,systemic,12.0,=,,True

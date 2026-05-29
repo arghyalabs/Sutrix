@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Isoxaben,EFSA,2010,1233,Ecotox (water compartment),acute toxicity,Northern quahog,Not reported,2.0,EC50,=,0.96,mg/L,development,,0.96,=,,True

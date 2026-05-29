@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Clethodim,EFSA,2011,1299,Ecotox (water compartment),chronic/long term toxicity,Daphnia magna,Not reported,21.0,NOEC,=,49.0,mg/L,reproduction,,49.0,=,,True

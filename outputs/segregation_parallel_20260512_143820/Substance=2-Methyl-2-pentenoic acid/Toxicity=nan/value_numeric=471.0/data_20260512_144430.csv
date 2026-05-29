@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+2-Methyl-2-pentenoic acid,EFSA FEEDAP,2016,2841,Ecotox (water compartment),acute toxicity,Green alga,Not reported,,EC50,=,471.0,mg/L,mortality,,471.0,=,,True

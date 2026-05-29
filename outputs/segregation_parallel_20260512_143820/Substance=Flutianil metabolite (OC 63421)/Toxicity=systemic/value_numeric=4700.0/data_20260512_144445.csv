@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Flutianil metabolite (OC 63421),EFSA,2018,3118,Human health,short-term toxicity,Unspecified,Not reported,28.0,NOAEL,=,4700.0,mg/kg bw/day,food efficiency,systemic,4700.0,=,,True

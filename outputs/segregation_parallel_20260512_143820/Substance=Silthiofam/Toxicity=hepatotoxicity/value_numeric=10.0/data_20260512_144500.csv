@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Silthiofam,EFSA,2016,2867,Human health,subchronic,Dog,Not reported,90.0,NOAEL,=,10.0,mg/kg bw/day,clinical chemistry,hepatotoxicity,10.0,=,,True

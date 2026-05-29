@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+2-Acetylbutyric acid,EFSA AFC,2009,2306,Human health,not reported,Unspecified,Not reported,,NOAEL,=,600.0,mg/kg bw/day,development,teratogenic,600.0,=,,True

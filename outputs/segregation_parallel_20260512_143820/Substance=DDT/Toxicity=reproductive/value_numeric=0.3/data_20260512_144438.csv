@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+DDT,EFSA CONTAM,2006,73,Animal (target species) health,reproduction toxicity,Common quail,Not reported,,NOAEL,=,0.3,mg/kg bw/day,reproduction,reproductive,0.3,=,,True

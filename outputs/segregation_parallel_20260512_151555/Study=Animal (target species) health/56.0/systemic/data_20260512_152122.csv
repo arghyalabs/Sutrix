@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready,PubChem_CID,PubChem_MW,PubChem_CanonicalSMILES,PubChem_InChIKey,PubChem_Ambiguous,PubChem_Candidate_CIDs,PubChem_Error
+CID_5429,EFSA CONTAM,2008,104,Animal (target species) health,subchronic,Goat,Not reported,56.0,dose level,=,300.0,mg/kg bw/day,food consumption,systemic,300.0,=,,True,5429,180.16,,YAPQBXQYLJRXSA-UHFFFAOYSA-N,False,,

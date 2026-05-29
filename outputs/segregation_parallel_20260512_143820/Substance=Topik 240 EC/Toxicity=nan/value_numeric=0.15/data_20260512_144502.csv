@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Topik 240 EC,EFSA,2005,1372,Ecotox (water compartment),acute toxicity,not reported,Not reported,14.0,EC50,=,0.15,mg/L,not reported,,0.15,=,,True

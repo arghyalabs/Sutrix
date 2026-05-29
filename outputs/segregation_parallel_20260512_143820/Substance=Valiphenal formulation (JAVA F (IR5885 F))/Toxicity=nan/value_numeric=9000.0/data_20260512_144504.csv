@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Valiphenal formulation (JAVA F (IR5885 F)),EFSA,2013,2366,Ecotox (soil compartment),acute toxicity,Aphidius rhopalosiphi,Not reported,2.0,LR50,>,9000.0,g/ha,mortality,,9000.0,=,,True

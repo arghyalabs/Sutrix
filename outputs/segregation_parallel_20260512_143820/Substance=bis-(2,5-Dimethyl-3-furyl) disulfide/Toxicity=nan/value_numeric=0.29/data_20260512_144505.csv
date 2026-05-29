@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+"bis-(2,5-Dimethyl-3-furyl) disulfide",EFSA FEEDAP,2016,2768,Animal (target species) health,subchronic,Rat,Not reported,90.0,NOAEL,=,0.29,mg/kg bw/day,no adverse effect observed at single/highest dose,,0.29,=,,True

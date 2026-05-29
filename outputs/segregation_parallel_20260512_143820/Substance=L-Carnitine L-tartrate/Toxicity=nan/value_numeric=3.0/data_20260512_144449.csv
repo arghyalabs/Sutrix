@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+L-Carnitine L-tartrate,EFSA AFC,2003,365,Human health,study with volunteers,Human,oral: capsule,21.0,conc. Level,=,3.0,g/day,no adverse effect observed,,3.0,=,,True

@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Pyrimethanil,EFSA,2006,1072,Human health,reproduction toxicity,Rat,Not reported,,NOAEL,=,18.4,mg/kg bw/day,body weight,developmental,18.4,=,,True

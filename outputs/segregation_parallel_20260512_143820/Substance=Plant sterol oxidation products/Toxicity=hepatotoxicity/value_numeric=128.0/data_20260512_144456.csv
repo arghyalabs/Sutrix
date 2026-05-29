@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Plant sterol oxidation products,EFSA NDA,2020,3663,Human health,subchronic,Rat,oral: feed,90.0,NOAEL,=,128.0,mg/kg bw/day,clinical chemistry,hepatotoxicity,128.0,=,,True

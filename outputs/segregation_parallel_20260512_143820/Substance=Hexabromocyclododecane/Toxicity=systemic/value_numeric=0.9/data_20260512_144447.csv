@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Hexabromocyclododecane,EFSA CONTAM,2021,3935,Human health,acute toxicity,Mouse,oral: gavage,,LOAEL,=,0.9,mg/kg bw/day,behaviour,systemic,0.9,=,,True

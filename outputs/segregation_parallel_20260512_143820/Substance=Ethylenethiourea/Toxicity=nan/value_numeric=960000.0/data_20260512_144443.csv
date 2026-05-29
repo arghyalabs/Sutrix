@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Ethylenethiourea,EFSA,2019,3605,Ecotox (water compartment),chronic/long term toxicity,Common duckweed,Not reported,7.0,NOEC,=,960000.0,µg/L,frond number,,960000.0,=,,True

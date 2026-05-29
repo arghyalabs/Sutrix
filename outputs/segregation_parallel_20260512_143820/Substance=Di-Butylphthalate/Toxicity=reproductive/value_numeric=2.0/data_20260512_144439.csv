@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Di-Butylphthalate,EFSA AFC,2005,353,Human health,reproduction toxicity,Rat,oral: unspecified,,LOAEL,=,2.0,mg/kg bw/day,histopathology non neoplastic,reproductive,2.0,=,,True

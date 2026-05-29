@@ -1,0 +1,4 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready,PubChem_CID,PubChem_MW,PubChem_CanonicalSMILES,PubChem_InChIKey,PubChem_Ambiguous,PubChem_Candidate_CIDs,PubChem_Error
+CID_3007984,EFSA CONTAM,2014,2546,Human health,subchronic,Human,Not reported,,LOAEL,>,0.09,mg/kg bw/day,clinical signs,irritation,0.09,=,,True,3007984,783.9,,GYSCAQFHASJXRS-FFCOJMSVSA-N,False,,
+"Enniatins (including Enniatin A, A1, B, B1)",EFSA CONTAM,2014,2546,Human health,subchronic,Human,Not reported,,LOAEL,>,0.09,mg/kg bw/day,clinical signs,irritation,0.09,=,,True,,,,,False,,Not Found
+CID_3084092,EFSA CONTAM,2014,2546,Human health,subchronic,Human,Not reported,,LOAEL,>,0.09,mg/kg bw/day,clinical signs,irritation,0.09,=,,True,3084092,639.8,,MIZMDSVSLSIMSC-OGLSAIDSSA-N,False,,

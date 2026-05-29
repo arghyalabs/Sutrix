@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready,PubChem_CID,PubChem_MW,PubChem_CanonicalSMILES,PubChem_InChIKey,PubChem_Ambiguous,PubChem_Candidate_CIDs,PubChem_Error
+CID_9862076,EFSA,2016,2836,Ecotox (soil compartment),not reported,Typhlodromus pyri,Not reported,10.0,ER50,<,3.16,g/ha,reproduction,,3.16,=,,True,9862076,324.79,,YXKMMRDKEKCERS-UHFFFAOYSA-N,False,,

@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+"5,7-Dihydro-2-methylthieno(3,4-d)pyrimidine",EFSA CEF,2011,2078,Human health,subchronic,Rat,Not reported,90.0,NOAEL,=,6.6,mg/kg bw/day,not reported,not reported,6.6,=,,True

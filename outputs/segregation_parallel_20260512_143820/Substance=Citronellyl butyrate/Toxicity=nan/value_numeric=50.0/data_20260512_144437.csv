@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Citronellyl butyrate,EFSA FEEDAP,2016,2864,Animal (target species) health,subchronic,Rat,oral: feed,84.0,NOEL,=,50.0,mg/kg bw/day,no adverse effect observed,,50.0,=,,True

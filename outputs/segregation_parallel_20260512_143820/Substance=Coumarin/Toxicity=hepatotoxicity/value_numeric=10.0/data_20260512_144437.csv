@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Coumarin,EFSA AFC,2008,2271,Human health,chronic/long term toxicity,Dog,Not reported,730.0,NOAEL,=,10.0,mg/kg bw/day,histopathology non neoplastic,hepatotoxicity,10.0,=,,True

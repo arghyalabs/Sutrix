@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Metazachlor,EFSA,2008,1127,Ecotox (water compartment),acute toxicity,Rainbow trout,Not reported,4.0,LC50,=,8.5,mg/L,mortality,,8.5,=,,True

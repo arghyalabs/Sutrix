@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Ethametsulfuron methyl,EFSA,2014,2545,Ecotox (soil compartment),acute toxicity,Aphidius rhopalosiphi,Not reported,2.0,LR50,>,18.75,g/ha,mortality,,18.75,=,,True

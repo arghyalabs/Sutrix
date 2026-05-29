@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Cyflufenamid,EFSA,2009,1180,Human health,reproduction toxicity,Rabbit,Not reported,,NOAEL,=,5.0,mg/kg bw/day,food consumption,systemic,5.0,=,,True

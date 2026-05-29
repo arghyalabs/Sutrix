@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready,PubChem_CID,PubChem_MW,PubChem_CanonicalSMILES,PubChem_InChIKey,PubChem_Ambiguous,PubChem_Candidate_CIDs,PubChem_Error
+CID_90480033,EFSA NDA,2019,3254,Human health,reproduction toxicity,Rat,oral: gavage,15.0,NOAEL,=,325.0,mg/kg bw/day,development,developmental,325.0,=,,True,90480033,290.7,,YABIFCKURFRPPO-IVOJBTPCSA-N,False,,

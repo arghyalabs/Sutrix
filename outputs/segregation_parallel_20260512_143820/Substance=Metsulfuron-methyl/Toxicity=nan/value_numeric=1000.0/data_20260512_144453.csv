@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Metsulfuron-methyl,EFSA,2015,2608,Ecotox (soil compartment),acute toxicity,Tiger worm,Not reported,14.0,LC50,>,1000.0,mg/kg,mortality,,1000.0,=,,True

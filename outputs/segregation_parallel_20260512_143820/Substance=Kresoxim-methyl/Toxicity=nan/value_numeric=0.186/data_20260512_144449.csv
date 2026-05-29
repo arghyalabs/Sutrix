@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Kresoxim-methyl,EFSA,2010,1262,Ecotox (water compartment),acute toxicity,Daphnia magna,Not reported,2.0,EC50,=,0.186,mg/L,mortality,,0.186,=,,True

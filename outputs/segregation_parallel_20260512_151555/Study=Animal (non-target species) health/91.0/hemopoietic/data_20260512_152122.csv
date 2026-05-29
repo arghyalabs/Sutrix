@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready,PubChem_CID,PubChem_MW,PubChem_CanonicalSMILES,PubChem_InChIKey,PubChem_Ambiguous,PubChem_Candidate_CIDs,PubChem_Error
+CID_15553,EFSA,2006,1061,Animal (non-target species) health,subchronic,Rat,Not reported,91.0,NOAEL,=,300.0,mg/kg bw/day,haematology,hemopoietic,300.0,=,,True,15553,192.0,,HUBANNPOLNYSAD-UHFFFAOYSA-N,False,,

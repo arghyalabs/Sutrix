@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Methylmercury,EFSA CONTAM,2012,2164,Human health,study with volunteers,Human,Not reported,,BMDL05,=,12.0,mg/kg,neurology,neurotoxicity,12.0,=,,True

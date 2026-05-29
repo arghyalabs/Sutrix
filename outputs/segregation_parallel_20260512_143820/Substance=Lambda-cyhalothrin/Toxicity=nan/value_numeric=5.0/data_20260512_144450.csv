@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Lambda-cyhalothrin,EFSA,2014,2493,Ecotox (water compartment),acute toxicity,Pseudokirchneriella subcapitata,Not reported,3.0,EC50,=,5.0,µg/L,other,,5.0,=,,True

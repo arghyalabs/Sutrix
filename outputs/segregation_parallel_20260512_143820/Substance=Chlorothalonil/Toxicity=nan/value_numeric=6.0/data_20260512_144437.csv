@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Chlorothalonil,EFSA,2018,3023,Ecotox (soil compartment),chronic/long term toxicity,Folsomia candida,Not reported,28.0,EC10,=,6.0,mg/kg,reproduction,,6.0,=,,True

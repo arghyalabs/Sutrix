@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+BAS 505 01F,EFSA,2005,1060,Ecotox (water compartment),chronic/long term toxicity,Ide,Not reported,66.0,NOEC,=,0.015,mg/L,not reported,,0.015,=,,True

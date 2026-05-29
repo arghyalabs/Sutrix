@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Alpha-cyclodextrin,EFSA NDA,2007,32,Human health,subchronic,Dog,oral: feed,90.0,NOAEL,ca.,10.0,g/kg bw/day,no adverse effect observed at single/highest dose,,10.0,=,,True

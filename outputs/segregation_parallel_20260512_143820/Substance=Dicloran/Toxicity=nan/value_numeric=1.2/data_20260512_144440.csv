@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Dicloran,EFSA,2010,1225,Ecotox (water compartment),acute toxicity,Scenedesmus subspicatus,Not reported,3.0,EC50,=,1.2,mg/L,biomass,,1.2,=,,True

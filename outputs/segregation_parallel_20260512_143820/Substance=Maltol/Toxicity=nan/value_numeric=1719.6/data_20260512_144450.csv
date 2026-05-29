@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Maltol,EFSA FEEDAP,2016,2888,Ecotox (soil compartment),acute toxicity,Earthworm,Not reported,,EC50,=,1719.6,mg/kg,mortality,,1719.6,=,,True

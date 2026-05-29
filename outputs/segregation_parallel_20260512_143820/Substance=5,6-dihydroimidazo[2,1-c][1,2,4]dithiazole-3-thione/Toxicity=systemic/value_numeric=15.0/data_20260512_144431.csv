@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+"5,6-dihydroimidazo[2,1-c][1,2,4]dithiazole-3-thione",EFSA,2019,3605,Human health,other,Rat,Not reported,,NOAEL,=,15.0,mg/kg bw/day,body weight,systemic,15.0,=,,True

@@ -1,0 +1,9 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready,PubChem_CID,PubChem_MW,PubChem_CanonicalSMILES,PubChem_InChIKey,PubChem_Ambiguous,PubChem_Candidate_CIDs,PubChem_Error
+CID_18749,EFSA,2018,3024,Human health,short-term toxicity,Mouse,oral: unspecified,14.0,NOAEL,=,13.8,mg/kg bw/day,organ weights,systemic,13.8,=,,True,18749,207.01,,AULKDLUOQCUNOK-UHFFFAOYSA-N,False,,
+"O-methyl O-hydrogen O-(2,6-dichloro-4-methylphenyl) phosphorothioate",EFSA,2018,3024,Human health,short-term toxicity,Mouse,oral: unspecified,14.0,NOAEL,=,13.8,mg/kg bw/day,organ weights,systemic,13.8,=,,True,,,,,False,,Not Found
+CID_91664,EFSA,2018,3024,Human health,short-term toxicity,Mouse,oral: unspecified,14.0,NOAEL,=,13.8,mg/kg bw/day,organ weights,systemic,13.8,=,,True,91664,301.13,,OBZIQQJJIKNWNO-UHFFFAOYSA-N,False,,
+Tolclofos-methyl metabolite (DM-TM-CH2OH),EFSA,2018,3024,Human health,short-term toxicity,Mouse,oral: unspecified,14.0,NOAEL,=,13.8,mg/kg bw/day,organ weights,systemic,13.8,=,,True,,,,,False,,Not Found
+Tolclofos-methyl metabolite (DM-TM-COOH),EFSA,2018,3024,Human health,short-term toxicity,Mouse,oral: unspecified,14.0,NOAEL,=,13.8,mg/kg bw/day,organ weights,systemic,13.8,=,,True,,,,,False,,Not Found
+Tolclofos-methyl metabolite (DM-TMO),EFSA,2018,3024,Human health,short-term toxicity,Mouse,oral: unspecified,14.0,NOAEL,=,13.8,mg/kg bw/day,organ weights,systemic,13.8,=,,True,,,,,False,,Not Found
+Tolclofos-methyl metabolite (TMO-CH2OH),EFSA,2018,3024,Human health,short-term toxicity,Mouse,oral: unspecified,14.0,NOAEL,=,13.8,mg/kg bw/day,organ weights,systemic,13.8,=,,True,,,,,False,,Not Found
+Tolclofos-methyl metabolite (TMO-COOH),EFSA,2018,3024,Human health,short-term toxicity,Mouse,oral: unspecified,14.0,NOAEL,=,13.8,mg/kg bw/day,organ weights,systemic,13.8,=,,True,,,,,False,,Not Found

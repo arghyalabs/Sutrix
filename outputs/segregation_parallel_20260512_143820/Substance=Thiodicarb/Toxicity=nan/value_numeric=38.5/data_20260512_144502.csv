@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Thiodicarb,EFSA,2006,1066,Ecotox (soil compartment),acute toxicity,Tiger worm,Not reported,,LC50,=,38.5,mg/kg,mortality,,38.5,=,,True

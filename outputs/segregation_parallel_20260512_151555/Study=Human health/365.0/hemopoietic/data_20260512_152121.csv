@@ -1,0 +1,4 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready,PubChem_CID,PubChem_MW,PubChem_CanonicalSMILES,PubChem_InChIKey,PubChem_Ambiguous,PubChem_Candidate_CIDs,PubChem_Error
+CID_107720,EFSA,2018,3026,Human health,chronic/long term toxicity,Dog,oral: unspecified,365.0,LOAEL,=,1.1,mg/kg bw/day,haematology,hemopoietic,1.1,=,,True,107720,527.8,,VBCVPMMZEGZULK-NRFANRHFSA-N,False,,
+CID_4933,EFSA,2011,1284,Human health,chronic/long term toxicity,Dog,oral: unspecified,365.0,LOAEL,=,5.0,mg/kg bw/day,haematology,hemopoietic,5.0,=,,True,4933,218.08,,LFULEKSKNZEWOE-UHFFFAOYSA-N,False,,
+CID_4933,EFSA,2018,3126,Human health,chronic/long term toxicity,Dog,oral: unspecified,365.0,LOAEL,=,5.0,mg/kg bw/day,haematology,hemopoietic,5.0,=,,True,4933,218.08,,LFULEKSKNZEWOE-UHFFFAOYSA-N,False,,

@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready,PubChem_CID,PubChem_MW,PubChem_CanonicalSMILES,PubChem_InChIKey,PubChem_Ambiguous,PubChem_Candidate_CIDs,PubChem_Error
+Iodine (total),SCF,2002,3760,Human health,study with volunteers,Human,Not reported,14.0,dose level,=,1800.0,µg/day,no adverse effect observed at single/highest dose,,1800.0,=,,True,,,,,False,,Not Found

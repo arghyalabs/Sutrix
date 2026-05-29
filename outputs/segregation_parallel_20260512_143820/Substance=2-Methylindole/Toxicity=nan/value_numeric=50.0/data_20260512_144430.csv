@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+2-Methylindole,EFSA CEF,2013,2380,Human health,chronic/long term toxicity,Rat,oral: feed,203.0,NOAEL,=,50.0,mg/kg bw/day,no adverse effect observed at single/highest dose,,50.0,=,,True

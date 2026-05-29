@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Flusilazole,EFSA PPR,2009,927,Human health,chronic/long term toxicity,Dog,Not reported,365.0,NOAEL,=,0.2,mg/kg bw/day,not reported,not reported,0.2,=,,True

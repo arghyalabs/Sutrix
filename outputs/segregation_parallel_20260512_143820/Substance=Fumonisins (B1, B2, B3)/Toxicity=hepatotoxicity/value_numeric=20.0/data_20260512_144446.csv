@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+"Fumonisins (B1, B2, B3)",EFSA CONTAM,2018,3097,Animal (target species) health,short-term toxicity,Chicken,oral: feed,21.0,NOAEL,=,20.0,mg/kg,clinical chemistry,hepatotoxicity,20.0,=,,True

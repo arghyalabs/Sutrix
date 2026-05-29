@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+"Arsenic, inorganic derivates",EFSA CONTAM,2009,48,Human health,study with volunteers,Human,Not reported,,BMDL01,<=,3.7,µg/kg bw/day,clinical signs,systemic,3.7,=,,True

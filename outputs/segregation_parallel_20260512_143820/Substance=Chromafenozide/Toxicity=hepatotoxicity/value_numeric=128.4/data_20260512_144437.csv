@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Chromafenozide,EFSA,2013,2433,Animal (non-target species) health,reproduction toxicity,Rat,Not reported,,NOEL,=,128.4,mg/kg bw/day,histopathology non neoplastic,hepatotoxicity,128.4,=,,True

@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Penflufen,EFSA,2016,2880,Ecotox (water compartment),acute toxicity,Eastern oyster,Not reported,4.0,EC50,=,1.3,mg/L,other,,1.3,=,,True

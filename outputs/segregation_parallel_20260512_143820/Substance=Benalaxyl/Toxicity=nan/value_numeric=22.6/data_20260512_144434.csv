@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Benalaxyl,EFSA PPR,2020,3420,Ecotox (soil compartment),acute toxicity,Honey bee,oral: unspecified,,LD50,>,22.6,µg/piece,mortality,,22.6,=,,True

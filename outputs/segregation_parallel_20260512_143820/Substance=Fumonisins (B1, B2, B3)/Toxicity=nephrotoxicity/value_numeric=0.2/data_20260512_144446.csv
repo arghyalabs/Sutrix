@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+"Fumonisins (B1, B2, B3)",EFSA CONTAM,2005,55,Human health,subchronic,Rat,Not reported,,NOAEL,=,0.2,mg/kg bw/day,not reported,nephrotoxicity,0.2,=,,True

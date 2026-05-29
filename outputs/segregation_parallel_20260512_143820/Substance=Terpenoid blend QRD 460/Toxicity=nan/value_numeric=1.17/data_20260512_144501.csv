@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Terpenoid blend QRD 460,EFSA,2014,2558,Ecotox (water compartment),acute toxicity,Fathead minnow,Not reported,4.0,EC50,>,1.17,mg/L,mortality,,1.17,=,,True

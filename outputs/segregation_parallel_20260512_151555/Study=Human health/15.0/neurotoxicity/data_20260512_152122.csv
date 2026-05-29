@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready,PubChem_CID,PubChem_MW,PubChem_CanonicalSMILES,PubChem_InChIKey,PubChem_Ambiguous,PubChem_Candidate_CIDs,PubChem_Error
+CID_176,EFSA,2013,1362,Human health,study with volunteers,Human,inhalation: unspecified,15.0,NOAEC,=,10.0,mg/m³,clinical signs,neurotoxicity,10.0,=,,True,176,60.05,,QTBSBXVTEAMEQO-UHFFFAOYSA-N,False,,

@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+2-Propoxy-3-propylquinazolin-4(3H)-one,EFSA,2009,1198,Animal (non-target species) health,acute toxicity,Rat,oral: unspecified,,LD50,=,2052.0,mg/kg bw/day,mortality,systemic,2052.0,=,,True

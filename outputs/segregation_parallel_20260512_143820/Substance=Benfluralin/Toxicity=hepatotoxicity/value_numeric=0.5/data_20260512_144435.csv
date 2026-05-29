@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Benfluralin,EFSA PPR,2019,3375,Human health,chronic/long term toxicity,Rat,Not reported,730.0,NOAEL,=,0.5,mg/kg bw/day,histopathology non neoplastic,hepatotoxicity,0.5,=,,True

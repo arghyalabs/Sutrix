@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Haloxyfop-P,EFSA,2006,1095,Human health,reproduction toxicity,Rabbit,Not reported,,NOAEL,=,7.5,mg/kg bw/day,mortality,systemic,7.5,=,,True

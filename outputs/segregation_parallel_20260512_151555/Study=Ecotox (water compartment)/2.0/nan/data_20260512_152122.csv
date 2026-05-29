@@ -1,0 +1,6 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready,PubChem_CID,PubChem_MW,PubChem_CanonicalSMILES,PubChem_InChIKey,PubChem_Ambiguous,PubChem_Candidate_CIDs,PubChem_Error
+CID_86367,EFSA,2006,1062,Ecotox (water compartment),acute toxicity,not reported,Not reported,2.0,EC50,=,0.15,mg/L,not reported,,0.15,=,,True,86367,225.29,,HAORKNGNJCEJBX-UHFFFAOYSA-N,False,,
+CID_86367,EFSA,2006,1062,Ecotox (water compartment),acute toxicity,not reported,Not reported,2.0,EC50,=,0.22,mg/L,not reported,,0.22,=,,True,86367,225.29,,HAORKNGNJCEJBX-UHFFFAOYSA-N,False,,
+CID_86367,EFSA,2006,1062,Ecotox (water compartment),acute toxicity,not reported,Not reported,2.0,EC50,=,1.1,mg/L,not reported,,1.1,=,,True,86367,225.29,,HAORKNGNJCEJBX-UHFFFAOYSA-N,False,,
+CID_86367,EFSA,2006,1062,Ecotox (water compartment),acute toxicity,not reported,Not reported,2.0,EC50,=,3.5,mg/L,not reported,,3.5,=,,True,86367,225.29,,HAORKNGNJCEJBX-UHFFFAOYSA-N,False,,
+CID_86367,EFSA,2006,1062,Ecotox (water compartment),acute toxicity,not reported,Not reported,2.0,EC50,=,4.0,mg/L,not reported,,4.0,=,,True,86367,225.29,,HAORKNGNJCEJBX-UHFFFAOYSA-N,False,,

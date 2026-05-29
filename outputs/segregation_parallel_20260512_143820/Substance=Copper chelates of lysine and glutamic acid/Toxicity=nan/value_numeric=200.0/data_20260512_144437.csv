@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Copper chelates of lysine and glutamic acid,EFSA FEEDAP,2019,3229,Animal (target species) health,subchronic,Chicken,oral: feed,37.0,dose level,=,200.0,mg/kg,no adverse effect observed at single/highest dose,,200.0,=,,True

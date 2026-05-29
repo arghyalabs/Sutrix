@@ -1,0 +1,3 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready,PubChem_CID,PubChem_MW,PubChem_CanonicalSMILES,PubChem_InChIKey,PubChem_Ambiguous,PubChem_Candidate_CIDs,PubChem_Error
+Copper hydroxide formulation (Kocide 101),EFSA,2008,1153,Ecotox (water compartment),chronic/long term toxicity,Rainbow trout,Not reported,92.0,NOEC,=,0.0017,mg/L,growth,,0.0017,=,,True,,,,,False,,Not Found
+CID_24744,EFSA,2018,3029,Ecotox (water compartment),chronic/long term toxicity,Rainbow trout,Not reported,92.0,NOEC,=,0.041,mg/L,growth,,0.041,=,,True,24744,300.31,,IDOWTHOLJBTAFI-UHFFFAOYSA-N,False,,

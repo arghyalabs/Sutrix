@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Pyriproxyfen,EFSA,2019,3271,Human health,chronic/long term toxicity,Mouse,Not reported,540.0,LOAEL,=,16.4,mg/kg bw/day,mortality,systemic,16.4,=,,True

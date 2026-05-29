@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Formetanate hydrochloride,EFSA,2006,1080,Ecotox (soil compartment),acute toxicity,Rapeseed (oilseed rape),Not reported,21.0,NOEC,>,500.0,g/ha,seedling emergence,,500.0,=,,True

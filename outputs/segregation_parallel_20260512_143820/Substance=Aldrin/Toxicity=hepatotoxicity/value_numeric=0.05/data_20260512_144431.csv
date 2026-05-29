@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Aldrin,EFSA CONTAM,2005,69,Animal (target species) health,chronic/long term toxicity,Dog,oral: feed,468.0,NOAEL,ca.,0.05,mg/kg bw/day,organ weights,hepatotoxicity,0.05,=,,True

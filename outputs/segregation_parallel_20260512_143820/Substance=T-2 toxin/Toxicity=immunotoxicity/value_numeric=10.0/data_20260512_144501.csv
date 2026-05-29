@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+T-2 toxin,EFSA CONTAM,2011,585,Human health,short-term toxicity,Pig,oral: feed,21.0,BMDL05,=,10.0,µg/kg bw/day,clinical chemistry,immunotoxicity,10.0,=,,True

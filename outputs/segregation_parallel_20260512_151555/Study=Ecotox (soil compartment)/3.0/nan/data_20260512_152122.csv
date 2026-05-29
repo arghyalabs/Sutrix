@@ -1,0 +1,9 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready,PubChem_CID,PubChem_MW,PubChem_CanonicalSMILES,PubChem_InChIKey,PubChem_Ambiguous,PubChem_Candidate_CIDs,PubChem_Error
+CID_6129,EFSA,2006,1089,Ecotox (soil compartment),acute toxicity,Honey bee,dermal,3.0,LD50,>,0.14,µg/piece,mortality,,0.14,=,,True,6129,201.22,,CVXBEEMKQHEXEN-UHFFFAOYSA-N,False,,
+CID_11271640,EFSA,2013,2360,Ecotox (soil compartment),acute toxicity,Honey bee,dermal,3.0,LD50,>,4.0,µg/piece,mortality,,4.0,=,,True,11271640,483.1,,PSOVNZZNOMJUBI-UHFFFAOYSA-N,False,,
+CID_16760189,EFSA,2016,2804,Ecotox (soil compartment),acute toxicity,Honey bee,oral: unspecified,3.0,LD50,>,70.0,µg/piece,mortality,,70.0,=,,True,16760189,529.24,,JUJFQMPKBJPSFZ-UHFFFAOYSA-M,False,,
+CID_86210,EFSA,2006,1075,Ecotox (soil compartment),acute toxicity,Honey bee,oral: unspecified,3.0,LD50,>,85.0,µg/piece,mortality,,85.0,=,,True,86210,319.8,,XWPZUHJBOLQNMN-UHFFFAOYSA-N,False,,
+CID_105010,EFSA,2017,2987,Ecotox (soil compartment),acute toxicity,Honey bee,oral: unspecified,3.0,LD50,>,2000.0,µg/piece,mortality,,2000.0,=,,True,105010,368.5,,QCAWEPFNJXQPAN-UHFFFAOYSA-N,False,,
+CID_6336,EFSA,2009,1185,Ecotox (soil compartment),acute toxicity,Honey bee,dermal,3.0,LD50,>,39.6,µg/piece,mortality,,39.6,=,,True,6336,288.77,,HZJKXKUJVSEEFU-UHFFFAOYSA-N,False,,
+CID_6336,EFSA,2010,1223,Ecotox (soil compartment),acute toxicity,Honey bee,dermal,3.0,LD50,>,39.6,µg/piece,mortality,,39.6,=,,True,6336,288.77,,HZJKXKUJVSEEFU-UHFFFAOYSA-N,False,,
+CID_6336,EFSA,2010,1223,Ecotox (soil compartment),acute toxicity,Honey bee,oral: unspecified,3.0,LD50,>,33.9,µg/piece,mortality,,33.9,=,,True,6336,288.77,,HZJKXKUJVSEEFU-UHFFFAOYSA-N,False,,

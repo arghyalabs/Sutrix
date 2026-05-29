@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Fenpyroximate,EFSA,2013,2746,Ecotox (water compartment),chronic/long term toxicity,Rainbow trout,Not reported,21.0,NOEC,=,0.00019,mg/L,no data,,0.00019,=,,True

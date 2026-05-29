@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+"Annatto extract (solvent-extracted bixin, Annatto B)",EFSA ANS,2016,2865,Human health,subchronic,Rat,oral: feed,91.0,NOAEL,=,1206.0,mg/kg bw/day,clinical chemistry,nephrotoxicity,1206.0,=,,True

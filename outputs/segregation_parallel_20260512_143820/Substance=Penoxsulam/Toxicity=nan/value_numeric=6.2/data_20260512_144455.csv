@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Penoxsulam,EFSA,2009,1194,Ecotox (soil compartment),not reported,Sugar beet,Not reported,,EC50,=,6.2,g/ha,seedling emergence,,6.2,=,,True

@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Phosmet,EFSA,2021,3934,Ecotox (water compartment),acute toxicity,Bluegill,Not reported,4.0,LD50,=,19.7,µg/L,mortality,,19.7,=,,True

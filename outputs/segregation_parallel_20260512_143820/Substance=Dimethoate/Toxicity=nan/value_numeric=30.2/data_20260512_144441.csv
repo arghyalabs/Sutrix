@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Dimethoate,EFSA,2006,1092,Ecotox (water compartment),acute toxicity,Rainbow trout,Not reported,4.0,LC50,=,30.2,mg/L,mortality,,30.2,=,,True

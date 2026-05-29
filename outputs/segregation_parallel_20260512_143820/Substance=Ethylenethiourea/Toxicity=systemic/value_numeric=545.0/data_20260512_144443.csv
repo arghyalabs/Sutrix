@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Ethylenethiourea,EFSA,2019,3605,Animal (non-target species) health,acute toxicity,Rat,oral: unspecified,,LD50,=,545.0,mg/kg bw/day,mortality,systemic,545.0,=,,True

@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Prothioconazole,EFSA,2007,1103,Animal (non-target species) health,acute toxicity,Rat,oral: unspecified,,LD50,=,2506.0,mg/kg bw/day,mortality,systemic,2506.0,=,,True

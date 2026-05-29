@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Spinetoram,EFSA,2013,2229,Ecotox (water compartment),acute toxicity,Navicula pelliculosa,Not reported,3.0,EC50,=,77.9,µg/L,other,,77.9,=,,True

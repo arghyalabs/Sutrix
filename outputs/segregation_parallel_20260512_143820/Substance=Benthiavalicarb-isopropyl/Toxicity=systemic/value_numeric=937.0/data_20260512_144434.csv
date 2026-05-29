@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Benthiavalicarb-isopropyl,EFSA,2007,1104,Animal (non-target species) health,short-term toxicity,Bobwhite quail,oral: feed,,LC50,>,937.0,mg/kg bw/day,mortality,systemic,937.0,=,,True

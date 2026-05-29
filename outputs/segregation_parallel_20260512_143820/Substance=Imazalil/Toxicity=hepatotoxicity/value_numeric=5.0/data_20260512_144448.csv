@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Imazalil,EFSA,2010,1208,Human health,chronic/long term toxicity,Rat,oral: unspecified,180.0,NOAEL,=,5.0,mg/kg bw/day,clinical chemistry,hepatotoxicity,5.0,=,,True

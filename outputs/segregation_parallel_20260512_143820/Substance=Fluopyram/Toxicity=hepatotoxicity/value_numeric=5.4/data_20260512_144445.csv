@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Fluopyram,EFSA,2013,2177,Human health,subchronic,Mouse,oral: feed,90.0,NOAEL,=,5.4,mg/kg bw/day,organ weights,hepatotoxicity,5.4,=,,True

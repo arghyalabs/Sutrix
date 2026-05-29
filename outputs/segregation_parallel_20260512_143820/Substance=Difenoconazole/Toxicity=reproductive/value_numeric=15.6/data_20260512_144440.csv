@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Difenoconazole,EFSA,2011,1277,Human health,reproduction toxicity,Rat,Not reported,,NOAEL,=,15.6,mg/kg bw/day,development,reproductive,15.6,=,,True

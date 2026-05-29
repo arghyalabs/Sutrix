@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Acrinathrin,EFSA,2010,1257,Ecotox (soil compartment),acute toxicity,Tiger worm,Not reported,14.0,NOEC,=,1.6,mg/kg,not reported,,1.6,=,,True

@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready,PubChem_CID,PubChem_MW,PubChem_CanonicalSMILES,PubChem_InChIKey,PubChem_Ambiguous,PubChem_Candidate_CIDs,PubChem_Error
+CID_5323714,EFSA CONTAM,2015,2663,Human health,chronic/long term toxicity,Mouse,oral: feed,390.0,BMDL10,=,3.5,mg/kg bw/day,histopathology neoplastic,pulmonary and cardiac,3.5,=,,True,5323714,225.16,,PLHJDBGFXBMTGZ-WEVVVXLNSA-N,False,,

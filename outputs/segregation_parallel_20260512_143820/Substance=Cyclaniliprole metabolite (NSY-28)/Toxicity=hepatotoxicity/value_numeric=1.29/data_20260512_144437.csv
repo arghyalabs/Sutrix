@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Cyclaniliprole metabolite (NSY-28),EFSA,2016,2803,Human health,chronic/long term toxicity,Dog,oral: unspecified,365.0,LOAEL,=,1.29,mg/kg bw/day,organ weights,hepatotoxicity,1.29,=,,True

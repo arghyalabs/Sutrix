@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Allyl isothiocyanate,EFSA ANS,2010,464,Human health,chronic/long term toxicity,Rat,oral: gavage,721.0,LOAEL,=,9.0,mg/kg bw/day,histopathology non neoplastic,nephrotoxicity,9.0,=,,True

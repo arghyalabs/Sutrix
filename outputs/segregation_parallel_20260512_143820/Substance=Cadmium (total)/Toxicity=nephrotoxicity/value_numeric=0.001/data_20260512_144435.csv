@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Cadmium (total),EFSA CONTAM,2011,50,Human health,study with volunteers,Human,Not reported,,BMDL05,=,0.001,mg/kg,clinical chemistry,nephrotoxicity,0.001,=,,True

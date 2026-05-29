@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Thiophanate-methyl,EFSA,2018,3025,Ecotox (soil compartment),not reported,Aphidius rhopalosiphi,Not reported,,ER50,>=,175.0,g/ha,reproduction,,175.0,=,,True

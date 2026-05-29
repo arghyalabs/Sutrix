@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Diethyl (2RS)-2-[(dimethoxyphosphoryl)sulfanyl]butanedioate,EFSA,2009,1190,Animal (non-target species) health,short-term toxicity,Bobwhite quail,oral: feed,,LD50,=,333.5,mg/kg bw,mortality,systemic,333.5,=,,True

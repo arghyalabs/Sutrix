@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Carbaryl,EFSA,2006,1089,Human health,chronic/long term toxicity,Mouse,oral: feed,730.0,LOAEL,=,15.0,mg/kg bw/day,histopathology neoplastic,systemic,15.0,=,,True

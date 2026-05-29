@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Endrin,EFSA CONTAM,2005,70,Animal (target species) health,chronic/long term toxicity,Common quail,oral: feed,105.0,LOAEL,=,0.5,mg/kg,mortality,systemic,0.5,=,,True

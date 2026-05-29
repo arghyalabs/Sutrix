@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Ethoprophos,EFSA,2006,1077,Ecotox (soil compartment),not reported,Poecilus cupreus,Not reported,,dose level,=,7000.0,g/ha,mortality,,7000.0,=,,True

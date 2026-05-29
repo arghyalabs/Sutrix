@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Azimsulfuron,EFSA,2010,1210,Ecotox (water compartment),chronic/long term toxicity,Rainbow trout,Not reported,90.0,NOEC,=,6.3,mg/L,time to hatch,,6.3,=,,True

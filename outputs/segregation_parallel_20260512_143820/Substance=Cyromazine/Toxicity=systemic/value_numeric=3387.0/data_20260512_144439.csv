@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Cyromazine,EFSA,2008,1137,Animal (non-target species) health,acute toxicity,Rat,Not reported,,LD50,=,3387.0,mg/kg bw,mortality,systemic,3387.0,=,,True

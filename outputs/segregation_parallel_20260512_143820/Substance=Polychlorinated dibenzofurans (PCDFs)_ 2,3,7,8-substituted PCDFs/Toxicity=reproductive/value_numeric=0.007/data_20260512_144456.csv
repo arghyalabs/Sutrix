@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+"Polychlorinated dibenzofurans (PCDFs): 2,3,7,8-substituted PCDFs.",EFSA CONTAM,2018,3158,Human health,study with volunteers,Human,Not reported,,NOAEL,=,0.007,µg/g,reproduction,reproductive,0.007,=,,True

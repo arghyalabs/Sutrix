@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Haloxyfop-P,EFSA,2009,1197,Animal (non-target species) health,reproduction toxicity,Bird,Not reported,,NOEC,ca.,17.1,mg/kg bw/day,not reported,not reported,17.1,=,,True

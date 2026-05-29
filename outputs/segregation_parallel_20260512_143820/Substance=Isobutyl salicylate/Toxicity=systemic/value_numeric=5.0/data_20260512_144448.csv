@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Isobutyl salicylate,EFSA FEEDAP,2012,607,Human health,subchronic,Rat,oral: unspecified,91.0,NOAEL,=,5.0,mg/kg bw/day,body weight,systemic,5.0,=,,True

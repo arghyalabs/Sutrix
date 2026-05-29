@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Metobromuron,EFSA,2014,2439,Human health,chronic/long term toxicity,Mouse,Not reported,730.0,NOAEL,=,0.8,mg/kg bw/day,haematology,systemic,0.8,=,,True

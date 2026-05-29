@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Pinoxaden,EFSA,2013,2424,Ecotox (soil compartment),acute toxicity,Common oat,Not reported,21.0,ER50,=,9.16,g/ha,biomass,,9.16,=,,True

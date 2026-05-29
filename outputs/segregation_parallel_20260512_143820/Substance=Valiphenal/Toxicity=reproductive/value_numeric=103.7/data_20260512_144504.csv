@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Valiphenal,EFSA,2013,2366,Animal (non-target species) health,reproduction toxicity,Bobwhite quail,Not reported,,NOAEL,=,103.7,mg/kg bw/day,reproduction,reproductive,103.7,=,,True

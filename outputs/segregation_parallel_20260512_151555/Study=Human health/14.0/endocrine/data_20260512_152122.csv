@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready,PubChem_CID,PubChem_MW,PubChem_CanonicalSMILES,PubChem_InChIKey,PubChem_Ambiguous,PubChem_Candidate_CIDs,PubChem_Error
+CID_3259,EFSA ANS,2011,462,Human health,study with volunteers,Human,oral: capsule,14.0,NOAEL,=,1.0,mg/kg bw/day,clinical chemistry,endocrine,1.0,=,,True,3259,835.9,,OALHHIHQOFIMEF-UHFFFAOYSA-N,False,,

@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Methoxyfenozide,EFSA,2017,2987,Ecotox (water compartment),acute toxicity,Sheepshead minnow,Not reported,4.0,LC50,>,2.8,mg/L,mortality,,2.8,=,,True

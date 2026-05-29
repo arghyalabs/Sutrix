@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+T-2 toxin-triol,EFSA CONTAM,2017,2908,Human health,subchronic,Rat,oral: feed,90.0,RPF,=,0.1,dimensionless,haematology,hemopoietic,0.1,=,,True

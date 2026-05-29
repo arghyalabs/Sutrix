@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+4-[2-Chloro-4-(trifluoromethyl)phenoxy-2-fluorobenzenamine,EFSA,2011,1286,Animal (non-target species) health,acute toxicity,Rat,oral: unspecified,,LD50,=,1937.0,mg/kg bw/day,mortality,systemic,1937.0,=,,True

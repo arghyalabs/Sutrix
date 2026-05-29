@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Melamine,"EFSA CEF, EFSA CONTAM",2010,86,Animal (target species) health,acute toxicity,Pig,oral: feed,3.0,dose level,=,400.0,mg/kg bw/day,no adverse effect observed,,400.0,=,,True

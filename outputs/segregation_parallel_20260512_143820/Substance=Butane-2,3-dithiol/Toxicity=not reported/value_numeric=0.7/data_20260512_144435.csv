@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+"Butane-2,3-dithiol",EFSA CEF,2011,2121,Human health,subchronic,Rat,oral: unspecified,90.0,NOAEL,=,0.7,mg/kg bw/day,not reported,not reported,0.7,=,,True

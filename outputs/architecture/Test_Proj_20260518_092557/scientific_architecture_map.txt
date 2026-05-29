@@ -1,0 +1,17 @@
+====================================================
+         RECURSIVE SCIENTIFIC ARCHITECTURE          
+====================================================
+
+WORKFLOW LINEAGE:
+ [Raw Experimental Data] -> [Ontology Routing] -> [Recursive Partitioning] -> [QSAR Subsets]
+
+HIERARCHY PATH:
+Species -> Endpoint
+
+ARCHITECTURE MAP (PREVIEW):
+📁 Root Dataset (n=3)
+├── 📁 A [Species] (n=2)
+│   📁 X (n=1)
+│   📁 Y (n=1)
+└── 📁 B [Species] (n=1)
+    📁 X (n=1)

@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Triasulfuron formulation (A6943E (20% WG)),EFSA,2015,2592,Ecotox (soil compartment),not reported,Typhlodromus pyri,Not reported,,LR50,>,125.0,g/ha,mortality,,125.0,=,,True

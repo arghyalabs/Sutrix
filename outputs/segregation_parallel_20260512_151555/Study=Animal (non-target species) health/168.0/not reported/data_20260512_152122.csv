@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready,PubChem_CID,PubChem_MW,PubChem_CanonicalSMILES,PubChem_InChIKey,PubChem_Ambiguous,PubChem_Candidate_CIDs,PubChem_Error
+CID_53297381,EFSA,2007,1104,Animal (non-target species) health,reproduction toxicity,Bobwhite quail,Not reported,168.0,NOEL,=,105.0,mg/kg bw/day,not reported,not reported,105.0,=,,True,53297381,381.5,,USRKFGIXLGKMKU-ABAIWWIYSA-N,False,,

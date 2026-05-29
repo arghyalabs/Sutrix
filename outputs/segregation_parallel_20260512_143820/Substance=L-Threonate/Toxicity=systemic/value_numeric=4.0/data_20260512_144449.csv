@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+L-Threonate,EFSA ANS,2008,556,Human health,chronic/long term toxicity,Rat,oral: gavage,168.0,NOAEL,=,4.0,g/kg bw/day,haematology,systemic,4.0,=,,True

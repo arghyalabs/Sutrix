@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Propargite,EFSA,2011,1285,Animal (non-target species) health,acute toxicity,Rat,oral: unspecified,,LD50,=,2639.0,mg/kg bw/day,mortality,systemic,2639.0,=,,True

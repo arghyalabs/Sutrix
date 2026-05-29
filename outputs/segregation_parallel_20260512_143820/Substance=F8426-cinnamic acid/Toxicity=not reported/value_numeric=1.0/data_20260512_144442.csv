@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+F8426-cinnamic acid,EFSA,2016,2866,Animal (non-target species) health,short-term toxicity,Rat,Not reported,28.0,NOAEL,=,1.0,mg/kg bw/day,not reported,not reported,1.0,=,,True

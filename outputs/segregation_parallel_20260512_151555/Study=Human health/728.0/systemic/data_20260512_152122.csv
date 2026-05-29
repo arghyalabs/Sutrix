@@ -1,0 +1,3 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready,PubChem_CID,PubChem_MW,PubChem_CanonicalSMILES,PubChem_InChIKey,PubChem_Ambiguous,PubChem_Candidate_CIDs,PubChem_Error
+Sucroglycerides,EFSA AFC,2004,313,Human health,chronic/long term toxicity,Rat,oral: feed,728.0,NOAEL,ca.,2000.0,mg/kg bw/day,body weight,systemic,2000.0,=,,True,,,,,False,,Not Found
+Sucrose esters of fatty acids,EFSA AFC,2004,313,Human health,chronic/long term toxicity,Rat,oral: feed,728.0,NOAEL,ca.,2000.0,mg/kg bw/day,body weight,systemic,2000.0,=,,True,,,,,False,,Not Found

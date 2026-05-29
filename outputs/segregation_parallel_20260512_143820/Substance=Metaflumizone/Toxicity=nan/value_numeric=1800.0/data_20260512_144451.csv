@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Metaflumizone,EFSA,2013,2431,Ecotox (water compartment),acute toxicity,Chironomus tentans,Not reported,10.0,LC50,=,1800.0,µg/kg,mortality,,1800.0,=,,True

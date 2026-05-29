@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Fluopyram,EFSA,2013,2177,Ecotox (soil compartment),acute toxicity,Sugar beet,Not reported,21.0,ER50,>,250.0,g/ha,other,,250.0,=,,True

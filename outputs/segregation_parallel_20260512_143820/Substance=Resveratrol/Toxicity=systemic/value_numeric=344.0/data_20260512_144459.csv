@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Resveratrol,EFSA NDA,2016,2731,Human health,subchronic,Rat,oral: feed,90.0,BMDL05,=,344.0,mg/kg bw/day,body weight,systemic,344.0,=,,True

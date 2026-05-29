@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Dimoxystrobin,EFSA,2005,1060,Ecotox (water compartment),chronic/long term toxicity,Daphnia magna,Not reported,21.0,NOEC,=,0.0125,mg/L,reproduction,,0.0125,=,,True

@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Isoxaflutole metabolite (RPA 202248),EFSA,2016,2777,Ecotox (water compartment),acute toxicity,Swollen duckweed,Not reported,14.0,EC50,=,0.055,mg/L,biomass,,0.055,=,,True

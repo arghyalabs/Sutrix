@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+"4-Methoxy-1,2-benzothiazol-3(2H)-one 1,1-dioxide",EFSA,2016,2885,Ecotox (water compartment),acute toxicity,Swollen duckweed,Not reported,,EC50,=,0.453,µg/L,not reported,,0.453,=,,True

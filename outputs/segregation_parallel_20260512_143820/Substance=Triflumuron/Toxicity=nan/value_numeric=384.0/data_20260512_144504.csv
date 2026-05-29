@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Triflumuron,EFSA,2009,1160,Ecotox (soil compartment),chronic/long term toxicity,Typhlodromus pyri,Not reported,,dose level,=,384.0,g/ha,reproduction,,384.0,=,,True

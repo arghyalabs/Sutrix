@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Aluminium silicate,EFSA,2012,1317,Ecotox (water compartment),acute toxicity,Red seabream,Not reported,0.5,LC50,=,494.0,mg/L,mortality,,494.0,=,,True

@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+"T-2 toxin, HT-2 toxin, Neosolaniol and its phase II metabolites",EFSA CONTAM,2017,2908,Human health,acute toxicity,American mink,intraperitoneal,,BMDL10,=,2.97,µg/kg bw,clinical signs,systemic,2.97,=,,True

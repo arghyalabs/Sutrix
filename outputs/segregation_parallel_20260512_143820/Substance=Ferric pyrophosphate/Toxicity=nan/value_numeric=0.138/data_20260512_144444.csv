@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Ferric pyrophosphate,EFSA PPR,2020,3419,Ecotox (water compartment),chronic/long term toxicity,Zebra fish,Not reported,30.0,NOEC,>=,0.138,mg/L,growth,,0.138,=,,True

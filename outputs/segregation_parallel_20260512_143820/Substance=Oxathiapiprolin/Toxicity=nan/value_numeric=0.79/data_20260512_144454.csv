@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Oxathiapiprolin,EFSA,2016,2828,Ecotox (water compartment),acute toxicity,Swollen duckweed,Not reported,7.0,EC50,>,0.79,mg/L,other,,0.79,=,,True

@@ -1,0 +1,6 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready,PubChem_CID,PubChem_MW,PubChem_CanonicalSMILES,PubChem_InChIKey,PubChem_Ambiguous,PubChem_Candidate_CIDs,PubChem_Error
+1-Phenethyl acetate,EFSA FEEDAP,2016,2863,Animal (target species) health,subchronic,Rat,oral: feed,91.0,NOAEL,=,50.0,mg/kg bw/day,haematology,hemopoietic,50.0,=,,True,,,,,False,,Not Found
+CID_7409,EFSA FEEDAP,2016,2863,Animal (target species) health,subchronic,Rat,oral: feed,91.0,NOAEL,=,50.0,mg/kg bw/day,haematology,hemopoietic,50.0,=,,True,7409,122.16,,WAPNOHKVXSQRPX-UHFFFAOYSA-N,False,,
+CID_7476,EFSA FEEDAP,2016,2863,Animal (target species) health,subchronic,Rat,oral: feed,91.0,NOAEL,=,50.0,mg/kg bw/day,haematology,hemopoietic,50.0,=,,True,7476,150.17,,NTPLXRHDUXRPNE-UHFFFAOYSA-N,False,,
+CID_8500,EFSA FEEDAP,2016,2863,Animal (target species) health,subchronic,Rat,oral: feed,91.0,NOAEL,=,50.0,mg/kg bw/day,haematology,hemopoietic,50.0,=,,True,8500,134.17,,GNKZMNRKLCTJAY-UHFFFAOYSA-N,False,,
+CID_7410,EFSA FEEDAP,2016,2863,Animal (target species) health,subchronic,Rat,oral: feed,91.0,NOAEL,=,50.0,mg/kg bw/day,haematology,hemopoietic,50.0,=,,True,7410,120.15,,KWOLFJPFCHCOCG-UHFFFAOYSA-N,False,,

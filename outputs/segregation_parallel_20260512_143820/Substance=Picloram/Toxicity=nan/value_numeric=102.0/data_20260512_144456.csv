@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Picloram,EFSA,2009,1201,Ecotox (water compartment),acute toxicity,Swollen duckweed,Not reported,14.0,EC50,=,102.0,mg/L,frond number,,102.0,=,,True

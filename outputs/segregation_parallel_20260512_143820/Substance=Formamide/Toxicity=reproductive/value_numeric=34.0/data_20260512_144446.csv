@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Formamide,EFSA FEEDAP,2020,3571,Animal (target species) health,reproduction toxicity,Rabbit,oral: gavage,13.0,NOAEL,=,34.0,mg/kg bw/day,reproduction,reproductive,34.0,=,,True

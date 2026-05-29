@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Narasin,EFSA FEEDAP,2004,268,Ecotox (soil compartment),acute toxicity,Radish,Not reported,,EC50,>,3.4,mg/kg,growth,,3.4,=,,True

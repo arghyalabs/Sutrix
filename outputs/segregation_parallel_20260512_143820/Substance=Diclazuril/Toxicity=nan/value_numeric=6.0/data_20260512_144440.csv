@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Diclazuril,EFSA FEEDAP,2007,275,Animal (target species) health,subchronic,Rabbit,oral: feed,35.0,dose level,=,6.0,mg/kg,no adverse effect observed,,6.0,=,,True

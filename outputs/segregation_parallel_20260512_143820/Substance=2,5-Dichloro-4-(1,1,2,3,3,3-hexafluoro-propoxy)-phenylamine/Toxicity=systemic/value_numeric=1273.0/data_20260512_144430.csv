@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+"2,5-Dichloro-4-(1,1,2,3,3,3-hexafluoro-propoxy)-phenylamine",EFSA,2009,1155,Animal (non-target species) health,acute toxicity,Rat,oral: unspecified,,LD50,=,1273.0,mg/kg bw/day,mortality,systemic,1273.0,=,,True

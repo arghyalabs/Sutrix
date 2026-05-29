@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Cadusafos,EFSA,2009,1181,Animal (non-target species) health,short-term toxicity,Bobwhite quail,oral: feed,,LC50,=,10.8,mg/kg bw/day,mortality,systemic,10.8,=,,True

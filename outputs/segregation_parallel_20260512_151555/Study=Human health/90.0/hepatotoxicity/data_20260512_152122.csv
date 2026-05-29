@@ -1,0 +1,27 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready,PubChem_CID,PubChem_MW,PubChem_CanonicalSMILES,PubChem_InChIKey,PubChem_Ambiguous,PubChem_Candidate_CIDs,PubChem_Error
+CID_699489,EFSA AFC,2005,2096,Human health,subchronic,Rat,oral: feed,90.0,NOEL,=,54.0,mg/kg bw/day,haematology,hepatotoxicity,54.0,=,,True,699489,166.17,,MWZBTMXISMOMAE-AATRIKPKSA-N,False,,
+CID_699489,EFSA CEF,2010,2051,Human health,subchronic,Rat,oral: feed,90.0,NOEL,=,54.0,mg/kg bw/day,haematology,hepatotoxicity,54.0,=,,True,699489,166.17,,MWZBTMXISMOMAE-AATRIKPKSA-N,False,,
+CID_699489,EFSA CEF,2011,2110,Human health,subchronic,Rat,oral: feed,90.0,NOEL,=,54.0,mg/kg bw/day,haematology,hepatotoxicity,54.0,=,,True,699489,166.17,,MWZBTMXISMOMAE-AATRIKPKSA-N,False,,
+CID_6919,EFSA CEF,2010,2051,Human health,subchronic,Rat,oral: feed,90.0,NOEL,=,54.0,mg/kg bw/day,haematology,hepatotoxicity,54.0,=,,True,6919,112.08,,SMNDYUVBFMFKNZ-UHFFFAOYSA-N,False,,
+CID_6919,EFSA CEF,2011,2110,Human health,subchronic,Rat,oral: feed,90.0,NOEL,=,54.0,mg/kg bw/day,haematology,hepatotoxicity,54.0,=,,True,6919,112.08,,SMNDYUVBFMFKNZ-UHFFFAOYSA-N,False,,
+CID_11409,EFSA AFC,2005,2096,Human health,subchronic,Rat,oral: feed,90.0,NOEL,=,54.0,mg/kg bw/day,haematology,hepatotoxicity,54.0,=,,True,11409,168.19,,PAMQYEWNNPDBLM-UHFFFAOYSA-N,False,,
+CID_11409,EFSA CEF,2010,2051,Human health,subchronic,Rat,oral: feed,90.0,NOEL,=,54.0,mg/kg bw/day,haematology,hepatotoxicity,54.0,=,,True,11409,168.19,,PAMQYEWNNPDBLM-UHFFFAOYSA-N,False,,
+CID_11409,EFSA CEF,2011,2110,Human health,subchronic,Rat,oral: feed,90.0,NOEL,=,54.0,mg/kg bw/day,haematology,hepatotoxicity,54.0,=,,True,11409,168.19,,PAMQYEWNNPDBLM-UHFFFAOYSA-N,False,,
+CID_11980,EFSA AFC,2005,2096,Human health,subchronic,Rat,oral: feed,90.0,NOEL,=,54.0,mg/kg bw/day,haematology,hepatotoxicity,54.0,=,,True,11980,140.14,,NHXSTXWKZVAVOQ-UHFFFAOYSA-N,False,,
+CID_11980,EFSA CEF,2010,2051,Human health,subchronic,Rat,oral: feed,90.0,NOEL,=,54.0,mg/kg bw/day,haematology,hepatotoxicity,54.0,=,,True,11980,140.14,,NHXSTXWKZVAVOQ-UHFFFAOYSA-N,False,,
+CID_11980,EFSA CEF,2011,2110,Human health,subchronic,Rat,oral: feed,90.0,NOEL,=,54.0,mg/kg bw/day,haematology,hepatotoxicity,54.0,=,,True,11980,140.14,,NHXSTXWKZVAVOQ-UHFFFAOYSA-N,False,,
+CID_7362,EFSA AFC,2004,2248,Human health,subchronic,Rat,oral: feed,90.0,NOEL,=,54.0,mg/kg bw/day,haematology,hepatotoxicity,54.0,=,,True,7362,96.08,,HYBBIBNJHNGZAN-UHFFFAOYSA-N,False,,
+CID_83553,EFSA AFC,2004,2248,Human health,subchronic,Rat,oral: feed,90.0,NOEL,=,54.0,mg/kg bw/day,haematology,hepatotoxicity,54.0,=,,True,83553,170.21,,SEILDMUKBMYIEZ-UHFFFAOYSA-N,False,,
+CID_20560364,EFSA AFC,2005,2096,Human health,subchronic,Rat,oral: feed,90.0,NOEL,=,54.0,mg/kg bw/day,haematology,hepatotoxicity,54.0,=,,True,20560364,182.22,,FWHTZOMSKMABHQ-UHFFFAOYSA-N,False,,
+CID_20560364,EFSA CEF,2010,2051,Human health,subchronic,Rat,oral: feed,90.0,NOEL,=,54.0,mg/kg bw/day,haematology,hepatotoxicity,54.0,=,,True,20560364,182.22,,FWHTZOMSKMABHQ-UHFFFAOYSA-N,False,,
+CID_20560364,EFSA CEF,2011,2110,Human health,subchronic,Rat,oral: feed,90.0,NOEL,=,54.0,mg/kg bw/day,haematology,hepatotoxicity,54.0,=,,True,20560364,182.22,,FWHTZOMSKMABHQ-UHFFFAOYSA-N,False,,
+Furfuryl but-2(E)-enoate,EFSA AFC,2005,2096,Human health,subchronic,Rat,oral: feed,90.0,NOEL,=,54.0,mg/kg bw/day,haematology,hepatotoxicity,54.0,=,,True,,,,,False,,Not Found
+Furfuryl but-2(E)-enoate,EFSA CEF,2010,2051,Human health,subchronic,Rat,oral: feed,90.0,NOEL,=,54.0,mg/kg bw/day,haematology,hepatotoxicity,54.0,=,,True,,,,,False,,Not Found
+Furfuryl but-2(E)-enoate,EFSA CEF,2011,2110,Human health,subchronic,Rat,oral: feed,90.0,NOEL,=,54.0,mg/kg bw/day,haematology,hepatotoxicity,54.0,=,,True,,,,,False,,Not Found
+CID_61167,EFSA CEF,2011,2110,Human health,subchronic,Rat,oral: feed,90.0,NOEL,=,54.0,mg/kg bw/day,haematology,hepatotoxicity,54.0,=,,True,61167,168.19,,IXISGRHWGVGCAK-UHFFFAOYSA-N,False,,
+CID_557222,EFSA AFC,2005,2096,Human health,subchronic,Rat,oral: feed,90.0,NOEL,=,54.0,mg/kg bw/day,haematology,hepatotoxicity,54.0,=,,True,557222,196.24,,IBIDUABZZSJJNF-UHFFFAOYSA-N,False,,
+CID_557222,EFSA CEF,2010,2051,Human health,subchronic,Rat,oral: feed,90.0,NOEL,=,54.0,mg/kg bw/day,haematology,hepatotoxicity,54.0,=,,True,557222,196.24,,IBIDUABZZSJJNF-UHFFFAOYSA-N,False,,
+CID_557222,EFSA CEF,2011,2110,Human health,subchronic,Rat,oral: feed,90.0,NOEL,=,54.0,mg/kg bw/day,haematology,hepatotoxicity,54.0,=,,True,557222,196.24,,IBIDUABZZSJJNF-UHFFFAOYSA-N,False,,
+CID_80454,EFSA AFC,2005,2096,Human health,subchronic,Rat,oral: feed,90.0,NOEL,=,54.0,mg/kg bw/day,haematology,hepatotoxicity,54.0,=,,True,80454,168.19,,SZWUNATWHPNXKD-UHFFFAOYSA-N,False,,
+CID_80454,EFSA CEF,2010,2051,Human health,subchronic,Rat,oral: feed,90.0,NOEL,=,54.0,mg/kg bw/day,haematology,hepatotoxicity,54.0,=,,True,80454,168.19,,SZWUNATWHPNXKD-UHFFFAOYSA-N,False,,
+CID_80454,EFSA CEF,2011,2110,Human health,subchronic,Rat,oral: feed,90.0,NOEL,=,54.0,mg/kg bw/day,haematology,hepatotoxicity,54.0,=,,True,80454,168.19,,SZWUNATWHPNXKD-UHFFFAOYSA-N,False,,

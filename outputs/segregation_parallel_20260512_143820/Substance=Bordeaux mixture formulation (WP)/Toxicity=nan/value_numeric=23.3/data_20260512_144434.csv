@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Bordeaux mixture formulation (WP),EFSA,2018,3032,Ecotox (soil compartment),acute toxicity,Honey bee,oral: unspecified,,LD50,=,23.3,µg/piece,mortality,,23.3,=,,True

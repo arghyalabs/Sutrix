@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Foramsulfuron,EFSA,2016,2788,Animal (non-target species) health,reproduction toxicity,Bobwhite quail,Not reported,,NOEL,=,104.0,mg/kg bw/day,not reported,not reported,104.0,=,,True

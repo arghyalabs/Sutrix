@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready,PubChem_CID,PubChem_MW,PubChem_CanonicalSMILES,PubChem_InChIKey,PubChem_Ambiguous,PubChem_Candidate_CIDs,PubChem_Error
+Trifluoroacetic acid (TFA),EFSA,2016,2825,Human health,short-term toxicity,Rat,oral: unspecified,14.0,NOAEL,=,43.0,mg/kg bw/day,other,not reported,43.0,=,,True,,,,,False,,Not Found

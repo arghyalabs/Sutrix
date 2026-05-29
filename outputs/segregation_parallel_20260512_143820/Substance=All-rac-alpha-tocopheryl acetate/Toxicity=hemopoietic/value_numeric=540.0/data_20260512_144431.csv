@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+All-rac-alpha-tocopheryl acetate,EFSA FEEDAP,2010,178,Human health,study with volunteers,Human,Not reported,,NOAEL,=,540.0,mg/day,haematology,hemopoietic,540.0,=,,True

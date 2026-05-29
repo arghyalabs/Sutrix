@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+"Dinophysistoxin 2, acylated derivatives",EFSA CONTAM,2008,124,Human health,acute toxicity,Mouse,intraperitoneal,,TEF,=,0.6,dimensionless,mortality,systemic,0.6,=,,True

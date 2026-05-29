@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Phosphine,EFSA,2012,2742,Human health,chronic/long term toxicity,Rat,inhalation: unspecified,730.0,NOAEL,=,1.1,mg/kg bw/day,not reported,not reported,1.1,=,,True

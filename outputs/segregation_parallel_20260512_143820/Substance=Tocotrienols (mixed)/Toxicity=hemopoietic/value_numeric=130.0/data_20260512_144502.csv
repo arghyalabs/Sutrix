@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Tocotrienols (mixed),EFSA AFC,2008,381,Human health,subchronic,Rat,oral: feed,91.0,NOAEL,=,130.0,mg/kg bw/day,haematology,hemopoietic,130.0,=,,True

@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+"3,6-dichloropyridine-2-carboxylic acid",EFSA,2006,1061,Animal (non-target species) health,subchronic,Rat,Not reported,91.0,NOAEL,=,300.0,mg/kg bw/day,haematology,hemopoietic,300.0,=,,True

@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+"3-Monochloropropane-1,2-diol",EFSA CONTAM,2018,3033,Human health,chronic/long term toxicity,Rat,oral: unspecified,730.0,BMDL10,=,0.2,mg/kg bw/day,histopathology non neoplastic,nephrotoxicity,0.2,=,,True

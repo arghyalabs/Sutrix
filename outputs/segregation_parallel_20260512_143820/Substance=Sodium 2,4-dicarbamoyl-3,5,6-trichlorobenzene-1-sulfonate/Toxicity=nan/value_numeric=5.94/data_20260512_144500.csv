@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+"Sodium 2,4-dicarbamoyl-3,5,6-trichlorobenzene-1-sulfonate",EFSA,2018,3023,Ecotox (soil compartment),chronic/long term toxicity,Tiger worm,Not reported,56.0,NOEC,=,5.94,mg/kg,growth,,5.94,=,,True

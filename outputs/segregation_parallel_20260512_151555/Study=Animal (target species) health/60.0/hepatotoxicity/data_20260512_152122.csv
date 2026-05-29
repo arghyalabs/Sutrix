@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready,PubChem_CID,PubChem_MW,PubChem_CanonicalSMILES,PubChem_InChIKey,PubChem_Ambiguous,PubChem_Candidate_CIDs,PubChem_Error
+Methylmercury,EFSA CONTAM,2008,44,Animal (target species) health,subchronic,Pig,oral: feed,60.0,NOAEL,=,0.19,mg/kg bw/day,histopathology non neoplastic,hepatotoxicity,0.19,=,,True,,,,,True,"6860,7906",Ambiguous Identity

@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Prochloraz,EFSA,2011,1297,Ecotox (water compartment),acute toxicity,Sheepshead minnow,Not reported,4.0,LC50,=,1.2,mg/L,mortality,,1.2,=,,True

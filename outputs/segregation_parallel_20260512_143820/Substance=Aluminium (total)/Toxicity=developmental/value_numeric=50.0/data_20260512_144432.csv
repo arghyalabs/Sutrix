@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Aluminium (total),EFSA AFC,2008,295,Human health,reproduction toxicity,Mouse,Not reported,,LOAEL,=,50.0,mg/kg bw/day,neurology,developmental,50.0,=,,True

@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Amitrole formulation (CA2210),EFSA,2014,2542,Ecotox (soil compartment),not reported,Aphidius rhopalosiphi,Not reported,,LR50,>,45000.0,ml/ha,mortality,,45000.0,=,,True

@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Mesosulfuron-methyl,EFSA,2016,2874,Ecotox (soil compartment),acute toxicity,Honey bee,oral: unspecified,,LD50,>,105.6,µg/piece,mortality,,105.6,=,,True

@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Sodium nitrite,EFSA ANS,2017,2956,Human health,subchronic,Rat,Not reported,98.0,BMDL,=,9.63,mg/kg bw/day,clinical chemistry,systemic,9.63,=,,True

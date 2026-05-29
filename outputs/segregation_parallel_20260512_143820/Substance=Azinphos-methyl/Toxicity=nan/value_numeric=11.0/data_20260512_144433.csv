@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Azinphos-methyl,EFSA PPR,2004,917,Ecotox (soil compartment),acute toxicity,Trichogramma cacoeciae,Not reported,7.0,ER50,=,11.0,g/ha,not reported,,11.0,=,,True

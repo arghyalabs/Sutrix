@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Cyclohexyl acetate,EFSA FEEDAP,2016,2822,Ecotox (soil compartment),acute toxicity,Earthworm,Not reported,,LC50,=,1152.0,mg/kg,mortality,,1152.0,=,,True

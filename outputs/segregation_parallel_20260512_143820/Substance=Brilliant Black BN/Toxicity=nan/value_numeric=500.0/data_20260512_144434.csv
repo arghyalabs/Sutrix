@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Brilliant Black BN,EFSA ANS,2010,412,Human health,chronic/long term toxicity,Rat,oral: feed,730.0,NOAEL,=,500.0,mg/kg bw/day,no adverse effect observed at single/highest dose,,500.0,=,,True

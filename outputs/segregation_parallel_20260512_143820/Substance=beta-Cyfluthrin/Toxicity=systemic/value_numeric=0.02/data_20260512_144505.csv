@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+beta-Cyfluthrin,EFSA PPR,2020,3532,Human health,chronic/long term toxicity,Rat,inhalation: unspecified,91.0,NOAEL,ca.,0.02,mg/kg bw/day,clinical signs,systemic,0.02,=,,True

@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Potassium diformate (aqueous solution),EFSA FEEDAP,2004,292,Animal (target species) health,subchronic,Atlantic salmon,oral: feed,90.0,dose level,=,10.0,g/kg,no adverse effect observed,,10.0,=,,True

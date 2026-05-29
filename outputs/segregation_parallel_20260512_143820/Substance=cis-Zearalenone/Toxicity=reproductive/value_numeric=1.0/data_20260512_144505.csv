@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+cis-Zearalenone,EFSA CONTAM,2016,2801,Human health,reproduction toxicity,Pig,Not reported,,RPF,=,1.0,dimensionless,morphology,reproductive,1.0,=,,True

@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Etoxazole,EFSA,2017,3011,Ecotox (soil compartment),chronic/long term toxicity,Red tiger worm,Not reported,56.0,NOEC,=,5.0,mg/kg,reproduction,,5.0,=,,True

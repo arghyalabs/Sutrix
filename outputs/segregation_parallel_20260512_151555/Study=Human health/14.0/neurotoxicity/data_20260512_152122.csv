@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready,PubChem_CID,PubChem_MW,PubChem_CanonicalSMILES,PubChem_InChIKey,PubChem_Ambiguous,PubChem_Candidate_CIDs,PubChem_Error
+CID_4618,EFSA,2006,1094,Human health,short-term toxicity,Rat,oral: unspecified,14.0,NOAEL,=,0.15,mg/kg bw/day,clinical chemistry,neurotoxicity,0.15,=,,True,4618,246.3,,PMCVMORKVPSKHZ-UHFFFAOYSA-N,False,,

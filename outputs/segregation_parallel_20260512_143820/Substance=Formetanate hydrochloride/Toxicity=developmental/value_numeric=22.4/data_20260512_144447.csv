@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Formetanate hydrochloride,EFSA,2006,1080,Animal (non-target species) health,reproduction toxicity,Rat,Not reported,,NOEL,=,22.4,mg/kg bw/day,mortality,developmental,22.4,=,,True

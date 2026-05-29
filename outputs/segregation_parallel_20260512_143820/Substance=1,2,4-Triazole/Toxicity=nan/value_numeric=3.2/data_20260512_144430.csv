@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+"1,2,4-Triazole",EFSA,2014,2542,Ecotox (water compartment),chronic/long term toxicity,Rainbow trout,Not reported,28.0,NOEC,=,3.2,mg/L,other,,3.2,=,,True

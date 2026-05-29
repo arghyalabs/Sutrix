@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Allura Red AC,EFSA FEEDAP,2015,2701,Animal (target species) health,reproduction toxicity,Rat,Not reported,,NOAEL,=,701.0,mg/kg bw/day,development,developmental,701.0,=,,True

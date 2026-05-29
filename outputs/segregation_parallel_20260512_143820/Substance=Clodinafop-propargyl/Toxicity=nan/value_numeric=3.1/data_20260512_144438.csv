@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Clodinafop-propargyl,EFSA,2005,1372,Ecotox (soil compartment),not reported,Aphidius rhopalosiphi,Not reported,14.0,LR50,=,3.1,g/ha,mortality,,3.1,=,,True

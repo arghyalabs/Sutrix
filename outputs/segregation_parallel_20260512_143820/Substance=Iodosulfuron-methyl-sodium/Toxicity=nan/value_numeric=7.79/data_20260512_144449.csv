@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Iodosulfuron-methyl-sodium,EFSA,2016,2804,Ecotox (water compartment),chronic/long term toxicity,Brown trout,Not reported,28.0,NOEC,=,7.79,mg/L,growth,,7.79,=,,True

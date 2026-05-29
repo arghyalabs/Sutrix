@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Haloxyfop-P,EFSA,2009,1197,Ecotox (soil compartment),not reported,Aphidius rhopalosiphi,Not reported,,dose level,=,108.0,g/ha,mortality,,108.0,=,,True

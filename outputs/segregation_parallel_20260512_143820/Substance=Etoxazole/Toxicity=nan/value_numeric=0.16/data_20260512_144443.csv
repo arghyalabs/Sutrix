@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Etoxazole,EFSA,2017,3011,Ecotox (water compartment),acute toxicity,Sheepshead minnow,Not reported,4.0,LC50,>,0.16,mg/L,mortality,,0.16,=,,True

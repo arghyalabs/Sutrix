@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Dimethomorph,EFSA,2006,1090,Animal (non-target species) health,acute toxicity,Bird,oral: unspecified,,LD50,=,3900.0,mg/kg bw,mortality,systemic,3900.0,=,,True

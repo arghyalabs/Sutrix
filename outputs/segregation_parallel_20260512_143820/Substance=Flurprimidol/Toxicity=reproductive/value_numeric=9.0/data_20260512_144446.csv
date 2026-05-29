@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Flurprimidol,EFSA,2008,1133,Human health,reproduction toxicity,Rabbit,Not reported,,NOAEL,=,9.0,mg/kg bw/day,development,reproductive,9.0,=,,True

@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Terbuthylazine,EFSA,2011,1279,Animal (non-target species) health,acute toxicity,Rat,oral: unspecified,,LD50,<,1590.0,mg/kg bw,mortality,systemic,1590.0,=,,True

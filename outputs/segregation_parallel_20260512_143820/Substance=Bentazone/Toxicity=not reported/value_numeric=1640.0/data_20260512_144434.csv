@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Bentazone,EFSA,2015,2638,Animal (non-target species) health,acute toxicity,Rat,Not reported,,LD50,=,1640.0,mg/kg bw/day,not reported,not reported,1640.0,=,,True

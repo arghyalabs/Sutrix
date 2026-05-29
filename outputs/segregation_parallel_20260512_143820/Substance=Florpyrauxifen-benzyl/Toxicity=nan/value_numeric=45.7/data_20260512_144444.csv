@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Florpyrauxifen-benzyl,EFSA,2018,3114,Ecotox (soil compartment),chronic/long term toxicity,Tiger worm,Not reported,56.0,EC10,=,45.7,mg/kg,reproduction,,45.7,=,,True

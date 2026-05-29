@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Ametoctradin,EFSA,2012,1349,Human health,reproduction toxicity,Rat,Not reported,,NOAEL,=,1000.0,mg/kg bw/day,no adverse effect observed at single/highest dose,,1000.0,=,,True

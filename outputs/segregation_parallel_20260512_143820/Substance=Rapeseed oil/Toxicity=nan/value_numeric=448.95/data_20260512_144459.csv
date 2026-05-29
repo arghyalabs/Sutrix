@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Rapeseed oil,EFSA,2013,1360,Ecotox (soil compartment),acute toxicity,Tiger worm,Not reported,14.0,LC50,=,448.95,mg/kg,mortality,,448.95,=,,True

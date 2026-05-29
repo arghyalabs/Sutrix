@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Flupyrsulfuron-methyl-sodium,EFSA,2014,2571,Human health,reproduction toxicity,Rat,Not reported,,NOAEL,=,20.0,mg/kg bw/day,development,teratogenic,20.0,=,,True

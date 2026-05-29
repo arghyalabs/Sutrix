@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Trifloxystrobin metabolite (CGA 321113),EFSA,2017,3012,Ecotox (water compartment),acute toxicity,Rainbow trout,Not reported,4.0,LC50,>,106.0,mg/L,mortality,,106.0,=,,True

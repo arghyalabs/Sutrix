@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Tribenuron-methyl,EFSA,2005,1369,Ecotox (water compartment),chronic/long term toxicity,Rainbow trout,Not reported,21.0,NOEC,=,560.0,mg/L,not reported,,560.0,=,,True

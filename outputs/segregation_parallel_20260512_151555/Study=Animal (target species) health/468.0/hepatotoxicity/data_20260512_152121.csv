@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready,PubChem_CID,PubChem_MW,PubChem_CanonicalSMILES,PubChem_InChIKey,PubChem_Ambiguous,PubChem_Candidate_CIDs,PubChem_Error
+CID_12310947,EFSA CONTAM,2005,69,Animal (target species) health,chronic/long term toxicity,Dog,oral: feed,468.0,NOAEL,ca.,0.05,mg/kg bw/day,organ weights,hepatotoxicity,0.05,=,,True,12310947,364.9,,QBYJBZPUGVGKQQ-SJJAEHHWSA-N,False,,

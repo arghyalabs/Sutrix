@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Dried aerial parts of Hoodia parviflora,EFSA NDA,2017,3005,Human health,subchronic,Rat,oral: gavage,90.0,BMDL05,=,53.5,mg/kg bw/day,body weight,systemic,53.5,=,,True

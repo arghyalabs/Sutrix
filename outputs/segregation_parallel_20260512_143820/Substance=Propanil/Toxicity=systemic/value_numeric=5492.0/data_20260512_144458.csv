@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Propanil,EFSA,2011,1284,Animal (non-target species) health,short-term toxicity,Mallard duck,oral: feed,,LC50,=,5492.0,mg/kg,mortality,systemic,5492.0,=,,True

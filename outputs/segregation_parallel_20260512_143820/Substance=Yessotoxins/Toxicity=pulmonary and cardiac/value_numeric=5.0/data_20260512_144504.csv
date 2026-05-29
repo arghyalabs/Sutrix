@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Yessotoxins,EFSA CONTAM,2009,126,Human health,acute toxicity,Mouse,oral: gavage,,NOAEL,=,5.0,mg/kg bw/day,morphology,pulmonary and cardiac,5.0,=,,True

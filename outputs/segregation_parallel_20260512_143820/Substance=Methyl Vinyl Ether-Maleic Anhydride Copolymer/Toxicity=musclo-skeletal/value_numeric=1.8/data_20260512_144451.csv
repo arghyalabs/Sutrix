@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Methyl Vinyl Ether-Maleic Anhydride Copolymer,EFSA NDA,2013,2416,Human health,subchronic,Rat,oral: feed,90.0,NOAEL,=,1.8,g/kg bw/day,histopathology non neoplastic,musclo-skeletal,1.8,=,,True

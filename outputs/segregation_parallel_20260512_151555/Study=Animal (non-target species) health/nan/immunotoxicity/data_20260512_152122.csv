@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready,PubChem_CID,PubChem_MW,PubChem_CanonicalSMILES,PubChem_InChIKey,PubChem_Ambiguous,PubChem_Candidate_CIDs,PubChem_Error
+CID_2728,EFSA,2017,2976,Animal (non-target species) health,reproduction toxicity,Rat,Not reported,,NOAEL,=,44.5,mg/kg bw/day,immunology,immunotoxicity,44.5,=,,True,2728,213.66,,CWJSHJJYOPWUGX-UHFFFAOYSA-N,False,,

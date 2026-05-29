@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Isofetamid,EFSA,2015,2761,Human health,reproduction toxicity,Rabbit,Not reported,,NOAEL,=,100.0,mg/kg bw/day,development,reproductive,100.0,=,,True

@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+BAS 610 06 F,EFSA,2016,2894,Ecotox (soil compartment),not reported,not reported,Not reported,,ER50,>,750.0,g/ha,other,,750.0,=,,True

@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Fenazaquin,EFSA,2010,1263,Ecotox (soil compartment),not reported,Seven-spot ladybird,Not reported,,LR50,<,21.9,g/ha,mortality,,21.9,=,,True

@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Penflufen,EFSA,2016,2880,Animal (non-target species) health,chronic/long term toxicity,Mallard duck,Not reported,,BMDL05,=,35.7,mg/kg bw/day,not reported,not reported,35.7,=,,True

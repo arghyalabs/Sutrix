@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready,PubChem_CID,PubChem_MW,PubChem_CanonicalSMILES,PubChem_InChIKey,PubChem_Ambiguous,PubChem_Candidate_CIDs,PubChem_Error
+CID_14210,EFSA,2013,2363,Human health,chronic/long term toxicity,Dog,oral: gavage,360.0,NOAEL,=,0.025,mg/kg bw/day,clinical chemistry,neurotoxicity,0.025,=,,True,14210,213.19,,PZXOQEXFMJCDPG-UHFFFAOYSA-N,False,,

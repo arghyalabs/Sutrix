@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Quizalofop,EFSA,2009,1168,Ecotox (water compartment),chronic/long term toxicity,Floating sweet-grass,Not reported,14.0,NOEC,=,0.094,mg/L,not reported,,0.094,=,,True

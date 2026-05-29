@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Mecoprop-P,EFSA,2017,2954,Animal (non-target species) health,subchronic,Japanese quail,Not reported,,NOAEL,=,70.9,mg/kg bw/day,not reported,not reported,70.9,=,,True

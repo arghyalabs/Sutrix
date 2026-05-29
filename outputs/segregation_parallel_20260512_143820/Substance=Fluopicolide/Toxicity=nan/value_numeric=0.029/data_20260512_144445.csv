@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Fluopicolide,EFSA,2009,1186,Ecotox (water compartment),acute toxicity,Navicula pelliculosa,Not reported,3.0,EC50,=,0.029,mg/L,biomass,,0.029,=,,True

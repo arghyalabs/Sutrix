@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+"Deca-(2E,4E)-dienoic acid isobutyl-amide",EFSA CEF,2015,2601,Human health,subchronic,Rat,oral: feed,90.0,NOAEL,=,10.0,mg/kg bw/day,histopathology non neoplastic,endocrine,10.0,=,,True

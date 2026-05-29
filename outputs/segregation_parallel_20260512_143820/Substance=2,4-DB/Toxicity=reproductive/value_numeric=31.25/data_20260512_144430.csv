@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+"2,4-DB",EFSA,2016,2826,Human health,reproduction toxicity,Rat,Not reported,,NOAEL,=,31.25,mg/kg bw/day,body weight,reproductive,31.25,=,,True

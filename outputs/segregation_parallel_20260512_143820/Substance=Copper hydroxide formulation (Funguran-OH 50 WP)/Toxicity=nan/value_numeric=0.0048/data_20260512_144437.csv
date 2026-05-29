@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Copper hydroxide formulation (Funguran-OH 50 WP),EFSA,2018,3032,Ecotox (water compartment),chronic/long term toxicity,Unspecified,Not reported,,NOEC,=,0.0048,mg/L,not reported,,0.0048,=,,True

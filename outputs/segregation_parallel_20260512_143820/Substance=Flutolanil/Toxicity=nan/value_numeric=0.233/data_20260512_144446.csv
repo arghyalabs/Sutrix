@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Flutolanil,EFSA,2008,1118,Ecotox (water compartment),chronic/long term toxicity,Fathead minnow,Not reported,30.0,NOEC,=,0.233,mg/L,growth,,0.233,=,,True

@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+2-[(2-Ethyl-6-methylphenyl) amino]-2-oxoethane sulfonic acid,EFSA,2011,1289,Human health,chronic/long term toxicity,Dog,oral: unspecified,365.0,NOAEL,=,2.0,mg/kg bw/day,histopathology non neoplastic,systemic,2.0,=,,True

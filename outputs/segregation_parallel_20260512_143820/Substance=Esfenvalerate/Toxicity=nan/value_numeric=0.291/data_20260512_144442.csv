@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Esfenvalerate,EFSA,2014,2569,Ecotox (soil compartment),acute toxicity,Seven-spot ladybird,Not reported,2.0,LR50,=,0.291,g/ha,mortality,,0.291,=,,True

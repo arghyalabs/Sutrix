@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+"4-(1,1-Dimethylethyl)benzene ethanol",EFSA,2013,2743,Human health,short-term toxicity,Rat,oral: unspecified,28.0,NOAEL,=,20.0,mg/kg bw/day,not reported,not reported,20.0,=,,True

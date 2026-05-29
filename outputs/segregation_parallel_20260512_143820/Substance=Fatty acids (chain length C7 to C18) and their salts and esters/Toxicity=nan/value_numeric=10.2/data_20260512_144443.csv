@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Fatty acids (chain length C7 to C18) and their salts and esters,EFSA,2013,1356,Ecotox (water compartment),acute toxicity,Daphnia magna,Not reported,2.0,EC50,=,10.2,mg/L,mortality,,10.2,=,,True

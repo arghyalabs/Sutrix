@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Azimsulfuron formulation,EFSA,2010,1210,Ecotox (soil compartment),acute toxicity,Onion,Not reported,21.0,ER50,=,2.64,g/ha,other,,2.64,=,,True

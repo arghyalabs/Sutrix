@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready,PubChem_CID,PubChem_MW,PubChem_CanonicalSMILES,PubChem_InChIKey,PubChem_Ambiguous,PubChem_Candidate_CIDs,PubChem_Error
+CID_66826,EFSA FEEDAP,2004,230,Animal (non-target species) health,chronic/long term toxicity,Rat,oral: feed,730.0,NOEL,ca.,2.0,mg/kg bw/day,histopathology non neoplastic,hepatotoxicity,2.0,=,,True,66826,247.04,,FUUFQLXAIUOWML-UHFFFAOYSA-N,False,,

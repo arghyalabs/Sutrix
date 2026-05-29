@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+"N-(2,4-Dimethoxy-benzyl)-N'-(2-pyridin-2-yl-ethyl)-oxalamide",EFSA CEF,2014,2481,Human health,subchronic,Rat,Not reported,93.0,NOEL,=,100.0,mg/kg bw/day,not reported,not reported,100.0,=,,True

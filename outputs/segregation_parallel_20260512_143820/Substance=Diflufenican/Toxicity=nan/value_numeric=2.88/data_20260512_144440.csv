@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Diflufenican,EFSA,2008,1115,Ecotox (soil compartment),acute toxicity,Rapeseed (oilseed rape),Not reported,21.0,EC50,=,2.88,g/ha,other,,2.88,=,,True

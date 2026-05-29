@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Forchlorfenuron,EFSA,2017,2966,Ecotox (soil compartment),acute toxicity,Honey bee,dermal,,LD50,>,30.0,µg/piece,mortality,,30.0,=,,True

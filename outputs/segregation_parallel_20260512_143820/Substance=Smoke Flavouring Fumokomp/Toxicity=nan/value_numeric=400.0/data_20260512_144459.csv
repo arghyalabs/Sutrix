@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Smoke Flavouring Fumokomp,EFSA CEF,2011,2108,Human health,subchronic,Rat,oral: gavage,90.0,NOAEL,=,400.0,mg/kg bw/day,no adverse effect observed at single/highest dose,,400.0,=,,True

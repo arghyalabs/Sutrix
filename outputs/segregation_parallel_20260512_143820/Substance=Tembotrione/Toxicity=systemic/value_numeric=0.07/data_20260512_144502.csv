@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Tembotrione,EFSA,2013,3607,Human health,subchronic,Rat,Not reported,90.0,NOAEL,=,0.07,mg/kg bw/day,ophthalmoscopic examination,systemic,0.07,=,,True

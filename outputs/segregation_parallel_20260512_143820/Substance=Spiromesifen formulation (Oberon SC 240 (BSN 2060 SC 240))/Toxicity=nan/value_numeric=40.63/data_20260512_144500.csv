@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Spiromesifen formulation (Oberon SC 240 (BSN 2060 SC 240)),EFSA,2012,1344,Ecotox (soil compartment),not reported,Aphidius rhopalosiphi,Not reported,,LR50,=,40.63,ml/ha,mortality,,40.63,=,,True

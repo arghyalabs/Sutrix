@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Fenoxycarb,EFSA,2010,1243,Ecotox (water compartment),chronic/long term toxicity,Rainbow trout,Not reported,60.0,NOEC,=,0.048,mg/L,body weight,,0.048,=,,True

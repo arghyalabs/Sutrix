@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Zinc (total),EFSA FEEDAP,2017,2969,Human health,study with volunteers,Human,oral: feed,98.0,NOAEL,=,40.0,mg/day,no adverse effect observed at single/highest dose,,40.0,=,,True

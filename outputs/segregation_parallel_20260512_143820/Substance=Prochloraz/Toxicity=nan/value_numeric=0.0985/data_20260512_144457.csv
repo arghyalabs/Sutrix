@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Prochloraz,EFSA,2011,1297,Ecotox (soil compartment),acute toxicity,Typhlodromus pyri,Not reported,7.0,LR50,=,0.0985,g/ha,not reported,,0.0985,=,,True

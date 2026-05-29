@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready,PubChem_CID,PubChem_MW,PubChem_CanonicalSMILES,PubChem_InChIKey,PubChem_Ambiguous,PubChem_Candidate_CIDs,PubChem_Error
+CID_15553,EFSA,2006,1061,Human health,chronic/long term toxicity,Dog,oral: unspecified,360.0,NOAEL,=,100.0,mg/kg bw/day,haematology,hemopoietic,100.0,=,,True,15553,192.0,,HUBANNPOLNYSAD-UHFFFAOYSA-N,False,,

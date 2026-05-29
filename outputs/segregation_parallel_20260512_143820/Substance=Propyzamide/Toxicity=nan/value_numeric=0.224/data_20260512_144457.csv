@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Propyzamide,EFSA,2016,2844,Ecotox (water compartment),chronic/long term toxicity,Fathead minnow,Not reported,,NOEC,=,0.224,mg/L,not reported,,0.224,=,,True

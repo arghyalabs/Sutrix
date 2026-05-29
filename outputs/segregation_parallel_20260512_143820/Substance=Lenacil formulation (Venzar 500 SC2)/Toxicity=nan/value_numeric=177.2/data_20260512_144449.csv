@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Lenacil formulation (Venzar 500 SC2),EFSA,2009,1195,Ecotox (soil compartment),acute toxicity,Rapeseed (oilseed rape),Not reported,21.0,ER50,=,177.2,g/ha,seedling emergence,,177.2,=,,True

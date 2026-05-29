@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+"2,2-Bis(4-hydroxyphenyl)propane bis(2,3-epoxypropyl)ether",EFSA AFC,2004,356,Human health,chronic/long term toxicity,Rat,oral: gavage,730.0,NOAEL,=,15.0,mg/kg bw/day,organ weights,systemic,15.0,=,,True

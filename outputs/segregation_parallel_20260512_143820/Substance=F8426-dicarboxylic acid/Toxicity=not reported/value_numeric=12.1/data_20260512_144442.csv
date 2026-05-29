@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+F8426-dicarboxylic acid,EFSA,2016,2866,Human health,short-term toxicity,Rat,Not reported,28.0,NOAEL,=,12.1,mg/kg bw/day,not reported,not reported,12.1,=,,True

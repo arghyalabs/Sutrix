@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+1-Phenethyl acetate,EFSA FEEDAP,2016,2863,Ecotox (soil compartment),acute toxicity,Earthworm,Not reported,,LC50,=,1479.0,mg/kg,mortality,,1479.0,=,,True

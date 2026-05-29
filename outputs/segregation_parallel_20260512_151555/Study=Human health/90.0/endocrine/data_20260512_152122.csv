@@ -1,0 +1,15 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready,PubChem_CID,PubChem_MW,PubChem_CanonicalSMILES,PubChem_InChIKey,PubChem_Ambiguous,PubChem_Candidate_CIDs,PubChem_Error
+"(1R,2S,5R)-N-(2-(Pyridine-2-yl)ethyl)-3-p-menthanecarboxamide",EFSA CEF,2014,2524,Human health,subchronic,Rat,oral: feed,90.0,NOAEL,=,5.0,mg/kg bw/day,histopathology non neoplastic,endocrine,5.0,=,,True,,,,,False,,Not Found
+CID_14079,EFSA CEF,2014,2441,Human health,subchronic,Rat,oral: unspecified,90.0,NOAEL,=,48.0,µg/kg bw/day,histopathology neoplastic,endocrine,48.0,=,,True,14079,109.13,,IGJQUJNPMOYEJY-UHFFFAOYSA-N,False,,
+CID_14079,EFSA CEF,2018,3044,Human health,subchronic,Rat,oral: unspecified,90.0,NOAEL,=,48.0,µg/kg bw/day,histopathology neoplastic,endocrine,48.0,=,,True,14079,109.13,,IGJQUJNPMOYEJY-UHFFFAOYSA-N,False,,
+CID_61260,EFSA CEF,2014,2441,Human health,subchronic,Rat,oral: unspecified,90.0,NOAEL,=,48.0,µg/kg bw/day,histopathology neoplastic,endocrine,48.0,=,,True,61260,123.15,,AEJPPSRYXGEVDT-UHFFFAOYSA-N,False,,
+CID_61260,EFSA CEF,2018,3044,Human health,subchronic,Rat,oral: unspecified,90.0,NOAEL,=,48.0,µg/kg bw/day,histopathology neoplastic,endocrine,48.0,=,,True,61260,123.15,,AEJPPSRYXGEVDT-UHFFFAOYSA-N,False,,
+CID_1639,EFSA,2014,2542,Human health,subchronic,Rat,oral: unspecified,90.0,NOAEL,=,0.1,mg/kg bw/day,histopathology neoplastic,endocrine,0.1,=,,True,1639,84.08,,KLSJWNVTNUYHDU-UHFFFAOYSA-N,False,,
+CID_11496052,EFSA,2012,1311,Human health,subchronic,Rat,oral: unspecified,90.0,NOAEL,=,16.5,mg/kg bw/day,histopathology non neoplastic,endocrine,16.5,=,,True,11496052,447.4,,AWSZRJQNBMEZOI-UHFFFAOYSA-N,False,,
+"Deca-(2E,4E)-dienoic acid isobutyl-amide",EFSA CEF,2015,2601,Human health,subchronic,Rat,oral: feed,90.0,NOAEL,=,10.0,mg/kg bw/day,histopathology non neoplastic,endocrine,10.0,=,,True,,,,,False,,Not Found
+CID_73668,EFSA,2008,1133,Human health,subchronic,Rat,oral: unspecified,90.0,NOAEL,=,1.96,mg/kg bw/day,organ weights,endocrine,1.96,=,,True,73668,312.29,,VEVZCONIUDBCDC-UHFFFAOYSA-N,False,,
+CID_3034368,EFSA,2019,3605,Human health,subchronic,Rat,oral: unspecified,90.0,NOAEL,=,6.8,mg/kg bw/day,clinical chemistry,endocrine,6.8,=,,True,3034368,541.1,,CHNQZRKUZPNOOH-UHFFFAOYSA-J,False,,
+CID_6450826,EFSA,2017,2995,Human health,subchronic,Rat,oral: feed,90.0,NOAEL,=,8.0,mg/kg bw/day,organ weights,endocrine,8.0,=,,True,6450826,295.8,,CSWIKHNSBZVWNQ-UHFFFAOYSA-N,False,,
+Pethoxamid metabolite (MET-22),EFSA,2017,2995,Human health,subchronic,Rat,oral: feed,90.0,NOAEL,=,8.0,mg/kg bw/day,organ weights,endocrine,8.0,=,,True,,,,,False,,Not Found
+CID_11057771,EFSA,2009,1198,Human health,subchronic,Rat,oral: feed,90.0,NOAEL,=,2.0,mg/kg bw/day,histopathology non neoplastic,endocrine,2.0,=,,True,11057771,372.2,,FLVBXVXXXMLMOX-UHFFFAOYSA-N,False,,
+CID_5353001,EFSA CEF,2015,2598,Human health,subchronic,Rat,oral: feed,90.0,NOAEL,=,23.4,mg/kg bw/day,histopathology non neoplastic,endocrine,23.4,=,,True,5353001,221.34,,BXOCHUWSGYYSFW-HVWOQQCMSA-N,False,,

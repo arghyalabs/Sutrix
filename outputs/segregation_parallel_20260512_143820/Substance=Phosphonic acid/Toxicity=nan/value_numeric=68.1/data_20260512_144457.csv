@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Phosphonic acid,EFSA,2013,2362,Ecotox (water compartment),chronic/long term toxicity,Harlequin fly,Not reported,48.0,NOEC,=,68.1,mg/L,not reported,,68.1,=,,True

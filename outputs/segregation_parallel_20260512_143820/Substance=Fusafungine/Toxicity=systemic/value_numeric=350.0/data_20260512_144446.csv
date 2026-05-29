@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Fusafungine,EFSA CONTAM,2014,2546,Human health,acute toxicity,Mouse,oral: unspecified,,LD50,=,350.0,mg/kg bw,mortality,systemic,350.0,=,,True

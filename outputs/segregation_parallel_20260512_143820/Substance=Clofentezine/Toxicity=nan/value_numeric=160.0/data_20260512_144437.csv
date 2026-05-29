@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Clofentezine,EFSA,2009,1182,Ecotox (soil compartment),chronic/long term toxicity,Folsomia candida,Not reported,,NOEC,=,160.0,mg/kg,reproduction,,160.0,=,,True

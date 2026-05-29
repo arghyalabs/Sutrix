@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Heptachlor epoxide,EFSA CONTAM,2007,74,Animal (target species) health,chronic/long term toxicity,Chicken,oral: feed,175.0,NOAEL,=,0.002,mg/kg bw/day,development,developmental,0.002,=,,True

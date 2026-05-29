@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Pyridate,EFSA,2014,2547,Animal (non-target species) health,reproduction toxicity,Rat,Not reported,,NOAEL,=,18.8,mg/kg bw,not reported,not reported,18.8,=,,True

@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Tefluthrin formulation (Force 20 CS),EFSA,2010,1230,Animal (non-target species) health,acute toxicity,Rat,oral: unspecified,,LD50,>,344.0,mg/kg bw/day,mortality,systemic,344.0,=,,True

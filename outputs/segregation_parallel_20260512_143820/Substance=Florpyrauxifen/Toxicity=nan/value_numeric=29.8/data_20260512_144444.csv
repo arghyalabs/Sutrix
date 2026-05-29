@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Florpyrauxifen,EFSA,2018,3114,Ecotox (water compartment),chronic/long term toxicity,Fathead minnow,Not reported,33.0,NOEC,=,29.8,mg/L,other,,29.8,=,,True

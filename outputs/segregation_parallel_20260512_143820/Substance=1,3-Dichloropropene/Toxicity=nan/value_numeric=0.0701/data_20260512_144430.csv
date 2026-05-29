@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+"1,3-Dichloropropene",EFSA,2009,1196,Ecotox (water compartment),chronic/long term toxicity,Daphnia magna,Not reported,21.0,NOEC,=,0.0701,mg/L,mortality,,0.0701,=,,True

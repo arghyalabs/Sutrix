@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+2-(Methylthio)ethan-1-ol,EFSA CEF,2011,2066,Human health,subchronic,Rat,oral: gavage,91.0,NOEL,=,1.4,mg/kg bw/day,not reported,not reported,1.4,=,,True

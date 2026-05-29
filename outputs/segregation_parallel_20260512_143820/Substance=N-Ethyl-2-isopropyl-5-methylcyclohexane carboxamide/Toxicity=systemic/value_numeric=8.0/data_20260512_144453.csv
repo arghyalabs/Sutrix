@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+N-Ethyl-2-isopropyl-5-methylcyclohexane carboxamide,EFSA CEF,2011,2080,Human health,short-term toxicity,Rat,oral: gavage,28.0,NOEL,=,8.0,mg/kg bw/day,not reported,systemic,8.0,=,,True

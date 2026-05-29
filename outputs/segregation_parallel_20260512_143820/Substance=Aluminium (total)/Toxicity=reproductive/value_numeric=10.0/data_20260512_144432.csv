@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Aluminium (total),EFSA AFC,2008,295,Human health,reproduction toxicity,Mouse,oral: feed,,NOAEL,=,10.0,mg/kg bw/day,neurology,reproductive,10.0,=,,True

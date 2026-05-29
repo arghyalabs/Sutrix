@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Water extract of Cistanche tubulosa stems,EFSA NDA,2021,3924,Human health,study with volunteers,Human,oral: capsule,90.0,dose level,=,1800.0,mg/day,neurology,neurotoxicity,1800.0,=,,True

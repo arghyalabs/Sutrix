@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Bromoxynil,EFSA,2017,2962,Animal (non-target species) health,acute toxicity,Rat,oral: unspecified,,LD50,=,81.2,mg/kg bw/day,mortality,systemic,81.2,=,,True

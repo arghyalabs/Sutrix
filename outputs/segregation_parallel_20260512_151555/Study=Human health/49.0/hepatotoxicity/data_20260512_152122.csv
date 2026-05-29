@@ -1,0 +1,3 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready,PubChem_CID,PubChem_MW,PubChem_CanonicalSMILES,PubChem_InChIKey,PubChem_Ambiguous,PubChem_Candidate_CIDs,PubChem_Error
+CID_8658,EFSA FEEDAP,2012,607,Human health,subchronic,Rat,oral: gavage,49.0,NOAEL,=,10.0,mg/kg bw/day,histopathology non neoplastic,hepatotoxicity,10.0,=,,True,8658,136.15,,PKZJLOCLABXVMC-UHFFFAOYSA-N,False,,
+CID_6998,EFSA FEEDAP,2012,607,Human health,subchronic,Rat,oral: gavage,49.0,NOAEL,=,10.0,mg/kg bw/day,histopathology non neoplastic,hepatotoxicity,10.0,=,,True,6998,122.12,,SMQUZDBALVYZAC-UHFFFAOYSA-N,False,,

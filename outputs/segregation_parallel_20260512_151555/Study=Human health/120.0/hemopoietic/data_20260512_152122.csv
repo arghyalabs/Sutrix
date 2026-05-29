@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready,PubChem_CID,PubChem_MW,PubChem_CanonicalSMILES,PubChem_InChIKey,PubChem_Ambiguous,PubChem_Candidate_CIDs,PubChem_Error
+CID_14985,SCF,2003,3399,Human health,study with volunteers,Human,Not reported,120.0,NOAEL,=,540.0,mg/day,haematology,hemopoietic,540.0,=,,True,14985,430.7,,GVJHHUAWPYXKBD-IEOSBIPESA-N,False,,

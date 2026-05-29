@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready,PubChem_CID,PubChem_MW,PubChem_CanonicalSMILES,PubChem_InChIKey,PubChem_Ambiguous,PubChem_Candidate_CIDs,PubChem_Error
+"Sodium 5-nitroguaiacolate, sodium o-nitrophenolate and sodium p-nitrophenolate formulation (Atonik)",EFSA,2009,1157,Ecotox (water compartment),chronic/long term toxicity,Zebra fish,Not reported,21.0,NOEC,=,7.74,mg/L,not reported,,7.74,=,,True,,,,,False,,Not Found

@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Chromafenozide,EFSA,2013,2433,Human health,chronic/long term toxicity,Dog,oral: unspecified,364.0,NOAEL,=,27.0,mg/kg bw/day,haematology,hemopoietic,27.0,=,,True

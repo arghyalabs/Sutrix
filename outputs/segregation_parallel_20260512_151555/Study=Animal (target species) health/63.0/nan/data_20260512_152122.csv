@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready,PubChem_CID,PubChem_MW,PubChem_CanonicalSMILES,PubChem_InChIKey,PubChem_Ambiguous,PubChem_Candidate_CIDs,PubChem_Error
+CID_16212175,EFSA FEEDAP,2004,271,Animal (target species) health,subchronic,Chicken,oral: feed,63.0,dose level,=,225.0,mg/kg,no adverse effect observed,,225.0,=,,True,16212175,370.7,,LTWIBTYLSRDGHP-HCURTGQUSA-N,False,,

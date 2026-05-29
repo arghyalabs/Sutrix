@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Acetamiprid,EFSA PPR,2013,2661,Human health,reproduction toxicity,Rat,oral: gavage,16.0,NOAEL,=,2.5,mg/kg bw/day,other,neurotoxicity,2.5,=,,True

@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Ethyl 3-mercaptobutyrate,EFSA CEF,2018,3043,Human health,subchronic,Rat,oral: gavage,92.0,NOEL,=,0.7,mg/kg bw/day,not reported,not reported,0.7,=,,True

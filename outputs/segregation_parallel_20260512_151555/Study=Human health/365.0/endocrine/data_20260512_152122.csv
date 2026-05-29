@@ -1,0 +1,5 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready,PubChem_CID,PubChem_MW,PubChem_CanonicalSMILES,PubChem_InChIKey,PubChem_Ambiguous,PubChem_Candidate_CIDs,PubChem_Error
+CID_36603,EFSA,2019,3605,Human health,short-term toxicity,Dog,oral: unspecified,365.0,NOAEL,=,2.3,mg/kg bw/day,clinical chemistry,endocrine,2.3,=,,True,36603,176.3,,BFTGQIQVUVTBJU-UHFFFAOYSA-N,False,,
+CID_3301,EFSA,2019,3605,Human health,short-term toxicity,Dog,oral: unspecified,365.0,NOAEL,=,2.3,mg/kg bw/day,clinical chemistry,endocrine,2.3,=,,True,3301,60.1,,PIICEJLVQHRZGT-UHFFFAOYSA-N,False,,
+CID_3034368,EFSA,2019,3605,Human health,short-term toxicity,Dog,oral: unspecified,365.0,NOAEL,=,2.3,mg/kg bw/day,clinical chemistry,endocrine,2.3,=,,True,3034368,541.1,,CHNQZRKUZPNOOH-UHFFFAOYSA-J,False,,
+CID_66082,EFSA,2019,3605,Human health,short-term toxicity,Dog,oral: unspecified,365.0,NOAEL,=,2.3,mg/kg bw/day,clinical chemistry,endocrine,2.3,=,,True,66082,102.14,,DAKZISABEDGGSV-UHFFFAOYSA-N,False,,

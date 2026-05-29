@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Hydrogen cyanide,EFSA CONTAM,2007,99,Animal (target species) health,chronic/long term toxicity,Goat,oral: unspecified,150.0,dose level,=,0.6,mg/kg bw/day,no adverse effect observed,,0.6,=,,True

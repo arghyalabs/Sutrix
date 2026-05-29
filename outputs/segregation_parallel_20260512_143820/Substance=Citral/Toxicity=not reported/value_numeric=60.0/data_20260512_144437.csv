@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Citral,EFSA CEF,2013,2375,Human health,other,Unspecified,Not reported,,NOAEL,=,60.0,mg/kg bw,not reported,not reported,60.0,=,,True

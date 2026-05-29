@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+"2,5-dimethyl-3-(isovalerylthio)furan",EFSA CEF,2015,2620,Human health,subchronic,Rat,Not reported,90.0,NOEL,=,0.73,mg/kg bw/day,not reported,not reported,0.73,=,,True

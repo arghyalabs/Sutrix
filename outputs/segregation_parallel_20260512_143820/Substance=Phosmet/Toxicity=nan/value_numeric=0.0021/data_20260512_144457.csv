@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Phosmet,EFSA,2011,1292,Ecotox (water compartment),acute toxicity,Daphnia magna,Not reported,2.0,EC50,=,0.0021,mg/L,mortality,,0.0021,=,,True

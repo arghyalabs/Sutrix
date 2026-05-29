@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Sodium erythorbate,EFSA ANS,2016,2740,Human health,chronic/long term toxicity,Rat,oral: drinking water,730.0,NOAEL,=,650.0,mg/kg bw/day,body weight,systemic,650.0,=,,True

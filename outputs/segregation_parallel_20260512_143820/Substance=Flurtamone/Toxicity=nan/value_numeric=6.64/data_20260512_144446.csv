@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Flurtamone,EFSA,2017,2986,Ecotox (water compartment),acute toxicity,Fathead minnow,oral: feed,4.0,LC50,=,6.64,mg/L,mortality,,6.64,=,,True

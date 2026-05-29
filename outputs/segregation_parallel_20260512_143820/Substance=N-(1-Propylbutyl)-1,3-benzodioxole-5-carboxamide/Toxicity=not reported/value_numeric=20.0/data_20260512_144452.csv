@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+"N-(1-Propylbutyl)-1,3-benzodioxole-5-carboxamide",EFSA CEF,2014,2481,Human health,subchronic,Rat,Not reported,93.0,NOEL,=,20.0,mg/kg bw/day,not reported,not reported,20.0,=,,True

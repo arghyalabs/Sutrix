@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready,PubChem_CID,PubChem_MW,PubChem_CanonicalSMILES,PubChem_InChIKey,PubChem_Ambiguous,PubChem_Candidate_CIDs,PubChem_Error
+Maxiban G160 (narasin and nicarbazin),EFSA FEEDAP,2010,215,Animal (target species) health,subchronic,Chicken,oral: feed,45.0,dose level,=,150.0,mg/kg,gross pathology,pulmonary and cardiac,150.0,=,,True,,,,,False,,Not Found

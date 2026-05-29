@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Clomazone,EFSA,2007,1106,Human health,chronic/long term toxicity,Dog,oral: feed,360.0,NOAEL,=,13.3,mg/kg bw/day,organ weights,hepatotoxicity,13.3,=,,True

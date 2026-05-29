@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Fluoxastrobin,EFSA,2005,1100,Animal (non-target species) health,reproduction toxicity,Mallard duck,oral: feed,5.0,NOEC,=,285.0,mg/kg bw/day,not reported,not reported,285.0,=,,True

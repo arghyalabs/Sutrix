@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Flazasulfuron,EFSA,2016,2868,Animal (non-target species) health,not reported,Dog,Not reported,,conc. Level,=,2.0,mg/kg bw/day,not reported,not reported,2.0,=,,True

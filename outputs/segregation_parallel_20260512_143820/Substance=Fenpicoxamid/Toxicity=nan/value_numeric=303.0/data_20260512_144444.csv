@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Fenpicoxamid,EFSA,2018,3027,Ecotox (soil compartment),acute toxicity,Honey bee,oral: unspecified,,LD50,>,303.0,µg/piece,mortality,,303.0,=,,True

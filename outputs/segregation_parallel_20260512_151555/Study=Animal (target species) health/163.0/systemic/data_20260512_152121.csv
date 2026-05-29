@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready,PubChem_CID,PubChem_MW,PubChem_CanonicalSMILES,PubChem_InChIKey,PubChem_Ambiguous,PubChem_Candidate_CIDs,PubChem_Error
+CID_12358480,EFSA CONTAM,2005,70,Animal (target species) health,chronic/long term toxicity,Rainbow trout,oral: feed,163.0,LOAEL,=,4.3,µg/kg bw/day,clinical chemistry,systemic,4.3,=,,True,12358480,380.9,,DFBKLUNHFCTMDC-GKRDHZSOSA-N,False,,

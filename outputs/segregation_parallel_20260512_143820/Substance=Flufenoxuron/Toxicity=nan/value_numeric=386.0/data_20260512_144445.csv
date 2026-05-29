@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Flufenoxuron,EFSA,2011,1286,Ecotox (soil compartment),not reported,Aphidius rhopalosiphi,Not reported,,LR50,>,386.0,g/ha,mortality,,386.0,=,,True

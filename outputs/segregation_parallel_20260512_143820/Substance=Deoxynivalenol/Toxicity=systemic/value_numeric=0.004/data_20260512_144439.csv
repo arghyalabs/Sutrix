@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Deoxynivalenol,EFSA CONTAM,2017,2991,Animal (target species) health,acute toxicity,American mink,oral: gavage,,BMDL10,=,0.004,mg/kg bw,clinical signs,systemic,0.004,=,,True

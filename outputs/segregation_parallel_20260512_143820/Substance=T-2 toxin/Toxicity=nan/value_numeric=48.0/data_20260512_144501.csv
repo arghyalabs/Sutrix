@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+T-2 toxin,EFSA CONTAM,2011,585,Animal (target species) health,subchronic,Turkey,Not reported,35.0,LOAEL,=,48.0,µg/kg bw/day,clinical signs,,48.0,=,,True

@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Glyphosate,EFSA,2017,2988,Ecotox (water compartment),chronic/long term toxicity,Fathead minnow,Not reported,255.0,NOEC,=,25.7,mg/L,growth,,25.7,=,,True

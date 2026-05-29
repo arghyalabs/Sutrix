@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Pyriproxyfen,EFSA,2019,3271,Ecotox (soil compartment),not reported,Onion,Not reported,,ER50,>,448.0,g/ha,seedling emergence,,448.0,=,,True

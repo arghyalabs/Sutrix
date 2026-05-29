@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+"Hexa-2(trans),4(trans)-dienal",EFSA FEEDAP,2019,3186,Animal (target species) health,subchronic,Rat,oral: gavage,98.0,NOAEL,=,15.0,mg/kg bw/day,body weight,systemic,15.0,=,,True

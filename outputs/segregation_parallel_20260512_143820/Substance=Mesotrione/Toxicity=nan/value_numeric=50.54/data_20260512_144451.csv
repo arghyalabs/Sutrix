@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Mesotrione,EFSA,2016,2787,Ecotox (soil compartment),chronic/long term toxicity,Folsomia candida,Not reported,14.0,NOEC,=,50.54,mg/kg,reproduction,,50.54,=,,True

@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Imazamox,EFSA,2016,2790,Ecotox (soil compartment),chronic/long term toxicity,Folsomia candida,Not reported,,NOEC,=,3.36,mg/kg,mortality,,3.36,=,,True

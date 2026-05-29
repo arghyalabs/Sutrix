@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Dieldrin,EFSA CONTAM,2005,69,Animal (target species) health,chronic/long term toxicity,Sheep,oral: feed,224.0,NOAEL,=,1.0,mg/kg bw/day,body weight,systemic,1.0,=,,True

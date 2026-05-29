@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Florpyrauxifen,EFSA,2018,3114,Ecotox (water compartment),acute toxicity,Eurasian watermilfoil,Not reported,14.0,EC50,=,0.00035,mg/L,other,,0.00035,=,,True

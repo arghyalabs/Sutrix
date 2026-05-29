@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Abamectin,EFSA,2008,1129,Ecotox (soil compartment),not reported,Aphidius rhopalosiphi,Not reported,,dose level,=,4.32,g/ha,reproduction,,4.32,=,,True

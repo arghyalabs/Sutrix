@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready,PubChem_CID,PubChem_MW,PubChem_CanonicalSMILES,PubChem_InChIKey,PubChem_Ambiguous,PubChem_Candidate_CIDs,PubChem_Error
+CID_11534837,EFSA,2010,1230,Ecotox (water compartment),chronic/long term toxicity,Fathead minnow,Not reported,345.0,NOEC,=,3.97e-06,mg/L,mortality,,3.97e-06,=,,True,11534837,418.7,,ZFHGXWPMULPQSE-SZGBIDFHSA-N,False,,

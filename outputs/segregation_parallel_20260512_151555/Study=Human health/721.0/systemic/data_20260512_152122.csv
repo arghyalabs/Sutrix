@@ -1,0 +1,8 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready,PubChem_CID,PubChem_MW,PubChem_CanonicalSMILES,PubChem_InChIKey,PubChem_Ambiguous,PubChem_Candidate_CIDs,PubChem_Error
+CID_22311,EFSA CEF,2011,2102,Human health,chronic/long term toxicity,Rat,oral: gavage,721.0,NOAEL,=,215.0,mg/kg bw/day,mortality,systemic,215.0,=,,True,22311,136.23,,XMGQYMWWDOXHJM-UHFFFAOYSA-N,False,,
+CID_22311,EFSA CEF,2015,2636,Human health,chronic/long term toxicity,Rat,oral: gavage,721.0,NOAEL,=,215.0,mg/kg bw/day,mortality,systemic,215.0,=,,True,22311,136.23,,XMGQYMWWDOXHJM-UHFFFAOYSA-N,False,,
+Polyoxyethylene sorbitan monooleate,EFSA ANS,2015,2782,Human health,chronic/long term toxicity,Rat,oral: unspecified,721.0,NOAEL,=,2500.0,mg/kg bw/day,mortality,systemic,2500.0,=,,True,,,,,False,,Not Found
+Polysorbates,EFSA ANS,2015,2782,Human health,chronic/long term toxicity,Rat,oral: unspecified,721.0,NOAEL,=,2500.0,mg/kg bw/day,mortality,systemic,2500.0,=,,True,,,,,False,,Not Found
+CID_440917,EFSA CEF,2011,2102,Human health,chronic/long term toxicity,Rat,oral: gavage,721.0,NOAEL,=,215.0,mg/kg bw/day,mortality,systemic,215.0,=,,True,440917,136.23,,XMGQYMWWDOXHJM-JTQLQIEISA-N,False,,
+CID_439250,EFSA CEF,2011,2102,Human health,chronic/long term toxicity,Rat,oral: gavage,721.0,NOAEL,=,215.0,mg/kg bw/day,mortality,systemic,215.0,=,,True,439250,136.23,,XMGQYMWWDOXHJM-SNVBAGLBSA-N,False,,
+CID_439250,EFSA CEF,2015,2636,Human health,chronic/long term toxicity,Rat,oral: gavage,721.0,NOAEL,=,215.0,mg/kg bw/day,mortality,systemic,215.0,=,,True,439250,136.23,,XMGQYMWWDOXHJM-SNVBAGLBSA-N,False,,

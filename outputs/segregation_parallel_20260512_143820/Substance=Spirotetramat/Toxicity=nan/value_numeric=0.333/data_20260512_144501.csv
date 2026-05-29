@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Spirotetramat,EFSA,2013,2365,Ecotox (soil compartment),acute toxicity,Typhlodromus pyri,Not reported,7.0,LR50,=,0.333,g/ha,mortality,,0.333,=,,True

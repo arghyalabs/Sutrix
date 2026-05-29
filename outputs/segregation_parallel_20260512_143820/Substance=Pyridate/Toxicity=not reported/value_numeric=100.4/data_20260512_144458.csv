@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Pyridate,EFSA,2014,2547,Animal (non-target species) health,reproduction toxicity,Mallard duck,Not reported,,NOAEL,=,100.4,mg/kg bw,not reported,not reported,100.4,=,,True

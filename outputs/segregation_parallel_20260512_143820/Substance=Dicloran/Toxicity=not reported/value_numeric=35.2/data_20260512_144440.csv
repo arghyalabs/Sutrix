@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Dicloran,EFSA,2010,1225,Animal (non-target species) health,reproduction toxicity,Bobwhite quail,Not reported,,NOEC,=,35.2,mg/kg bw/day,not reported,not reported,35.2,=,,True

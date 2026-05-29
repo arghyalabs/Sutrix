@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Fenhexamid,EFSA,2014,2543,Animal (non-target species) health,reproduction toxicity,Rat,Not reported,,NOAEL,=,40.2,mg/kg bw/day,not reported,not reported,40.2,=,,True

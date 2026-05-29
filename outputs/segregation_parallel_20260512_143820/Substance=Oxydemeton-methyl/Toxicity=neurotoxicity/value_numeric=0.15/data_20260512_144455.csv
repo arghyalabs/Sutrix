@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Oxydemeton-methyl,EFSA,2006,1094,Human health,short-term toxicity,Rat,oral: unspecified,14.0,NOAEL,=,0.15,mg/kg bw/day,clinical chemistry,neurotoxicity,0.15,=,,True

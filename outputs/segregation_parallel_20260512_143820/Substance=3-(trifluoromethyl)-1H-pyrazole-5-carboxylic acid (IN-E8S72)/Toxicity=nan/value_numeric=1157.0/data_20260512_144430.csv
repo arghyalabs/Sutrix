@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+3-(trifluoromethyl)-1H-pyrazole-5-carboxylic acid (IN-E8S72),EFSA,2016,2828,Human health,short-term toxicity,Rat,oral: feed,28.0,NOAEL,=,1157.0,mg/kg bw/day,no adverse effect observed at single/highest dose,,1157.0,=,,True

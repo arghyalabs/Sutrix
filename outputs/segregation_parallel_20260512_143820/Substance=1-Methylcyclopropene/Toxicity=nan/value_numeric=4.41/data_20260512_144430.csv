@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+1-Methylcyclopropene,EFSA,2018,3112,Ecotox (soil compartment),acute toxicity,Tiger worm,Not reported,,LD50,>,4.41,,mortality,,4.41,=,,True

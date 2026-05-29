@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Pyrimethanil,EFSA,2006,1072,Ecotox (soil compartment),not reported,Trichogramma cacoeciae,Not reported,,dose level,=,1000.0,g/ha,reproduction,,1000.0,=,,True

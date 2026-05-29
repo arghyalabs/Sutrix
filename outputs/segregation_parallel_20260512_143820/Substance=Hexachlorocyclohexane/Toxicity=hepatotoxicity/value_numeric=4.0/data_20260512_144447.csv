@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Hexachlorocyclohexane,EFSA CONTAM,2005,67,Animal (target species) health,short-term toxicity,Chicken,oral: feed,27.0,NOAEL,=,4.0,mg/kg,organ weights,hepatotoxicity,4.0,=,,True

@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Fosetyl-aluminium,EFSA,2013,2362,Animal (non-target species) health,chronic/long term toxicity,Rat,Not reported,,NOAEL,=,231.8,mg/kg bw/day,not reported,not reported,231.8,=,,True

@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Glycyrrhiza glabra L. root or rootstock extract,EFSA NDA,2011,31,Human health,subchronic,Rat,Not reported,90.0,BMDL05,=,167.0,mg/kg bw/day,haematology,systemic,167.0,=,,True

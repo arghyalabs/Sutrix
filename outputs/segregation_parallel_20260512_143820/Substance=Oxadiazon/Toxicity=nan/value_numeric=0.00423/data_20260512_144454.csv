@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Oxadiazon,EFSA,2010,1200,Ecotox (water compartment),acute toxicity,Scenedesmus subspicatus,Not reported,3.0,EC50,=,0.00423,mg/L,growth,,0.00423,=,,True

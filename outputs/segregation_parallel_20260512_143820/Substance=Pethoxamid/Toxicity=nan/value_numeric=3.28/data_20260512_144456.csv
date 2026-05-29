@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Pethoxamid,EFSA,2017,2995,Ecotox (water compartment),acute toxicity,Eastern oyster,Not reported,,EC50,=,3.28,mg/L,other,,3.28,=,,True

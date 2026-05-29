@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Florpyrauxifen,EFSA,2018,3114,Ecotox (soil compartment),not reported,Carrot,Not reported,,ER50,=,1.2,g/ha,other,,1.2,=,,True

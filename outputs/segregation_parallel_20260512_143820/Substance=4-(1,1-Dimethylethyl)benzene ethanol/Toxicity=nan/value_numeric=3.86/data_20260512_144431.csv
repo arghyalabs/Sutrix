@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+"4-(1,1-Dimethylethyl)benzene ethanol",EFSA,2013,2743,Ecotox (water compartment),acute toxicity,Daphnia magna,Not reported,,EC50,=,3.86,mg/L,mortality,,3.86,=,,True

@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Malic acid,EFSA FEEDAP,2014,2452,Animal (target species) health,chronic/long term toxicity,Dog,Not reported,728.0,dose level,=,50000.0,mg/kg,no adverse effect observed,,50000.0,=,,True

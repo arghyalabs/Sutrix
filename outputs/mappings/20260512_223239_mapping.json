@@ -1,0 +1,67 @@
+{
+  "dataset_id": "20260512_223239",
+  "mappings": [
+    {
+      "user_column": "N\u00b0 CAS",
+      "scientific_variable": "cas_number",
+      "method": "auto"
+    },
+    {
+      "user_column": "NOM SA",
+      "scientific_variable": "chemical_id",
+      "method": "manual"
+    },
+    {
+      "user_column": "CLASSEMENT R\u00c9F\u00c9RENCE",
+      "scientific_variable": "=",
+      "method": "auto"
+    },
+    {
+      "user_column": "CLASSEMENT DATE",
+      "scientific_variable": "=",
+      "method": "auto"
+    },
+    {
+      "user_column": "CLASSEMENT CAT\u00c9GORIE DANGER",
+      "scientific_variable": "=",
+      "method": "auto"
+    },
+    {
+      "user_column": "CLASSEMENT CODE H",
+      "scientific_variable": "=",
+      "method": "auto"
+    },
+    {
+      "user_column": "CLASSEMENT MENTION DANGER",
+      "scientific_variable": "=",
+      "method": "auto"
+    },
+    {
+      "user_column": "FACTEUR M VALEUR",
+      "scientific_variable": "=",
+      "method": "auto"
+    },
+    {
+      "user_column": "FACTEUR M ORIGINE",
+      "scientific_variable": "=",
+      "method": "auto"
+    },
+    {
+      "user_column": "FACTEUR M DATE",
+      "scientific_variable": "=",
+      "method": "auto"
+    },
+    {
+      "user_column": "Unnamed: 10",
+      "scientific_variable": "=",
+      "method": "auto"
+    },
+    {
+      "user_column": "Unnamed: 11",
+      "scientific_variable": "=",
+      "method": "auto"
+    }
+  ],
+  "created_at": "2026-05-12T22:33:18.364451",
+  "version": "1.0"
+}

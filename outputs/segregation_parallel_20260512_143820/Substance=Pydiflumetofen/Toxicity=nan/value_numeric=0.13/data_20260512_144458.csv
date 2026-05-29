@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Pydiflumetofen,EFSA,2019,3299,Ecotox (water compartment),chronic/long term toxicity,Fathead minnow,Not reported,32.0,EC10,=,0.13,mg/L,other,,0.13,=,,True

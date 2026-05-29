@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+22-Desmethyl-23-hydroxyazaspiracid,EFSA CONTAM,2008,125,Human health,acute toxicity,Mouse,intraperitoneal,,TEF,=,0.2,dimensionless,mortality,systemic,0.2,=,,True

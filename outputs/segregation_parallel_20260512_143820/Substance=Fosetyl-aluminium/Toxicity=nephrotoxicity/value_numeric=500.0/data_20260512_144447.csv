@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Fosetyl-aluminium,EFSA,2012,1354,Human health,short-term toxicity,Rodents,Not reported,,NOAEL,=,500.0,mg/kg bw/day,histopathology non neoplastic,nephrotoxicity,500.0,=,,True

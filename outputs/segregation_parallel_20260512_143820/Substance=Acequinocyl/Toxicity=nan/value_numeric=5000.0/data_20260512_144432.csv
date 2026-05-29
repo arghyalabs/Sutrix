@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Acequinocyl,EFSA,2013,2228,Ecotox (soil compartment),not reported,Monocots,Not reported,,dose level,=,5000.0,g/ha,no adverse effect observed,,5000.0,=,,True

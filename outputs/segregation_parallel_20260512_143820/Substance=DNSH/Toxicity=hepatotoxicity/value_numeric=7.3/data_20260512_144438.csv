@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+DNSH,EFSA CONTAM,2015,2663,Human health,not reported,Unspecified,Not reported,,BMDL05,=,7.3,mg/kg bw/day,organ weights,hepatotoxicity,7.3,=,,True

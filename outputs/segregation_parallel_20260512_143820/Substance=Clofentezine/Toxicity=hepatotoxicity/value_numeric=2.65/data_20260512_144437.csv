@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Clofentezine,EFSA,2009,1182,Human health,subchronic,Rat,oral: unspecified,90.0,NOAEL,=,2.65,mg/kg bw/day,histopathology non neoplastic,hepatotoxicity,2.65,=,,True

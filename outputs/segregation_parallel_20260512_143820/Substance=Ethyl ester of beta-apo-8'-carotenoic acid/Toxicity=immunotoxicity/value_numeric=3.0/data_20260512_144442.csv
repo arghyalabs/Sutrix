@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Ethyl ester of beta-apo-8'-carotenoic acid,EFSA FEEDAP,2019,3377,Human health,subchronic,Rat,Not reported,,NOAEL,=,3.0,mg/kg bw/day,histopathology non neoplastic,immunotoxicity,3.0,=,,True

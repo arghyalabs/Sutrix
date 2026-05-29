@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Penflufen,EFSA,2016,2880,Ecotox (soil compartment),chronic/long term toxicity,Folsomia candida,Not reported,28.0,NOEC,=,231.0,mg/kg,not reported,,231.0,=,,True

@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+2-Methyl-3-mercaptothiophene,EFSA CEF,2015,2634,Human health,not reported,Unspecified,Not reported,,NOAEL,=,0.29,mg/kg bw/day,not reported,not reported,0.29,=,,True

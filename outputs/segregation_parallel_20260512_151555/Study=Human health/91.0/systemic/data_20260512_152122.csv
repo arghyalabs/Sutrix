@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready,PubChem_CID,PubChem_MW,PubChem_CanonicalSMILES,PubChem_InChIKey,PubChem_Ambiguous,PubChem_Candidate_CIDs,PubChem_Error
+CID_56608859,EFSA,2018,3131,Human health,subchronic,Rat,inhalation: aerosol,91.0,NOAEL,ca.,0.02,mg/kg bw/day,behaviour,systemic,0.02,=,,True,56608859,434.3,,QQODLKZGRKWIFG-RUTXASTPSA-N,False,,

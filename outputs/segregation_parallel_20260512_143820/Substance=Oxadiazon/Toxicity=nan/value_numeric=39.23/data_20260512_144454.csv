@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Oxadiazon,EFSA,2010,1200,Ecotox (soil compartment),acute toxicity,Cucumber,Not reported,14.0,ER50,=,39.23,g/ha,seedling emergence,,39.23,=,,True

@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Complexation product of sodium tartrates and iron(III) chloride,EFSA ANS,2015,2605,Human health,subchronic,Rat,oral: gavage,90.0,BMDL10,=,267.0,mg/kg bw/day,histopathology non neoplastic,endocrine,267.0,=,,True

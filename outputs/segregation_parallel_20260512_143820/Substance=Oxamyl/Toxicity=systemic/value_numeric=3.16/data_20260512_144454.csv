@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Oxamyl,EFSA,2005,1052,Animal (non-target species) health,acute toxicity,Mallard duck,oral: unspecified,,LD50,=,3.16,mg/kg bw,mortality,systemic,3.16,=,,True

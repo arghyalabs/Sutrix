@@ -1,0 +1,8 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready,PubChem_CID,PubChem_MW,PubChem_CanonicalSMILES,PubChem_InChIKey,PubChem_Ambiguous,PubChem_Candidate_CIDs,PubChem_Error
+CID_102993,EFSA CEF,2010,2058,Human health,chronic/long term toxicity,Rat,Not reported,730.0,NOEL,=,2500.0,mg/kg bw/day,not reported,not reported,2500.0,=,,True,102993,102.13,,ROSFUFIOLRQOON-UHFFFAOYSA-N,False,,
+CID_138818,EFSA CEF,2010,2042,Human health,chronic/long term toxicity,Rat,Not reported,730.0,NOEL,=,15.0,mg/kg bw/day,not reported,not reported,15.0,=,,True,138818,80.18,,INBDPOJZYZJUDA-UHFFFAOYSA-N,False,,
+CID_712,EFSA CEF,2010,2042,Human health,chronic/long term toxicity,Rat,Not reported,730.0,NOEL,=,15.0,mg/kg bw/day,not reported,not reported,15.0,=,,True,712,30.026,,WSFSSNUMVMOOMR-UHFFFAOYSA-N,False,,
+CID_68595,EFSA CONTAM,2008,92,Human health,chronic/long term toxicity,Rat,oral: feed,730.0,NOEL,=,0.16,mg/kg bw/day,not reported,not reported,0.16,=,,True,68595,934.2,,WQGJEAMPBSZCIF-HKSLRPGUSA-N,False,,
+CID_1030,EFSA ANS,2018,3046,Human health,chronic/long term toxicity,Rat,Not reported,730.0,NOEL,=,2500.0,mg/kg bw/day,not reported,not reported,2500.0,=,,True,1030,76.09,,DNIAPMSPPWPWGF-UHFFFAOYSA-N,False,,
+CID_1030,EFSA ANS,2018,3060,Human health,chronic/long term toxicity,Rat,Not reported,730.0,NOEL,=,2500.0,mg/kg bw/day,not reported,not reported,2500.0,=,,True,1030,76.09,,DNIAPMSPPWPWGF-UHFFFAOYSA-N,False,,
+CID_1030,EFSA CEF,2010,2058,Human health,chronic/long term toxicity,Rat,Not reported,730.0,NOEL,=,2500.0,mg/kg bw/day,not reported,not reported,2500.0,=,,True,1030,76.09,,DNIAPMSPPWPWGF-UHFFFAOYSA-N,False,,

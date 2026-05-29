@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Salinomycin sodium,EFSA FEEDAP,2018,3071,Ecotox (soil compartment),acute toxicity,Radish,Not reported,,EC50,=,4.51,mg/kg,biomass,,4.51,=,,True

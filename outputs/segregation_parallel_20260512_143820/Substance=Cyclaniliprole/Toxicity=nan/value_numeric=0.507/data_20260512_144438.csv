@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Cyclaniliprole,EFSA,2016,2803,Ecotox (soil compartment),not reported,Aphidius rhopalosiphi,Not reported,,LR50,=,0.507,g/ha,mortality,,0.507,=,,True

@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+"2,4-D",EFSA,2014,2555,Ecotox (water compartment),chronic/long term toxicity,Eurasian watermilfoil,Not reported,14.0,EC50,=,0.011,mg/L,other,,0.011,=,,True

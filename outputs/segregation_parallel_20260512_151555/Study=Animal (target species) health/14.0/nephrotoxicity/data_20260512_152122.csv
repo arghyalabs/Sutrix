@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready,PubChem_CID,PubChem_MW,PubChem_CanonicalSMILES,PubChem_InChIKey,PubChem_Ambiguous,PubChem_Candidate_CIDs,PubChem_Error
+CID_442530,EFSA CONTAM,2004,54,Animal (target species) health,short-term toxicity,Dog,Not reported,14.0,dose level,=,0.2,mg/kg bw/day,histopathology non neoplastic,nephrotoxicity,0.2,=,,True,442530,403.8,,RWQKHEORZBHNRI-BMIGLBTASA-N,False,,

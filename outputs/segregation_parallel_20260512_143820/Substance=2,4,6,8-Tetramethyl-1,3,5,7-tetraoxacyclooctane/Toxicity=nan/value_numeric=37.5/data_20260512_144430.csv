@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+"2,4,6,8-Tetramethyl-1,3,5,7-tetraoxacyclooctane",EFSA,2010,1251,Ecotox (water compartment),chronic/long term toxicity,Rainbow trout,Not reported,21.0,NOEC,=,37.5,mg/L,mortality,,37.5,=,,True

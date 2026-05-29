@@ -1,0 +1,8 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready,PubChem_CID,PubChem_MW,PubChem_CanonicalSMILES,PubChem_InChIKey,PubChem_Ambiguous,PubChem_Candidate_CIDs,PubChem_Error
+CID_660,EFSA FEEDAP,2012,152,Animal (target species) health,subchronic,Rat,Not reported,91.0,NOAEL,=,150.0,mg/kg bw/day,haematology,systemic,150.0,=,,True,660,148.16,,VMUXSMXIQBNMGZ-UHFFFAOYSA-N,False,,
+CID_61007,EFSA FEEDAP,2016,2863,Animal (target species) health,subchronic,Rat,oral: feed,91.0,NOAEL,=,128.0,mg/kg bw/day,organ weights,systemic,128.0,=,,True,61007,178.23,,PCBSXBYCASFXTM-UHFFFAOYSA-N,False,,
+4-(p-Hydroxyphenyl)butan-2-one,EFSA FEEDAP,2016,2863,Animal (target species) health,subchronic,Rat,oral: feed,91.0,NOAEL,=,128.0,mg/kg bw/day,organ weights,systemic,128.0,=,,True,,,,,False,,Not Found
+CID_4947,EFSA FEEDAP,2020,3567,Animal (target species) health,subchronic,Rat,oral: feed,91.0,NOAEL,=,1910.0,mg/kg bw/day,clinical chemistry,systemic,1910.0,=,,True,4947,212.2,,ZTHYODDOHIVTJV-UHFFFAOYSA-N,False,,
+CID_31211,EFSA FEEDAP,2016,2863,Animal (target species) health,subchronic,Rat,oral: feed,91.0,NOAEL,=,128.0,mg/kg bw/day,organ weights,systemic,128.0,=,,True,31211,194.23,,OJYLAHXKWMRDGS-UHFFFAOYSA-N,False,,
+CID_5282108,EFSA FEEDAP,2016,2822,Animal (target species) health,subchronic,Rat,oral: feed,91.0,NOAEL,=,10.0,mg/kg bw/day,food consumption,systemic,10.0,=,,True,5282108,192.3,,UZFLPKAIBPNNCA-BQYQJAHWSA-N,False,,
+CID_638014,EFSA FEEDAP,2016,2822,Animal (target species) health,subchronic,Rat,oral: feed,91.0,NOAEL,=,10.0,mg/kg bw/day,body weight,systemic,10.0,=,,True,638014,192.3,,PSQYTAPXSHCGMF-BQYQJAHWSA-N,False,,

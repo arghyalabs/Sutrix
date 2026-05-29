@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Cyclopropanecarboxylic acid (2-isopropyl-5-methyl-cyclohexyl)-amide,EFSA CEF,2014,2572,Human health,subchronic,Rat,oral: feed,90.0,NOAEL,=,147.0,mg/kg bw/day,body weight,systemic,147.0,=,,True

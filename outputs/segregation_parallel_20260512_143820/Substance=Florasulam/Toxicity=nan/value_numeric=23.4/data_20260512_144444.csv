@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Florasulam,EFSA,2015,2593,Ecotox (water compartment),chronic/long term toxicity,Daphnia magna,Not reported,21.0,NOEC,=,23.4,mg/L,not reported,,23.4,=,,True

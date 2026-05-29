@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Chromium(III),EFSA CONTAM,2014,2468,Human health,chronic/long term toxicity,Rat,oral: feed,730.0,NOAEL,=,286.0,mg/kg bw/day,histopathology neoplastic,not reported,286.0,=,,True

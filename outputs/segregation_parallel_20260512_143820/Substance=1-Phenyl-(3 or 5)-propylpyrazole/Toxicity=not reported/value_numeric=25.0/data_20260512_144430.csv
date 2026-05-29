@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+1-Phenyl-(3 or 5)-propylpyrazole,EFSA CEF,2011,2078,Human health,subchronic,Unspecified,Not reported,,NOAEL,=,25.0,mg/kg bw/day,not reported,not reported,25.0,=,,True

@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Quizalofop-P-ethyl,EFSA,2009,1168,Ecotox (soil compartment),not reported,Aphidius rhopalosiphi,Not reported,,LR50,=,48.5,g/ha,mortality,,48.5,=,,True

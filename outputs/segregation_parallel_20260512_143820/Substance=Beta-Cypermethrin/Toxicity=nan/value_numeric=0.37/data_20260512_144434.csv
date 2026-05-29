@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Beta-Cypermethrin,EFSA,2014,2520,Ecotox (water compartment),chronic/long term toxicity,Fathead minnow,Not reported,34.0,NOEC,=,0.37,µg/L,other,,0.37,=,,True

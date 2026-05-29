@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready,PubChem_CID,PubChem_MW,PubChem_CanonicalSMILES,PubChem_InChIKey,PubChem_Ambiguous,PubChem_Candidate_CIDs,PubChem_Error
+Polyvinyl alcohol,EFSA AFC,2006,306,Human health,reproduction toxicity,Rat,oral: unspecified,70.0,NOAEL,=,5000.0,mg/kg bw/day,no adverse effect observed at single/highest dose,,5000.0,=,,True,,,,,False,,Not Found

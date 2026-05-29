@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready,PubChem_CID,PubChem_MW,PubChem_CanonicalSMILES,PubChem_InChIKey,PubChem_Ambiguous,PubChem_Candidate_CIDs,PubChem_Error
+CID_407,EFSA,2006,1065,Human health,chronic/long term toxicity,Rat,oral: unspecified,819.0,NOAEL,=,224.47,mg/kg bw/day,no adverse effect observed at single/highest dose,,224.47,=,,True,407,81.996,,ABLZXFCXXLZCGV-UHFFFAOYSA-N,False,,

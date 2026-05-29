@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Spiromesifen,EFSA,2012,1344,Animal (non-target species) health,short-term toxicity,Mallard duck,oral: feed,,LC50,>,5000.0,mg/kg,mortality,systemic,5000.0,=,,True

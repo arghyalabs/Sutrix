@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Dimethenamid-P,EFSA PPR,2012,775,Human health,acute toxicity,Rat,Not reported,4.0,NOAEL,=,25.0,mg/kg bw/day,not reported,not reported,25.0,=,,True

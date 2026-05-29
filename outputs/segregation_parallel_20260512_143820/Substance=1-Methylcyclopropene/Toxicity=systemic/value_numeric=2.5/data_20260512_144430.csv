@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+1-Methylcyclopropene,EFSA,2005,1056,Animal (non-target species) health,acute toxicity,Rat,inhalation: unspecified,,LC50,>,2.5,mg/L,mortality,systemic,2.5,=,,True

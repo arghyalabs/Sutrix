@@ -1,0 +1,3 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Etoxazole,EFSA,2017,3011,Ecotox (soil compartment),acute toxicity,Honey bee,dermal,,LD50,>,200.0,µg/piece,mortality,,200.0,=,,True
+Etoxazole,EFSA,2017,3011,Ecotox (soil compartment),acute toxicity,Honey bee,oral: unspecified,,LD50,>,200.0,µg/piece,mortality,,200.0,=,,True

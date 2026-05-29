@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Zinc chelates of lysine and glutamic acid,EFSA FEEDAP,2019,3247,Animal (target species) health,subchronic,Chicken,oral: feed,35.0,dose level,=,440.0,mg/kg,no adverse effect observed at single/highest dose,,440.0,=,,True

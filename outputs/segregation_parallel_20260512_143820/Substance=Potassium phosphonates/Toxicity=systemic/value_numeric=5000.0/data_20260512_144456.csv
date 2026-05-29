@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Potassium phosphonates,EFSA,2012,1354,Animal (non-target species) health,acute toxicity,Rat,oral: unspecified,,LD50,>,5000.0,mg/kg bw,mortality,systemic,5000.0,=,,True

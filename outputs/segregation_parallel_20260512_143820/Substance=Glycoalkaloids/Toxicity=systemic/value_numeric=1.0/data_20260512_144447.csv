@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Glycoalkaloids,EFSA CONTAM,2020,3680,Human health,acute toxicity,Human,Not reported,,LOAEL,=,1.0,mg/kg bw,clinical signs,systemic,1.0,=,,True

@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Dimethoate,EFSA,2006,1092,Ecotox (soil compartment),acute toxicity,Lob worm,Not reported,14.0,LC50,=,31.0,mg/kg,mortality,,31.0,=,,True

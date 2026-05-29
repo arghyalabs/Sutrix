@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Dimethomorph,EFSA,2006,1090,Human health,reproduction toxicity,Rat,Not reported,,NOAEL,=,60.0,mg/kg bw/day,development,teratogenic,60.0,=,,True

@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Decarbamoylneosaxitoxin,EFSA CONTAM,2009,128,Human health,acute toxicity,Mouse,intraperitoneal,,TEF,=,0.4,dimensionless,neurology,neurotoxicity,0.4,=,,True

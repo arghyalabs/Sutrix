@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Prosulfocarb,EFSA,2007,1108,Animal (non-target species) health,reproduction toxicity,Mallard duck,Not reported,,NOEL,=,131.0,mg/kg bw/day,not reported,not reported,131.0,=,,True

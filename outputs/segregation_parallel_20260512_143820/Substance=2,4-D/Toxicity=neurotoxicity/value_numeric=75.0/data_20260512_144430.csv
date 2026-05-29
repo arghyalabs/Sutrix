@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+"2,4-D",EFSA,2014,2555,Human health,acute toxicity,Rat,Not reported,,NOAEL,=,75.0,mg/kg bw,clinical signs,neurotoxicity,75.0,=,,True

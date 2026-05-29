@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Maltodextrin,EFSA,2013,1355,Ecotox (soil compartment),acute toxicity,Honey bee,dermal,,LD50,>,200.0,µg/piece,mortality,,200.0,=,,True

@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Fenitrothion,EFSA,2006,1070,Ecotox (soil compartment),acute toxicity,Minute pirate bug,Not reported,7.0,dose level,=,715.0,g/ha,reproduction,,715.0,=,,True

@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Dichlorprop-P,EFSA,2018,3110,Ecotox (soil compartment),not reported,Cucumber,Not reported,,ER50,=,25.2,g/ha,other,,25.2,=,,True

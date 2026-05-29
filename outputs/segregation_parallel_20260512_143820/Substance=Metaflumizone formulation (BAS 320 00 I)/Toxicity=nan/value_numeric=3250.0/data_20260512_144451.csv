@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Metaflumizone formulation (BAS 320 00 I),EFSA,2013,2431,Ecotox (soil compartment),chronic/long term toxicity,Typhlodromus pyri,Not reported,14.0,LR50,>,3250.0,ml/ha,mortality,,3250.0,=,,True

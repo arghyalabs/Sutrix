@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Dimethenamid-P metabolite (M656PH031),EFSA,2018,3103,Human health,chronic/long term toxicity,Rat,Not reported,730.0,NOAEL,=,5.0,mg/kg bw/day,organ weights,hepatotoxicity,5.0,=,,True

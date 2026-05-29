@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Pyrimethanil,EFSA,2006,1072,Animal (non-target species) health,reproduction toxicity,Bobwhite quail,Not reported,,NOAEL,ca.,95.96,mg/kg bw,not reported,not reported,95.96,=,,True

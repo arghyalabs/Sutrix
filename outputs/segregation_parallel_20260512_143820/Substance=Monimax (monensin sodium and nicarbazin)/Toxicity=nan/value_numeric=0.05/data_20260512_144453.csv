@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Monimax (monensin sodium and nicarbazin),EFSA FEEDAP,2018,3140,Ecotox (water compartment),not reported,not reported,Not reported,,NOEL,=,0.05,mg/L,not reported,,0.05,=,,True

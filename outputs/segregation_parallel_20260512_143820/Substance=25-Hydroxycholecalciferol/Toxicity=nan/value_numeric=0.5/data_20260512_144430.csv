@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+25-Hydroxycholecalciferol,EFSA FEEDAP,2009,167,Animal (target species) health,subchronic,Pig,oral: feed,42.0,dose level,=,0.5,mg/kg,no adverse effect observed,,0.5,=,,True

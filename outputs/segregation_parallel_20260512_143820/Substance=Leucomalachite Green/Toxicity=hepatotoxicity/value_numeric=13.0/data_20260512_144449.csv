@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Leucomalachite Green,EFSA CONTAM,2016,2860,Human health,chronic/long term toxicity,Mouse,oral: feed,728.0,BMDL10,=,13.0,mg/kg bw/day,histopathology neoplastic,hepatotoxicity,13.0,=,,True

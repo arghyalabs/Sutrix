@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Mineral oil saturated hydrocarbons,"EFSA CEF, EFSA CONTAM",2012,603,Human health,subchronic,Rat,Not reported,90.0,NOAEL,=,19.0,mg/kg bw/day,histopathology neoplastic,hepatotoxicity,19.0,=,,True

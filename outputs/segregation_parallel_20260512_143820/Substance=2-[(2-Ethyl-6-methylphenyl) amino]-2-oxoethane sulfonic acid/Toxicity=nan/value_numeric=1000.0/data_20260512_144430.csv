@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+2-[(2-Ethyl-6-methylphenyl) amino]-2-oxoethane sulfonic acid,EFSA,2010,1241,Ecotox (soil compartment),chronic/long term toxicity,Folsomia candida,Not reported,,NOEC,>,1000.0,mg/kg,reproduction,,1000.0,=,,True

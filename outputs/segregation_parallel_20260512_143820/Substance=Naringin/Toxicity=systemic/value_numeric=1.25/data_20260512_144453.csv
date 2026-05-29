@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Naringin,EFSA FEEDAP,2011,144,Animal (target species) health,chronic/long term toxicity,Rat,oral: feed,400.0,NOAEL,=,1.25,g/kg bw/day,food consumption,systemic,1.25,=,,True

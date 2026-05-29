@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Spinetoram,EFSA,2013,2229,Ecotox (water compartment),acute toxicity,Bluegill,Not reported,4.0,LC50,=,2.69,mg/L,mortality,,2.69,=,,True

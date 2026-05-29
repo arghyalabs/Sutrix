@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Asulam Sodium,EFSA,2018,3106,Ecotox (water compartment),acute toxicity,Gammaridae,Not reported,14.0,EC50,=,0.146,mg/L,growth,,0.146,=,,True

@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Fenamidone metabolite (RPA 412708),EFSA,2016,2776,Animal (non-target species) health,short-term toxicity,Bobwhite quail,oral: feed,,LD50,=,723.0,mg/kg bw,mortality,systemic,723.0,=,,True

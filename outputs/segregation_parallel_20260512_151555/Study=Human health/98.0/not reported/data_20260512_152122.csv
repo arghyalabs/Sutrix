@@ -1,0 +1,4 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready,PubChem_CID,PubChem_MW,PubChem_CanonicalSMILES,PubChem_InChIKey,PubChem_Ambiguous,PubChem_Candidate_CIDs,PubChem_Error
+CID_5362832,EFSA CEF,2010,2042,Human health,subchronic,Rat,Not reported,98.0,NOEL,=,250.0,mg/kg bw/day,not reported,not reported,250.0,=,,True,5362832,116.23,,PBWZEERIWACABP-GQCTYLIASA-N,False,,
+CID_399848,EFSA CEF,2010,2042,Human health,subchronic,Rat,Not reported,98.0,NOEL,=,250.0,mg/kg bw/day,not reported,not reported,250.0,=,,True,399848,154.3,,PQFOEUXAUYRCAY-UHFFFAOYSA-N,False,,
+CID_1068,EFSA CEF,2010,2042,Human health,subchronic,Rat,Not reported,98.0,NOEL,=,250.0,mg/kg bw/day,not reported,not reported,250.0,=,,True,1068,62.14,,QMMFVYPAHWMCMS-UHFFFAOYSA-N,False,,

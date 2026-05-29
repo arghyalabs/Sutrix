@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+"Benzene-1,3-diol",EFSA FEEDAP,2012,151,Animal (target species) health,chronic/long term toxicity,Mouse,Not reported,728.0,NOAEL,=,36.0,mg/kg bw/day,clinical signs,systemic,36.0,=,,True

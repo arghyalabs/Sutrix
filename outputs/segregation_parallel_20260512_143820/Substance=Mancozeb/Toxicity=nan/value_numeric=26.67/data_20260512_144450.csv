@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Mancozeb,EFSA,2019,3605,Ecotox (soil compartment),not reported,Typhlodromus pyri,Not reported,,LR50,=,26.67,g/ha,mortality,,26.67,=,,True

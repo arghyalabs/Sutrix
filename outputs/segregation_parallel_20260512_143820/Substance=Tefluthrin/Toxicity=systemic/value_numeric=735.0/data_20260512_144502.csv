@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Tefluthrin,EFSA,2010,1230,Animal (non-target species) health,short-term toxicity,Bobwhite quail,oral: feed,,LD50,>,735.0,mg/kg bw/day,mortality,systemic,735.0,=,,True

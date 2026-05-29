@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Benzoic acid,EFSA FEEDAP,2012,589,Animal (target species) health,other,Pig,Not reported,,dose level,=,20000.0,mg/kg,clinical chemistry,systemic,20000.0,=,,True

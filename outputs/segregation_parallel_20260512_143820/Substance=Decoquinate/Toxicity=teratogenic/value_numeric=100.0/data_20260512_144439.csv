@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Decoquinate,EFSA FEEDAP,2004,270,Animal (non-target species) health,reproduction toxicity,Rat,oral: gavage,11.0,NOEL,=,100.0,mg/kg bw/day,development,teratogenic,100.0,=,,True

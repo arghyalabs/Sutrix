@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+F8426-dicarboxylic acid,EFSA,2016,2866,Ecotox (soil compartment),chronic/long term toxicity,Tiger worm,Not reported,,NOEC,=,0.152,mg/kg,reproduction,,0.152,=,,True

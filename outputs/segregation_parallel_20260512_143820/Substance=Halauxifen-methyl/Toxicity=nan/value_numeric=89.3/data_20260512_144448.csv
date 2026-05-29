@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Halauxifen-methyl,EFSA,2014,2751,Ecotox (water compartment),chronic/long term toxicity,Chironomus tentans,Not reported,28.0,NOEC,=,89.3,mg/kg,not reported,,89.3,=,,True

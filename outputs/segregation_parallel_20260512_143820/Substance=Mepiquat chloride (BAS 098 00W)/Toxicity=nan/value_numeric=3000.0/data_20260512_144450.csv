@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Mepiquat chloride (BAS 098 00W),EFSA,2008,1128,Ecotox (soil compartment),not reported,Monocots,Not reported,,ER50,>,3000.0,g/ha,other,,3000.0,=,,True

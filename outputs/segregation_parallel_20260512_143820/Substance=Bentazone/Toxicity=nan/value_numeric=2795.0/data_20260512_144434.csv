@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Bentazone,EFSA,2015,2638,Ecotox (soil compartment),not reported,Typhlodromus pyri,Not reported,,LR50,=,2795.0,g/ha,mortality,,2795.0,=,,True

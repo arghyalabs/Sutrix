@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Fluometuron,EFSA,2011,1272,Ecotox (soil compartment),acute toxicity,Typhlodromus pyri,Not reported,2.0,LR50,=,28.9,g/ha,reproduction,,28.9,=,,True

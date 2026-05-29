@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Zoxamide,EFSA,2017,2994,Ecotox (water compartment),chronic/long term toxicity,Mysid shrimp,Not reported,27.0,NOEC,=,0.0072,mg/L,not reported,,0.0072,=,,True

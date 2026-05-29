@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Dodine,EFSA,2010,1217,Animal (non-target species) health,acute toxicity,Mouse,oral: unspecified,,LD50,=,1354.0,mg/kg bw/day,mortality,systemic,1354.0,=,,True

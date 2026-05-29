@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Zinc phosphide,EFSA,2010,1222,Animal (non-target species) health,reproduction toxicity,Japanese quail,Not reported,,NOEL,=,1.2,mg/kg bw/day,not reported,not reported,1.2,=,,True

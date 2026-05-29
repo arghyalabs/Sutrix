@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Fenbutatin oxide,EFSA,2010,1232,Ecotox (soil compartment),acute toxicity,Aphidius rhopalosiphi,Not reported,2.0,LR50,>,85.9,g/ha,mortality,,85.9,=,,True

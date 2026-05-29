@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Diflufenican,EFSA,2008,1115,Human health,subchronic,Rat,oral: unspecified,91.0,NOAEL,=,19.47,mg/kg bw/day,body weight,systemic,19.47,=,,True

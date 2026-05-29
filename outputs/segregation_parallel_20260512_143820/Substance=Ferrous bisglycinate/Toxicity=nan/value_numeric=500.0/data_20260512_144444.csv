@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Ferrous bisglycinate,EFSA AFC,2006,374,Human health,subchronic,Rat,oral: unspecified,91.0,NOAEL,=,500.0,mg/kg bw/day,no adverse effect observed at single/highest dose,,500.0,=,,True

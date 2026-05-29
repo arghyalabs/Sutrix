@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Thiram,EFSA,2017,3606,Ecotox (water compartment),chronic/long term toxicity,Fathead minnow,Not reported,,NOEC,=,1.1,µg/L,other,,1.1,=,,True

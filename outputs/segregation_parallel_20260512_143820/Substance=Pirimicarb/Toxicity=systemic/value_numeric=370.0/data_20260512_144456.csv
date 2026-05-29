@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Pirimicarb,EFSA PPR,2005,773,Animal (non-target species) health,acute toxicity,Bobwhite quail,oral: feed,,LD50,=,370.0,mg/kg bw,mortality,systemic,370.0,=,,True

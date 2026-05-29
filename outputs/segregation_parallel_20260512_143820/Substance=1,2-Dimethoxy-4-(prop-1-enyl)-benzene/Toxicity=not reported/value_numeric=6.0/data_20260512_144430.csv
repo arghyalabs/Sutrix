@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+"1,2-Dimethoxy-4-(prop-1-enyl)-benzene",EFSA CEF,2010,2073,Human health,not reported,Unspecified,Not reported,,NOAEL,=,6.0,mg/kg bw/day,not reported,not reported,6.0,=,,True

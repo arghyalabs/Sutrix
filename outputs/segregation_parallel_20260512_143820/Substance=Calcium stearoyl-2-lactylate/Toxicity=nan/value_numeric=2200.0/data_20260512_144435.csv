@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Calcium stearoyl-2-lactylate,EFSA ANS,2013,2198,Human health,chronic/long term toxicity,Rat,Not reported,365.0,NOAEL,ca.,2200.0,mg/kg bw/day,no adverse effect observed at single/highest dose,,2200.0,=,,True

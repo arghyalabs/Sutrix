@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Uranium (total),EFSA CONTAM,2009,46,Human health,subchronic,Rat,oral: drinking water,91.0,LOAEL,=,0.06,mg/kg bw/day,histopathology non neoplastic,nephrotoxicity,0.06,=,,True

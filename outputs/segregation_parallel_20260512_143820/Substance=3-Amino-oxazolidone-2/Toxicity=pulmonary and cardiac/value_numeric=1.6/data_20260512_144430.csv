@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+3-Amino-oxazolidone-2,EFSA CONTAM,2015,2663,Human health,chronic/long term toxicity,Mouse,Not reported,,BMDL10,=,1.6,mg/kg bw/day,histopathology neoplastic,pulmonary and cardiac,1.6,=,,True

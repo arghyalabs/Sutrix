@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Proquinazid,EFSA,2009,1198,Ecotox (water compartment),chronic/long term toxicity,Sheepshead minnow,Not reported,36.0,NOEC,=,0.00872,mg/L,mortality,,0.00872,=,,True

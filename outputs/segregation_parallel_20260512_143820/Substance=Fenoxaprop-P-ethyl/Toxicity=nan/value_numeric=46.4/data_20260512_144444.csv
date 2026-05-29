@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Fenoxaprop-P-ethyl,EFSA,2007,1114,Ecotox (soil compartment),not reported,Aphidius rhopalosiphi,Not reported,,LR50,=,46.4,g/ha,mortality,,46.4,=,,True

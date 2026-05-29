@@ -1,0 +1,27 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready,PubChem_CID,PubChem_MW,PubChem_CanonicalSMILES,PubChem_InChIKey,PubChem_Ambiguous,PubChem_Candidate_CIDs,PubChem_Error
+CID_146677121,EFSA,2016,2866,Human health,chronic/long term toxicity,Rat,Not reported,730.0,NOAEL,=,3.0,mg/kg bw/day,haematology,hemopoietic,3.0,=,,True,146677121,370.11,,BFYWHGADLYLBOI-UHFFFAOYSA-N,False,,
+CID_20055238,EFSA,2016,2866,Human health,chronic/long term toxicity,Rat,Not reported,730.0,NOAEL,=,3.0,mg/kg bw/day,haematology,hemopoietic,3.0,=,,True,20055238,400.13,,YNFLMVREGPIUPB-UHFFFAOYSA-N,False,,
+CID_403,EFSA,2018,3028,Human health,chronic/long term toxicity,Rat,Not reported,730.0,NOAEL,=,3.2,mg/kg bw/day,haematology,hemopoietic,3.2,=,,True,403,109.13,,PLIKAWJENQZMHA-UHFFFAOYSA-N,False,,
+CID_93315,EFSA,2008,1117,Human health,chronic/long term toxicity,Rat,Not reported,730.0,NOAEL,=,2.3,mg/kg bw/day,clinical signs,hemopoietic,2.3,=,,True,93315,384.5,,QDRXWCAVUNHOGA-UHFFFAOYSA-N,False,,
+CID_93315,EFSA,2013,2228,Human health,chronic/long term toxicity,Rat,Not reported,730.0,NOAEL,=,2.3,mg/kg bw/day,haematology,hemopoietic,2.3,=,,True,93315,384.5,,QDRXWCAVUNHOGA-UHFFFAOYSA-N,False,,
+CID_607662,EFSA,2018,3106,Human health,chronic/long term toxicity,Rat,Not reported,730.0,NOAEL,=,36.0,mg/kg bw/day,haematology,hemopoietic,36.0,=,,True,607662,272.28,,WYSQQGOTBXOTIB-UHFFFAOYSA-N,False,,
+CID_13389335,EFSA,2010,1246,Human health,chronic/long term toxicity,Rat,Not reported,730.0,NOAEL,=,36.0,mg/kg bw/day,haematology,hemopoietic,36.0,=,,True,13389335,252.23,,PEXLHWBDBQUUOG-UHFFFAOYSA-M,False,,
+CID_13389335,EFSA,2018,3106,Human health,chronic/long term toxicity,Rat,Not reported,730.0,NOAEL,=,36.0,mg/kg bw/day,haematology,hemopoietic,36.0,=,,True,13389335,252.23,,PEXLHWBDBQUUOG-UHFFFAOYSA-M,False,,
+Asulam glucoside,EFSA,2018,3106,Human health,chronic/long term toxicity,Rat,Not reported,730.0,NOAEL,=,36.0,mg/kg bw/day,haematology,hemopoietic,36.0,=,,True,,,,,False,,Not Found
+CID_176879,EFSA,2017,2911,Human health,chronic/long term toxicity,Rat,Not reported,730.0,NOAEL,=,1.0,mg/kg bw/day,haematology,hemopoietic,1.0,=,,True,176879,300.35,,VHLKTXFWDRXILV-UHFFFAOYSA-N,False,,
+CID_23682789,EFSA,2010,1224,Human health,chronic/long term toxicity,Rat,Not reported,730.0,NOAEL,=,1.1,mg/kg bw/day,haematology,hemopoietic,1.1,=,,True,23682789,452.3,,FUHMZYWBSHTEDZ-UHFFFAOYSA-M,False,,
+CID_443229,EFSA,2016,2866,Human health,chronic/long term toxicity,Rat,Not reported,730.0,NOAEL,=,3.0,mg/kg bw/day,haematology,hemopoietic,3.0,=,,True,443229,384.13,,YHKBGVDUSSWOAB-UHFFFAOYSA-N,False,,
+CID_86222,EFSA,2016,2866,Human health,chronic/long term toxicity,Rat,Not reported,730.0,NOAEL,=,3.0,mg/kg bw/day,haematology,hemopoietic,3.0,=,,True,86222,412.2,,MLKCGVHIFJBRCD-UHFFFAOYSA-N,False,,
+CID_10788,EFSA,2010,1249,Human health,chronic/long term toxicity,Rat,oral: feed,730.0,NOAEL,=,0.9,mg/kg bw/day,haematology,hemopoietic,0.9,=,,True,10788,162.3,,QAYICIQNSGETAS-UHFFFAOYSA-N,False,,
+Desamino asulam,EFSA,2018,3106,Human health,chronic/long term toxicity,Rat,Not reported,730.0,NOAEL,=,36.0,mg/kg bw/day,haematology,hemopoietic,36.0,=,,True,,,,,False,,Not Found
+CID_24743,EFSA,2018,3028,Human health,chronic/long term toxicity,Rat,Not reported,730.0,NOAEL,=,3.2,mg/kg bw/day,haematology,hemopoietic,3.2,=,,True,24743,300.31,,WZJZMXBKUWKXTQ-UHFFFAOYSA-N,False,,
+CID_11487,EFSA,2009,1154,Human health,chronic/long term toxicity,Rat,Not reported,730.0,NOAEL,=,7.5,mg/kg bw/day,haematology,hemopoietic,7.5,=,,True,11487,169.22,,DMBHHRLKUKUOEG-UHFFFAOYSA-N,False,,
+CID_11487,EFSA,2012,1302,Human health,chronic/long term toxicity,Rat,Not reported,730.0,NOAEL,=,7.5,mg/kg bw/day,haematology,hemopoietic,7.5,=,,True,11487,169.22,,DMBHHRLKUKUOEG-UHFFFAOYSA-N,False,,
+CID_47898,EFSA,2008,1118,Human health,chronic/long term toxicity,Rat,Not reported,730.0,NOAEL,=,8.7,mg/kg bw/day,haematology,hemopoietic,8.7,=,,True,47898,323.31,,PTCGDEVVHUXTMP-UHFFFAOYSA-N,False,,
+Formyl asulam,EFSA,2018,3106,Human health,chronic/long term toxicity,Rat,Not reported,730.0,NOAEL,=,36.0,mg/kg bw/day,haematology,hemopoietic,36.0,=,,True,,,,,False,,Not Found
+CID_107720,EFSA,2018,3026,Human health,chronic/long term toxicity,Rat,Not reported,730.0,NOAEL,=,1.04,mg/kg bw/day,haematology,hemopoietic,1.04,=,,True,107720,527.8,,VBCVPMMZEGZULK-NRFANRHFSA-N,False,,
+Malonyl-asulam,EFSA,2018,3106,Human health,chronic/long term toxicity,Rat,Not reported,730.0,NOAEL,=,36.0,mg/kg bw/day,haematology,hemopoietic,36.0,=,,True,,,,,False,,Not Found
+CID_73281,EFSA,2008,1113,Human health,chronic/long term toxicity,Rat,Not reported,730.0,NOAEL,=,199.0,mg/kg bw/day,haematology,hemopoietic,199.0,=,,True,73281,410.4,,RTCOGUMHFFWOJV-UHFFFAOYSA-N,False,,
+CID_23082663,EFSA,2013,2201,Human health,chronic/long term toxicity,Rat,Not reported,730.0,NOAEL,=,7.25,mg/kg bw/day,haematology,hemopoietic,7.25,=,,True,23082663,365.8,,NMVCBWZLCXANER-UHFFFAOYSA-N,False,,
+CID_47445,EFSA,2009,1160,Human health,chronic/long term toxicity,Rat,Not reported,730.0,NOAEL,=,0.82,mg/kg bw/day,haematology,hemopoietic,0.82,=,,True,47445,358.7,,XAIPTRIXGHTTNT-UHFFFAOYSA-N,False,,
+CID_47445,EFSA,2011,1271,Human health,chronic/long term toxicity,Rat,Not reported,730.0,NOAEL,=,0.82,mg/kg bw/day,haematology,hemopoietic,0.82,=,,True,47445,358.7,,XAIPTRIXGHTTNT-UHFFFAOYSA-N,False,,

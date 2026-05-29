@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+2-Naphthyloxyacetic acid,EFSA,2011,1290,Ecotox (water compartment),acute toxicity,Swollen duckweed,Not reported,7.0,EC50,ca.,3.85,mg/L,frond number,,3.85,=,,True

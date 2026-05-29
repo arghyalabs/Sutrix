@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+"N-(2-Methylcyclohexyl)-2,3,4,5,6-pentafluoro-benzamide",EFSA CEF,2017,2942,Human health,subchronic,Rat,oral: feed,90.0,NOAEL,=,55.0,mg/kg bw/day,clinical signs,systemic,55.0,=,,True

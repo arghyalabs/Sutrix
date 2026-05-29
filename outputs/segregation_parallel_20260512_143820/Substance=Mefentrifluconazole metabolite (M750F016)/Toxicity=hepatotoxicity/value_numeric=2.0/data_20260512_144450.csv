@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Mefentrifluconazole metabolite (M750F016),EFSA,2018,3115,Human health,subchronic,Mouse,Not reported,90.0,NOAEL,=,2.0,mg/kg bw/day,organ weights,hepatotoxicity,2.0,=,,True

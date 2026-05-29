@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Methomyl,EFSA,2009,1178,Ecotox (soil compartment),acute toxicity,Tiger worm,Not reported,14.0,LC50,=,19.0,mg/kg,mortality,,19.0,=,,True

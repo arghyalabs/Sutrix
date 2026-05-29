@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Fluoxastrobin,EFSA,2005,1100,Animal (non-target species) health,reproduction toxicity,Rat,Not reported,,NOAEL,>,742.0,mg/kg bw/day,development,developmental,742.0,=,,True

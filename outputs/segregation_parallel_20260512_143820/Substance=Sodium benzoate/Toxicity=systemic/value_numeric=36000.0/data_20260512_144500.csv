@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Sodium benzoate,EFSA FEEDAP,2011,250,Animal (target species) health,subchronic,Pig,oral: feed,36.0,dose level,=,36000.0,mg/kg,body weight,systemic,36000.0,=,,True

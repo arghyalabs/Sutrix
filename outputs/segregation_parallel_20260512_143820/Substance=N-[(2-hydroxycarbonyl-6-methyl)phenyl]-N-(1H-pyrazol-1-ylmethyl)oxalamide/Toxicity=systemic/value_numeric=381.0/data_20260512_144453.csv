@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+N-[(2-hydroxycarbonyl-6-methyl)phenyl]-N-(1H-pyrazol-1-ylmethyl)oxalamide,EFSA,2017,2963,Human health,short-term toxicity,Rat,oral: feed,28.0,NOAEL,=,381.0,mg/kg bw/day,body weight,systemic,381.0,=,,True

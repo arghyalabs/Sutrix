@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Methyl propionate,EFSA FEEDAP,2013,2209,Animal (target species) health,subchronic,Rat,oral: gavage,90.0,NOAEL,=,500.0,mg/kg bw/day,other,hepatotoxicity,500.0,=,,True

@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Aldrin,EFSA CONTAM,2005,69,Animal (target species) health,subchronic,Cattle,oral: feed,43.0,NOAEL,=,1.5,mg/kg bw/day,clinical signs,neurotoxicity,1.5,=,,True

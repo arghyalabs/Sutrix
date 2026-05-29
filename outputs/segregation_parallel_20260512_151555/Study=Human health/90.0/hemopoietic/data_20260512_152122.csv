@@ -1,0 +1,23 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready,PubChem_CID,PubChem_MW,PubChem_CanonicalSMILES,PubChem_InChIKey,PubChem_Ambiguous,PubChem_Candidate_CIDs,PubChem_Error
+CID_44559327,EFSA CONTAM,2017,2908,Human health,subchronic,Rat,oral: feed,90.0,RPF,=,0.3,dimensionless,haematology,hemopoietic,0.3,=,,True,44559327,440.5,,OJBCMLLFVXXDGS-QDSVCGCGSA-N,False,,
+19-HO-T-2 toxin,EFSA CONTAM,2017,2908,Human health,subchronic,Rat,oral: feed,90.0,RPF,=,1.0,dimensionless,haematology,hemopoietic,1.0,=,,True,,,,,False,,Not Found
+CID_102515027,EFSA CONTAM,2017,2908,Human health,subchronic,Rat,oral: feed,90.0,RPF,=,1.0,dimensionless,haematology,hemopoietic,1.0,=,,True,102515027,508.6,,NOTOVTQRFFVBSB-BLURLISNSA-N,False,,
+3-feruloyl-T-2 toxin,EFSA CONTAM,2017,2908,Human health,subchronic,Rat,oral: feed,90.0,RPF,=,1.0,dimensionless,haematology,hemopoietic,1.0,=,,True,,,,,False,,Not Found
+CID_10093830,EFSA CONTAM,2017,2908,Human health,subchronic,Rat,oral: feed,90.0,RPF,=,1.0,dimensionless,haematology,hemopoietic,1.0,=,,True,10093830,424.5,,PNKLMTPXERFKEN-MLXHEQMXSA-N,False,,
+CID_165362852,EFSA CONTAM,2017,2908,Human health,subchronic,Rat,oral: feed,90.0,RPF,=,1.0,dimensionless,haematology,hemopoietic,1.0,=,,True,165362852,586.6,,BADZYONHTIISJO-HRCHIXSNSA-N,False,,
+CID_131698796,EFSA CONTAM,2017,2908,Human health,subchronic,Rat,oral: feed,90.0,RPF,=,1.0,dimensionless,haematology,hemopoietic,1.0,=,,True,131698796,600.6,,XRCGZVWSCBGTFJ-CHSZPMLASA-N,False,,
+CID_165362853,EFSA CONTAM,2017,2908,Human health,subchronic,Rat,oral: feed,90.0,RPF,=,1.0,dimensionless,haematology,hemopoietic,1.0,=,,True,165362853,600.6,,VADOMOZSAYAVLW-HDFXBFDOSA-N,False,,
+HT-2 toxin-diglucose,EFSA CONTAM,2017,2908,Human health,subchronic,Rat,oral: feed,90.0,RPF,=,1.0,dimensionless,haematology,hemopoietic,1.0,=,,True,,,,,False,,Not Found
+CID_165362854,EFSA CONTAM,2017,2908,Human health,subchronic,Rat,oral: feed,90.0,RPF,=,1.0,dimensionless,haematology,hemopoietic,1.0,=,,True,165362854,672.7,,NXHKVPIXMWUGKZ-GOBCNMAISA-N,False,,
+CID_13818797,EFSA CONTAM,2017,2908,Human health,subchronic,Rat,oral: feed,90.0,RPF,=,0.3,dimensionless,haematology,hemopoietic,0.3,=,,True,13818797,382.4,,TVZHDVCTOCZDNE-WVJYZQHISA-N,False,,
+Neosolaniol-glucose,EFSA CONTAM,2017,2908,Human health,subchronic,Rat,oral: feed,90.0,RPF,=,0.3,dimensionless,haematology,hemopoietic,0.3,=,,True,,,,,False,,Not Found
+CID_5284461,EFSA CONTAM,2017,2908,Human health,subchronic,Rat,oral: feed,90.0,RPF,=,1.0,dimensionless,haematology,hemopoietic,1.0,=,,True,5284461,466.5,,BXFOFFBJRFZBQZ-QYWOHJEZSA-N,False,,
+CID_165362900,EFSA CONTAM,2017,2908,Human health,subchronic,Rat,oral: feed,90.0,RPF,=,1.0,dimensionless,haematology,hemopoietic,1.0,=,,True,165362900,622.7,,MXSSBGIJQSMKKD-PKGRNIINSA-N,False,,
+CID_122378488,EFSA CONTAM,2017,2908,Human health,subchronic,Rat,oral: feed,90.0,RPF,=,1.0,dimensionless,haematology,hemopoietic,1.0,=,,True,122378488,628.7,,WHFQULYAKIACNZ-AOSYTODVSA-N,False,,
+T-2 toxin-3-diglucose,EFSA CONTAM,2017,2908,Human health,subchronic,Rat,oral: feed,90.0,RPF,=,1.0,dimensionless,haematology,hemopoietic,1.0,=,,True,,,,,False,,Not Found
+CID_165362902,EFSA CONTAM,2017,2908,Human health,subchronic,Rat,oral: feed,90.0,RPF,=,1.0,dimensionless,haematology,hemopoietic,1.0,=,,True,165362902,642.6,,PGCYSYUZXXMCEY-YYKCUTLBSA-N,False,,
+CID_165362901,EFSA CONTAM,2017,2908,Human health,subchronic,Rat,oral: feed,90.0,RPF,=,1.0,dimensionless,haematology,hemopoietic,1.0,=,,True,165362901,545.6,,WFZBJXJTJOGROY-QYWOHJEZSA-M,False,,
+T-2 toxin-tetraol,EFSA CONTAM,2017,2908,Human health,subchronic,Rat,oral: feed,90.0,RPF,=,0.1,dimensionless,haematology,hemopoietic,0.1,=,,True,,,,,False,,Not Found
+T-2 toxin-tetraol-glucose,EFSA CONTAM,2017,2908,Human health,subchronic,Rat,oral: feed,90.0,RPF,=,0.1,dimensionless,haematology,hemopoietic,0.1,=,,True,,,,,False,,Not Found
+T-2 toxin-triol,EFSA CONTAM,2017,2908,Human health,subchronic,Rat,oral: feed,90.0,RPF,=,0.1,dimensionless,haematology,hemopoietic,0.1,=,,True,,,,,False,,Not Found
+T-2 toxin-triol-glucose,EFSA CONTAM,2017,2908,Human health,subchronic,Rat,oral: feed,90.0,RPF,=,0.1,dimensionless,haematology,hemopoietic,0.1,=,,True,,,,,False,,Not Found

@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Spirodiclofen,EFSA,2009,1193,Human health,chronic/long term toxicity,Dog,oral: unspecified,365.0,NOAEL,=,1.45,mg/kg bw/day,clinical chemistry,hepatotoxicity,1.45,=,,True

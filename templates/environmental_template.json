@@ -1,0 +1,104 @@
+{
+  "template_id": "environmental",
+  "name": "Environmental Chemistry",
+  "description": "Template for environmental chemistry datasets including fate, transport, and ecotoxicology data.",
+  "version": "1.0.0",
+  "required_variables": [
+    "chemical_id",
+    "environmental_compartment",
+    "parameter",
+    "value",
+    "unit"
+  ],
+  "optional_variables": [
+    "cas_number",
+    "smiles",
+    "location",
+    "latitude",
+    "longitude",
+    "sampling_date",
+    "depth",
+    "temperature",
+    "ph",
+    "organic_carbon",
+    "method",
+    "detection_limit",
+    "quantification_limit",
+    "qualifier",
+    "matrix",
+    "study_id"
+  ],
+  "default_hierarchy": ["environmental_compartment", "parameter", "location"],
+  "validation_rules": {
+    "chemical_id": {
+      "type": "string",
+      "min_length": 1,
+      "description": "Chemical identifier"
+    },
+    "environmental_compartment": {
+      "type": "categorical",
+      "allowed_values": [
+        "water", "soil", "sediment", "air", "biota",
+        "surface_water", "groundwater", "effluent", "porewater"
+      ],
+      "description": "Environmental compartment sampled"
+    },
+    "parameter": {
+      "type": "categorical",
+      "allowed_values": [
+        "concentration", "bioconcentration_factor",
+        "bioaccumulation_factor", "half_life",
+        "degradation_rate", "partition_coefficient",
+        "koc", "kow", "vapor_pressure", "solubility",
+        "henry_law_constant"
+      ],
+      "description": "Environmental fate / exposure parameter"
+    },
+    "value": {
+      "type": "numeric",
+      "description": "Numeric measurement value"
+    },
+    "unit": {
+      "type": "categorical",
+      "allowed_values": [
+        "mg/L", "ug/L", "ng/L", "mg/kg", "ug/kg",
+        "ppm", "ppb", "ppt", "mg/m3", "ug/m3",
+        "dimensionless", "d-1", "h-1"
+      ],
+      "description": "Unit of measurement"
+    },
+    "latitude": {
+      "type": "numeric",
+      "min_value": -90,
+      "max_value": 90,
+      "description": "Sampling location latitude (decimal degrees)"
+    },
+    "longitude": {
+      "type": "numeric",
+      "min_value": -180,
+      "max_value": 180,
+      "description": "Sampling location longitude (decimal degrees)"
+    },
+    "ph": {
+      "type": "numeric",
+      "min_value": 0,
+      "max_value": 14,
+      "description": "Sample pH"
+    },
+    "qualifier": {
+      "type": "categorical",
+      "allowed_values": ["=", ">", "<", ">=", "<=", "ND", "<LOD", "<LOQ"],
+      "description": "Value qualifier"
+    }
+  },
+  "metadata_standards": {
+    "chemical_identification": "Use CAS number for unambiguous identification",
+    "spatial_reference": "Record coordinates in WGS84 decimal degrees",
+    "temporal_reference": "Use ISO 8601 date format (YYYY-MM-DD)",
+    "detection_limits": "Always record LOD and LOQ alongside censored values"
+  },
+  "quality_thresholds": {
+    "max_missing_value_pct": 25,
+    "required_identifier_fields": ["chemical_id", "environmental_compartment"]
+  }
+}

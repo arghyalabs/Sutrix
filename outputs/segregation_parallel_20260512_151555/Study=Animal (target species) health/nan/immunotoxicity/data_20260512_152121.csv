@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready,PubChem_CID,PubChem_MW,PubChem_CanonicalSMILES,PubChem_InChIKey,PubChem_Ambiguous,PubChem_Candidate_CIDs,PubChem_Error
+Modified (masked) forms of nivalenol,EFSA CONTAM,2014,2584,Animal (target species) health,not reported,Pig,Not reported,,LOAEL,=,100.0,µg/kg bw/day,immunology,immunotoxicity,100.0,=,,True,,,,,False,,Not Found

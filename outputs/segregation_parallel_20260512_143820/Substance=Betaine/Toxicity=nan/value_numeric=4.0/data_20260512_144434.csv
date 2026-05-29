@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Betaine,EFSA NDA,2017,3007,Human health,study with volunteers,Human,oral: unspecified,180.0,dose level,=,4.0,g/day,no adverse effect observed at single/highest dose,,4.0,=,,True

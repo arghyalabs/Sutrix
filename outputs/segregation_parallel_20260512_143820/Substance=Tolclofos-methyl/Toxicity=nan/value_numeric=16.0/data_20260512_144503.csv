@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Tolclofos-methyl,EFSA,2018,3024,Ecotox (soil compartment),chronic/long term toxicity,Aphidius rhopalosiphi,Not reported,,ER50,=,16.0,g/ha,reproduction,,16.0,=,,True

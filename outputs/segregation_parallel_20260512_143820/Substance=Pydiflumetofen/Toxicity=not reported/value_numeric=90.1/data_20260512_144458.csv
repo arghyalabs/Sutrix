@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Pydiflumetofen,EFSA,2019,3299,Animal (non-target species) health,reproduction toxicity,Bobwhite quail,Not reported,,NOEC,=,90.1,mg/kg bw/day,not reported,not reported,90.1,=,,True

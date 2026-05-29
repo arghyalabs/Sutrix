@@ -1,0 +1,90 @@
+{
+  "template_id": "toxicology",
+  "name": "Toxicology / Pharmacology",
+  "description": "Template for toxicology and pharmacology datasets including acute, subchronic, and chronic studies.",
+  "version": "1.0.0",
+  "required_variables": [
+    "chemical_id",
+    "species",
+    "endpoint",
+    "value",
+    "unit"
+  ],
+  "optional_variables": [
+    "cas_number",
+    "smiles",
+    "inchi",
+    "inchi_key",
+    "duration",
+    "qualifier",
+    "toxicity_category",
+    "study_type",
+    "route",
+    "sex",
+    "strain",
+    "age",
+    "weight",
+    "dose",
+    "frequency"
+  ],
+  "default_hierarchy": ["endpoint", "species", "duration"],
+  "validation_rules": {
+    "chemical_id": {
+      "type": "string",
+      "min_length": 1,
+      "description": "Chemical identifier (name, CAS, or InChI)"
+    },
+    "species": {
+      "type": "categorical",
+      "allowed_values": ["rat", "mouse", "human", "dog", "rabbit", "fish"],
+      "description": "Test species"
+    },
+    "endpoint": {
+      "type": "categorical",
+      "allowed_values": ["ld50", "lc50", "noael", "loael", "noel", "aed"],
+      "description": "Toxicological endpoint"
+    },
+    "value": {
+      "type": "numeric",
+      "min_value": 0,
+      "description": "Numeric measurement value"
+    },
+    "unit": {
+      "type": "categorical",
+      "allowed_values": ["mg/kg", "mg/kg/day", "ppm", "ppb", "ug/L", "mg/L", "g/L"],
+      "description": "Unit of measurement"
+    },
+    "duration": {
+      "type": "numeric",
+      "min_value": 0,
+      "description": "Exposure duration in days"
+    },
+    "qualifier": {
+      "type": "categorical",
+      "allowed_values": ["=", ">", "<", ">=", "<=", "ND", "<LOD", ">LOQ"],
+      "description": "Value qualifier / inequality operator"
+    },
+    "route": {
+      "type": "categorical",
+      "allowed_values": ["oral", "inhalation", "dermal", "intravenous",
+                         "intraperitoneal", "subcutaneous", "gavage"],
+      "description": "Route of administration"
+    },
+    "sex": {
+      "type": "categorical",
+      "allowed_values": ["male", "female", "both", "M", "F"],
+      "description": "Sex of test animals"
+    }
+  },
+  "metadata_standards": {
+    "chemical_identification": "Prefer CAS number or InChI Key for unambiguous identification",
+    "species_nomenclature": "Use common name with scientific name in parentheses where possible",
+    "unit_standardisation": "Convert all units to standard SI-derived units",
+    "endpoint_classification": "Use standardised abbreviations (LD50, NOAEL, etc.)"
+  },
+  "quality_thresholds": {
+    "min_records_per_chemical": 3,
+    "max_missing_value_pct": 20,
+    "required_identifier_fields": ["chemical_id"]
+  }
+}

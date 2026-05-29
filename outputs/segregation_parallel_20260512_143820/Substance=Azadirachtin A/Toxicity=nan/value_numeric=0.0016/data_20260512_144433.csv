@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Azadirachtin A,EFSA,2018,3120,Ecotox (water compartment),chronic/long term toxicity,Harlequin fly,Not reported,28.0,NOEC,=,0.0016,mg/L,not reported,,0.0016,=,,True

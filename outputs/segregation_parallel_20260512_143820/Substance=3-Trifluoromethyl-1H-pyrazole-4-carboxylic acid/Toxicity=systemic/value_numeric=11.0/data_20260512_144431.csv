@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+3-Trifluoromethyl-1H-pyrazole-4-carboxylic acid,EFSA,2013,2193,Human health,reproduction toxicity,Rat,Not reported,,NOAEL,=,11.0,mg/kg bw/day,body weight,systemic,11.0,=,,True

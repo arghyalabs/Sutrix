@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Ethametsulfuron methyl,EFSA,2014,2437,Ecotox (soil compartment),not reported,Tomato,Not reported,,ER50,=,15.2,g/ha,other,,15.2,=,,True

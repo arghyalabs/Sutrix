@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Linuron,EFSA PPR,2012,775,Human health,reproduction toxicity,Rabbit,Not reported,,NOAEL,=,10.0,mg/kg bw/day,development,developmental,10.0,=,,True

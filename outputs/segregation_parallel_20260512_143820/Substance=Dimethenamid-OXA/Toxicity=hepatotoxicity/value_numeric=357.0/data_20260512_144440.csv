@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Dimethenamid-OXA,EFSA,2018,3103,Human health,short-term toxicity,Rat,Not reported,28.0,NOAEL,=,357.0,mg/kg bw/day,organ weights,hepatotoxicity,357.0,=,,True

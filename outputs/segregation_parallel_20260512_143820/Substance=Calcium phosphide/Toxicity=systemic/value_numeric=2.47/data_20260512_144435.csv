@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Calcium phosphide,EFSA,2011,1300,Animal (non-target species) health,reproduction toxicity,Japanese quail,Not reported,,NOEC,=,2.47,mg/kg bw/day,mortality,systemic,2.47,=,,True

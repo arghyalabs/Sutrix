@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Imazaquin formulation (METEOR),EFSA,2011,1278,Ecotox (soil compartment),not reported,Onion,Not reported,,ER50,>,1700.0,ml/ha,seedling emergence,,1700.0,=,,True

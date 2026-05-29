@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Fumonisins and their hidden forms,EFSA CONTAM,2018,3097,Animal (target species) health,subchronic,Cattle,oral: feed,31.0,NOAEL,=,31.0,mg/kg,immunology,immunotoxicity,31.0,=,,True

@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Acetic acid formulation (Natural Weed spray No. 1),EFSA,2013,1362,Ecotox (soil compartment),chronic/long term toxicity,Typhlodromus pyri,Not reported,14.0,NOEC,=,580.0,ml/ha,reproduction,,580.0,=,,True

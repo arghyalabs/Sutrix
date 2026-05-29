@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Penthiopyrad,EFSA,2013,2193,Ecotox (water compartment),chronic/long term toxicity,Fathead minnow,Not reported,33.0,NOAEC,=,51.0,µg/L,growth,,51.0,=,,True

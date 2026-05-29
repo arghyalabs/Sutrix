@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Sulfosulfuron,EFSA,2014,2544,Animal (non-target species) health,reproduction toxicity,Rat,oral: feed,660.0,NOAEL,=,312.0,mg/kg bw/day,body weight,reproductive,312.0,=,,True

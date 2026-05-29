@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+3-chloroacrylic acid,EFSA,2006,1083,Ecotox (water compartment),acute toxicity,Daphnia magna,Not reported,2.0,EC50,=,55.0,mg/L,not reported,,55.0,=,,True

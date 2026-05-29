@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Orthosulfamuron,EFSA,2014,2490,Ecotox (water compartment),chronic/long term toxicity,Harlequin fly,Not reported,28.0,NOEC,=,66.9,mg/L,development,,66.9,=,,True

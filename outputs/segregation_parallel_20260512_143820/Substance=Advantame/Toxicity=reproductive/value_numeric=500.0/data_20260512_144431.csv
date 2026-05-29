@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Advantame,EFSA ANS,2013,2325,Human health,reproduction toxicity,Rabbit,oral: gavage,22.0,NOAEL,=,500.0,mg/kg bw/day,clinical signs,reproductive,500.0,=,,True

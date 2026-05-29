@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+3-Chloroaniline,EFSA,2017,2976,Ecotox (water compartment),acute toxicity,Swollen duckweed,Not reported,7.0,EC50,=,41.3,mg/L,other,,41.3,=,,True

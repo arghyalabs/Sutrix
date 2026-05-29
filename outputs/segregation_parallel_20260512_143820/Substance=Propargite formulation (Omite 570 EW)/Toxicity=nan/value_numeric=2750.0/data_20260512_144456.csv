@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Propargite formulation (Omite 570 EW),EFSA,2011,1285,Ecotox (soil compartment),not reported,Tomato,Not reported,,ER50,>,2750.0,g/ha,seedling emergence,,2750.0,=,,True

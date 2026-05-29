@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Captan,EFSA PPR,2020,3748,Ecotox (soil compartment),not reported,Aphidius rhopalosiphi,Not reported,,ER50,>,1868.0,g/ha,mortality,,1868.0,=,,True

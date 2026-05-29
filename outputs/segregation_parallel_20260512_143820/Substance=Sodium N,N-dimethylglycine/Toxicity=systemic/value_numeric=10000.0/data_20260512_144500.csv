@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+"Sodium N,N-dimethylglycine",EFSA FEEDAP,2011,249,Animal (target species) health,subchronic,Chicken,oral: feed,39.0,dose level,=,10000.0,mg/kg,food consumption,systemic,10000.0,=,,True

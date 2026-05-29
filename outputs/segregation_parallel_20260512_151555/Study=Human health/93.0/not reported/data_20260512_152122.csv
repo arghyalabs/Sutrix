@@ -1,0 +1,13 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready,PubChem_CID,PubChem_MW,PubChem_CanonicalSMILES,PubChem_InChIKey,PubChem_Ambiguous,PubChem_Candidate_CIDs,PubChem_Error
+CID_22831877,EFSA CEF,2010,2043,Human health,subchronic,Rat,Not reported,93.0,NOEL,=,20.0,mg/kg bw/day,not reported,not reported,20.0,=,,True,22831877,263.33,,YOBNUUGTIXQSPD-UHFFFAOYSA-N,False,,
+CID_22831877,EFSA CEF,2012,2134,Human health,subchronic,Rat,Not reported,93.0,NOEL,=,20.0,mg/kg bw/day,not reported,not reported,20.0,=,,True,22831877,263.33,,YOBNUUGTIXQSPD-UHFFFAOYSA-N,False,,
+CID_22831877,EFSA CEF,2014,2481,Human health,subchronic,Rat,Not reported,93.0,NOEL,=,20.0,mg/kg bw/day,not reported,not reported,20.0,=,,True,22831877,263.33,,YOBNUUGTIXQSPD-UHFFFAOYSA-N,False,,
+"N-(2,4-Dimethoxy-benzyl)-N'-(2-pyridin-2-yl-ethyl)-oxalamide",EFSA CEF,2010,2043,Human health,subchronic,Rat,Not reported,93.0,NOEL,=,100.0,mg/kg bw/day,not reported,not reported,100.0,=,,True,,,,,False,,Not Found
+"N-(2,4-Dimethoxy-benzyl)-N'-(2-pyridin-2-yl-ethyl)-oxalamide",EFSA CEF,2012,2134,Human health,subchronic,Rat,Not reported,93.0,NOEL,=,100.0,mg/kg bw/day,not reported,not reported,100.0,=,,True,,,,,False,,Not Found
+"N-(2,4-Dimethoxy-benzyl)-N'-(2-pyridin-2-yl-ethyl)-oxalamide",EFSA CEF,2014,2481,Human health,subchronic,Rat,Not reported,93.0,NOEL,=,100.0,mg/kg bw/day,not reported,not reported,100.0,=,,True,,,,,False,,Not Found
+CID_11210019,EFSA CEF,2010,2043,Human health,subchronic,Rat,Not reported,93.0,NOEL,=,100.0,mg/kg bw/day,not reported,not reported,100.0,=,,True,11210019,341.4,,GDMDCNCFVKXNAN-UHFFFAOYSA-N,False,,
+CID_11210019,EFSA CEF,2012,2134,Human health,subchronic,Rat,Not reported,93.0,NOEL,=,100.0,mg/kg bw/day,not reported,not reported,100.0,=,,True,11210019,341.4,,GDMDCNCFVKXNAN-UHFFFAOYSA-N,False,,
+CID_11210019,EFSA CEF,2014,2481,Human health,subchronic,Rat,Not reported,93.0,NOEL,=,100.0,mg/kg bw/day,not reported,not reported,100.0,=,,True,11210019,341.4,,GDMDCNCFVKXNAN-UHFFFAOYSA-N,False,,
+CID_11221120,EFSA CEF,2010,2043,Human health,subchronic,Rat,Not reported,93.0,NOEL,=,100.0,mg/kg bw/day,not reported,not reported,100.0,=,,True,11221120,327.4,,DWXUCYSOIKPLJM-UHFFFAOYSA-N,False,,
+CID_11221120,EFSA CEF,2012,2134,Human health,subchronic,Rat,Not reported,93.0,NOEL,=,100.0,mg/kg bw/day,not reported,not reported,100.0,=,,True,11221120,327.4,,DWXUCYSOIKPLJM-UHFFFAOYSA-N,False,,
+CID_11221120,EFSA CEF,2014,2481,Human health,subchronic,Rat,Not reported,93.0,NOEL,=,100.0,mg/kg bw/day,not reported,not reported,100.0,=,,True,11221120,327.4,,DWXUCYSOIKPLJM-UHFFFAOYSA-N,False,,

@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+3-Butenyl isothiocyanate,EFSA AFC,2008,2279,Human health,chronic/long term toxicity,Rat,oral: gavage,721.0,NOAEL,=,12.0,mg/kg bw/day,histopathology neoplastic,not reported,12.0,=,,True

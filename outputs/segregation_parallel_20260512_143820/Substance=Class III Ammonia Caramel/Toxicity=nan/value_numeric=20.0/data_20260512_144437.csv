@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Class III Ammonia Caramel,EFSA ANS,2011,480,Human health,subchronic,Rat,Not reported,90.0,NOAEL,=,20.0,g/kg bw/day,no adverse effect observed at single/highest dose,,20.0,=,,True

@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Potassium diformate,EFSA FEEDAP,2004,290,Animal (target species) health,not reported,Pig,oral: feed,,dose level,=,60000.0,mg/kg,no adverse effect observed,,60000.0,=,,True

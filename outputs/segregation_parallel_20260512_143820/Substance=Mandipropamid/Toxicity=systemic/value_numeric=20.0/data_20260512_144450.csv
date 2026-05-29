@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Mandipropamid,EFSA,2012,1350,Animal (non-target species) health,chronic/long term toxicity,Rat,Not reported,,NOEL,=,20.0,mg/kg bw/day,body weight,systemic,20.0,=,,True

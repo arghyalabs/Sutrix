@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Triflusulfuron-methyl,EFSA,2009,1161,Ecotox (soil compartment),not reported,Sorghum,Not reported,,ER50,=,17.8,g/ha,other,,17.8,=,,True

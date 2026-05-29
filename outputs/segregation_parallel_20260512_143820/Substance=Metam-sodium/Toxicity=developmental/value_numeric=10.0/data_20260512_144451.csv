@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Metam-sodium,EFSA,2011,2741,Human health,chronic/long term toxicity,Rat,Not reported,,NOAEL,=,10.0,mg/kg bw/day,development,developmental,10.0,=,,True

@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Triclopyr-butoxyethyl ester,EFSA,2006,1067,Human health,chronic/long term toxicity,Rat,oral: feed,730.0,NOAEL,=,3.0,mg/kg bw/day,organ weights,nephrotoxicity,3.0,=,,True

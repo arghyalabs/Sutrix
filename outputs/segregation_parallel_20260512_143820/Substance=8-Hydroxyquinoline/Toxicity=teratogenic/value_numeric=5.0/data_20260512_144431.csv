@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+8-Hydroxyquinoline,EFSA,2016,2835,Human health,reproduction toxicity,Rabbit,Not reported,,NOAEL,=,5.0,mg/kg bw/day,development,teratogenic,5.0,=,,True

@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Riddelliine,EFSA CONTAM,2017,2980,Human health,chronic/long term toxicity,Rat,Not reported,,BMDL10,=,237.0,µg/kg bw/day,histopathology neoplastic,hepatotoxicity,237.0,=,,True

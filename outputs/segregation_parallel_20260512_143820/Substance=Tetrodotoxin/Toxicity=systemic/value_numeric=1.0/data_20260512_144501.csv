@@ -1,0 +1,3 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Tetrodotoxin,EFSA CONTAM,2017,2944,Human health,acute toxicity,Mouse,Not reported,,RPF,=,1.0,dimensionless,mortality,systemic,1.0,=,,True
+Tetrodotoxin,EFSA CONTAM,2017,2944,Human health,acute toxicity,Mouse,intraperitoneal,,RPF,=,1.0,dimensionless,mortality,systemic,1.0,=,,True

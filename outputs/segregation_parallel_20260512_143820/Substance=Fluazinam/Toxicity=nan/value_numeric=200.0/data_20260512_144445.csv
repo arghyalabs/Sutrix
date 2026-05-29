@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Fluazinam,EFSA,2008,1122,Ecotox (soil compartment),not reported,Aphidius rhopalosiphi,Not reported,,LR50,>,200.0,g/ha,mortality,,200.0,=,,True

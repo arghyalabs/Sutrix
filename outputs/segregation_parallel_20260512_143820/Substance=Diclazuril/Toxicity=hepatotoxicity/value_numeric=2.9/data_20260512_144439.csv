@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Diclazuril,EFSA FEEDAP,2007,275,Human health,chronic/long term toxicity,Mouse,Not reported,730.0,NOAEL,=,2.9,mg/kg bw/day,histopathology non neoplastic,hepatotoxicity,2.9,=,,True

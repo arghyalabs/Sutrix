@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+4-Chlorobenzoic acid,EFSA,2013,2366,Animal (non-target species) health,acute toxicity,Rat,oral: unspecified,,LD50,=,1170.0,mg/kg bw,mortality,systemic,1170.0,=,,True

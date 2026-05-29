@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Clodinafop-propargyl,EFSA,2005,1372,Ecotox (soil compartment),acute toxicity,Tiger worm,Not reported,,LC50,=,197.0,mg/kg,mortality,,197.0,=,,True

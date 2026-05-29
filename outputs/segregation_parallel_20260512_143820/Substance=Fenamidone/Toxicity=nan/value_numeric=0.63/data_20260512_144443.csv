@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Fenamidone,EFSA,2016,2776,Ecotox (soil compartment),chronic/long term toxicity,Tiger worm,Not reported,,NOEC,=,0.63,mg/kg,growth,,0.63,=,,True

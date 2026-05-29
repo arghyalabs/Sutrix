@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+"N-(2,6-dimethylphenyl)-N-(1H-pyrazol-1-ylmethyl)oxalamide",EFSA,2017,2963,Human health,subchronic,Rat,oral: feed,90.0,NOAEL,=,328.0,mg/kg bw/day,organ weights,nephrotoxicity,328.0,=,,True

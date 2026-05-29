@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Potassium ferrocyanide,EFSA ANS,2018,3063,Human health,chronic/long term toxicity,Rat,oral: feed,730.0,NOAEL,=,4.4,mg/kg bw/day,urinalysis,nephrotoxicity,4.4,=,,True

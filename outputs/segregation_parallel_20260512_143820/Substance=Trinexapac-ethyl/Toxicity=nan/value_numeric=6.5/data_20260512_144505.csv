@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Trinexapac-ethyl,EFSA,2018,3104,Ecotox (water compartment),acute toxicity,Mysid shrimp,Not reported,4.0,EC50,=,6.5,mg/L,mortality,,6.5,=,,True

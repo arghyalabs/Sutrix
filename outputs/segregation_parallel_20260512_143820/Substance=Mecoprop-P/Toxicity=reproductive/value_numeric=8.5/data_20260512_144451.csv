@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Mecoprop-P,EFSA,2017,2954,Animal (non-target species) health,chronic/long term toxicity,Rat,Not reported,,NOAEL,=,8.5,mg/kg bw/day,reproduction,reproductive,8.5,=,,True

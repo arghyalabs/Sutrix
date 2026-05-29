@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Smoke Flavouring SmokEz Enviro 23,EFSA CEF,2009,2029,Human health,subchronic,Rat,Not reported,90.0,NOAEL,=,300.0,mg/kg bw/day,organ weights,systemic,300.0,=,,True

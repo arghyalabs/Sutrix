@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Erythrosine,EFSA FEEDAP,2011,148,Animal (target species) health,chronic/long term toxicity,Dog,oral: feed,730.0,NOAEL,=,10.0,g/kg,clinical chemistry,endocrine,10.0,=,,True

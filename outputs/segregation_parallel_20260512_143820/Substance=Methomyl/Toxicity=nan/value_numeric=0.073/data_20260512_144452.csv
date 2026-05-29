@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Methomyl,EFSA,2009,1178,Ecotox (water compartment),chronic/long term toxicity,Fathead minnow,Not reported,,NOEC,=,0.073,mg/L,not reported,,0.073,=,,True

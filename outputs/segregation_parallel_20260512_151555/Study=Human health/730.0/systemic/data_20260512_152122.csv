@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready,PubChem_CID,PubChem_MW,PubChem_CanonicalSMILES,PubChem_InChIKey,PubChem_Ambiguous,PubChem_Candidate_CIDs,PubChem_Error
+CID_25271089,EFSA,2012,1332,Human health,reproduction toxicity,Rat,Not reported,730.0,NOAEL,=,8.0,mg/kg bw/day,body weight,systemic,8.0,=,,True,25271089,359.4,,XTDZGXBTXBEZDN-UHFFFAOYSA-N,False,,

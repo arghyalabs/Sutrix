@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready,PubChem_CID,PubChem_MW,PubChem_CanonicalSMILES,PubChem_InChIKey,PubChem_Ambiguous,PubChem_Candidate_CIDs,PubChem_Error
+"Copolymer of ethyl acrylate, methyl methacrylate",EFSA ANS,2010,455,Human health,reproduction toxicity,Rabbit,oral: feed,13.0,NOAEL,=,2000.0,mg/kg bw/day,no adverse effect observed at single/highest dose,,2000.0,=,,True,,,,,False,,Not Found

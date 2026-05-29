@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready,PubChem_CID,PubChem_MW,PubChem_CanonicalSMILES,PubChem_InChIKey,PubChem_Ambiguous,PubChem_Candidate_CIDs,PubChem_Error
+CID_16559,EFSA,2009,1195,Animal (non-target species) health,reproduction toxicity,Rat,Not reported,,NOEL,=,81.9,mg/kg bw/day,not reported,endocrine,81.9,=,,True,16559,234.29,,ZTMKADLOSYKWCA-UHFFFAOYSA-N,False,,

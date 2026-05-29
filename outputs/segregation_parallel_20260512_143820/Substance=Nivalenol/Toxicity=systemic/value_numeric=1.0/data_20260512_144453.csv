@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Nivalenol,EFSA CONTAM,2017,2940,Human health,acute toxicity,American mink,oral: gavage,,RPF,=,1.0,dimensionless,clinical signs,systemic,1.0,=,,True

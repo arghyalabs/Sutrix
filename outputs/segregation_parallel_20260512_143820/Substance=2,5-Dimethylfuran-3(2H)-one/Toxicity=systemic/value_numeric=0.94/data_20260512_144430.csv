@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+"2,5-Dimethylfuran-3(2H)-one",EFSA CEF,2016,2849,Human health,subchronic,Rat,oral: gavage,90.0,BMDL05,=,0.94,mg/kg bw,haematology,systemic,0.94,=,,True

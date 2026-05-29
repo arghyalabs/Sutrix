@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Dimethoate,EFSA,2013,2363,Animal (non-target species) health,reproduction toxicity,Bobwhite quail,Not reported,,NOEC,=,1.0,mg/kg bw/day,reproduction,reproductive,1.0,=,,True

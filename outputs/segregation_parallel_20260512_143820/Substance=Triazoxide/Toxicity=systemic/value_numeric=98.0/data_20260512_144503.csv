@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Triazoxide,EFSA,2011,1280,Animal (non-target species) health,acute toxicity,Rat,oral: unspecified,,LD50,=,98.0,mg/kg bw/week,mortality,systemic,98.0,=,,True

@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Gibberellic acid,EFSA,2012,1314,Human health,subchronic,Rat,oral: unspecified,90.0,NOAEL,=,680.0,mg/kg bw/day,organ weights,nephrotoxicity,680.0,=,,True

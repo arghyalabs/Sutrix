@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Dieldrin,EFSA CONTAM,2005,69,Animal (target species) health,reproduction toxicity,Chicken,oral: feed,390.0,NOAEL,=,0.6,mg/kg bw/day,mortality,reproductive,0.6,=,,True

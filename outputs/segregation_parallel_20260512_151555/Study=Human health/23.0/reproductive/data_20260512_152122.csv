@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready,PubChem_CID,PubChem_MW,PubChem_CanonicalSMILES,PubChem_InChIKey,PubChem_Ambiguous,PubChem_Candidate_CIDs,PubChem_Error
+CID_23667299,EFSA FEEDAP,2005,228,Human health,reproduction toxicity,Rabbit,oral: gavage,23.0,NOEL,=,0.3,mg/kg bw/day,body weight,reproductive,0.3,=,,True,23667299,692.9,,XOIQMTLWECTKJL-FBZUZRIGSA-M,False,,

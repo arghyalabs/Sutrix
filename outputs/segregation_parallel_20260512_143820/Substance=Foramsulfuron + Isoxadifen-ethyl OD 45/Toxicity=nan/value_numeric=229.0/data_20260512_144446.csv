@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Foramsulfuron + Isoxadifen-ethyl OD 45,EFSA,2016,2788,Ecotox (soil compartment),chronic/long term toxicity,Tiger worm,Not reported,56.0,NOEC,=,229.0,mg/kg,reproduction,,229.0,=,,True

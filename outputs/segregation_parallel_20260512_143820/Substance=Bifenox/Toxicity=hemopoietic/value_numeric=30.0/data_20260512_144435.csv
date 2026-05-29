@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Bifenox,EFSA,2008,1112,Human health,chronic/long term toxicity,Mouse,Not reported,730.0,NOAEL,=,30.0,mg/kg bw/day,haematology,hemopoietic,30.0,=,,True

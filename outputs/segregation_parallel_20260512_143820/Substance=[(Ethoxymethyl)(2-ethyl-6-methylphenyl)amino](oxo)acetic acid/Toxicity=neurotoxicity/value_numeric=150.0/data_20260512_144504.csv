@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+[(Ethoxymethyl)(2-ethyl-6-methylphenyl)amino](oxo)acetic acid,EFSA,2011,1289,Human health,acute toxicity,Rat,Not reported,,NOAEL,=,150.0,mg/kg bw/day,not reported,neurotoxicity,150.0,=,,True

@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Metalaxyl-M,EFSA,2015,2759,Ecotox (water compartment),acute toxicity,Eastern oyster,Not reported,4.0,EC50,=,9.7,mg/L,mortality,,9.7,=,,True

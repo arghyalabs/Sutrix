@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+alpha-Hexylcinnamaldehyde,EFSA FEEDAP,2017,2920,Ecotox (water compartment),acute toxicity,not reported,Not reported,,LC50,=,0.2,mg/L,mortality,,0.2,=,,True

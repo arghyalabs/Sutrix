@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready,PubChem_CID,PubChem_MW,PubChem_CanonicalSMILES,PubChem_InChIKey,PubChem_Ambiguous,PubChem_Candidate_CIDs,PubChem_Error
+CID_2733487,EFSA CONTAM,2005,55,Animal (target species) health,chronic/long term toxicity,Cattle,oral: feed,253.0,LOAEL,=,2.4,mg/kg bw/day,histopathology non neoplastic,hepatotoxicity,2.4,=,,True,2733487,721.8,,UVBUBMSSQKOIBE-DSLOAKGESA-N,False,,

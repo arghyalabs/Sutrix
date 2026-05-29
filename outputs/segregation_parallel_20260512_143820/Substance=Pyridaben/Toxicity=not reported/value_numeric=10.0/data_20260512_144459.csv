@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Pyridaben,EFSA,2016,2755,Animal (non-target species) health,chronic/long term toxicity,Mallard duck,Not reported,,NOEC,=,10.0,mg/kg bw/day,not reported,not reported,10.0,=,,True

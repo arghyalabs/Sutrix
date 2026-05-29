@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Malathion,EFSA,2009,1190,Animal (non-target species) health,acute toxicity,Bobwhite quail,oral: unspecified,,LD50,=,359.0,mg/kg bw,mortality,systemic,359.0,=,,True

@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Clothianidin,EFSA,2018,3039,Ecotox (soil compartment),acute toxicity,Honey bee,dermal,,LD50,=,0.0258,µg/piece,mortality,,0.0258,=,,True

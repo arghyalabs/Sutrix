@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Terbuthylazine,EFSA,2011,1279,Ecotox (water compartment),chronic/long term toxicity,Harlequin fly,Not reported,27.0,NOEC,=,0.5,mg/L,not reported,,0.5,=,,True

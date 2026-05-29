@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+"L-Glutamic acid, N,N-diacetic acid, tetrasodium salt",EFSA FEEDAP,2018,3082,Animal (target species) health,subchronic,Chicken,oral: feed,35.0,dose level,=,10000.0,mg/kg,body weight,systemic,10000.0,=,,True

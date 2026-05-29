@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Ethametsulfuron methyl,EFSA,2014,2545,Ecotox (soil compartment),chronic/long term toxicity,Typhlodromus pyri,Not reported,7.0,LR50,>,11.37,g/ha,mortality,,11.37,=,,True

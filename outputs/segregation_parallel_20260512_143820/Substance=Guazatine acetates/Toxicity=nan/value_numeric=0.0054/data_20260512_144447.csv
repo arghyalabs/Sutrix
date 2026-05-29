@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Guazatine acetates,EFSA,2010,1229,Ecotox (water compartment),acute toxicity,Pseudokirchneriella subcapitata,Not reported,3.0,EC50,=,0.0054,mg/L,biomass,,0.0054,=,,True

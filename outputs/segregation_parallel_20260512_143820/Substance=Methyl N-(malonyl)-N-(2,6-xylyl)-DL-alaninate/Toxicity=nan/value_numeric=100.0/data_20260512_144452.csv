@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+"Methyl N-(malonyl)-N-(2,6-xylyl)-DL-alaninate",EFSA PPR,2020,3420,Ecotox (water compartment),acute toxicity,Rainbow trout,Not reported,4.0,LC50,>,100.0,mg/L,not reported,,100.0,=,,True

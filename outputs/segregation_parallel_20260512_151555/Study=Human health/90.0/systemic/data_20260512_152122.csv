@@ -1,0 +1,3 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready,PubChem_CID,PubChem_MW,PubChem_CanonicalSMILES,PubChem_InChIKey,PubChem_Ambiguous,PubChem_Candidate_CIDs,PubChem_Error
+CID_11321092,EFSA,2016,2885,Human health,subchronic,Rat,Not reported,90.0,conc. Level,=,36.5,mg/kg bw/day,body weight,systemic,36.5,=,,True,11321092,157.17,,HSOFIFZZCZLBFE-UHFFFAOYSA-N,False,,
+"5-(2-Hydroxypropoxy)-4-methyl-2,4-dihydro-3H-1,2,4-triazol-3-one (M02)",EFSA,2016,2885,Human health,subchronic,Rat,Not reported,90.0,conc. Level,=,36.5,mg/kg bw/day,body weight,systemic,36.5,=,,True,,,,,False,,Not Found

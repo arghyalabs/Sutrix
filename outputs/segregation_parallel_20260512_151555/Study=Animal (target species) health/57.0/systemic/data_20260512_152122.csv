@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready,PubChem_CID,PubChem_MW,PubChem_CanonicalSMILES,PubChem_InChIKey,PubChem_Ambiguous,PubChem_Candidate_CIDs,PubChem_Error
+CID_3036,EFSA CONTAM,2006,73,Animal (target species) health,subchronic,Chicken,oral: feed,57.0,LOAEL,=,0.5,mg/kg bw/day,clinical chemistry,systemic,0.5,=,,True,3036,354.5,,YVGGHNCTFXOJCH-UHFFFAOYSA-N,False,,

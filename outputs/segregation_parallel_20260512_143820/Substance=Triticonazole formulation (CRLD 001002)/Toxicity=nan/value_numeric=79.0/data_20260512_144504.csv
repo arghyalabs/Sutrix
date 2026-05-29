@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Triticonazole formulation (CRLD 001002),EFSA,2005,1371,Ecotox (water compartment),acute toxicity,Rainbow trout,Not reported,4.0,LC50,=,79.0,mg/L,mortality,,79.0,=,,True

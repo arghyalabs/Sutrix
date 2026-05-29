@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Propaquizafop,EFSA,2009,1167,Ecotox (soil compartment),chronic/long term toxicity,Folsomia candida,Not reported,28.0,NOEC,=,5.4,mg/kg,not reported,,5.4,=,,True

@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Dimethenamid EC form. 900 g/L,EFSA,2006,1064,Ecotox (water compartment),chronic/long term toxicity,Swollen duckweed,Not reported,7.0,EC50,=,0.012,mg/L,biomass,,0.012,=,,True

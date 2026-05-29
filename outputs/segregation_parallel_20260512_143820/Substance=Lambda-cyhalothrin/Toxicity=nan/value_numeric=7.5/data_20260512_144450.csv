@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Lambda-cyhalothrin,EFSA,2014,2493,Ecotox (soil compartment),not reported,Monocots,Not reported,,NOEC,=,7.5,g/ha,not reported,,7.5,=,,True

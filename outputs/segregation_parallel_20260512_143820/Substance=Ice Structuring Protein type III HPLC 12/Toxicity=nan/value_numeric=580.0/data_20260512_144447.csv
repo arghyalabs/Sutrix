@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Ice Structuring Protein type III HPLC 12,"EFSA NDA, EFSA GMO",2008,33,Human health,subchronic,Rat,oral: gavage,90.0,NOAEL,=,580.0,mg/kg bw/day,no adverse effect observed at single/highest dose,,580.0,=,,True

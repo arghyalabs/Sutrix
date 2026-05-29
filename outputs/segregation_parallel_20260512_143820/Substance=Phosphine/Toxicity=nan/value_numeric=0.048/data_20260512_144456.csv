@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Phosphine,EFSA,2012,2742,Ecotox (water compartment),acute toxicity,Zebra fish,Not reported,4.0,LC50,=,0.048,mg/L,mortality,,0.048,=,,True

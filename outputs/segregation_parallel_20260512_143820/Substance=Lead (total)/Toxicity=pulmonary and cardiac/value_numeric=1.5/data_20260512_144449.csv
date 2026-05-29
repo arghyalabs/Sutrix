@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Lead (total),EFSA CONTAM,2010,49,Human health,study with volunteers,Human,oral: unspecified,,BMDL01,=,1.5,µg/kg bw/day,clinical signs,pulmonary and cardiac,1.5,=,,True

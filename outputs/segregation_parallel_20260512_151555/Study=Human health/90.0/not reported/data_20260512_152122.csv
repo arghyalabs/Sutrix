@@ -1,0 +1,16 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready,PubChem_CID,PubChem_MW,PubChem_CanonicalSMILES,PubChem_InChIKey,PubChem_Ambiguous,PubChem_Candidate_CIDs,PubChem_Error
+CID_93236,EFSA CEF,2011,2120,Human health,subchronic,Unspecified,oral: unspecified,90.0,NOAEL,=,0.23,mg/kg bw/day,not reported,not reported,0.23,=,,True,93236,140.3,,MYIOBINSHMEDEY-UHFFFAOYSA-N,False,,
+CID_2734646,EFSA CEF,2010,2052,Human health,subchronic,Unspecified,Not reported,90.0,NOAEL,=,0.6,mg/kg bw/day,not reported,not reported,0.6,=,,True,2734646,146.19,,YGBXXWTZWLALGR-UHFFFAOYSA-N,False,,
+CID_108764,EFSA CEF,2010,2052,Human health,subchronic,Unspecified,Not reported,90.0,NOAEL,=,0.73,mg/kg bw/day,not reported,not reported,0.73,=,,True,108764,170.23,,LULNJORVPBVGRB-UHFFFAOYSA-N,False,,
+"2,5-dimethyl-3-(isovalerylthio)furan",EFSA CEF,2010,2052,Human health,subchronic,Unspecified,Not reported,90.0,NOAEL,=,0.73,mg/kg bw/day,not reported,not reported,0.73,=,,True,,,,,False,,Not Found
+2-(Methylthio)ethan-1-ol,EFSA CEF,2011,2120,Human health,subchronic,Unspecified,Not reported,90.0,NOAEL,=,250.0,mg/kg bw/day,not reported,not reported,250.0,=,,True,,,,,False,,Not Found
+CID_61976,EFSA CEF,2011,2078,Human health,subchronic,Unspecified,Not reported,90.0,NOAEL,=,8.6,mg/kg bw/day,not reported,not reported,8.6,=,,True,61976,129.18,,KNHWRHAKUZHDQP-UHFFFAOYSA-N,False,,
+CID_12980878,EFSA CEF,2010,2052,Human health,subchronic,Unspecified,Not reported,90.0,NOAEL,=,3.76,mg/kg bw/day,not reported,not reported,3.76,=,,True,12980878,184.26,,AOEYNSLUBHRZPA-UHFFFAOYSA-N,False,,
+CID_43598,EFSA CEF,2010,2052,Human health,subchronic,Unspecified,Not reported,90.0,NOAEL,=,3.76,mg/kg bw/day,not reported,not reported,3.76,=,,True,43598,226.34,,GFRRQSASJZMMJC-UHFFFAOYSA-N,False,,
+CID_11617,EFSA CEF,2011,2120,Human health,subchronic,Unspecified,Not reported,90.0,NOAEL,=,250.0,mg/kg bw/day,not reported,not reported,250.0,=,,True,11617,114.21,,UBJVUCKUDDKUJF-UHFFFAOYSA-N,False,,
+CID_17356,EFSA CEF,2010,2042,Human health,subchronic,Unspecified,Not reported,90.0,NOAEL,=,0.23,mg/kg bw/day,not reported,not reported,0.23,=,,True,17356,230.4,,ODHAQPXNQDBHSH-UHFFFAOYSA-N,False,,
+CID_17356,EFSA CEF,2011,2120,Human health,subchronic,Unspecified,oral: unspecified,90.0,NOAEL,=,0.23,mg/kg bw/day,not reported,not reported,0.23,=,,True,17356,230.4,,ODHAQPXNQDBHSH-UHFFFAOYSA-N,False,,
+CID_1068,EFSA CEF,2011,2120,Human health,subchronic,Unspecified,Not reported,90.0,NOAEL,=,250.0,mg/kg bw/day,not reported,not reported,250.0,=,,True,1068,62.14,,QMMFVYPAHWMCMS-UHFFFAOYSA-N,False,,
+CID_57509241,EFSA CEF,2011,2120,Human health,subchronic,Unspecified,Not reported,90.0,NOAEL,=,250.0,mg/kg bw/day,not reported,not reported,250.0,=,,True,57509241,176.28,,PAXAYUXLROMDQU-UHFFFAOYSA-N,False,,
+S-Ethyl acetothioate,EFSA CEF,2010,2054,Human health,subchronic,Unspecified,Not reported,90.0,NOAEL,=,6.7,mg/kg bw/day,not reported,not reported,6.7,=,,True,,,,,False,,Not Found
+S-Methyl 2-furanthiocarboxylate,EFSA CEF,2010,2054,Human health,subchronic,Unspecified,Not reported,90.0,NOAEL,=,6.7,mg/kg bw/day,not reported,not reported,6.7,=,,True,,,,,False,,Not Found

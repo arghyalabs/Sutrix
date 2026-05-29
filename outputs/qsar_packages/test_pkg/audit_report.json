@@ -1,0 +1,19 @@
+{
+    "timestamp": "2026-05-18T09:30:21.933559",
+    "enrichment_statistics": {
+        "initial_dataset_rows": 2,
+        "final_qsar_rows": 2,
+        "overall_enrichment_retention_pct": 100.0
+    },
+    "preprocessing_log": [
+        "Merged datasets on InChIKey.",
+        "Dropped 0 rows due to broken alignment or missing descriptors.",
+        "Validated 1 mathematical descriptors."
+    ],
+    "descriptor_completeness": {
+        "MolWt": {
+            "missing": 0,
+            "completeness_pct": 100.0
+        }
+    }
+}

@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Ractopamine hydrochloride,EFSA FEEDAP,2009,286,Human health,study with volunteers,Human,oral: unspecified,,NOEL,=,67.0,µg/kg bw/day,clinical signs,pulmonary and cardiac,67.0,=,,True

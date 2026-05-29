@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready,PubChem_CID,PubChem_MW,PubChem_CanonicalSMILES,PubChem_InChIKey,PubChem_Ambiguous,PubChem_Candidate_CIDs,PubChem_Error
+CID_18771,EFSA,2010,1266,Human health,short-term toxicity,Rat,oral: unspecified,7.0,NOAEL,=,12.0,mg/kg bw/day,histopathology non neoplastic,nephrotoxicity,12.0,=,,True,18771,296.3,,PYZSVQVRHDXQSL-UHFFFAOYSA-N,False,,

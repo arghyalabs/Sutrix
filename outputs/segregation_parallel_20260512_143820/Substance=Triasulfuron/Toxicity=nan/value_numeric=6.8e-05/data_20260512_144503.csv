@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Triasulfuron,EFSA,2015,2592,Ecotox (water compartment),chronic/long term toxicity,Swollen duckweed,Not reported,14.0,EC50,=,6.8e-05,mg/L,other,,6.8e-05,=,,True

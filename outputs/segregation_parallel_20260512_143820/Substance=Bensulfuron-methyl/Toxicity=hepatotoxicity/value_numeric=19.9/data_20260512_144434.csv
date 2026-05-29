@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Bensulfuron-methyl,EFSA,2009,1144,Human health,chronic/long term toxicity,Dog,oral: unspecified,365.0,NOAEL,=,19.9,mg/kg bw/day,histopathology non neoplastic,hepatotoxicity,19.9,=,,True

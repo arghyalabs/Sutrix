@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+"1,2,3,7,8-PeCDF",EFSA CONTAM,2011,83,Human health,not reported,Unspecified,Not reported,,TEF,=,0.05,dimensionless,not reported,not reported,0.05,=,,True

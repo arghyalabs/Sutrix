@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+"(8,9-Z)-isomer of avermectin B1a",EFSA,2016,2831,Ecotox (water compartment),acute toxicity,Rainbow trout,Not reported,4.0,LC50,=,5.1,µg/L,mortality,,5.1,=,,True

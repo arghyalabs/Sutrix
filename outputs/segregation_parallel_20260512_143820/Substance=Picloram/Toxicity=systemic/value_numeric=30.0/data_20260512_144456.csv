@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Picloram,EFSA,2009,1201,Human health,reproduction toxicity,Rabbit,Not reported,,NOAEL,=,30.0,mg/kg bw/day,body weight,systemic,30.0,=,,True

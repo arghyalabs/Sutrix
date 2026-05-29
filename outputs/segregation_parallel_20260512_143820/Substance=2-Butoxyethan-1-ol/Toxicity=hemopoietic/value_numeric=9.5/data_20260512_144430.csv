@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+2-Butoxyethan-1-ol,EFSA CEF,2012,2125,Human health,not reported,Unspecified,Not reported,,LOAEL,=,9.5,mg/kg bw/day,not reported,hemopoietic,9.5,=,,True

@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Ethofumesate,EFSA,2016,2756,Ecotox (water compartment),acute toxicity,Common carp,Not reported,,LC50,=,10.92,mg/L,mortality,,10.92,=,,True

@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Diclazuril,EFSA CONTAM,2008,97,Animal (non-target species) health,subchronic,Goat,Not reported,,dose level,<=,80.0,mg/kg bw,no adverse effect observed,,80.0,=,,True

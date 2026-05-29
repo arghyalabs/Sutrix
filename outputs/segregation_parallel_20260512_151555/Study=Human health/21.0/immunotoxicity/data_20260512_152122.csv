@@ -1,0 +1,3 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready,PubChem_CID,PubChem_MW,PubChem_CanonicalSMILES,PubChem_InChIKey,PubChem_Ambiguous,PubChem_Candidate_CIDs,PubChem_Error
+T-2 and HT-2 toxins,EFSA CONTAM,2011,585,Human health,short-term toxicity,Pig,oral: feed,21.0,BMDL05,=,10.0,µg/kg bw/day,clinical chemistry,immunotoxicity,10.0,=,,True,,,,,False,,Not Found
+CID_5284461,EFSA CONTAM,2011,585,Human health,short-term toxicity,Pig,oral: feed,21.0,BMDL05,=,10.0,µg/kg bw/day,clinical chemistry,immunotoxicity,10.0,=,,True,5284461,466.5,,BXFOFFBJRFZBQZ-QYWOHJEZSA-N,False,,

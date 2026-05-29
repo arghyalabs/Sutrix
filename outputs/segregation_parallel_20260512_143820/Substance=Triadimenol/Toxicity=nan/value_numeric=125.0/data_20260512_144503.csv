@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Triadimenol,EFSA,2008,1143,Ecotox (soil compartment),not reported,Monocots,Not reported,,dose level,=,125.0,g/ha,seedling emergence,,125.0,=,,True

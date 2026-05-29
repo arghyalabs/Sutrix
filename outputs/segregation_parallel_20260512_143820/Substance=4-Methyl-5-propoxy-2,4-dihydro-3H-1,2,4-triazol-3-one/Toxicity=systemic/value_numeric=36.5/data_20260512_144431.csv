@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+"4-Methyl-5-propoxy-2,4-dihydro-3H-1,2,4-triazol-3-one",EFSA,2016,2885,Human health,subchronic,Rat,Not reported,90.0,conc. Level,=,36.5,mg/kg bw/day,body weight,systemic,36.5,=,,True

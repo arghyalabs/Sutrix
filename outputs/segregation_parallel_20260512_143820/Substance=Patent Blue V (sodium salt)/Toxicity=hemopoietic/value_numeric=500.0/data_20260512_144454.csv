@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Patent Blue V (sodium salt),EFSA FEEDAP,2013,2192,Human health,chronic/long term toxicity,Mouse,Not reported,690.0,NOAEL,=,500.0,mg/kg bw/day,haematology,hemopoietic,500.0,=,,True

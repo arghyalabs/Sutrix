@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Sulfoxaflor metabolite (X11721061),EFSA,2014,2749,Animal (non-target species) health,acute toxicity,Bobwhite quail,oral: unspecified,,LD50,=,1038.0,mg/kg bw,mortality,systemic,1038.0,=,,True

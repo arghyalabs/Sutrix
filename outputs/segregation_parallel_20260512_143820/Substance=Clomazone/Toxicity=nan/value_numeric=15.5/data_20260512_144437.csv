@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Clomazone,EFSA,2007,1106,Ecotox (water compartment),acute toxicity,Rainbow trout,Not reported,4.0,LC50,=,15.5,mg/L,mortality,,15.5,=,,True

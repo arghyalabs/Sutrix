@@ -1,0 +1,4 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready,PubChem_CID,PubChem_MW,PubChem_CanonicalSMILES,PubChem_InChIKey,PubChem_Ambiguous,PubChem_Candidate_CIDs,PubChem_Error
+CID_446925,EFSA AFC,2008,319,Human health,chronic/long term toxicity,Rat,Not reported,365.0,NOAEL,=,50.0,mg/kg bw/day,clinical chemistry,systemic,50.0,=,,True,446925,536.9,,OAIJSZIZWZSQBC-GYZMGTAESA-N,False,,
+CID_446925,EFSA ANS,2010,478,Human health,chronic/long term toxicity,Rat,Not reported,365.0,NOAEL,=,50.0,mg/kg bw/day,clinical chemistry,systemic,50.0,=,,True,446925,536.9,,OAIJSZIZWZSQBC-GYZMGTAESA-N,False,,
+CID_446925,EFSA NDA,2008,20,Human health,chronic/long term toxicity,Rat,Not reported,365.0,NOAEL,=,50.0,mg/kg bw/day,clinical chemistry,systemic,50.0,=,,True,446925,536.9,,OAIJSZIZWZSQBC-GYZMGTAESA-N,False,,

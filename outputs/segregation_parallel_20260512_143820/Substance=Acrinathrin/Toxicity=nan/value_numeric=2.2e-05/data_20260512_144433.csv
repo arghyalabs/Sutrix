@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Acrinathrin,EFSA,2013,2434,Ecotox (water compartment),acute toxicity,Daphnia magna,Not reported,2.0,EC50,=,2.2e-05,mg/L,mortality,,2.2e-05,=,,True

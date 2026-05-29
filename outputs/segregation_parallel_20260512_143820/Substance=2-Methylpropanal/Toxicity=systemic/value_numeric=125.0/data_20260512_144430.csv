@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+2-Methylpropanal,EFSA FEEDAP,2012,615,Human health,subchronic,Rat,oral: gavage,90.0,NOAEL,=,125.0,mg/kg bw/day,gross pathology,systemic,125.0,=,,True

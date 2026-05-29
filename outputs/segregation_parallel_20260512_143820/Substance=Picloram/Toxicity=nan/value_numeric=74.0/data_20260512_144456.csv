@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Picloram,EFSA,2009,1201,Ecotox (soil compartment),acute toxicity,Honey bee,oral: unspecified,,LD50,>,74.0,µg/piece,mortality,,74.0,=,,True

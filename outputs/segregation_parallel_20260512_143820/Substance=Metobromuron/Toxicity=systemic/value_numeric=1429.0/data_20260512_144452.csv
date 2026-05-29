@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Metobromuron,EFSA,2014,2439,Animal (non-target species) health,acute toxicity,Japanese quail,oral: unspecified,,LD50,=,1429.0,mg/kg bw/day,mortality,systemic,1429.0,=,,True

@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Fenazaquin,EFSA,2013,2743,Ecotox (water compartment),acute toxicity,Fathead minnow,Not reported,,LC50,=,0.0042,mg/L,mortality,,0.0042,=,,True

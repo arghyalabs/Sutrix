@@ -1,0 +1,7 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready,PubChem_CID,PubChem_MW,PubChem_CanonicalSMILES,PubChem_InChIKey,PubChem_Ambiguous,PubChem_Candidate_CIDs,PubChem_Error
+CID_91777,EFSA,2008,1109,Human health,chronic/long term toxicity,Dog,oral: unspecified,364.0,NOAEL,=,144.1,mg/kg bw/day,clinical chemistry,systemic,144.1,=,,True,91777,369.4,,CTTHWASMBLQOFR-UHFFFAOYSA-N,False,,
+CID_9576412,EFSA,2008,1163,Human health,chronic/long term toxicity,Dog,oral: unspecified,364.0,NOAEL,=,1.5,mg/kg bw/day,food consumption,systemic,1.5,=,,True,9576412,421.5,,YYJNOYZRYGDPNH-MFKUBSTISA-N,False,,
+CID_9576412,EFSA,2013,2746,Human health,chronic/long term toxicity,Dog,oral: unspecified,364.0,NOAEL,=,1.5,mg/kg bw/day,food consumption,systemic,1.5,=,,True,9576412,421.5,,YYJNOYZRYGDPNH-MFKUBSTISA-N,False,,
+CID_91731,EFSA,2008,1122,Human health,chronic/long term toxicity,Dog,oral: unspecified,364.0,NOAEL,=,1.0,mg/kg bw/day,body weight,systemic,1.0,=,,True,91731,465.09,,UZCGKGPEKUCDTF-UHFFFAOYSA-N,False,,
+CID_155887642,EFSA,2010,1229,Human health,chronic/long term toxicity,Dog,oral: unspecified,364.0,NOAEL,=,2.4,mg/kg bw/day,body weight,systemic,2.4,=,,True,155887642,831.2,,CXTBGQUZGIDYAT-UHFFFAOYSA-N,False,,
+CID_9810996,EFSA AFC,2007,315,Human health,chronic/long term toxicity,Dog,oral: feed,364.0,NOAEL,=,200.0,mg/kg bw/day,clinical chemistry,systemic,200.0,=,,True,9810996,378.5,,HLIAVLHNDJUHFG-HOTGVXAUSA-N,False,,

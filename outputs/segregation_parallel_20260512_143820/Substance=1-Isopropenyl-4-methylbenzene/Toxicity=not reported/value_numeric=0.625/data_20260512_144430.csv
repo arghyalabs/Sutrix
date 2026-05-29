@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+1-Isopropenyl-4-methylbenzene,EFSA CEF,2015,2635,Human health,subchronic,Rat,Not reported,90.0,NOAEL,=,0.625,mg/kg bw/day,not reported,not reported,0.625,=,,True

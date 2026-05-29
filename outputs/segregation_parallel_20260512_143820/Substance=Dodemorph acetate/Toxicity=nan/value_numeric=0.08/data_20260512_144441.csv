@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Dodemorph acetate,EFSA,2008,1139,Ecotox (water compartment),chronic/long term toxicity,Daphnia magna,Not reported,,NOEC,=,0.08,mg/L,not reported,,0.08,=,,True

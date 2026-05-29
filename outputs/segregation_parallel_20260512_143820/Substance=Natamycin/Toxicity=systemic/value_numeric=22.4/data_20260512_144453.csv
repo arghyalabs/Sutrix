@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Natamycin,EFSA ANS,2009,400,Human health,chronic/long term toxicity,Rat,oral: feed,730.0,NOAEL,=,22.4,mg/kg bw/day,growth,systemic,22.4,=,,True

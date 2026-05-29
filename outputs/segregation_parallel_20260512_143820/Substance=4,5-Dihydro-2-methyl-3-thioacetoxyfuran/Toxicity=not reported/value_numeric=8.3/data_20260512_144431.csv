@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+"4,5-Dihydro-2-methyl-3-thioacetoxyfuran",EFSA CEF,2015,2620,Human health,chronic/long term toxicity,Rat,oral: feed,365.0,NOEL,=,8.3,mg/kg bw/day,not reported,not reported,8.3,=,,True

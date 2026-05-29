@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Pyridaben,EFSA,2010,1218,Ecotox (water compartment),chronic/long term toxicity,Mysid shrimp,Not reported,35.0,NOEC,=,4.7e-05,mg/L,reproduction,,4.7e-05,=,,True

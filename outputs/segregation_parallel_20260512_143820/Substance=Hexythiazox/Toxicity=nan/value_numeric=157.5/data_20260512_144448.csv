@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Hexythiazox,EFSA,2010,1240,Ecotox (soil compartment),not reported,Aphidius matricariae,Not reported,,dose level,=,157.5,g/ha,reproduction,,157.5,=,,True

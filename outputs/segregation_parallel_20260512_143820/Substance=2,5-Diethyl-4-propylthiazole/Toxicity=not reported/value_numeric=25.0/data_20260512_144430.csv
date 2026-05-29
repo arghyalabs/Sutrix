@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+"2,5-Diethyl-4-propylthiazole",EFSA CEF,2015,2634,Human health,subchronic,Rat,Not reported,90.0,NOAEL,=,25.0,mg/kg bw/day,not reported,not reported,25.0,=,,True

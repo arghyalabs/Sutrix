@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Trinexapac-ethyl,EFSA,2006,1068,Ecotox (soil compartment),not reported,Aphidius rhopalosiphi,Not reported,,LR50,=,114.0,g/ha,mortality,,114.0,=,,True

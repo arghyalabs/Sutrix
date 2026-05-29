@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Oxathiapiprolin,EFSA,2016,2828,Animal (non-target species) health,chronic/long term toxicity,Bobwhite quail,oral: feed,,conc. Level,=,106.7,mg/kg bw/day,not reported,not reported,106.7,=,,True

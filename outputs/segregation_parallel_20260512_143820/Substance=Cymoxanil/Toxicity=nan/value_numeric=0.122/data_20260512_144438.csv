@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Cymoxanil,EFSA,2008,1136,Ecotox (water compartment),acute toxicity,Anabaena flosaquae,Not reported,4.0,EC50,=,0.122,mg/L,biomass,,0.122,=,,True

@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+AHD,EFSA CONTAM,2015,2663,Human health,chronic/long term toxicity,Rat,Not reported,,BMDL10,=,29.5,mg/kg bw/day,histopathology neoplastic,musclo-skeletal,29.5,=,,True

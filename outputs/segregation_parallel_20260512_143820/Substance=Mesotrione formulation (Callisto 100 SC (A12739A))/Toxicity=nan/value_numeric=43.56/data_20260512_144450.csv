@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Mesotrione formulation (Callisto 100 SC (A12739A)),EFSA,2016,2787,Ecotox (soil compartment),not reported,Aphidius rhopalosiphi,Not reported,,LR50,=,43.56,g/ha,mortality,,43.56,=,,True

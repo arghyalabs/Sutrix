@@ -1,0 +1,3 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready,PubChem_CID,PubChem_MW,PubChem_CanonicalSMILES,PubChem_InChIKey,PubChem_Ambiguous,PubChem_Candidate_CIDs,PubChem_Error
+CID_6426850,EFSA,2018,3103,Human health,short-term toxicity,Rat,Not reported,28.0,NOAEL,=,341.0,mg/kg bw/day,organ weights,reproductive,341.0,=,,True,6426850,321.4,,YMYKMSAZEZQEER-UHFFFAOYSA-N,False,,
+TBSA,EFSA PPR,2008,762,Human health,short-term toxicity,Rat,Not reported,28.0,NOAEL,=,15.0,mg/kg bw/day,organ weights,reproductive,15.0,=,,True,,,,,False,,Not Found

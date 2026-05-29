@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Iprovalicarb,EFSA,2015,2637,Human health,chronic/long term toxicity,Dog,oral: unspecified,371.0,LOAEL,=,3.0,mg/kg bw/day,organ weights,hepatotoxicity,3.0,=,,True

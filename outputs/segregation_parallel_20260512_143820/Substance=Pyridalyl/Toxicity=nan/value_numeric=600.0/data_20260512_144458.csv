@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Pyridalyl,EFSA,2013,2423,Ecotox (soil compartment),acute toxicity,Typhlodromus pyri,Not reported,7.0,LR50,>,600.0,g/ha,mortality,,600.0,=,,True

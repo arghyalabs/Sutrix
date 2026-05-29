@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+3-Chloro-4-hydroxyaniline,EFSA,2017,2976,Human health,subchronic,Rat,Not reported,90.0,LOAEL,=,10.0,mg/kg bw/day,clinical chemistry,systemic,10.0,=,,True

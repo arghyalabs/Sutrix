@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Deoxynivalenol,EFSA CONTAM,2017,2991,Human health,chronic/long term toxicity,Mouse,oral: feed,730.0,NOAEL,=,0.1,mg/kg bw/day,food consumption,systemic,0.1,=,,True

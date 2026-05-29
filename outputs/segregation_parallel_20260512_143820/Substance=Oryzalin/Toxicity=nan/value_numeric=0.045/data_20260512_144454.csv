@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Oryzalin,EFSA,2010,1228,Ecotox (water compartment),chronic/long term toxicity,Marine centric diatom,Not reported,5.0,EC50,=,0.045,mg/L,other,,0.045,=,,True

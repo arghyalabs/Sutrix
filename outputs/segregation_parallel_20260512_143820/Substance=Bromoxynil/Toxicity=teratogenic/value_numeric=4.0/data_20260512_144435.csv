@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Bromoxynil,EFSA,2018,3119,Human health,reproduction toxicity,Rat,Not reported,,NOAEL,=,4.0,mg/kg bw/day,development,teratogenic,4.0,=,,True

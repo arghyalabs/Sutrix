@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Quinine monohydrochloride dihydrate,EFSA CEF,2015,2695,Human health,study with volunteers,Human,oral: unspecified,21.0,NOAEL,=,72.0,mg/person/day,ophthalmoscopic examination,systemic,72.0,=,,True

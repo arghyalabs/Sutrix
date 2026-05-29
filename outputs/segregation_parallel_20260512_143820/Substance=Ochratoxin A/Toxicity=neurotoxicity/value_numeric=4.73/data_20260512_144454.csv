@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Ochratoxin A,EFSA CONTAM,2020,3609,Human health,chronic/long term toxicity,Pig,oral: feed,120.0,BMDL10,=,4.73,µg/kg bw/day,histopathology non neoplastic,neurotoxicity,4.73,=,,True

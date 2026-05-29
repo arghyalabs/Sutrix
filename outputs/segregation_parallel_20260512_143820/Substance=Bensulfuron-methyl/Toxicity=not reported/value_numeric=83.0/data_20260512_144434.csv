@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Bensulfuron-methyl,EFSA,2009,1144,Animal (non-target species) health,reproduction toxicity,Mallard duck,Not reported,,NOEC,=,83.0,mg/kg bw/day,not reported,not reported,83.0,=,,True

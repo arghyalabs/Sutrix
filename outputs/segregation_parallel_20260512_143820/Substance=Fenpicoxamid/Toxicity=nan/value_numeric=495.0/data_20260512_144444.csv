@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Fenpicoxamid,EFSA,2018,3027,Animal (non-target species) health,chronic/long term toxicity,Rabbit,Not reported,,NOAEL,=,495.0,mg/kg bw/day,no adverse effect observed at single/highest dose,,495.0,=,,True

@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Sea-algae extract formulation (Stimplex (pH 8)),EFSA,2012,1304,Ecotox (water compartment),acute toxicity,Pseudokirchneriella subcapitata,Not reported,3.0,EC10,>,30.0,mg/L,biomass,,30.0,=,,True

@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Monensin sodium,EFSA FEEDAP,2005,228,Animal (target species) health,subchronic,Turkey,oral: feed,84.0,dose level,=,100.0,mg/kg,no adverse effect observed,,100.0,=,,True

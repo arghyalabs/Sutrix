@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Pacific ciguatoxin 3C,EFSA CONTAM,2010,133,Human health,acute toxicity,Mouse,intraperitoneal,,TEF,=,0.2,dimensionless,mortality,systemic,0.2,=,,True

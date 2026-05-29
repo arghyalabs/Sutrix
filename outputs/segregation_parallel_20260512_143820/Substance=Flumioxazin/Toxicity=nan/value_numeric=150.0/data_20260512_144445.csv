@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Flumioxazin,EFSA,2014,2509,Ecotox (water compartment),chronic/long term toxicity,not reported,Not reported,28.0,NOEC,=,150.0,µg/L,no adverse effect observed at single/highest dose,,150.0,=,,True

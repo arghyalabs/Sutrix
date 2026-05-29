@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Smoke Flavouring Unismoke,EFSA CEF,2009,2317,Human health,subchronic,Rat,oral: feed,90.0,NOAEL,=,300.0,mg/kg bw/day,haematology,systemic,300.0,=,,True

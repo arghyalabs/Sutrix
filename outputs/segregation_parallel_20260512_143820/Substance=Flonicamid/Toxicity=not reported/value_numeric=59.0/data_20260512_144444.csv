@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Flonicamid,EFSA,2010,1204,Animal (non-target species) health,reproduction toxicity,Duck,Not reported,,NOEL,=,59.0,mg/kg bw/day,not reported,not reported,59.0,=,,True

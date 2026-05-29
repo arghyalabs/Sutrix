@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Epoxiconazole,EFSA,2008,1123,Ecotox (soil compartment),not reported,Aphidius rhopalosiphi,Not reported,,dose level,=,246.0,g/ha,reproduction,,246.0,=,,True

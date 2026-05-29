@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Methyl salicylate,EFSA FEEDAP,2012,607,Human health,chronic/long term toxicity,Rat,oral: unspecified,730.0,NOAEL,=,50.0,mg/kg bw/day,growth,systemic,50.0,=,,True

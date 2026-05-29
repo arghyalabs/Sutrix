@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Glufosinate-ammonium,EFSA,2005,1053,Animal (non-target species) health,reproduction toxicity,Bobwhite quail,Not reported,,NOAEL,=,122.0,mg/kg bw/day,not reported,not reported,122.0,=,,True

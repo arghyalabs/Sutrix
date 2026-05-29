@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Tebuconazole,EFSA,2014,2436,Animal (non-target species) health,reproduction toxicity,Rat,oral: feed,,NOEL,=,10.0,mg/kg bw/day,body weight,systemic,10.0,=,,True

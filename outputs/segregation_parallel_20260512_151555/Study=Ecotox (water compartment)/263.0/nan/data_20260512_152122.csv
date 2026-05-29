@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready,PubChem_CID,PubChem_MW,PubChem_CanonicalSMILES,PubChem_InChIKey,PubChem_Ambiguous,PubChem_Candidate_CIDs,PubChem_Error
+CID_4933,EFSA,2018,3126,Ecotox (water compartment),chronic/long term toxicity,Fathead minnow,Not reported,263.0,NOEC,=,0.0091,mg/L,reproduction,,0.0091,=,,True,4933,218.08,,LFULEKSKNZEWOE-UHFFFAOYSA-N,False,,

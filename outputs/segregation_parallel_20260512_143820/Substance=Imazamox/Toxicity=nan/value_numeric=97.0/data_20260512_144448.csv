@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Imazamox,EFSA,2016,2790,Ecotox (water compartment),acute toxicity,Sheepshead minnow,Not reported,4.0,LC50,>,97.0,mg/L,mortality,,97.0,=,,True

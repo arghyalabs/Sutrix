@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Bupirimate,EFSA,2010,1245,Ecotox (soil compartment),not reported,Encarsia formosa,Not reported,,dose level,=,750.0,g/ha,mortality,,750.0,=,,True

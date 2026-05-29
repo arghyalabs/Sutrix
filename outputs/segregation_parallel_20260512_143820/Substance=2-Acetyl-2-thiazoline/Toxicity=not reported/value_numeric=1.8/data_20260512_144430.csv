@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+2-Acetyl-2-thiazoline,EFSA CEF,2013,2379,Human health,subchronic,Rat,Not reported,90.0,NOAEL,=,1.8,mg/kg bw/day,not reported,not reported,1.8,=,,True

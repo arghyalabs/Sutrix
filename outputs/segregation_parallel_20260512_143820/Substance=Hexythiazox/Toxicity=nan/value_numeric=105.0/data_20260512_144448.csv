@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Hexythiazox,EFSA,2010,1240,Ecotox (soil compartment),acute toxicity,Tiger worm,Not reported,14.0,LC50,>,105.0,mg/kg,mortality,,105.0,=,,True

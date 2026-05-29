@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Methomyl formulation (Methomyl 20SL),EFSA,2006,1091,Animal (non-target species) health,acute toxicity,Bobwhite quail,oral: unspecified,,LD50,=,30.4,mg/kg bw,mortality,systemic,30.4,=,,True

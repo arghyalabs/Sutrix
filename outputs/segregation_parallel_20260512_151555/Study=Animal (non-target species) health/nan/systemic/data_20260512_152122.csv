@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready,PubChem_CID,PubChem_MW,PubChem_CanonicalSMILES,PubChem_InChIKey,PubChem_Ambiguous,PubChem_Candidate_CIDs,PubChem_Error
+CID_448979,EFSA,2006,1095,Animal (non-target species) health,short-term toxicity,Unspecified,oral: feed,,LC50,>,1106.0,mg/kg bw/day,mortality,systemic,1106.0,=,,True,448979,361.7,,GOCUAJYOYBLQRH-MRVPVSSYSA-N,False,,

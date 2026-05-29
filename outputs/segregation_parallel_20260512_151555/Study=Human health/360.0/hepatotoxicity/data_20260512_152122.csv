@@ -1,0 +1,3 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready,PubChem_CID,PubChem_MW,PubChem_CanonicalSMILES,PubChem_InChIKey,PubChem_Ambiguous,PubChem_Candidate_CIDs,PubChem_Error
+CID_54778,EFSA,2007,1106,Human health,chronic/long term toxicity,Dog,oral: feed,360.0,NOAEL,=,13.3,mg/kg bw/day,organ weights,hepatotoxicity,13.3,=,,True,54778,239.7,,KIEDNEWSYUYDSN-UHFFFAOYSA-N,False,,
+CID_11657899,EFSA PPR,2008,762,Human health,chronic/long term toxicity,Dog,oral: unspecified,360.0,NOAEL,=,6.0,mg/kg bw/day,organ weights,hepatotoxicity,6.0,=,,True,11657899,445.3,,KVEQCVKVIFQSGC-UHFFFAOYSA-N,False,,

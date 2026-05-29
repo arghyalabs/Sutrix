@@ -1,0 +1,3 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready,PubChem_CID,PubChem_MW,PubChem_CanonicalSMILES,PubChem_InChIKey,PubChem_Ambiguous,PubChem_Candidate_CIDs,PubChem_Error
+CID_76922,EFSA AFC,2008,2279,Human health,chronic/long term toxicity,Rat,oral: gavage,721.0,NOAEL,=,12.0,mg/kg bw/day,histopathology neoplastic,not reported,12.0,=,,True,76922,113.18,,SKIHGKNFJKJXPX-UHFFFAOYSA-N,False,,
+CID_5971,EFSA AFC,2008,2279,Human health,chronic/long term toxicity,Rat,oral: gavage,721.0,NOAEL,=,12.0,mg/kg bw/day,histopathology neoplastic,not reported,12.0,=,,True,5971,99.16,,ZOJBYZNEUISWFT-UHFFFAOYSA-N,False,,

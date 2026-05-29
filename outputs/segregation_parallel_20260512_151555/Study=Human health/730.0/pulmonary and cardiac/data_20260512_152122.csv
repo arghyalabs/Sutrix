@@ -1,0 +1,4 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready,PubChem_CID,PubChem_MW,PubChem_CanonicalSMILES,PubChem_InChIKey,PubChem_Ambiguous,PubChem_Candidate_CIDs,PubChem_Error
+CID_946,EFSA ANS,2010,410,Human health,chronic/long term toxicity,Rat,oral: drinking water,730.0,NOEL,=,6.7,mg/kg bw/day,gross pathology,pulmonary and cardiac,6.7,=,,True,946,46.006,,IOVCWXUNBOPUCH-UHFFFAOYSA-M,False,,
+CID_946,EFSA CONTAM,2008,102,Human health,chronic/long term toxicity,Rat,oral: drinking water,730.0,NOEL,=,6.7,mg/kg bw/day,gross pathology,pulmonary and cardiac,6.7,=,,True,946,46.006,,IOVCWXUNBOPUCH-UHFFFAOYSA-M,False,,
+CID_946,EFSA CONTAM,2009,108,Human health,chronic/long term toxicity,Rat,oral: drinking water,730.0,NOEL,=,6.7,mg/kg bw/day,gross pathology,pulmonary and cardiac,6.7,=,,True,946,46.006,,IOVCWXUNBOPUCH-UHFFFAOYSA-M,False,,

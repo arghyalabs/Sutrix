@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Flubendiamide,EFSA,2013,2425,Ecotox (water compartment),chronic/long term toxicity,Fathead minnow,Not reported,35.0,NOEC,=,60.2,µg/L,body weight,,60.2,=,,True

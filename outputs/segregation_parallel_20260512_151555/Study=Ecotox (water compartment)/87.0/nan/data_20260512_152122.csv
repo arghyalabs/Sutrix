@@ -1,0 +1,6 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready,PubChem_CID,PubChem_MW,PubChem_CanonicalSMILES,PubChem_InChIKey,PubChem_Ambiguous,PubChem_Candidate_CIDs,PubChem_Error
+CID_86412,EFSA,2014,2549,Ecotox (water compartment),chronic/long term toxicity,Rainbow trout,Not reported,87.0,NOEC,=,26.0,µg/L,not reported,,26.0,=,,True,86412,210.3,,UELITFHSCLAHKR-UHFFFAOYSA-N,False,,
+CID_176879,EFSA,2017,2911,Ecotox (water compartment),chronic/long term toxicity,Rainbow trout,Not reported,87.0,NOEC,=,0.017,mg/L,growth,,0.017,=,,True,176879,300.35,,VHLKTXFWDRXILV-UHFFFAOYSA-N,False,,
+CID_91756,EFSA,2014,2437,Ecotox (water compartment),chronic/long term toxicity,Rainbow trout,Not reported,87.0,NOEC,=,5.4,mg/L,growth,,5.4,=,,True,91756,410.4,,ZINJLDJMHCUBIP-UHFFFAOYSA-N,False,,
+CID_91756,EFSA,2014,2545,Ecotox (water compartment),chronic/long term toxicity,Rainbow trout,Not reported,87.0,NOEC,=,5.4,mg/L,growth,,5.4,=,,True,91756,410.4,,ZINJLDJMHCUBIP-UHFFFAOYSA-N,False,,
+CID_86426,EFSA,2014,2544,Ecotox (water compartment),chronic/long term toxicity,Rainbow trout,Not reported,87.0,NOEC,=,100.0,mg/L,mortality,,100.0,=,,True,86426,470.5,,RBSXHDIPCIWOMG-UHFFFAOYSA-N,False,,

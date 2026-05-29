@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Diclazuril,EFSA FEEDAP,2013,2190,Animal (target species) health,subchronic,Chicken,Not reported,37.0,dose level,=,25.0,mg/kg,no adverse effect observed,,25.0,=,,True

@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready,PubChem_CID,PubChem_MW,PubChem_CanonicalSMILES,PubChem_InChIKey,PubChem_Ambiguous,PubChem_Candidate_CIDs,PubChem_Error
+CID_10157484,EFSA,2013,2433,Animal (non-target species) health,reproduction toxicity,Rat,Not reported,,NOEL,=,128.4,mg/kg bw/day,histopathology non neoplastic,hepatotoxicity,128.4,=,,True,10157484,394.5,,HPNSNYBUADCFDR-UHFFFAOYSA-N,False,,

@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+T-2 and HT-2 toxins,EFSA CONTAM,2011,585,Animal (target species) health,subchronic,Rabbit,oral: feed,,NOAEL,=,100.0,µg/kg bw/day,clinical chemistry,systemic,100.0,=,,True

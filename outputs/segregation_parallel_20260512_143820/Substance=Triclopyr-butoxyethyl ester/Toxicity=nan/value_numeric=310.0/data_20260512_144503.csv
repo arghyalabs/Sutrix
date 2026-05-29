@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Triclopyr-butoxyethyl ester,EFSA,2006,1067,Ecotox (water compartment),acute toxicity,not reported,Not reported,,conc. Level,=,310.0,µg/L,not reported,,310.0,=,,True

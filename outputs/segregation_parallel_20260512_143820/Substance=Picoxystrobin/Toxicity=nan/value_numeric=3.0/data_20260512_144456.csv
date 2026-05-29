@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Picoxystrobin,EFSA,2016,2842,Ecotox (water compartment),acute toxicity,Anabaena flosaquae,Not reported,4.0,EC50,>,3.0,mg/L,biomass,,3.0,=,,True

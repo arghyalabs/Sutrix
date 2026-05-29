@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+"Enniatins (including Enniatin A, A1, B, B1)",EFSA CONTAM,2014,2546,Animal (target species) health,not reported,Chicken,Not reported,,NOAEL,=,216.0,µg/kg bw/day,not reported,not reported,216.0,=,,True

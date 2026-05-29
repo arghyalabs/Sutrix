@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready,PubChem_CID,PubChem_MW,PubChem_CanonicalSMILES,PubChem_InChIKey,PubChem_Ambiguous,PubChem_Candidate_CIDs,PubChem_Error
+CID_16723172,EFSA,2014,2749,Ecotox (water compartment),chronic/long term toxicity,Sheepshead minnow,Not reported,38.0,NOEC,=,1.21,mg/L,mortality,,1.21,=,,True,16723172,277.27,,ZVQOOHYFBIDMTQ-UHFFFAOYSA-N,False,,

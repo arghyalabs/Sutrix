@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Inorganic mercury,EFSA CONTAM,2008,44,Human health,chronic/long term toxicity,Rat,Not reported,182.0,NOAEL,=,0.23,mg/kg bw/day,not reported,nephrotoxicity,0.23,=,,True

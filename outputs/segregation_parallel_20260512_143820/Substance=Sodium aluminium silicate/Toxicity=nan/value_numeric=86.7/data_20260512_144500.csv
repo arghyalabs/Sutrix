@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Sodium aluminium silicate,EFSA,2012,1305,Ecotox (water compartment),chronic/long term toxicity,Fathead minnow,Not reported,30.0,NOEC,=,86.7,mg/L,growth,,86.7,=,,True

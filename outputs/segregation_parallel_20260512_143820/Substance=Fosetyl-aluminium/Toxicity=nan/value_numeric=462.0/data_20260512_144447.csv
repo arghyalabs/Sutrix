@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Fosetyl-aluminium,EFSA,2006,1065,Ecotox (soil compartment),acute toxicity,Honey bee,oral: unspecified,2.0,LD50,=,462.0,µg/piece,mortality,,462.0,=,,True

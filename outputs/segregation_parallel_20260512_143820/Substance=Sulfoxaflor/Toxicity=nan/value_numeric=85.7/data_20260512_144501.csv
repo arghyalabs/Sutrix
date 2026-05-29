@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Sulfoxaflor,EFSA,2014,2749,Ecotox (water compartment),acute toxicity,Navicula pelliculosa,Not reported,4.0,EC50,=,85.7,mg/L,biomass,,85.7,=,,True

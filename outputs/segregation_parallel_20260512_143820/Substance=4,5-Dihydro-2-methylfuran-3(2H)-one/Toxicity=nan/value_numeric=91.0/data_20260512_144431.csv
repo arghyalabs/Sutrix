@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+"4,5-Dihydro-2-methylfuran-3(2H)-one",EFSA FEEDAP,2012,608,Human health,subchronic,Rat,Not reported,90.0,NOAEL,=,91.0,mg/kg bw/day,no adverse effect observed at single/highest dose,,91.0,=,,True

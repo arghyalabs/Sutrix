@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Emamectin,EFSA,2012,3525,Ecotox (soil compartment),acute toxicity,Earthworm,Not reported,14.0,LC50,>,23.8,mg/kg,mortality,,23.8,=,,True

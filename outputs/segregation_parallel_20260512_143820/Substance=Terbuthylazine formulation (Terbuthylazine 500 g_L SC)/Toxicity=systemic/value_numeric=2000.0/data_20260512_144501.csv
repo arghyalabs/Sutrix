@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Terbuthylazine formulation (Terbuthylazine 500 g/L SC),EFSA,2011,1279,Animal (non-target species) health,acute toxicity,Rat,oral: unspecified,,LD50,>,2000.0,mg/kg bw,mortality,systemic,2000.0,=,,True

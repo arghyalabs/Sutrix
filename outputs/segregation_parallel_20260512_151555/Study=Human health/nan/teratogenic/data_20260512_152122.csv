@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready,PubChem_CID,PubChem_MW,PubChem_CanonicalSMILES,PubChem_InChIKey,PubChem_Ambiguous,PubChem_Candidate_CIDs,PubChem_Error
+CID_445354,SCF,2002,3397,Human health,study with volunteers,Human,Not reported,,dose level,>,3000.0,mg/day,other,teratogenic,3000.0,=,,True,445354,286.5,,FPIPGXGPPPQFEQ-OVSJKPMPSA-N,False,,

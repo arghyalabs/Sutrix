@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Triflusulfuron-methyl,EFSA,2009,1161,Ecotox (water compartment),chronic/long term toxicity,Rainbow trout,Not reported,97.0,NOEC,=,57.7,mg/L,growth,,57.7,=,,True

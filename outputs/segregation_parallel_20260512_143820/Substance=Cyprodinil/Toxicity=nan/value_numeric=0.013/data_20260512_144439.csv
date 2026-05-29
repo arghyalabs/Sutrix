@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Cyprodinil,EFSA,2006,1062,Ecotox (water compartment),chronic/long term toxicity,Unspecified,Not reported,98.0,EAC,=,0.013,mg/L,other,,0.013,=,,True

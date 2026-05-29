@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Flubendiamide,EFSA,2013,2425,Ecotox (water compartment),acute toxicity,Sheepshead minnow,Not reported,4.0,LC50,>,29.8,µg/L,mortality,,29.8,=,,True

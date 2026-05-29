@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Benzoic acid,EFSA FEEDAP,2007,254,Animal (target species) health,subchronic,Pig,oral: feed,84.0,dose level,=,20000.0,mg/kg,organ weights,nephrotoxicity,20000.0,=,,True

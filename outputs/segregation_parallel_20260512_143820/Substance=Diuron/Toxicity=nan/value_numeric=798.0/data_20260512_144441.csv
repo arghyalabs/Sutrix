@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Diuron,EFSA,2005,2763,Ecotox (soil compartment),acute toxicity,Earthworm,Not reported,,LC50,>,798.0,mg/kg,mortality,,798.0,=,,True

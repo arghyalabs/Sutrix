@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Hydrogenated poly-1-decene,EFSA FAF,2020,3499,Human health,subchronic,Rat,oral: feed,90.0,NOAEL,=,4160.0,mg/kg bw/day,no adverse effect observed at single/highest dose,,4160.0,=,,True

@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready,PubChem_CID,PubChem_MW,PubChem_CanonicalSMILES,PubChem_InChIKey,PubChem_Ambiguous,PubChem_Candidate_CIDs,PubChem_Error
+CID_9502,EFSA,2016,2843,Animal (non-target species) health,reproduction toxicity,Mallard duck,Not reported,140.0,NOAEL,=,13.9,mg/kg bw/day,not reported,,13.9,=,,True,9502,249.09,,XKJMBINCVNINCA-UHFFFAOYSA-N,False,,

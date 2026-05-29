@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Lasalocid sodium,EFSA FEEDAP,2010,212,Animal (target species) health,chronic/long term toxicity,Turkey,oral: feed,112.0,dose level,=,375.0,mg/kg,no adverse effect observed,,375.0,=,,True

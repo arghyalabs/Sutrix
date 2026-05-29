@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+alpha-Cypermethrin,EFSA,2018,3128,Animal (non-target species) health,acute toxicity,Zebra finch,oral: unspecified,,LD50,=,1360.0,mg/kg bw/day,mortality,systemic,1360.0,=,,True

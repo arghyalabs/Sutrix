@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Dimethyl disulfide,EFSA PPR,2019,3376,Animal (non-target species) health,reproduction toxicity,Rat,inhalation: unspecified,,NOAEC,=,80.0,,no adverse effect observed at single/highest dose,,80.0,=,,True

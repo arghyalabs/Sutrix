@@ -1,0 +1,6 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready,PubChem_CID,PubChem_MW,PubChem_CanonicalSMILES,PubChem_InChIKey,PubChem_Ambiguous,PubChem_Candidate_CIDs,PubChem_Error
+1-Phenyl-(3 or 5)-propylpyrazole,EFSA CEF,2011,2078,Human health,subchronic,Unspecified,Not reported,,NOAEL,=,25.0,mg/kg bw/day,not reported,not reported,25.0,=,,True,,,,,False,,Not Found
+CID_61450,EFSA CEF,2010,2052,Human health,subchronic,Unspecified,Not reported,,NOAEL,=,35.0,mg/kg bw/day,not reported,not reported,35.0,=,,True,61450,168.19,,OWIWZQQFSTZZIG-UHFFFAOYSA-N,False,,
+Isobutyl 3-(2-furyl)propionate,EFSA CEF,2010,2052,Human health,subchronic,Unspecified,Not reported,,NOAEL,=,35.0,mg/kg bw/day,not reported,not reported,35.0,=,,True,,,,,False,,Not Found
+Isopentyl 3-(2-furan)propionate,EFSA CEF,2010,2052,Human health,subchronic,Unspecified,Not reported,,NOAEL,=,35.0,mg/kg bw/day,not reported,not reported,35.0,=,,True,,,,,False,,Not Found
+Isopentyl 4-(2-furan)butyrate,EFSA CEF,2010,2052,Human health,subchronic,Unspecified,Not reported,,NOAEL,=,35.0,mg/kg bw/day,not reported,not reported,35.0,=,,True,,,,,False,,Not Found

@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+"Natural mixture of illite, montmorillonite and kaolinite",EFSA FEEDAP,2017,2982,Animal (target species) health,subchronic,Pig,oral: feed,42.0,dose level,=,50000.0,mg/kg,no adverse effect observed at single/highest dose,,50000.0,=,,True

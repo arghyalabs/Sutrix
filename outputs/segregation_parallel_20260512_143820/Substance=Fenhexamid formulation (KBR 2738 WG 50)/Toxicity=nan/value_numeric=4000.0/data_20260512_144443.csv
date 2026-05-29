@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Fenhexamid formulation (KBR 2738 WG 50),EFSA,2014,2543,Ecotox (soil compartment),chronic/long term toxicity,Seven-spot ladybird,Not reported,13.0,dose level,=,4000.0,g/ha,mortality,,4000.0,=,,True

@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Prohexadione-calcium,EFSA,2010,1211,Animal (non-target species) health,reproduction toxicity,Mallard duck,Not reported,,NOEC,=,116.4,mg/kg bw/day,not reported,not reported,116.4,=,,True

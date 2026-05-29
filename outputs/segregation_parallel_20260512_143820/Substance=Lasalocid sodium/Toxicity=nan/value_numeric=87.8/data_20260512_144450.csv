@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Lasalocid sodium,EFSA FEEDAP,2010,212,Ecotox (soil compartment),acute toxicity,Perennial ryegrass,Not reported,18.0,EC50,=,87.8,mg/kg,growth,,87.8,=,,True

@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Tebuconazole,EFSA,2014,2436,Ecotox (soil compartment),acute toxicity,Honey bee,oral: unspecified,2.0,LD50,>,83.05,µg/piece,mortality,,83.05,=,,True

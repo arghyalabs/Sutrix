@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Pinoxaden,EFSA,2013,2424,Animal (non-target species) health,short-term toxicity,Bobwhite quail,oral: feed,,LC50,>,1574.0,mg/kg bw/day,mortality,systemic,1574.0,=,,True

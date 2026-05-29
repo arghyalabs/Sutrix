@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Manganese chelates of lysine and glutamic acid,EFSA FEEDAP,2021,3952,Animal (target species) health,subchronic,Chicken,oral: feed,42.0,dose level,=,800.0,mg/kg,no adverse effect observed at single/highest dose,,800.0,=,,True

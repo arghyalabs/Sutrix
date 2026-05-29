@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Folates,SCF,2000,3384,Human health,study with volunteers,Human,Not reported,,LOAEL,=,5.0,mg/day,neurology,neurotoxicity,5.0,=,,True

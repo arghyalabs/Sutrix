@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+"4-Amino-5,6-dimethylthioenol[2,3-d]pyrimidin-2(1H)-one hydrochloride",EFSA CEF,2011,2088,Human health,subchronic,Rat,oral: feed,91.0,NOAEL,=,60.0,mg/kg bw/day,no adverse effect observed at single/highest dose,,60.0,=,,True

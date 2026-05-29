@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready,PubChem_CID,PubChem_MW,PubChem_CanonicalSMILES,PubChem_InChIKey,PubChem_Ambiguous,PubChem_Candidate_CIDs,PubChem_Error
+CID_47491,EFSA,2009,1164,Ecotox (water compartment),chronic/long term toxicity,Rainbow trout,Not reported,77.0,NOEC,=,32.0,mg/L,growth,,32.0,=,,True,47491,357.77,,VJYIFXVZLXQVHO-UHFFFAOYSA-N,False,,

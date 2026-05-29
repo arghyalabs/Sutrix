@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Malathion,EFSA,2009,1190,Ecotox (water compartment),chronic/long term toxicity,Rainbow trout,Not reported,97.0,NOEC,=,0.021,mg/L,growth,,0.021,=,,True

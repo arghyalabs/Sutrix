@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+5-Methylquinoxaline,EFSA FEEDAP,2017,2919,Ecotox (water compartment),acute toxicity,Green alga,Not reported,,EC50,=,86.0,mg/L,mortality,,86.0,=,,True

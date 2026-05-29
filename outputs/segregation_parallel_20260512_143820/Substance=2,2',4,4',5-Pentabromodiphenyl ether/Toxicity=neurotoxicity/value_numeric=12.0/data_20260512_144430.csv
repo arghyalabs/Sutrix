@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+"2,2',4,4',5-Pentabromodiphenyl ether",EFSA CONTAM,2011,81,Human health,acute toxicity,Mouse,oral: gavage,,BMDL10,=,12.0,µg/kg bw/day,mobility,neurotoxicity,12.0,=,,True

@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Ethoprophos,EFSA,2006,1077,Human health,acute toxicity,Rat,oral: unspecified,,NOAEL,=,1.0,mg/kg bw/day,neurology,neurotoxicity,1.0,=,,True

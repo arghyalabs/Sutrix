@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Fenamiphos (aka phenamiphos),EFSA,2019,3215,Human health,acute toxicity,Dog,oral: unspecified,,NOAEL,=,0.25,mg/kg bw/day,neurology,neurotoxicity,0.25,=,,True

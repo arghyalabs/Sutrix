@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready,PubChem_CID,PubChem_MW,PubChem_CanonicalSMILES,PubChem_InChIKey,PubChem_Ambiguous,PubChem_Candidate_CIDs,PubChem_Error
+CID_19700,EFSA ANS,2010,461,Human health,chronic/long term toxicity,Rat,oral: feed,900.0,NOAEL,=,631.0,mg/kg bw/day,mortality,systemic,631.0,=,,True,19700,792.9,,SGHZXLIDFTYFHQ-UHFFFAOYSA-L,False,,

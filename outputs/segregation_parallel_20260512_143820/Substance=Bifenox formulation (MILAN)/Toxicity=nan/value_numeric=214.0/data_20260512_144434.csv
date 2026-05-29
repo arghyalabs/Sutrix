@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Bifenox formulation (MILAN),EFSA,2008,1112,Ecotox (soil compartment),not reported,Sugar beet,Not reported,,ER50,=,214.0,g/ha,biomass,,214.0,=,,True

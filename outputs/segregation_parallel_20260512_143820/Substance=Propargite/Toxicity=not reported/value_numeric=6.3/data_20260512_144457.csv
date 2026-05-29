@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Propargite,EFSA,2011,1285,Animal (non-target species) health,chronic/long term toxicity,Rat,Not reported,,NOEL,=,6.3,mg/kg bw/day,not reported,not reported,6.3,=,,True

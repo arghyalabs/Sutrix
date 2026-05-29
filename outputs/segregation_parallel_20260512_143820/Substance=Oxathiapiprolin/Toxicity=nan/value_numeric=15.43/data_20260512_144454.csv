@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Oxathiapiprolin,EFSA,2016,2828,Ecotox (soil compartment),chronic/long term toxicity,Tiger worm,Not reported,,NOEC,=,15.43,mg/kg,not reported,,15.43,=,,True

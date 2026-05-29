@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Iron sulfate anhydrous,EFSA,2012,1320,Human health,reproduction toxicity,Rat,Not reported,,NOAEL,=,380.0,mg/kg bw/day,development,reproductive,380.0,=,,True

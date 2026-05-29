@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Ricin,EFSA CONTAM,2008,105,Animal (target species) health,acute toxicity,Pig,oral: feed,,dose level,=,0.5,g/kg bw/day,clinical signs,systemic,0.5,=,,True

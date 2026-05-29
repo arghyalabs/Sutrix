@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Coriander seed oil,EFSA NDA,2013,2415,Human health,subchronic,Rat,oral: gavage,91.0,NOAEL,=,450.0,mg/kg bw/day,clinical chemistry,systemic,450.0,=,,True

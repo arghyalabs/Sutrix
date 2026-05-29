@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Indoxacarb,EFSA,2018,3026,Ecotox (soil compartment),acute toxicity,Aphidius rhopalosiphi,Not reported,,LR50,=,5.1,g/ha,mortality,,5.1,=,,True

@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Magnesium L-aspartate,EFSA ANS,2008,558,Human health,subchronic,Rat,oral: feed,90.0,NOAEL,=,700.0,mg/kg bw/day,histopathology neoplastic,nephrotoxicity,700.0,=,,True

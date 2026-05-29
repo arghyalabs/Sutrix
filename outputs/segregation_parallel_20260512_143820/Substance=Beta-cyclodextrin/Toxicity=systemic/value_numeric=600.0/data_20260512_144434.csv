@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Beta-cyclodextrin,EFSA ANS,2016,2896,Human health,chronic/long term toxicity,Rat,oral: gavage,180.0,NOAEL,=,600.0,mg/kg bw/day,body weight,systemic,600.0,=,,True

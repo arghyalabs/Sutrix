@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Di-isodecylphthalate,EFSA AFC,2005,350,Human health,subchronic,Dog,Not reported,91.0,NOAEL,=,15.0,mg/kg bw/day,histopathology non neoplastic,hepatotoxicity,15.0,=,,True

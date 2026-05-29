@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Tefluthrin,EFSA,2010,1230,Ecotox (soil compartment),chronic/long term toxicity,Folsomia candida,Not reported,,NOEC,=,30.0,mg/kg,reproduction,,30.0,=,,True

@@ -1,0 +1,8 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready,PubChem_CID,PubChem_MW,PubChem_CanonicalSMILES,PubChem_InChIKey,PubChem_Ambiguous,PubChem_Candidate_CIDs,PubChem_Error
+CID_11524680,EFSA AFC,2006,330,Human health,subchronic,Rat,Not reported,91.0,NOAEL,=,100.0,mg/kg bw/day,clinical chemistry,nephrotoxicity,100.0,=,,True,11524680,424.7,,HORIEOQXBKUKGQ-UHFFFAOYSA-N,False,,
+CID_23017,EFSA,2014,2492,Human health,subchronic,Rat,oral: feed,91.0,NOAEL,=,5.0,mg/kg bw/day,histopathology non neoplastic,nephrotoxicity,5.0,=,,True,23017,198.43,,WCYYAQFQZQEUEN-UHFFFAOYSA-N,False,,
+"Annatto extract (alkali-processed norbixin, acid-precipitated, Annatto F)",EFSA ANS,2016,2865,Human health,subchronic,Rat,oral: feed,91.0,NOAEL,=,30.0,mg/kg bw/day,clinical chemistry,nephrotoxicity,30.0,=,,True,,,,,False,,Not Found
+"Annatto extract (aqueous-processed bixin, Annatto E)",EFSA ANS,2016,2865,Human health,subchronic,Rat,oral: feed,91.0,NOAEL,=,191.0,mg/kg bw/day,clinical chemistry,nephrotoxicity,191.0,=,,True,,,,,False,,Not Found
+"Annatto extract (solvent-extracted bixin, Annatto B)",EFSA ANS,2016,2865,Human health,subchronic,Rat,oral: feed,91.0,NOAEL,=,1206.0,mg/kg bw/day,clinical chemistry,nephrotoxicity,1206.0,=,,True,,,,,False,,Not Found
+CID_5478003,EFSA ANS,2014,2780,Human health,subchronic,Rat,Not reported,91.0,NOAEL,=,30.0,mg/kg bw/day,histopathology non neoplastic,nephrotoxicity,30.0,=,,True,5478003,416.6,,DFMMVLFMMAQXHZ-DOKBYWHISA-N,False,,
+CID_41428,EFSA,2006,1067,Human health,subchronic,Rat,oral: feed,91.0,NOAEL,=,5.0,mg/kg bw/day,histopathology non neoplastic,nephrotoxicity,5.0,=,,True,41428,256.5,,REEQLXCGVXDJSQ-UHFFFAOYSA-N,False,,

@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready,PubChem_CID,PubChem_MW,PubChem_CanonicalSMILES,PubChem_InChIKey,PubChem_Ambiguous,PubChem_Candidate_CIDs,PubChem_Error
+CID_5281303,EFSA,2011,1253,Ecotox (soil compartment),acute toxicity,Maize,Not reported,22.0,dose level,=,30.9,g/ha,biomass,,30.9,=,,True,5281303,720.7,,FTNJWQUOZFUQQJ-NDAWSKJSSA-N,False,,

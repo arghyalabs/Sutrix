@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready,PubChem_CID,PubChem_MW,PubChem_CanonicalSMILES,PubChem_InChIKey,PubChem_Ambiguous,PubChem_Candidate_CIDs,PubChem_Error
+CID_185588,EFSA,2017,2954,Human health,reproduction toxicity,Rabbit,Not reported,730.0,NOAEL,=,20.0,mg/kg bw/day,development,teratogenic,20.0,=,,True,185588,214.64,,WNTGYJSOUMFZEP-SSDOTTSWSA-N,False,,

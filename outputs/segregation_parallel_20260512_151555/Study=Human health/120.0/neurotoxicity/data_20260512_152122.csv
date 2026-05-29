@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready,PubChem_CID,PubChem_MW,PubChem_CanonicalSMILES,PubChem_InChIKey,PubChem_Ambiguous,PubChem_Candidate_CIDs,PubChem_Error
+CID_442530,EFSA CONTAM,2020,3609,Human health,chronic/long term toxicity,Pig,oral: feed,120.0,BMDL10,=,4.73,µg/kg bw/day,histopathology non neoplastic,neurotoxicity,4.73,=,,True,442530,403.8,,RWQKHEORZBHNRI-BMIGLBTASA-N,False,,

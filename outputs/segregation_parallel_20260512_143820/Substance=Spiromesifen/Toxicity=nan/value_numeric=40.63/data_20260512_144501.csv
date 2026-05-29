@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Spiromesifen,EFSA,2007,1102,Ecotox (soil compartment),acute toxicity,Aphidius rhopalosiphi,Not reported,2.0,LR50,=,40.63,ml/ha,mortality,,40.63,=,,True

@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Linuron,EFSA,2016,2843,Ecotox (soil compartment),chronic/long term toxicity,Hypoaspis aculeifer,Not reported,21.0,NOEC,=,3.388,mg/kg,mortality,,3.388,=,,True

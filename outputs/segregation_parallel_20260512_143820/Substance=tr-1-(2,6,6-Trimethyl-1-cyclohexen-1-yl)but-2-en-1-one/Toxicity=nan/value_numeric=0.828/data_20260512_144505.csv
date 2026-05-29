@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+"tr-1-(2,6,6-Trimethyl-1-cyclohexen-1-yl)but-2-en-1-one",EFSA FEEDAP,2016,2822,Ecotox (water compartment),acute toxicity,Green alga,Not reported,,EC50,=,0.828,mg/L,mortality,,0.828,=,,True

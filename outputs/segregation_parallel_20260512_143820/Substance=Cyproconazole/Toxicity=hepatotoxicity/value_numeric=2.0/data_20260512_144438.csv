@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Cyproconazole,EFSA PPR,2009,927,Human health,chronic/long term toxicity,Rat,Not reported,,NOAEL,=,2.0,mg/kg bw/day,organ weights,hepatotoxicity,2.0,=,,True

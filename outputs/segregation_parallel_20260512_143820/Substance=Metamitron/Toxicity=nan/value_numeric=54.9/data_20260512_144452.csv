@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Metamitron,EFSA,2008,1151,Ecotox (soil compartment),acute toxicity,Rapeseed (oilseed rape),Not reported,21.0,ER50,=,54.9,g/ha,seedling emergence,,54.9,=,,True

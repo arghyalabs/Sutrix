@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+DDT,EFSA CONTAM,2006,73,Human health,not reported,Rat,Not reported,,NOAEL,=,1.0,mg/kg bw/day,development,developmental,1.0,=,,True

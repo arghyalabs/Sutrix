@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Diquat formulation (Diquat 20% SL),EFSA,2015,2714,Ecotox (soil compartment),acute toxicity,Honey bee,dermal,,LD50,>,20.1,µg/piece,mortality,,20.1,=,,True

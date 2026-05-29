@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Mandestrobin,EFSA,2015,2640,Animal (non-target species) health,acute toxicity,Rat,oral: unspecified,,LD50,>,200.0,mg/kg bw/day,mortality,systemic,200.0,=,,True

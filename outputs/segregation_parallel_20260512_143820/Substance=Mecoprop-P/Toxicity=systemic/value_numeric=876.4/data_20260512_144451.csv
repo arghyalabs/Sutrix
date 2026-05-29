@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Mecoprop-P,EFSA,2017,2954,Animal (non-target species) health,short-term toxicity,Mallard duck,oral: feed,,LD50,>,876.4,mg/kg bw/day,mortality,systemic,876.4,=,,True

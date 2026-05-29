@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Dimethachlor,EFSA,2008,1138,Ecotox (water compartment),acute toxicity,Daphnia magna,Not reported,2.0,EC50,=,8.54,mg/L,mortality,,8.54,=,,True

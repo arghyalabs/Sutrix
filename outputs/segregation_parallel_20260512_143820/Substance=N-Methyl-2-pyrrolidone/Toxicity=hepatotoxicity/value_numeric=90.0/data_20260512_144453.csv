@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+N-Methyl-2-pyrrolidone,EFSA AFC,2005,337,Human health,chronic/long term toxicity,Mouse,Not reported,,NOAEL,=,90.0,mg/kg bw/day,organ weights,hepatotoxicity,90.0,=,,True

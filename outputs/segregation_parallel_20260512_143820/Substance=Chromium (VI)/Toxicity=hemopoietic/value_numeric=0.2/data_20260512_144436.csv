@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Chromium (VI),EFSA CONTAM,2014,2468,Human health,short-term toxicity,Rat,oral: drinking water,22.0,BMDL05,=,0.2,mg/kg bw/day,haematology,hemopoietic,0.2,=,,True

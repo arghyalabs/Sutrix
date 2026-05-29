@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+d-Carvone,EFSA,2018,3117,Ecotox (water compartment),acute toxicity,Pseudokirchneriella subcapitata,Not reported,2.95833333333333,EC50,=,34.3,mg/L,growth,,34.3,=,,True

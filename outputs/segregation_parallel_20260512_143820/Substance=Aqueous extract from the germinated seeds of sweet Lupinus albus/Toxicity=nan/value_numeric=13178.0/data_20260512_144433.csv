@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Aqueous extract from the germinated seeds of sweet Lupinus albus,EFSA PPR,2020,3704,Ecotox (soil compartment),not reported,Typhlodromus pyri,Not reported,,LR50,>,13178.0,g/ha,mortality,,13178.0,=,,True

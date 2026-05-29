@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Fluazifop-P-butyl,EFSA,2012,1352,Animal (non-target species) health,reproduction toxicity,Bobwhite quail,Not reported,,NOEC,=,86.8,mg/kg bw/day,not reported,not reported,86.8,=,,True

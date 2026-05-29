@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Acibenzolar-S-methyl,EFSA,2014,2549,Ecotox (soil compartment),acute toxicity,Honey bee,oral: unspecified,2.0,LD50,=,128.0,µg/piece,mortality,,128.0,=,,True

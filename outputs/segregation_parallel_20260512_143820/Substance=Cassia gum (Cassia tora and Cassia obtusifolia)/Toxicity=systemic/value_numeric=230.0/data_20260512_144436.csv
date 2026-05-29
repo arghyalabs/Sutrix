@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Cassia gum (Cassia tora and Cassia obtusifolia),EFSA AFC,2006,317,Human health,short-term toxicity,Rat,Not reported,28.0,NOEL,=,230.0,mg/kg bw/day,clinical chemistry,systemic,230.0,=,,True

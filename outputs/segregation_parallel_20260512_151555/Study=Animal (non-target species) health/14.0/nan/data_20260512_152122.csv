@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready,PubChem_CID,PubChem_MW,PubChem_CanonicalSMILES,PubChem_InChIKey,PubChem_Ambiguous,PubChem_Candidate_CIDs,PubChem_Error
+CID_29112,EFSA CONTAM,2008,94,Animal (non-target species) health,short-term toxicity,Horse,oral: feed,14.0,dose level,=,6.25,mg/kg bw/day,no adverse effect observed,,6.25,=,,True,29112,417.5,,JHAYEQICABJSTP-UHFFFAOYSA-N,False,,

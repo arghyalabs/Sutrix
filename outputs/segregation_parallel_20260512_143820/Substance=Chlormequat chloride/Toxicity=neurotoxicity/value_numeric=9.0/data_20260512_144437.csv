@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Chlormequat chloride,EFSA,2009,1145,Human health,subchronic,Dog,Not reported,28.0,NOAEL,=,9.0,mg/kg bw/day,clinical signs,neurotoxicity,9.0,=,,True

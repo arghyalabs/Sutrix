@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Mesotrione,EFSA,2016,2787,Ecotox (water compartment),chronic/long term toxicity,Daphnia pulex,Not reported,21.0,NOEC,=,180.0,mg/L,reproduction,,180.0,=,,True

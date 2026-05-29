@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Imazalil,EFSA PPR,2007,778,Human health,reproduction toxicity,Rabbit,Not reported,,NOAEL,=,5.0,mg/kg bw/day,histopathology non neoplastic,teratogenic,5.0,=,,True

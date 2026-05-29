@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Fatty acids (chain length C7 to C18) and their salts and esters,EFSA,2013,1356,Ecotox (water compartment),chronic/long term toxicity,Zebra fish,Not reported,28.0,NOEC,=,2.0,mg/L,mortality,,2.0,=,,True

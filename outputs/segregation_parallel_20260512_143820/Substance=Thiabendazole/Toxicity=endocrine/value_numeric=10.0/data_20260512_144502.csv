@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Thiabendazole,EFSA,2014,2570,Human health,chronic/long term toxicity,Rat,Not reported,730.0,NOAEL,=,10.0,mg/kg bw/day,histopathology neoplastic,endocrine,10.0,=,,True

@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+"(7Z, 11E)-Hexadecadien-1-yl Acetate",EFSA,2014,2438,Animal (non-target species) health,acute toxicity,Bird,oral: unspecified,,LD50,>,2250.0,mg/kg bw,mortality,systemic,2250.0,=,,True

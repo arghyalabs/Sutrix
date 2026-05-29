@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Methylanthranilate,EFSA FEEDAP,2011,146,Animal (target species) health,subchronic,Rat,Not reported,90.0,NOAEL,=,150.0,mg/kg bw/day,not reported,systemic,150.0,=,,True

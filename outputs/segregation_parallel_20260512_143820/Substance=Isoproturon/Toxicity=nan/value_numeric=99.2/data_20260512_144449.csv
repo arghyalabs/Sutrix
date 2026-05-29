@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Isoproturon,EFSA,2015,2682,Ecotox (soil compartment),acute toxicity,Honey bee,oral: unspecified,,LD50,>,99.2,µg/piece,mortality,,99.2,=,,True

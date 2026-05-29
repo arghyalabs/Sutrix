@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Ethofumesate 500 SC,EFSA,2016,2756,Ecotox (soil compartment),not reported,Wheat,Not reported,,ER50,=,101.0,ml/ha,other,,101.0,=,,True

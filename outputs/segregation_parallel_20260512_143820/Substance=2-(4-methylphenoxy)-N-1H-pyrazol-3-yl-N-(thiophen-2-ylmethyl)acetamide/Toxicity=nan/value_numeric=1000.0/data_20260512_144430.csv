@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+2-(4-methylphenoxy)-N-1H-pyrazol-3-yl-N-(thiophen-2-ylmethyl)acetamide,EFSA CEF,2018,3144,Human health,reproduction toxicity,Rat,oral: gavage,,NOAEL,=,1000.0,mg/kg bw/day,no adverse effect observed at single/highest dose,,1000.0,=,,True

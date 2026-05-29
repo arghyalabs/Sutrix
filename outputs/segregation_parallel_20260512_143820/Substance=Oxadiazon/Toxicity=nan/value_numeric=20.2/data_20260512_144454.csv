@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Oxadiazon,EFSA,2010,1200,Ecotox (soil compartment),acute toxicity,Tomato,Not reported,14.0,ER50,=,20.2,g/ha,other,,20.2,=,,True

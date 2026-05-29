@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Triflumuron,EFSA,2011,1271,Ecotox (soil compartment),chronic/long term toxicity,Tiger worm,Not reported,56.0,NOEC,>,378.0,mg/kg,reproduction,,378.0,=,,True

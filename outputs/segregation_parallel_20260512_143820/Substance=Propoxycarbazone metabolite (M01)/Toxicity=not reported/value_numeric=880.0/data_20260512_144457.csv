@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Propoxycarbazone metabolite (M01),EFSA,2016,2885,Animal (non-target species) health,short-term toxicity,Rat,oral: feed,28.0,NOAEL,>,880.0,mg/kg bw/day,not reported,not reported,880.0,=,,True

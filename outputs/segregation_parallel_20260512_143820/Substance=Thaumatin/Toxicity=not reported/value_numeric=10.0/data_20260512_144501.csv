@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Thaumatin,EFSA FEEDAP,2011,143,Animal (target species) health,not reported,Dog,Not reported,,NOAEL,=,10.0,g/kg bw/day,not reported,not reported,10.0,=,,True

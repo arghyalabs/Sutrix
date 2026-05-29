@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Pyridalyl,EFSA,2013,2423,Animal (non-target species) health,reproduction toxicity,Bobwhite quail,Not reported,,NOEL,=,11.9,mg/kg bw/day,reproduction,reproductive,11.9,=,,True

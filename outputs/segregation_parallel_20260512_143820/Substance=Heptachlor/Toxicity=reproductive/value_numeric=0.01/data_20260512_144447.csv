@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Heptachlor,EFSA CONTAM,2007,74,Animal (target species) health,not reported,Chicken,Not reported,,LOAEL,=,0.01,mg/kg bw/day,reproduction,reproductive,0.01,=,,True

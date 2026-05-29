@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Chlorpropham,EFSA,2017,2976,Ecotox (soil compartment),chronic/long term toxicity,Rapeseed (oilseed rape),Not reported,,ER50,=,115.0,g/ha,other,,115.0,=,,True

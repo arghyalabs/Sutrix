@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Benzoic acid,EFSA ANS,2016,2794,Human health,reproduction toxicity,Rat,oral: feed,,NOAEL,=,500.0,mg/kg bw/day,no adverse effect observed at single/highest dose,,500.0,=,,True

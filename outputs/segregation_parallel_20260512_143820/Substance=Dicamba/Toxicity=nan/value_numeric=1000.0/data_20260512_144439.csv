@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Dicamba,EFSA,2011,1276,Ecotox (soil compartment),acute toxicity,Tiger worm,Not reported,14.0,LC50,>,1000.0,mg/kg,mortality,,1000.0,=,,True

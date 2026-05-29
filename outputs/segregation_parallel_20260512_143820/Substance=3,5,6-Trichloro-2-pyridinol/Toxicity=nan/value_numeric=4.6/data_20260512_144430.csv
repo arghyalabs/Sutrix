@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+"3,5,6-Trichloro-2-pyridinol",EFSA,2006,1067,Ecotox (soil compartment),chronic/long term toxicity,Earthworm,Not reported,,NOEC,=,4.6,mg/kg,not reported,,4.6,=,,True

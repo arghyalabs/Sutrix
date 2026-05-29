@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Pyridalyl,EFSA,2013,2423,Human health,reproduction toxicity,Rat,Not reported,,NOAEL,=,2.8,mg/kg bw/day,body weight,systemic,2.8,=,,True

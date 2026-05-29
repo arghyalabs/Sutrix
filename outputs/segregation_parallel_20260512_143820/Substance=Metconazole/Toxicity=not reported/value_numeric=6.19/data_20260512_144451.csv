@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Metconazole,EFSA,2006,1075,Animal (non-target species) health,reproduction toxicity,Bird,Not reported,154.0,NOEC,=,6.19,mg/kg bw/day,not reported,not reported,6.19,=,,True

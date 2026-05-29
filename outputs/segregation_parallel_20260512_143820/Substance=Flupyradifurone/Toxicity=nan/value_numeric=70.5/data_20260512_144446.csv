@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Flupyradifurone,EFSA,2015,2611,Ecotox (water compartment),acute toxicity,Fathead minnow,Not reported,4.0,LC50,>,70.5,mg/L,mortality,,70.5,=,,True

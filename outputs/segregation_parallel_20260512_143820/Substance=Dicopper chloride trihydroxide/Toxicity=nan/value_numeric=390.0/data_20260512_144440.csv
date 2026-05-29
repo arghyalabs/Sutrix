@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Dicopper chloride trihydroxide,EFSA FEEDAP,2011,182,Animal (target species) health,chronic/long term toxicity,Chicken,oral: feed,112.0,dose level,=,390.0,mg/kg,no adverse effect observed,,390.0,=,,True

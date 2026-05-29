@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Ethyl vanillin,EFSA AFC,2008,2243,Human health,subchronic,Rat,Not reported,98.0,NOAEL,=,500.0,mg/kg bw/day,not reported,not reported,500.0,=,,True

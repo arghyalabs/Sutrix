@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Tembotrione,EFSA,2013,3607,Ecotox (water compartment),chronic/long term toxicity,Harlequin fly,Not reported,,NOEC,=,2.0,mg/L,other,,2.0,=,,True

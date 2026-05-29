@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Diuron,EFSA,2005,2763,Human health,chronic/long term toxicity,Rat,oral: unspecified,180.0,NOAEL,=,0.66,mg/kg bw/day,haematology,hemopoietic,0.66,=,,True

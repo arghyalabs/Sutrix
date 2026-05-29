@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Methoxyfenozide,EFSA,2017,2987,Ecotox (water compartment),chronic/long term toxicity,not reported,Not reported,,NOEC,=,10.0,µg/L,not reported,,10.0,=,,True

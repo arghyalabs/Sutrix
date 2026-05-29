@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+5-Methylfurfural,EFSA CEF,2011,2111,Human health,not reported,Unspecified,Not reported,,BMDL,=,14.4,mg/kg bw/day,not reported,not reported,14.4,=,,True

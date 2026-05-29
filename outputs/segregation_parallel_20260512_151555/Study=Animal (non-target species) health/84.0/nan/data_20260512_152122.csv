@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready,PubChem_CID,PubChem_MW,PubChem_CanonicalSMILES,PubChem_InChIKey,PubChem_Ambiguous,PubChem_Candidate_CIDs,PubChem_Error
+CID_23678834,EFSA CONTAM,2008,91,Animal (non-target species) health,subchronic,Turkey,oral: feed,84.0,dose level,=,25.0,mg/kg,no adverse effect observed,,25.0,=,,True,23678834,895.1,,JXRFTGPGWGUBQB-LHOUOPCDSA-M,False,,

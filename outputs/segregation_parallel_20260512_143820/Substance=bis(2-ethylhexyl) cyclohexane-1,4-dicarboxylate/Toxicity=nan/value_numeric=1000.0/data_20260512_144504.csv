@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+"bis(2-ethylhexyl) cyclohexane-1,4-dicarboxylate",EFSA CEP,2020,3416,Human health,subchronic,Unspecified,oral: unspecified,90.0,NOAEL,=,1000.0,mg/kg bw/day,no adverse effect observed at single/highest dose,,1000.0,=,,True

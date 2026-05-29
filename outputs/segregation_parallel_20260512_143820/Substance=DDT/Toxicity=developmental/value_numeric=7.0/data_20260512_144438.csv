@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+DDT,EFSA CONTAM,2006,73,Animal (target species) health,not reported,Sheep,oral: feed,,dose level,=,7.0,mg/kg bw/day,clinical signs,developmental,7.0,=,,True

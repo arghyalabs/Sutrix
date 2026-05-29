@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Cycloxydim,EFSA,2010,1221,Ecotox (soil compartment),not reported,Perennial ryegrass,Not reported,,ER50,=,9.7,g/ha,not reported,,9.7,=,,True

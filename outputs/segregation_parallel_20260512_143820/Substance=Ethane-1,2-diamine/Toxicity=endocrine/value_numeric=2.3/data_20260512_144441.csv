@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+"Ethane-1,2-diamine",EFSA,2019,3605,Human health,short-term toxicity,Dog,oral: unspecified,365.0,NOAEL,=,2.3,mg/kg bw/day,clinical chemistry,endocrine,2.3,=,,True

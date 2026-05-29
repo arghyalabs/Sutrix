@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Deoxynivalenol,EFSA CONTAM,2017,2991,Animal (target species) health,subchronic,Common carp,oral: feed,42.0,NOAEL,=,0.6,mg/kg,histopathology non neoplastic,systemic,0.6,=,,True

@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Benthiavalicarb-isopropyl,EFSA,2007,1104,Animal (non-target species) health,reproduction toxicity,Bobwhite quail,Not reported,168.0,NOEL,=,105.0,mg/kg bw/day,not reported,not reported,105.0,=,,True

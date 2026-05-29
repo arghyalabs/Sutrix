@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+1-Chloro-2-methylpropene,EFSA,2018,3112,Human health,chronic/long term toxicity,Unspecified,Not reported,,BMD05,=,0.6,mg/kg bw/day,not reported,not reported,0.6,=,,True

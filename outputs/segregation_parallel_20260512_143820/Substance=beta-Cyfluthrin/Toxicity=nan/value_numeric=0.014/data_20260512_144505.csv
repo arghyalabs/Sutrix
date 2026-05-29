@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+beta-Cyfluthrin,EFSA,2018,3131,Ecotox (soil compartment),chronic/long term toxicity,Poecilus cupreus,Not reported,55.0,ER50,>,0.014,mg/kg,mortality,,0.014,=,,True

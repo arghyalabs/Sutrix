@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Gellan gum,EFSA ANS,2018,3055,Human health,chronic/long term toxicity,Rat,oral: feed,728.0,NOAEL,=,1460.0,mg/kg bw/day,no adverse effect observed at single/highest dose,,1460.0,=,,True

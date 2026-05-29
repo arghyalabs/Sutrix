@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Propamocarb hydrochloride,EFSA,2006,1087,Ecotox (water compartment),acute toxicity,Swollen duckweed,Not reported,14.0,EC50,>,18.0,mg/L,frond number,,18.0,=,,True

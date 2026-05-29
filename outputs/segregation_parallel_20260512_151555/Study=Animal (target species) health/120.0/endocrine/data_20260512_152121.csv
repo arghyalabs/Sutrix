@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready,PubChem_CID,PubChem_MW,PubChem_CanonicalSMILES,PubChem_InChIKey,PubChem_Ambiguous,PubChem_Candidate_CIDs,PubChem_Error
+CID_5284469,EFSA CONTAM,2005,64,Animal (target species) health,chronic/long term toxicity,Common quail,oral: unspecified,120.0,LOAEL,=,0.3,mg/kg bw/day,organ weights,endocrine,0.3,=,,True,5284469,411.8,,OEJNXTAZZBRGDN-UHFFFAOYSA-N,False,,

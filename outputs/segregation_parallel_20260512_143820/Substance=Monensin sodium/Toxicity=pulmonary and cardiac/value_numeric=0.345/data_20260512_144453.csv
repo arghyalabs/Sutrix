@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Monensin sodium,EFSA FEEDAP,2019,3359,Human health,not reported,Dog,oral: unspecified,,NOEL,=,0.345,mg/kg bw/day,clinical signs,pulmonary and cardiac,0.345,=,,True

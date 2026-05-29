@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Imidacloprid,EFSA,2008,1130,Ecotox (soil compartment),not reported,Poecilus cupreus,Not reported,,LR50,=,0.136,mg/kg,mortality,,0.136,=,,True

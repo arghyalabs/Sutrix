@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Pyriofenone,EFSA,2013,2201,Human health,subchronic,Rat,oral: unspecified,90.0,NOAEL,=,17.9,mg/kg bw/day,organ weights,hepatotoxicity,17.9,=,,True

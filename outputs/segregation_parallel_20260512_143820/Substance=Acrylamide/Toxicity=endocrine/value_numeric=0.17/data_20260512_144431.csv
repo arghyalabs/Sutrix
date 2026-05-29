@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Acrylamide,EFSA CONTAM,2015,2657,Human health,chronic/long term toxicity,Mouse,Not reported,730.0,BMDL10,=,0.17,mg/kg bw/day,histopathology neoplastic,endocrine,0.17,=,,True

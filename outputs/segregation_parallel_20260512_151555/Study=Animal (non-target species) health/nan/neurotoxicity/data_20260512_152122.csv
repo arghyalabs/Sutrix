@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready,PubChem_CID,PubChem_MW,PubChem_CanonicalSMILES,PubChem_InChIKey,PubChem_Ambiguous,PubChem_Candidate_CIDs,PubChem_Error
+CID_10342051,EFSA,2014,2569,Animal (non-target species) health,chronic/long term toxicity,Rat,Not reported,,NOAEL,=,1.75,mg/kg bw/day,clinical signs,neurotoxicity,1.75,=,,True,10342051,419.9,,NYPJDWWKZLNGGM-RPWUZVMVSA-N,False,,

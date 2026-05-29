@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Hex-3-enyl hexanoate,EFSA FEEDAP,2016,2864,Animal (target species) health,subchronic,Rat,oral: drinking water,98.0,NOAEL,=,127.0,mg/kg bw/day,other,systemic,127.0,=,,True

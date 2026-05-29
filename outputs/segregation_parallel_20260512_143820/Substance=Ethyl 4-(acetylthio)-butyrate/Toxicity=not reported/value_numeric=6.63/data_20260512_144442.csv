@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Ethyl 4-(acetylthio)-butyrate,EFSA CEF,2014,2499,Human health,subchronic,Rat,oral: unspecified,90.0,NOAEL,=,6.63,mg/kg bw/day,not reported,not reported,6.63,=,,True

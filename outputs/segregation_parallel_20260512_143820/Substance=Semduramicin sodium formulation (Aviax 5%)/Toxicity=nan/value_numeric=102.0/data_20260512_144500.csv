@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Semduramicin sodium formulation (Aviax 5%),EFSA FEEDAP,2018,3088,Ecotox (water compartment),chronic/long term toxicity,Harlequin fly,Not reported,28.0,EC10,=,102.0,mg/kg,other,,102.0,=,,True

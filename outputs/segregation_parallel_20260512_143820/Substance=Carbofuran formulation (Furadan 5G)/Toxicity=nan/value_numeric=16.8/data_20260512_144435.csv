@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Carbofuran formulation (Furadan 5G),EFSA,2006,1098,Ecotox (soil compartment),chronic/long term toxicity,Tiger worm,Not reported,,NOEC,<,16.8,mg/kg,reproduction,,16.8,=,,True

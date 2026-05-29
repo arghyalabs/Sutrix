@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+"(RS)-2,4-dinitro-6-(octan-2-yl)phenyl (2 E/Z)-but-2-enoate",EFSA,2014,2435,Ecotox (water compartment),chronic/long term toxicity,Daphnia magna,Not reported,21.0,NOEC,=,0.00076,mg/L,mobility,,0.00076,=,,True

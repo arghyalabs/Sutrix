@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Rapeseed oil,EFSA,2013,1360,Animal (non-target species) health,acute toxicity,Rat,inhalation: unspecified,,LC50,>,3.26,mg/L,mortality,systemic,3.26,=,,True

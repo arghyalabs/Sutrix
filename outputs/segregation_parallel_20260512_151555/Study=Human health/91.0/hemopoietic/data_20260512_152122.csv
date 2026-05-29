@@ -1,0 +1,4 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready,PubChem_CID,PubChem_MW,PubChem_CanonicalSMILES,PubChem_InChIKey,PubChem_Ambiguous,PubChem_Candidate_CIDs,PubChem_Error
+CID_37123,EFSA,2009,1189,Human health,subchronic,Rat,oral: unspecified,91.0,NOAEL,=,11.0,mg/kg bw/day,haematology,hemopoietic,11.0,=,,True,37123,310.68,,QQQYTWIFVNKMRW-UHFFFAOYSA-N,False,,
+CID_11488729,EFSA,2013,2423,Human health,subchronic,Rat,oral: unspecified,91.0,NOAEL,=,5.6,mg/kg bw/day,haematology,hemopoietic,5.6,=,,True,11488729,491.1,,AEHJMNVBLRLZKK-UHFFFAOYSA-N,False,,
+Tocotrienols (mixed),EFSA AFC,2008,381,Human health,subchronic,Rat,oral: feed,91.0,NOAEL,=,130.0,mg/kg bw/day,haematology,hemopoietic,130.0,=,,True,,,,,False,,Not Found

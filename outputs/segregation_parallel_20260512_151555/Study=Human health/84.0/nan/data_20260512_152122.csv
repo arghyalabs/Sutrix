@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready,PubChem_CID,PubChem_MW,PubChem_CanonicalSMILES,PubChem_InChIKey,PubChem_Ambiguous,PubChem_Candidate_CIDs,PubChem_Error
+CID_104770,EFSA CONTAM,2015,2662,Human health,study with volunteers,Human,oral: drinking water,84.0,NOEL,=,36.0,µg/kg bw/day,no adverse effect observed at single/highest dose,,36.0,=,,True,104770,83.45,,XTEGARKTQYYJKE-UHFFFAOYSA-M,False,,

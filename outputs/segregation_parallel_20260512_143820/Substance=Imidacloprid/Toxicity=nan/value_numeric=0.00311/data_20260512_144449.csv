@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Imidacloprid,EFSA,2008,1130,Ecotox (water compartment),chronic/long term toxicity,Harlequin fly,Not reported,28.0,EC50,=,0.00311,mg/L,seedling emergence,,0.00311,=,,True

@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Fluoxastrobin,EFSA,2005,1100,Ecotox (water compartment),chronic/long term toxicity,Rainbow trout,Not reported,95.0,NOEC,=,0.0286,mg/L,other,,0.0286,=,,True

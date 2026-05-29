@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Vitamin A,SCF,2002,3397,Human health,study with volunteers,Human,Not reported,,dose level,>,3000.0,mg/day,other,teratogenic,3000.0,=,,True

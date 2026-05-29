@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Tau-fluvalinate,EFSA,2010,1219,Human health,short-term toxicity,Rat,Not reported,28.0,NOAEL,=,6.0,mg/kg bw/day,clinical signs,neurotoxicity,6.0,=,,True

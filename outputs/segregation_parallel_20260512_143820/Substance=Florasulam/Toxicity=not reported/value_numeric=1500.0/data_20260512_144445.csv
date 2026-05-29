@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Florasulam,EFSA,2015,2593,Animal (non-target species) health,reproduction toxicity,Bobwhite quail,Not reported,,NOAEL,=,1500.0,mg/kg,not reported,not reported,1500.0,=,,True

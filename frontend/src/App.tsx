@@ -1,0 +1,446 @@
+import React, { useState, useRef } from 'react';
+import { Toaster, toast } from 'react-hot-toast';
+
+// API Services Resilience Layer
+import { uploadApi } from './services/uploadApi';
+import { mappingApi } from './services/mappingApi';
+import { enrichmentApi } from './services/enrichmentApi';
+import { readinessApi } from './services/readinessApi';
+import { workspaceApi } from './services/workspaceApi';
+
+// Store & Sockets
+import { useWorkspaceStore } from './store/useWorkspaceStore';
+import { useWebSocket } from './performance/useWebSocket';
+
+// Components
+import { LandingPage } from './components/landing/LandingPage';
+import { DashboardLayout } from './components/dashboard/DashboardLayout';
+import { UploadWorkspace } from './components/upload/UploadWorkspace';
+import { DatasetMapping } from './components/mapping/DatasetMapping';
+import { HierarchyBuilder } from './components/segregation/HierarchyBuilder';
+import { DataAnalysisWorkspace } from './components/analysis/DataAnalysisWorkspace';
+import { DescriptorEnrichment } from './components/enrichment/DescriptorEnrichment';
+import { ReadinessDashboard } from './components/readiness/ReadinessDashboard';
+import ModelingReadinessWorkspace from './components/modeling/ModelingReadinessWorkspace';
+import { modelingApi } from './services/modelingApi';
+import { ReportsExport } from './components/reports/ReportsExport';
+import { BenchmarkPanel } from './components/telemetry/BenchmarkPanel';
+
+// AGPL-3.0 Compliance Views
+import { LicenseGate } from './components/license/LicenseGate';
+import { LicenseModal } from './components/license/LicenseModal';
+import { SturixLogo } from './components/ui/SturixLogo';
+
+// ===========================================================================
+// ERROR BOUNDARY – catches React render crashes and shows a recoverable UI
+// instead of a full black screen
+// ===========================================================================
+class ErrorBoundary extends React.Component<
+  { children: React.ReactNode; onReset: () => void },
+  { hasError: boolean; errorMessage: string }
+> {
+  constructor(props: any) {
+    super(props);
+    this.state = { hasError: false, errorMessage: '' };
+  }
+
+  static getDerivedStateFromError(error: Error) {
+    return { hasError: true, errorMessage: error?.message || 'Unknown error' };
+  }
+
+  componentDidCatch(error: Error, info: any) {
+    console.error('[ErrorBoundary] Caught:', error, info);
+  }
+
+  render() {
+    if (this.state.hasError) {
+      return (
+        <div className="flex flex-col items-center justify-center h-full min-h-[60vh] text-center px-8">
+          <div className="w-16 h-16 rounded-2xl bg-rose-500/10 border border-rose-500/20 flex items-center justify-center mb-6">
+            <span className="text-rose-400 text-2xl font-bold">!</span>
+          </div>
+          <h2 className="text-white font-bold text-lg mb-2">Something went wrong</h2>
+          <p className="text-white/40 text-sm mb-2 max-w-md">{this.state.errorMessage}</p>
+          <p className="text-white/30 text-xs mb-6 max-w-md">
+            Your workspace data is still saved. Use the sidebar to navigate back to a previous step.
+          </p>
+          <button
+            onClick={() => {
+              this.setState({ hasError: false, errorMessage: '' });
+              this.props.onReset();
+            }}
+            className="px-6 py-2.5 rounded-xl bg-cyan-500/20 text-cyan-400 font-bold hover:bg-cyan-500/30 transition-colors"
+          >
+            Go Back to Enrichment
+          </button>
+        </div>
+      );
+    }
+    return this.props.children;
+  }
+}
+
+const App: React.FC = () => {
+  const clientId = useRef(`SDO_CORE_${Math.random().toString(36).substring(2, 9)}`).current;
+  
+  const [hasLaunched, setHasLaunched] = useState(false);
+
+  // AGPL-3.0 Open-Source License compliance state variables
+  const [licenseAccepted, setLicenseAccepted] = useState(() => {
+    return localStorage.getItem('sdo_agpl_agreed') === 'true';
+  });
+  const [isLicenseModalOpen, setIsLicenseModalOpen] = useState(false);
+
+  const handleAcceptLicense = () => {
+    localStorage.setItem('sdo_agpl_agreed', 'true');
+    setLicenseAccepted(true);
+  };
+
+  const {
+    activeTab, setActiveTab,
+    filename, parquetPath, rowCount, columns, preview, setDataset,
+    mappings, setMappings,
+    enrichmentMode, setEnrichmentMode,
+    includeMordred, setIncludeMordred,
+    readiness, setReadiness, readinessLoading, setReadinessLoading,
+    activeJobId, setActiveJobId, setActiveJobType,
+    modelingAnalysis, setModelingAnalysis, modelingLoading, setModelingLoading,
+    modelingActivePanel, setModelingActivePanel,
+    resetWorkspace
+  } = useWorkspaceStore();
+
+  const socket = useWebSocket(clientId);
+
+  const handleLaunch = () => {
+    setHasLaunched(true);
+    useWorkspaceStore.getState().setWorkspaceId(clientId);
+    window.location.hash = useWorkspaceStore.getState().activeTab;
+  };
+
+  React.useEffect(() => {
+    const handlePopState = () => {
+    const hash = window.location.hash.replace('#', '');
+      const validTabs = ['ingest', 'mapping', 'hierarchy', 'analysis', 'enrichment', 'readiness', 'benchmark', 'reports'];
+      if (validTabs.includes(hash)) {
+        setActiveTab(hash);
+      }
+    };
+    
+    if (hasLaunched && !window.location.hash) {
+      window.location.hash = activeTab;
+    }
+
+    window.addEventListener('popstate', handlePopState);
+    return () => window.removeEventListener('popstate', handlePopState);
+  }, [hasLaunched, activeTab, setActiveTab]);
+
+  const handleExit = () => {
+    setHasLaunched(false);
+    socket.resetSocketState();
+    resetWorkspace();
+  };
+
+  const handleIngestFile = async (e: React.ChangeEvent<HTMLInputElement>) => {
+    if (!e.target.files?.[0]) return;
+    const file = e.target.files[0];
+    
+    try {
+      const toastId = toast.loading('Uploading & processing dataset...');
+      const d = await uploadApi.ingestFile(file, clientId);
+      toast.success('Ingestion complete. Converted to snappy Parquet.', { id: toastId });
+      
+      setDataset(d.filename, d.parquet_path, d.row_count, d.columns, d.preview);
+      
+      // Fetch AI Semantic Schema Inference
+      let aiMappings: any = {};
+      let inferenceDetails: any = {};
+      try {
+        const schemaRes = await mappingApi.inferSchema(d.columns);
+        schemaRes.mappings.forEach((m: any) => {
+          aiMappings[m.column] = m.mapped_to;
+          inferenceDetails[m.column] = {
+            confidence: m.confidence,
+            reasons: m.reasons
+          };
+        });
+      } catch (err) {
+        console.warn("AI Schema inference failed, falling back to manual mapping.", err);
+        d.columns.forEach((c: string) => { aiMappings[c] = 'none'; });
+      }
+
+      setMappings(aiMappings);
+      const store = useWorkspaceStore.getState();
+      if (store.setMappingIntelligence) {
+        store.setMappingIntelligence(inferenceDetails);
+      }
+    } catch (error: any) {
+      toast.error(error.response?.data?.detail || 'Upload failed');
+    }
+  };
+
+  const handleLoadDemo = async () => {
+    try {
+      const toastId = toast.loading('Loading demo dataset...');
+      const d = await workspaceApi.loadDemoDataset(clientId);
+      toast.success('Demo dataset loaded.', { id: toastId });
+      
+      setDataset(d.filename, d.parquet_path, d.row_count, d.columns, d.preview);
+      
+      // Fetch AI Semantic Schema Inference
+      let aiMappings: any = {};
+      let inferenceDetails: any = {};
+      try {
+        const schemaRes = await mappingApi.inferSchema(d.columns);
+        schemaRes.mappings.forEach((m: any) => {
+          aiMappings[m.column] = m.mapped_to;
+          inferenceDetails[m.column] = {
+            confidence: m.confidence,
+            reasons: m.reasons
+          };
+        });
+      } catch (err) {
+        console.warn("AI Schema inference failed, falling back to manual mapping.", err);
+        d.columns.forEach((c: string) => { aiMappings[c] = 'none'; });
+      }
+
+      setMappings(aiMappings);
+      const store = useWorkspaceStore.getState();
+      if (store.setMappingIntelligence) {
+        store.setMappingIntelligence(inferenceDetails);
+      }
+    } catch (error: any) {
+      toast.error(error.response?.data?.detail || 'Failed to load demo dataset');
+    }
+  };
+
+  const handleCurateColumns = async (colsToDrop: string[]) => {
+    try {
+      const toastId = toast.loading('Sanitizing and dropping unneeded columns...');
+      const d = await uploadApi.curateColumns(colsToDrop, clientId);
+      toast.success('Dataset curated successfully.', { id: toastId });
+      setDataset(filename || 'dataset.parquet', d.parquet_path, d.row_count, d.columns, d.preview);
+      setActiveTab('mapping');
+    } catch (error: any) {
+      toast.error(error.response?.data?.detail || 'Curation failed');
+    }
+  };
+
+  const handleSaveMappings = async () => {
+    try {
+      const toastId = toast.loading('Saving mappings and running segregation...');
+      
+      // 1. Establish bindings
+      const mapRes = await mappingApi.saveMappings(mappings, clientId);
+      
+      if (mapRes.mappings) {
+        setMappings(mapRes.mappings as any);
+        if (mapRes.columns) {
+          setDataset(filename || 'dataset.parquet', parquetPath, rowCount, mapRes.columns, preview);
+        }
+      }
+      
+      if (mapRes.dataset_type) {
+        toast.success(`Dataset classified: ${mapRes.dataset_type}`, {
+          icon: '🧠',
+          duration: 5000
+        });
+      }
+      
+      if (mapRes.warnings && mapRes.warnings.length > 0) {
+        mapRes.warnings.forEach((warn: string) => {
+          toast.error(warn, {
+            icon: '⚠️',
+            duration: 8000
+          });
+        });
+      }
+      
+      toast.success('Mapping complete. Proceed to Hierarchy Builder.', { id: toastId });
+      
+      setActiveTab('hierarchy');
+    } catch (error: any) {
+      toast.error(error.response?.data?.detail || 'Mapping failed');
+    }
+  };
+
+  const handleRunEnrichment = async () => {
+    try {
+      const storeState = useWorkspaceStore.getState();
+      const response = await enrichmentApi.runEnrichment(
+        storeState.selectedDescriptors,
+        storeState.includeMordred,
+        storeState.enrichmentMode,
+        clientId
+      );
+      
+      setActiveJobId(response.job_id);
+      setActiveJobType('enrichment');
+      socket.connectToJob(response.job_id);
+      toast.success('Parallel calculation job dispatched.');
+    } catch (error: any) {
+      toast.error(error.response?.data?.detail || 'Failed to start job');
+    }
+  };
+
+  const handleCancelJob = async () => {
+    try {
+      const storeState = useWorkspaceStore.getState();
+      if (!storeState.activeJobId) return;
+      await enrichmentApi.cancelJob(clientId);
+      toast.error('Job cancellation requested.');
+    } catch (error: any) {
+      toast.error('Failed to cancel job');
+    }
+  };
+
+  const handleFetchEnrichmentResults = async () => {
+    try {
+      const storeState = useWorkspaceStore.getState();
+      if (!storeState.activeJobId) return;
+      
+      const toastId = toast.loading('Assembling enriched parquet...');
+      const d = await enrichmentApi.fetchResults(clientId);
+      toast.success('Enrichment matrix loaded.', { id: toastId });
+      
+      setDataset(d.job_id + '.parquet', d.parquet_path, d.total_rows, d.columns, d.preview);
+      
+      const auditToast = toast.loading('Running AI readiness analysis...');
+      try {
+        const modelingResult = await modelingApi.runAnalysis(clientId);
+        setModelingAnalysis(modelingResult);
+        toast.success('AI Analysis complete!', { id: auditToast });
+      } catch {
+        // Fallback to legacy readiness
+        try {
+          const auditRes = await readinessApi.evaluateReadiness(clientId);
+          setReadiness(auditRes as any);
+          toast.success('Readiness audit complete.', { id: auditToast });
+        } catch {
+          toast.dismiss(auditToast);
+        }
+      }
+      setActiveTab('readiness');
+    } catch (error: any) {
+      toast.error(error.response?.data?.detail || 'Failed to fetch results');
+    }
+  };
+
+  const handleRecalculateAudit = async () => {
+    const t = toast.loading('Recalculating audit...');
+    try {
+      const auditRes = await readinessApi.evaluateReadiness(clientId);
+      setReadiness(auditRes as any);
+      toast.success('Audit recalculated', { id: t });
+    } catch (e: any) {
+      toast.error(e.response?.data?.detail || 'Failed to recalculate', { id: t });
+    }
+  };
+
+  if (!hasLaunched) {
+    return <LandingPage onLaunch={handleLaunch} />;
+  }
+
+  // Calculate generic telemetry data to pass to topbar
+  const mockTelemetry = {
+    ram_usage_pct: Math.floor(40 + Math.random() * 20),
+    fps: 60,
+    active_jobs_count: socket.jobStatus === 'RUNNING' ? 1 : 0
+  };
+
+  const renderContent = () => {
+    switch (activeTab) {
+      case 'ingest':
+        return (
+          <UploadWorkspace
+            filename={filename} rowCount={rowCount} columns={columns} preview={preview}
+            handleIngestFile={handleIngestFile} handleLoadDemo={handleLoadDemo}
+            handleCurateColumns={handleCurateColumns}
+          />
+        );
+      case 'mapping':
+        return (
+          <DatasetMapping
+            columns={columns} mappings={mappings} setMappings={setMappings}
+            handleSaveMappings={handleSaveMappings}
+          />
+        );
+      case 'hierarchy':
+        return <HierarchyBuilder clientId={clientId} socket={socket} />;
+      case 'analysis':
+        return <DataAnalysisWorkspace />;
+      case 'enrichment':
+        return (
+          <DescriptorEnrichment
+            enrichmentMode={enrichmentMode} setEnrichmentMode={setEnrichmentMode}
+            includeMordred={includeMordred} setIncludeMordred={setIncludeMordred}
+            handleRunEnrichment={handleRunEnrichment} handleCancelJob={handleCancelJob}
+            handleFetchEnrichmentResults={handleFetchEnrichmentResults}
+            socket={socket} ramUsage={mockTelemetry.ram_usage_pct} fps={60}
+          />
+        );
+      case 'readiness':
+        return (
+          <ModelingReadinessWorkspace
+            clientId={clientId}
+            modelingAnalysis={modelingAnalysis}
+            modelingLoading={modelingLoading}
+            onRunAnalysis={async () => {
+              setModelingLoading(true);
+              try {
+                const result = await modelingApi.runAnalysis(clientId);
+                setModelingAnalysis(result);
+                toast.success('AI Analysis complete!');
+              } catch (e: any) {
+                toast.error(e.response?.data?.detail || 'Analysis failed');
+              } finally {
+                setModelingLoading(false);
+              }
+            }}
+            activePanel={modelingActivePanel}
+            setActivePanel={setModelingActivePanel}
+          />
+        );
+      case 'benchmark':
+        return <BenchmarkPanel />;
+      case 'reports':
+        return (
+          <ReportsExport
+            clientId={clientId}
+            activeJobId={activeJobId || null}
+            handleResetWorkspace={handleExit}
+          />
+        );
+      default:
+        return <UploadWorkspace filename={filename} rowCount={rowCount} columns={columns} preview={preview} handleIngestFile={handleIngestFile} handleLoadDemo={handleLoadDemo} handleCurateColumns={handleCurateColumns} />;
+    }
+  };
+
+  if (!licenseAccepted) {
+    return <LicenseGate onAccept={handleAcceptLicense} />;
+  }
+
+  return (
+    <>
+      <Toaster position="top-right" toastOptions={{ 
+        className: '!bg-[#111827] !text-white !border !border-white/[0.08] !shadow-2xl',
+        loading: {
+          icon: <SturixLogo className="w-5 h-5" isSpinning3D />,
+        }
+      }} />
+      <DashboardLayout
+        activeTab={activeTab}
+        setActiveTab={setActiveTab}
+        onExit={handleExit}
+        onOpenLicense={() => setIsLicenseModalOpen(true)}
+        telemetryData={mockTelemetry}
+      >
+        <ErrorBoundary key={activeTab} onReset={() => setActiveTab('enrichment')}>
+          {renderContent()}
+        </ErrorBoundary>
+      </DashboardLayout>
+      <LicenseModal isOpen={isLicenseModalOpen} onClose={() => setIsLicenseModalOpen(false)} />
+    </>
+  );
+};
+
+export default App;

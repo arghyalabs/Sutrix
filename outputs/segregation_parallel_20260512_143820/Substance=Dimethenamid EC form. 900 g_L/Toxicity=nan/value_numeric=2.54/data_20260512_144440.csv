@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Dimethenamid EC form. 900 g/L,EFSA,2006,1064,Ecotox (water compartment),acute toxicity,Rainbow trout,Not reported,4.0,LC50,=,2.54,mg/L,mortality,,2.54,=,,True

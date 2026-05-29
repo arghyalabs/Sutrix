@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+"Polychlorinated biphenyls, non dioxin-like (NDL-PCBs)",EFSA CONTAM,2005,68,Human health,subchronic,Rat,Not reported,90.0,NOAEL,=,500.0,µg/kg bw,clinical chemistry,hepatotoxicity,500.0,=,,True

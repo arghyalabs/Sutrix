@@ -1,0 +1,3 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready,PubChem_CID,PubChem_MW,PubChem_CanonicalSMILES,PubChem_InChIKey,PubChem_Ambiguous,PubChem_Candidate_CIDs,PubChem_Error
+CID_17466,EFSA ANS,2009,392,Human health,chronic/long term toxicity,Mouse,oral: feed,574.0,NOAEL,=,70.0,mg/kg bw/day,neurology,nephrotoxicity,70.0,=,,True,17466,604.5,,SWGJCIMEBVHMTA-UHFFFAOYSA-K,False,,
+CID_17466,EFSA FEEDAP,2018,3075,Human health,chronic/long term toxicity,Mouse,oral: feed,574.0,NOAEL,=,70.0,mg/kg bw/day,neurology,nephrotoxicity,70.0,=,,True,17466,604.5,,SWGJCIMEBVHMTA-UHFFFAOYSA-K,False,,

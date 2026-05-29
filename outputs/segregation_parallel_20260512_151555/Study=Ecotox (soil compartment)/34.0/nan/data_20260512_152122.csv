@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready,PubChem_CID,PubChem_MW,PubChem_CanonicalSMILES,PubChem_InChIKey,PubChem_Ambiguous,PubChem_Candidate_CIDs,PubChem_Error
+CID_5281303,EFSA,2018,3120,Ecotox (soil compartment),not reported,Green lacewing,Not reported,34.0,LR50,ca.,0.77,g/ha,mortality,,0.77,=,,True,5281303,720.7,,FTNJWQUOZFUQQJ-NDAWSKJSSA-N,False,,

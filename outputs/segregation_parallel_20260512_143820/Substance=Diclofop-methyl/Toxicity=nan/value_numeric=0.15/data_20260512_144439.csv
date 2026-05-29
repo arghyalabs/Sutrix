@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Diclofop-methyl,EFSA,2010,1236,Ecotox (water compartment),acute toxicity,Bluegill,Not reported,4.0,LC50,=,0.15,mg/L,mortality,,0.15,=,,True

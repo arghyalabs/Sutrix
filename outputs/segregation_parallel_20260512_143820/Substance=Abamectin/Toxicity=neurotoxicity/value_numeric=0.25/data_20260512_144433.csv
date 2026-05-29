@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Abamectin,EFSA,2016,2831,Human health,chronic/long term toxicity,Dog,oral: unspecified,371.0,NOAEL,=,0.25,mg/kg bw/day,clinical signs,neurotoxicity,0.25,=,,True

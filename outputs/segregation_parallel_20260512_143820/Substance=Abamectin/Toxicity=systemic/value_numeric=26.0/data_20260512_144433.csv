@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Abamectin,EFSA PPR,2020,3745,Animal (non-target species) health,acute toxicity,Mallard duck,oral: unspecified,,LD50,=,26.0,mg/kg bw/day,mortality,systemic,26.0,=,,True

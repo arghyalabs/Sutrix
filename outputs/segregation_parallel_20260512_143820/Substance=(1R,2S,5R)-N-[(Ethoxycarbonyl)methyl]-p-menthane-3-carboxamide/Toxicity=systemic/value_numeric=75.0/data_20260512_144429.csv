@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+"(1R,2S,5R)-N-[(Ethoxycarbonyl)methyl]-p-menthane-3-carboxamide",EFSA CEF,2014,2481,Human health,subchronic,Rat,oral: gavage,90.0,NOAEL,=,75.0,mg/kg bw/day,haematology,systemic,75.0,=,,True

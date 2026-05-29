@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+"2,5-Dihydroxy-2,5-dimethyl-1,4-dithiane",EFSA CEF,2012,2141,Human health,subchronic,Rat,oral: feed,90.0,NOAEL,=,3.14,mg/kg bw/day,no adverse effect observed at single/highest dose,,3.14,=,,True

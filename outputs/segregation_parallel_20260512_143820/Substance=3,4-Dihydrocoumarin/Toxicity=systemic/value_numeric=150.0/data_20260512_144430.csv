@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+"3,4-Dihydrocoumarin",EFSA FEEDAP,2012,152,Animal (target species) health,subchronic,Rat,Not reported,91.0,NOAEL,=,150.0,mg/kg bw/day,haematology,systemic,150.0,=,,True

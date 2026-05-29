@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Perchlorate,EFSA CONTAM,2014,2565,Human health,study with volunteers,Human,Not reported,14.0,BMDL05,=,0.0012,mg/kg bw/day,other,endocrine,0.0012,=,,True

@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Paraffin oil with carbon chain lengths C17-C31 (boiling point 280-460°C),EFSA,2009,1176,Ecotox (water compartment),chronic/long term toxicity,Rainbow trout,Not reported,21.0,NOEC,=,7.5,mg/L,not reported,,7.5,=,,True

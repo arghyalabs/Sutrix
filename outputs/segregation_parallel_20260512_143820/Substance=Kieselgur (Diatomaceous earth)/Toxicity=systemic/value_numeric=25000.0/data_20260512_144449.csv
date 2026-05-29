@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Kieselgur (Diatomaceous earth),EFSA PPR,2020,3530,Human health,acute toxicity,Rat,inhalation: unspecified,,LC50,>,25000.0,mg/m³,mortality,systemic,25000.0,=,,True

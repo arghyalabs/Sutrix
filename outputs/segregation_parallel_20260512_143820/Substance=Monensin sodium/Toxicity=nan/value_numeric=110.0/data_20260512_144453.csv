@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Monensin sodium,EFSA FEEDAP,2006,227,Animal (target species) health,chronic/long term toxicity,Cattle,oral: feed,160.0,dose level,=,110.0,mg/kg,no adverse effect observed at single/highest dose,,110.0,=,,True

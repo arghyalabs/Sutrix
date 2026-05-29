@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Mecoprop-P,EFSA,2017,2954,Ecotox (soil compartment),chronic/long term toxicity,Tiger worm,Not reported,,EC10,=,9.0,mg/kg,growth,,9.0,=,,True

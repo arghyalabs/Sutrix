@@ -1,0 +1,85 @@
+{
+  "template_id": "proteomics",
+  "name": "Proteomics / Biochemistry",
+  "description": "Template for proteomics and biochemistry datasets including protein expression and binding data.",
+  "version": "1.0.0",
+  "required_variables": [
+    "protein_id",
+    "organism",
+    "measurement_type",
+    "value",
+    "unit"
+  ],
+  "optional_variables": [
+    "gene_name",
+    "uniprot_id",
+    "sequence",
+    "molecular_weight",
+    "isoform",
+    "post_translational_modification",
+    "tissue",
+    "cell_type",
+    "condition",
+    "replicate",
+    "p_value",
+    "fold_change",
+    "fdr",
+    "sample_id"
+  ],
+  "default_hierarchy": ["measurement_type", "organism", "tissue"],
+  "validation_rules": {
+    "protein_id": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9_\\-]+$",
+      "description": "Protein identifier (UniProt AC, gene symbol, or internal ID)"
+    },
+    "organism": {
+      "type": "categorical",
+      "allowed_values": [
+        "homo_sapiens", "mus_musculus", "rattus_norvegicus",
+        "escherichia_coli", "saccharomyces_cerevisiae",
+        "danio_rerio", "caenorhabditis_elegans", "drosophila_melanogaster"
+      ],
+      "description": "Source organism (snake_case scientific name)"
+    },
+    "measurement_type": {
+      "type": "categorical",
+      "allowed_values": [
+        "expression", "abundance", "binding_affinity",
+        "kd", "ic50", "ec50", "kinase_activity",
+        "fold_change", "phosphorylation", "ubiquitination"
+      ],
+      "description": "Type of proteomics measurement"
+    },
+    "value": {
+      "type": "numeric",
+      "description": "Numeric measurement value"
+    },
+    "unit": {
+      "type": "categorical",
+      "allowed_values": ["nM", "uM", "mM", "M", "arbitrary units", "log2FC",
+                         "ratio", "intensity", "counts"],
+      "description": "Unit of measurement"
+    },
+    "p_value": {
+      "type": "numeric",
+      "min_value": 0,
+      "max_value": 1,
+      "description": "Statistical p-value"
+    },
+    "fold_change": {
+      "type": "numeric",
+      "description": "Fold change (or log2 fold change)"
+    }
+  },
+  "metadata_standards": {
+    "protein_identification": "Use UniProt accession numbers where possible",
+    "organism_naming": "Use snake_case binomial nomenclature",
+    "measurement_normalisation": "Document normalisation method in study metadata"
+  },
+  "quality_thresholds": {
+    "min_replicates": 3,
+    "max_missing_value_pct": 30,
+    "required_identifier_fields": ["protein_id", "organism"]
+  }
+}

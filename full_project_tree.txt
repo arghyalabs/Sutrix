@@ -1,0 +1,212 @@
+Scientific Data Orchestrator/
+|-- Home.py
+|-- Project Plan.txt
+|-- backend/
+|   |-- __init__.py
+|   |-- api_clients/
+|   |   |-- __init__.py
+|   |   |-- base_client.py
+|   |   |-- base_plugin.py
+|   |   |-- chembl_plugin.py
+|   |   |-- plugin_manager.py
+|   |   |-- pubchem_client.py
+|   |   |-- pubchem_plugin.py
+|   |   \-- uniprot_plugin.py
+|   |-- architecture_engine/
+|   |   |-- __init__.py
+|   |   |-- dataset_partition_engine.py
+|   |   |-- export_architecture_manager.py
+|   |   |-- hierarchy_generator.py
+|   |   |-- ontology_router.py
+|   |   \-- recursive_builder.py
+|   |-- cache/
+|   |   |-- __init__.py
+|   |   \-- sqlite_cache.py
+|   |-- database/
+|   |   |-- __init__.py
+|   |   |-- manager.py
+|   |   |-- models.py
+|   |   \-- session.py
+|   |-- descriptor_engine/
+|   |   |-- __init__.py
+|   |   |-- calculator.py
+|   |   |-- descriptor_registry.py
+|   |   |-- descriptor_validator.py
+|   |   |-- mordred_engine.py
+|   |   \-- rdkit_engine.py
+|   |-- exports/
+|   |   |-- __init__.py
+|   |   |-- exporters.py
+|   |   |-- index_generator.py
+|   |   |-- pdf_generator.py
+|   |   |-- qsar_auditor.py
+|   |   |-- qsar_merger.py
+|   |   |-- qsar_packager.py
+|   |   \-- qsar_validator.py
+|   |-- intelligence/
+|   |   |-- __init__.py
+|   |   |-- conflict_detection.py
+|   |   |-- dataset_health.py
+|   |   |-- descriptor_correlation.py
+|   |   |-- duplicate_detection.py
+|   |   \-- missingness_analysis.py
+|   |-- normalization/
+|   |   |-- __init__.py
+|   |   |-- compound_normalizer.py
+|   |   |-- identifier_resolver.py
+|   |   \-- smiles_cleaner.py
+|   |-- pipeline/
+|   |   |-- __init__.py
+|   |   \-- orchestrator.py
+|   |-- processing/
+|   |   |-- __init__.py
+|   |   |-- auditor.py
+|   |   |-- quality_scorer.py
+|   |   \-- report_generator.py
+|   |-- segregation/
+|   |   |-- __init__.py
+|   |   |-- engine.py
+|   |   |-- folder_generator.py
+|   |   |-- hierarchy_builder.py
+|   |   \-- splitter.py
+|   |-- utils/
+|   |   |-- __init__.py
+|   |   |-- config.py
+|   |   |-- encoding_detector.py
+|   |   |-- file_handler.py
+|   |   |-- logger.py
+|   |   |-- qualifier_parser.py
+|   |   |-- synonym_mapper.py
+|   |   \-- unit_converter.py
+|   |-- validation/
+|   |   |-- __init__.py
+|   |   |-- chemical_validator.py
+|   |   |-- duplicate_detector.py
+|   |   |-- endpoint_validator.py
+|   |   |-- species_validator.py
+|   |   \-- unit_validator.py
+|   \-- workers/
+|       \-- __init__.py
+|-- cache.db
+|-- config/
+|-- data/
+|-- docs/
+|   |-- api_reference.md
+|   |-- deployment.md
+|   |-- thesis_positioning.md
+|   \-- user_guide.md
+|-- fix_home.py
+|-- frontend/
+|   |-- README.md
+|   |-- __init__.py
+|   |-- assets/
+|   |   |-- logo-icon.png
+|   |   \-- logo-text.png
+|   |-- components/
+|   |   |-- __init__.py
+|   |   |-- column_mapper.py
+|   |   |-- download_manager.py
+|   |   |-- file_uploader.py
+|   |   |-- hierarchy_builder.py
+|   |   |-- metric_card.py
+|   |   |-- navbar.py
+|   |   \-- ui.py
+|   |-- eslint.config.js
+|   |-- index.html
+|   |-- layouts/
+|   |-- navigation/
+|   |-- package-lock.json
+|   |-- package.json
+|   |-- public/
+|   |   |-- favicon.svg
+|   |   |-- icons.svg
+|   |   |-- logo-icon.png
+|   |   \-- logo-text.png
+|   |-- src/
+|   |   |-- App.tsx
+|   |   |-- assets/
+|   |   |   |-- hero.png
+|   |   |   |-- react.svg
+|   |   |   \-- vite.svg
+|   |   |-- index.css
+|   |   |-- main.tsx
+|   |   \-- pages/
+|   |       \-- SutrixLanding.tsx
+|   |-- styles/
+|   |   \-- sutrix_theme.css
+|   |-- tsconfig.app.json
+|   |-- tsconfig.json
+|   |-- tsconfig.node.json
+|   |-- views/
+|   |   |-- chemical_enrichment.py
+|   |   |-- dashboard.py
+|   |   |-- data_ingestion.py
+|   |   |-- quality_audit.py
+|   |   |-- segregation_analytics.py
+|   |   \-- variable_mapping.py
+|   |-- vite.config.ts
+|   \-- widgets/
+|-- full_project_tree.txt
+|-- logs/
+|-- out/
+|   |-- endpoint=ld50/
+|   |   \-- [... dynamic Excel / structured outputs ...]
+|   \-- endpoint=noael/
+|       \-- [... dynamic Excel / structured outputs ...]
+|-- outputs/
+|   |-- architecture/
+|   |   \-- [... dynamic QSAR-ready partition folders & scientific datasets ...]
+|   |-- cache/
+|   |-- logs/
+|   |-- mappings/
+|   |-- qsar_packages/
+|   |   \-- [... dynamic QSAR-ready partition folders & scientific datasets ...]
+|   |-- segregation_parallel_20260512_120647/
+|   |   \-- [... dynamic QSAR-ready partition folders & scientific datasets ...]
+|   |-- segregation_parallel_20260512_120647.zip
+|   |-- segregation_parallel_20260512_143820/
+|   |   \-- [... dynamic QSAR-ready partition folders & scientific datasets ...]
+|   |-- segregation_parallel_20260512_143820.zip
+|   |-- segregation_parallel_20260512_151555/
+|   |   \-- [... dynamic QSAR-ready partition folders & scientific datasets ...]
+|   \-- segregation_parallel_20260512_151555.zip
+|-- package-lock.json
+|-- package.json
+|-- pages/
+|   |-- 01_Data_Ingestion.py
+|   |-- 02_Variable_Mapping.py
+|   |-- 03_Segregation_Analytics.py
+|   |-- 04_Chemical_Enrichment.py
+|   \-- 05_Quality_Audit_Packaging.py
+|-- requirements.txt
+|-- scratch_test.py
+|-- scratch_test2.py
+|-- scratch_test3.py
+|-- scratch_test_normalization.py
+|-- setup.py
+|-- sutrix_science.db
+|-- templates/
+|   |-- __init__.py
+|   |-- base_template.py
+|   |-- environmental_template.json
+|   |-- proteomics_template.json
+|   |-- template_manager.py
+|   \-- toxicology_template.json
+|-- test_async_st.py
+|-- test_data.csv
+|-- test_dedup_variance.py
+|-- test_html.py
+|-- test_imports_exec.py
+|-- tests/
+|   |-- __init__.py
+|   |-- conftest.py
+|   |-- test_api_plugins.py
+|   |-- test_audit.py
+|   |-- test_index_generator.py
+|   |-- test_ingestion.py
+|   |-- test_mapping.py
+|   |-- test_pubchem_batch.py
+|   |-- test_qualifier.py
+|   |-- test_segregation.py
+|   \-- test_validation.py
+\-- uploads/

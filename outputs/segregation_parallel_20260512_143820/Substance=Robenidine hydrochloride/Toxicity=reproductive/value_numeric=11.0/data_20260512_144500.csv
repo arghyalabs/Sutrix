@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Robenidine hydrochloride,EFSA FEEDAP,2019,3175,Human health,subchronic,Rabbit,oral: feed,84.0,NOAEL,=,11.0,mg/kg bw/day,reproduction,reproductive,11.0,=,,True

@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Halofuginone hydrobromide,EFSA CONTAM,2008,95,Human health,reproduction toxicity,Rabbit,Not reported,,NOEL,=,0.03,mg/kg bw/day,body weight,reproductive,0.03,=,,True

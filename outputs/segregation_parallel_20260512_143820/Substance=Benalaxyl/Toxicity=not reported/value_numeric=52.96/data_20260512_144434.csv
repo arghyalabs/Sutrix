@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Benalaxyl,EFSA PPR,2020,3420,Animal (non-target species) health,chronic/long term toxicity,Rat,Not reported,,NOAEL,=,52.96,mg/kg bw/day,not reported,not reported,52.96,=,,True

@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Pinoxaden,EFSA,2013,2424,Ecotox (water compartment),acute toxicity,Marine centric diatom,Not reported,4.0,EC50,=,0.9086,mg/L,biomass,,0.9086,=,,True

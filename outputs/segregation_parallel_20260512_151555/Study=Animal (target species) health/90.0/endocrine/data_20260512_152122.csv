@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready,PubChem_CID,PubChem_MW,PubChem_CanonicalSMILES,PubChem_InChIKey,PubChem_Ambiguous,PubChem_Candidate_CIDs,PubChem_Error
+CID_14079,EFSA FEEDAP,2016,2769,Animal (target species) health,subchronic,Rat,oral: feed,90.0,NOAEL,=,48.0,mg/kg bw/day,histopathology non neoplastic,endocrine,48.0,=,,True,14079,109.13,,IGJQUJNPMOYEJY-UHFFFAOYSA-N,False,,

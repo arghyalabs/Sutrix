@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Narasin,EFSA FEEDAP,2018,3137,Animal (target species) health,subchronic,Black duck,oral: feed,41.0,dose level,=,280.0,mg/kg,no adverse effect observed at single/highest dose,,280.0,=,,True

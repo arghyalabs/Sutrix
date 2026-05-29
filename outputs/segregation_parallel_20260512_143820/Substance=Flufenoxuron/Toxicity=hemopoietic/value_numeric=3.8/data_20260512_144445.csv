@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Flufenoxuron,EFSA,2011,1286,Human health,chronic/long term toxicity,Dog,oral: feed,365.0,NOAEL,<=,3.8,mg/kg bw/day,haematology,hemopoietic,3.8,=,,True

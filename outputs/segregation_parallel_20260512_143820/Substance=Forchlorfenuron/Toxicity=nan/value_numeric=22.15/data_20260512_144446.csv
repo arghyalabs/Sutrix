@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Forchlorfenuron,EFSA,2017,2966,Ecotox (water compartment),acute toxicity,Swollen duckweed,Not reported,7.0,EC50,=,22.15,mg/L,frond number,,22.15,=,,True

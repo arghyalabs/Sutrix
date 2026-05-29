@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Benfluralin,EFSA PPR,2019,3375,Ecotox (water compartment),acute toxicity,Swollen duckweed,Not reported,7.0,EC50,>,0.032,mg/L,frond number,,0.032,=,,True

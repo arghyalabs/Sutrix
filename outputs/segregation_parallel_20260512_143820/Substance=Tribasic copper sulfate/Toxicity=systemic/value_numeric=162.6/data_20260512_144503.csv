@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Tribasic copper sulfate,EFSA,2018,3032,Animal (non-target species) health,acute toxicity,Rat,Not reported,,LD50,>=,162.6,mg/kg bw,mortality,systemic,162.6,=,,True

@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Dicopper chloride trihydroxide formulation (WP),EFSA,2018,3032,Animal (non-target species) health,acute toxicity,Japanese quail,oral: unspecified,,LD50,=,173.0,mg/kg bw,mortality,systemic,173.0,=,,True

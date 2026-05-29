@@ -1,0 +1,14 @@
+{
+    "timestamp": "2026-05-18T09:25:57.828141",
+    "workflow_lineage": "Flat Dataset -> Subdataset Partitioning -> Recursive Building -> QSAR Ready Export",
+    "hierarchy_routing": [
+        "Species",
+        "Endpoint"
+    ],
+    "total_partitions": 3,
+    "files_generated": [
+        "outputs/architecture\\Test_Proj_20260518_092557\\A/X\\X_qsar_ready.csv",
+        "outputs/architecture\\Test_Proj_20260518_092557\\A/Y\\Y_qsar_ready.csv",
+        "outputs/architecture\\Test_Proj_20260518_092557\\B/X\\X_qsar_ready.csv"
+    ]
+}

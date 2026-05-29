@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Salinomycin sodium,EFSA FEEDAP,2007,222,Human health,chronic/long term toxicity,Rat,oral: feed,730.0,LOEL,=,1.5,mg/kg bw/day,clinical chemistry,hemopoietic,1.5,=,,True

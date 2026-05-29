@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Robenidine hydrochloride,EFSA FEEDAP,2011,211,Ecotox (water compartment),acute toxicity,Zebra fish,Not reported,,LC50,=,36.0,µg/L,mortality,,36.0,=,,True

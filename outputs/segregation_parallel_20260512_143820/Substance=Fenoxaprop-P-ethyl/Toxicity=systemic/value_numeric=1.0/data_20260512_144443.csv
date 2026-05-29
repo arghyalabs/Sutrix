@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Fenoxaprop-P-ethyl,EFSA,2007,1114,Human health,chronic/long term toxicity,Dog,oral: feed,730.0,NOAEL,=,1.0,mg/kg bw/day,body weight,systemic,1.0,=,,True

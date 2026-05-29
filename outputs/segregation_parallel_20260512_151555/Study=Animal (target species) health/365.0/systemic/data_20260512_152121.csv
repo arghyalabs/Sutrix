@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready,PubChem_CID,PubChem_MW,PubChem_CanonicalSMILES,PubChem_InChIKey,PubChem_Ambiguous,PubChem_Candidate_CIDs,PubChem_Error
+CID_8370,EFSA CONTAM,2006,72,Animal (target species) health,chronic/long term toxicity,Dog,oral: capsule,365.0,LOAEL,=,0.1,mg/kg bw/day,histopathology non neoplastic,systemic,0.1,=,,True,8370,284.8,,CKAPSXZOOQJIBF-UHFFFAOYSA-N,False,,

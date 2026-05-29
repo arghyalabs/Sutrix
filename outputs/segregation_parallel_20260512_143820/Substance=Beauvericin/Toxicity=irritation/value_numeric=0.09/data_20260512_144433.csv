@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Beauvericin,EFSA CONTAM,2014,2546,Human health,subchronic,Human,Not reported,,LOAEL,>,0.09,mg/kg bw/day,clinical signs,irritation,0.09,=,,True

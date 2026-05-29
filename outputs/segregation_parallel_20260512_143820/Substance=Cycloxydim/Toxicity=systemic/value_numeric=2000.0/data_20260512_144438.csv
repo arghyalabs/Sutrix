@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Cycloxydim,EFSA,2010,1221,Animal (non-target species) health,acute toxicity,Bobwhite quail,oral: unspecified,,LD50,>,2000.0,mg/kg bw/day,mortality,systemic,2000.0,=,,True

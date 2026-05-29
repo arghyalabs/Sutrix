@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Modified (masked) forms of nivalenol,EFSA CONTAM,2014,2584,Animal (target species) health,not reported,Chicken,Not reported,,LOAEL,=,53.0,µg/kg bw/day,histopathology non neoplastic,hepatotoxicity,53.0,=,,True

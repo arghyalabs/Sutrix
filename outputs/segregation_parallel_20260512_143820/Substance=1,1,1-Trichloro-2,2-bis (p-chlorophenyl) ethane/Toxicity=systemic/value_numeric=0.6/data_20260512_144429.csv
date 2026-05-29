@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+"1,1,1-Trichloro-2,2-bis (p-chlorophenyl) ethane",EFSA CONTAM,2006,73,Animal (target species) health,subchronic,Ringneck dove,oral: feed,,dose level,=,0.6,mg/kg bw/day,clinical chemistry,systemic,0.6,=,,True

@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready,PubChem_CID,PubChem_MW,PubChem_CanonicalSMILES,PubChem_InChIKey,PubChem_Ambiguous,PubChem_Candidate_CIDs,PubChem_Error
+CID_7955,"EFSA CEF, EFSA CONTAM",2010,86,Animal (target species) health,short-term toxicity,Cat,oral: feed,10.0,dose level,=,181.0,mg/kg bw/day,no adverse effect observed,,181.0,=,,True,7955,126.12,,JDSHMPZPIAZGSV-UHFFFAOYSA-N,False,,

@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+"3-(3,4-Dimethoxyphenyl)-N-[2-(3,4-dimethoxyphenyl)-ethyl]-acrylamide",EFSA CEF,2014,2481,Human health,subchronic,Rat,oral: feed,90.0,NOAEL,=,23.0,mg/kg bw/day,haematology,systemic,23.0,=,,True

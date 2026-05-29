@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Thiacloprid,EFSA,2019,3216,Ecotox (soil compartment),chronic/long term toxicity,Red tiger worm,Not reported,56.0,EC10,=,0.04,mg/kg,reproduction,,0.04,=,,True

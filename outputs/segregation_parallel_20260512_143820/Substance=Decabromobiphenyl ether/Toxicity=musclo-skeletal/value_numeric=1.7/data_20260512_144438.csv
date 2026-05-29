@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Decabromobiphenyl ether,EFSA CONTAM,2011,81,Human health,acute toxicity,Mouse,Not reported,,BMDL10,=,1.7,mg/kg bw/day,behaviour,musclo-skeletal,1.7,=,,True

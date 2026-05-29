@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Lasiocarpine,EFSA CONTAM,2011,114,Human health,chronic/long term toxicity,Rat,oral: feed,728.0,BMDL10,=,70.0,µg/kg bw/day,histopathology neoplastic,hepatotoxicity,70.0,=,,True

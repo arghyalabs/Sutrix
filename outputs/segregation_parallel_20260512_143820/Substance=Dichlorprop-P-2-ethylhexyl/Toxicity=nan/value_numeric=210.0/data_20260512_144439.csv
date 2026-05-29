@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Dichlorprop-P-2-ethylhexyl,EFSA,2018,3110,Ecotox (soil compartment),not reported,Typhlodromus pyri,Not reported,,ER50,>,210.0,g/ha,not reported,,210.0,=,,True

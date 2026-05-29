@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+4-(p-Hydroxyphenyl)butan-2-one,EFSA AFC,2008,2254,Human health,subchronic,Unspecified,Not reported,91.0,NOAEL,=,280.0,mg/kg bw/day,not reported,not reported,280.0,=,,True

@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+"5,6-dihydroimidazo[2,1-c][1,2,4]dithiazole-3-thione",EFSA,2019,3605,Animal (non-target species) health,acute toxicity,Rat,oral: unspecified,,LD50,=,240.0,mg/kg bw/day,mortality,systemic,240.0,=,,True

@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+6-Benzyladenine,EFSA,2010,1235,Ecotox (water compartment),acute toxicity,Navicula pelliculosa,Not reported,3.0,EC50,=,7.6,mg/L,biomass,,7.6,=,,True

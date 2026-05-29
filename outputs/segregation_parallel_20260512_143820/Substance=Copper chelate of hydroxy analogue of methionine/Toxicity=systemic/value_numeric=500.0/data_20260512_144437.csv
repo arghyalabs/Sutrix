@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Copper chelate of hydroxy analogue of methionine,EFSA FEEDAP,2008,163,Animal (target species) health,subchronic,Chicken,oral: feed,35.0,dose level,=,500.0,mg/kg,other,systemic,500.0,=,,True

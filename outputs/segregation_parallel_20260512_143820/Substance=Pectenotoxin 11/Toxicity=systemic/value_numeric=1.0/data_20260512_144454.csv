@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Pectenotoxin 11,EFSA CONTAM,2009,129,Human health,acute toxicity,Mouse,intraperitoneal,,TEF,=,1.0,dimensionless,mortality,systemic,1.0,=,,True

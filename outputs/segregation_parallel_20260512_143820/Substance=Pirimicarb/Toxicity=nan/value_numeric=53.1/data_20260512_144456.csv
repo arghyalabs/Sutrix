@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Pirimicarb,EFSA,2005,1057,Ecotox (soil compartment),acute toxicity,Honey bee,dermal,1.0,LD50,=,53.1,µg/piece,mortality,,53.1,=,,True

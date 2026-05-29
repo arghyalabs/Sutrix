@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+2-(sec-Butyl)-3-methoxypyrazine,EFSA FEEDAP,2017,2919,Ecotox (soil compartment),acute toxicity,Earthworm,Not reported,,LC50,=,235.0,mg/kg,mortality,,235.0,=,,True

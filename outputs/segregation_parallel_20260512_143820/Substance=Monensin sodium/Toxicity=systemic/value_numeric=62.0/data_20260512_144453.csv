@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Monensin sodium,EFSA CONTAM,2008,90,Animal (non-target species) health,short-term toxicity,Mallard duck,oral: feed,8.0,NOEL,=,62.0,mg/kg,body weight,systemic,62.0,=,,True

@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Scansmoke SEF7525,EFSA FEEDAP,2012,201,Animal (target species) health,subchronic,Rat,oral: unspecified,90.0,NOAEL,=,67.0,mg/kg bw/day,food consumption,systemic,67.0,=,,True

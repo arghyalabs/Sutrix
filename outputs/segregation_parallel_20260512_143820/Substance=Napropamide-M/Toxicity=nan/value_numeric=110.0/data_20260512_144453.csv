@@ -1,0 +1,3 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Napropamide-M,EFSA,2018,3127,Ecotox (soil compartment),acute toxicity,Honey bee,dermal,,LD50,>,110.0,µg/piece,mortality,,110.0,=,,True
+Napropamide-M,EFSA,2018,3127,Ecotox (soil compartment),acute toxicity,Honey bee,oral: unspecified,,LD50,>,110.0,µg/piece,mortality,,110.0,=,,True

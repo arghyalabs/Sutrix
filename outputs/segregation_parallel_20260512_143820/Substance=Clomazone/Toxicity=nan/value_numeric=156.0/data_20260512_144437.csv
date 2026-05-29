@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Clomazone,EFSA,2007,1106,Ecotox (soil compartment),acute toxicity,Tiger worm,Not reported,14.0,LC50,>,156.0,mg/kg,mortality,,156.0,=,,True

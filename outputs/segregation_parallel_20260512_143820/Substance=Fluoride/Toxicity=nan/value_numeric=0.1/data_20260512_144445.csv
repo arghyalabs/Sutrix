@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Fluoride,EFSA CONTAM,2005,43,Human health,study with volunteers,Human,oral: drinking water,,dose level,=,0.1,mg/kg bw/day,no adverse effect observed,,0.1,=,,True

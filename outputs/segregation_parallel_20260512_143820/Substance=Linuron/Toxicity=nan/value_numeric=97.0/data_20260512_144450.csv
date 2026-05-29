@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Linuron,EFSA,2016,2843,Ecotox (water compartment),chronic/long term toxicity,Fathead minnow,Not reported,264.0,NOEC,=,97.0,µg/L,other,,97.0,=,,True

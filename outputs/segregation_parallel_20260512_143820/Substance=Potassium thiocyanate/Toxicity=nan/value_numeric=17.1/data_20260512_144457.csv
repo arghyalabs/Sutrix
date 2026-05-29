@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Potassium thiocyanate,EFSA,2013,2358,Ecotox (water compartment),acute toxicity,Mozambique tilapia,Not reported,,LC50,=,17.1,mg/L,mortality,,17.1,=,,True

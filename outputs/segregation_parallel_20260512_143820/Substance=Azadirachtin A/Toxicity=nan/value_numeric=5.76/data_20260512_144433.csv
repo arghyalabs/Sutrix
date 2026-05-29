@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Azadirachtin A,EFSA,2011,1253,Ecotox (water compartment),acute toxicity,Pseudokirchneriella subcapitata,Not reported,3.0,EC50,>,5.76,mg/L,biomass,,5.76,=,,True

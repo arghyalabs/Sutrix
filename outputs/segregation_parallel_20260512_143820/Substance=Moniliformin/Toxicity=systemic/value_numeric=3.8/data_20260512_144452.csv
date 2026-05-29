@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Moniliformin,EFSA CONTAM,2018,3035,Animal (target species) health,chronic/long term toxicity,Chicken,oral: feed,420.0,NOAEL,=,3.8,mg/kg bw/day,body weight,systemic,3.8,=,,True

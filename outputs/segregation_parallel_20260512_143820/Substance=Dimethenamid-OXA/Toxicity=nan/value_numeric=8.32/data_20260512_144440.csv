@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Dimethenamid-OXA,EFSA,2018,3103,Ecotox (soil compartment),chronic/long term toxicity,Tiger worm,Not reported,56.0,NOEC,=,8.32,mg/kg,growth,,8.32,=,,True

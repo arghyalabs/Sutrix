@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+[(Ethoxymethyl)(2-ethyl-6-methylphenyl)amino](oxo)acetic acid,EFSA,2011,1289,Human health,chronic/long term toxicity,Mouse,Not reported,546.0,LOAEL,=,1.1,mg/kg bw/day,clinical signs,systemic,1.1,=,,True

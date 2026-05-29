@@ -1,0 +1,5 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready,PubChem_CID,PubChem_MW,PubChem_CanonicalSMILES,PubChem_InChIKey,PubChem_Ambiguous,PubChem_Candidate_CIDs,PubChem_Error
+CID_15625,EFSA CONTAM,2018,3158,Human health,study with volunteers,Human,Not reported,,NOAEL,=,0.007,µg/g,reproduction,reproductive,0.007,=,,True,15625,322.0,,HGUFODBRKLSHSI-UHFFFAOYSA-N,False,,
+"Polychlorinated biphenyls, dioxin-like (DL-PCBs)",EFSA CONTAM,2018,3158,Human health,study with volunteers,Human,Not reported,,NOAEL,=,0.007,µg/g,reproduction,reproductive,0.007,=,,True,,,,,False,,Not Found
+"Polychlorinated dibenzo-p-dioxins (PCDDs): 2,3,7,8-substituted PCDDs",EFSA CONTAM,2018,3158,Human health,study with volunteers,Human,Not reported,,NOAEL,=,0.007,µg/g,reproduction,reproductive,0.007,=,,True,,,,,False,,Not Found
+"Polychlorinated dibenzofurans (PCDFs): 2,3,7,8-substituted PCDFs.",EFSA CONTAM,2018,3158,Human health,study with volunteers,Human,Not reported,,NOAEL,=,0.007,µg/g,reproduction,reproductive,0.007,=,,True,,,,,False,,Not Found

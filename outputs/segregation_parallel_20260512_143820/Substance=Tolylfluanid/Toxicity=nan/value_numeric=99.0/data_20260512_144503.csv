@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Tolylfluanid,EFSA,2005,1055,Ecotox (water compartment),chronic/long term toxicity,Daphnia magna,Not reported,51.0,NOAEC,=,99.0,µg/L,not reported,,99.0,=,,True

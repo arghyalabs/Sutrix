@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+2-Benzofurancarboxaldehyde,EFSA CEF,2015,2653,Human health,subchronic,Rat,oral: feed,90.0,NOEL,=,25.0,mg/kg bw/day,not reported,not reported,25.0,=,,True

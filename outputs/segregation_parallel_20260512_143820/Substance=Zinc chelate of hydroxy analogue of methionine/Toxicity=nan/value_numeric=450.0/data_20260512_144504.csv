@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Zinc chelate of hydroxy analogue of methionine,EFSA FEEDAP,2009,173,Animal (target species) health,subchronic,Cattle,oral: feed,57.0,dose level,=,450.0,mg/kg,no adverse effect observed,,450.0,=,,True

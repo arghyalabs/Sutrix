@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Pinoxaden,EFSA,2013,2424,Ecotox (soil compartment),not reported,Perennial ryegrass,Not reported,,ER50,=,42.0,g/ha,biomass,,42.0,=,,True

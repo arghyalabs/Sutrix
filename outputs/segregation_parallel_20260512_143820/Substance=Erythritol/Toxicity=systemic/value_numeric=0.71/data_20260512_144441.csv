@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Erythritol,EFSA ANS,2015,2627,Human health,study with volunteers,Human,oral: drinking water,810.0,NOAEL,=,0.71,g/kg bw/day,clinical signs,systemic,0.71,=,,True

@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Iodosulfuron-methyl-sodium,EFSA,2016,2804,Ecotox (soil compartment),not reported,Wild cabbage,Not reported,,ER50,=,0.036,g/ha,other,,0.036,=,,True

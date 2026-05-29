@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Oxyfluorfen,EFSA,2010,1268,Ecotox (water compartment),chronic/long term toxicity,Fathead minnow,Not reported,34.0,NOEC,=,0.038,mg/L,reproduction,,0.038,=,,True

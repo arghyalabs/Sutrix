@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Triticonazole,EFSA,2005,1371,Ecotox (water compartment),chronic/long term toxicity,Swollen duckweed,Not reported,,NOEC,=,0.33,mg/L,biomass,,0.33,=,,True

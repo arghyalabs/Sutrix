@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Endrin,EFSA CONTAM,2005,70,Animal (target species) health,subchronic,Chicken,oral: feed,50.0,NOAEL,=,1.0,mg/kg,mortality,systemic,1.0,=,,True

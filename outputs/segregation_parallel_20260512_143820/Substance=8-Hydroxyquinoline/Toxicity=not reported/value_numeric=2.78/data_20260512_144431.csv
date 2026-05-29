@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+8-Hydroxyquinoline,EFSA,2016,2835,Animal (non-target species) health,chronic/long term toxicity,Japanese quail,Not reported,,NOAEL,=,2.78,mg/kg bw/day,not reported,not reported,2.78,=,,True

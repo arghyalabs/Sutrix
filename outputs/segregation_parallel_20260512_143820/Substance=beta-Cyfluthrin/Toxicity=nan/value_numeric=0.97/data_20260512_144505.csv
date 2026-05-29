@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+beta-Cyfluthrin,EFSA PPR,2020,3532,Ecotox (soil compartment),chronic/long term toxicity,Hypoaspis aculeifer,Not reported,,NOEC,=,0.97,mg/kg,reproduction,,0.97,=,,True

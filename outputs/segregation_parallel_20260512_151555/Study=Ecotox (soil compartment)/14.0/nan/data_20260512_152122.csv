@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready,PubChem_CID,PubChem_MW,PubChem_CanonicalSMILES,PubChem_InChIKey,PubChem_Ambiguous,PubChem_Candidate_CIDs,PubChem_Error
+CID_23667299,EFSA FEEDAP,2005,228,Ecotox (soil compartment),other,White mustard,Not reported,14.0,EC50,=,4.0,mg/kg,growth,,4.0,=,,True,23667299,692.9,,XOIQMTLWECTKJL-FBZUZRIGSA-M,False,,

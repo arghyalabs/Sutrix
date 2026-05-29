@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+S-Ethyl acetothioate,EFSA CEF,2010,2054,Human health,subchronic,Unspecified,Not reported,90.0,NOAEL,=,6.7,mg/kg bw/day,not reported,not reported,6.7,=,,True

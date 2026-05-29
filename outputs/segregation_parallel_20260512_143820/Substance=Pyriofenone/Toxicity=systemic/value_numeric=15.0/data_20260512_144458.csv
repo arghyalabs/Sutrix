@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Pyriofenone,EFSA,2013,2201,Human health,subchronic,Dog,oral: unspecified,90.0,NOAEL,=,15.0,mg/kg bw/day,clinical chemistry,systemic,15.0,=,,True

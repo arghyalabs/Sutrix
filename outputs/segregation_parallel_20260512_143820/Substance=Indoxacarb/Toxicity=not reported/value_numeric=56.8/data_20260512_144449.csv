@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Indoxacarb,EFSA,2018,3026,Animal (non-target species) health,reproduction toxicity,Bobwhite quail,Not reported,,NOAEL,=,56.8,mg/kg bw/day,not reported,not reported,56.8,=,,True

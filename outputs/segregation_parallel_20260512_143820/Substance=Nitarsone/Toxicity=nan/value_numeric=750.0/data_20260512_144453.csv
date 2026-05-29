@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Nitarsone,EFSA FEEDAP,2004,230,Animal (target species) health,not reported,Turkey,Not reported,,dose level,=,750.0,mg/kg,no adverse effect observed,,750.0,=,,True

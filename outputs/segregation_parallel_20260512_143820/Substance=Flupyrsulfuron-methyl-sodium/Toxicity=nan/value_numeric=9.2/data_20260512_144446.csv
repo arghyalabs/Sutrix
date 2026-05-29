@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Flupyrsulfuron-methyl-sodium,EFSA,2014,2571,Ecotox (water compartment),chronic/long term toxicity,Rainbow trout,Not reported,90.0,NOEC,=,9.2,mg/L,growth,,9.2,=,,True

@@ -1,0 +1,6 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready,PubChem_CID,PubChem_MW,PubChem_CanonicalSMILES,PubChem_InChIKey,PubChem_Ambiguous,PubChem_Candidate_CIDs,PubChem_Error
+Fenamiphos (aka phenamiphos),EFSA,2006,1073,Ecotox (water compartment),chronic/long term toxicity,Rainbow trout,Not reported,91.0,NOEC,=,0.0038,mg/L,development,,0.0038,=,,True,,,,,False,,Not Found
+Fenamiphos (aka phenamiphos),EFSA,2019,3215,Ecotox (water compartment),chronic/long term toxicity,Rainbow trout,Not reported,91.0,NOEC,=,3.8,µg/L,not reported,,3.8,=,,True,,,,,False,,Not Found
+CID_91707,EFSA,2007,1114,Ecotox (water compartment),chronic/long term toxicity,Rainbow trout,Not reported,91.0,NOEC,=,0.036,mg/L,mortality,,0.036,=,,True,91707,361.8,,PQKBPHSEKWERTG-LLVKDONJSA-N,False,,
+CID_86287518,EFSA,2008,1130,Ecotox (water compartment),chronic/long term toxicity,Rainbow trout,Not reported,91.0,NOEC,=,9.02,mg/L,time to swim up,,9.02,=,,True,86287518,255.66,,YWTYJOPNNQFBPC-UHFFFAOYSA-N,False,,
+CID_86287518,EFSA,2014,2560,Ecotox (water compartment),chronic/long term toxicity,Rainbow trout,Not reported,91.0,NOEC,=,9.02,mg/L,time to hatch,,9.02,=,,True,86287518,255.66,,YWTYJOPNNQFBPC-UHFFFAOYSA-N,False,,

@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Iron chelates of lysine and glutamic acid,EFSA FEEDAP,2019,3250,Animal (target species) health,subchronic,Chicken,oral: feed,36.0,dose level,=,590.0,mg/kg,no adverse effect observed at single/highest dose,,590.0,=,,True

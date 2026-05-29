@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Phomopsin A,EFSA CONTAM,2012,587,Animal (target species) health,acute toxicity,Sheep,subcutaneous,,LD50,>=,17.0,µg/kg bw,mortality,systemic,17.0,=,,True

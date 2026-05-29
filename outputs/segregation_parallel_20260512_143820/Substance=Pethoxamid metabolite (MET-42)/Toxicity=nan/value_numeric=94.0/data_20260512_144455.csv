@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Pethoxamid metabolite (MET-42),EFSA,2017,2995,Ecotox (water compartment),chronic/long term toxicity,Swollen duckweed,Not reported,14.0,EC50,>,94.0,mg/L,growth,,94.0,=,,True

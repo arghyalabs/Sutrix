@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+"2,4-DCP",EFSA,2016,2826,Ecotox (soil compartment),chronic/long term toxicity,Tiger worm,Not reported,56.0,EC10,=,3.16,mg/kg,reproduction,,3.16,=,,True

@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+"3,5,6-Trichloro-2-pyridinol",EFSA,2006,1067,Ecotox (water compartment),acute toxicity,not reported,Not reported,,conc. Level,=,610.0,µg/L,not reported,,610.0,=,,True

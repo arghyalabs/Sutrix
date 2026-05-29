@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Fluoxastrobin,EFSA,2005,1100,Ecotox (soil compartment),acute toxicity,Tiger worm,Not reported,,LC50,>,500.0,mg/kg,mortality,,500.0,=,,True

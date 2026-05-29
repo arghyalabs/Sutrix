@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready,PubChem_CID,PubChem_MW,PubChem_CanonicalSMILES,PubChem_InChIKey,PubChem_Ambiguous,PubChem_Candidate_CIDs,PubChem_Error
+CID_29112,EFSA FEEDAP,2004,270,Animal (non-target species) health,reproduction toxicity,Rat,oral: gavage,11.0,NOEL,=,100.0,mg/kg bw/day,development,teratogenic,100.0,=,,True,29112,417.5,,JHAYEQICABJSTP-UHFFFAOYSA-N,False,,

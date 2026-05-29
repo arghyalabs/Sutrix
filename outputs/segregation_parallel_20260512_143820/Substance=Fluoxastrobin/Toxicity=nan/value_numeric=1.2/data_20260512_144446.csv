@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Fluoxastrobin,EFSA,2005,1100,Ecotox (water compartment),chronic/long term toxicity,Harlequin fly,Not reported,28.0,EC5,=,1.2,mg/L,development,,1.2,=,,True

@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Famoxadone,EFSA,2015,2676,Human health,chronic/long term toxicity,Dog,oral: unspecified,365.0,NOAEL,=,1.2,mg/kg bw/day,ophthalmoscopic examination,systemic,1.2,=,,True

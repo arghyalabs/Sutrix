@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Ethephon,EFSA,2009,1140,Ecotox (soil compartment),chronic/long term toxicity,Maize,Not reported,,NOEC,=,2580.0,g/ha,not reported,,2580.0,=,,True

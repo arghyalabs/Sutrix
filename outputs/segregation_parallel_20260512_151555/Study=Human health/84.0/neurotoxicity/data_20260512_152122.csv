@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready,PubChem_CID,PubChem_MW,PubChem_CanonicalSMILES,PubChem_InChIKey,PubChem_Ambiguous,PubChem_Candidate_CIDs,PubChem_Error
+CID_16078,EFSA CONTAM,2015,2664,Human health,study with volunteers,Human,oral: unspecified,84.0,dose level,=,2.5,mg/day,neurology,neurotoxicity,2.5,=,,True,16078,314.5,,CYQFCXCEBYINGO-IAGOWNOFSA-N,False,,

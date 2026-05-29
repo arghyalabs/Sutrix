@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Flurprimidol,EFSA,2011,1274,Ecotox (water compartment),chronic/long term toxicity,Bluegill,Not reported,28.0,NOEC,=,0.42,mg/L,body weight,,0.42,=,,True

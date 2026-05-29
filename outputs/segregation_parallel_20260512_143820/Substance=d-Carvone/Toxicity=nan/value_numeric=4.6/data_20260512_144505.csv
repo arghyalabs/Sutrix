@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+d-Carvone,EFSA,2018,3117,Ecotox (water compartment),acute toxicity,Common duckweed,Not reported,8.0,NOEC,=,4.6,mg/L,frond number,,4.6,=,,True

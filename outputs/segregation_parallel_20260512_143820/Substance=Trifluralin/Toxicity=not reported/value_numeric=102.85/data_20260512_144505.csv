@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Trifluralin,EFSA,2009,1188,Animal (non-target species) health,reproduction toxicity,Bobwhite quail,Not reported,,NOEC,=,102.85,mg/kg bw/day,not reported,not reported,102.85,=,,True

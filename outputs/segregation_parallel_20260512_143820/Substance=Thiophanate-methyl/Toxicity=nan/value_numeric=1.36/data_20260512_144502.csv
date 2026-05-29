@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Thiophanate-methyl,EFSA,2018,3025,Ecotox (soil compartment),chronic/long term toxicity,Tiger worm,Not reported,,EC10,=,1.36,mg/kg,growth,,1.36,=,,True

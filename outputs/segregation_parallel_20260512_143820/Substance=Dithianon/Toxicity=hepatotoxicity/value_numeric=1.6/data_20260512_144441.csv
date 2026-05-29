@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Dithianon,EFSA,2010,1266,Human health,chronic/long term toxicity,Dog,oral: unspecified,364.0,NOAEL,=,1.6,mg/kg bw/day,not reported,hepatotoxicity,1.6,=,,True

@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Hexachlorobenzene,EFSA CONTAM,2006,72,Animal (target species) health,subchronic,Pig,oral: feed,91.0,NOAEL,=,0.05,mg/kg bw/day,clinical chemistry,hepatotoxicity,0.05,=,,True

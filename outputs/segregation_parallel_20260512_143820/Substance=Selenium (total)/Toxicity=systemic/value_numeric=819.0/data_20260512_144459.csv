@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Selenium (total),EFSA FEEDAP,2016,2796,Human health,study with volunteers,Human,Not reported,,dose level,=,819.0,µg/day,clinical signs,systemic,819.0,=,,True

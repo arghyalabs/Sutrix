@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+5-Methylheptan-3-one,EFSA CEF,2017,2914,Human health,subchronic,Rat,oral: gavage,91.0,NOAEL,=,82.0,mg/kg bw/day,neurology,neurotoxicity,82.0,=,,True

@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+"O-methyl O-hydrogen O-(2,6-dichloro-4-methylphenyl) phosphorothioate",EFSA,2018,3024,Human health,chronic/long term toxicity,Mouse,Not reported,730.0,NOAEL,=,6.4,mg/kg bw/day,clinical chemistry,neurotoxicity,6.4,=,,True

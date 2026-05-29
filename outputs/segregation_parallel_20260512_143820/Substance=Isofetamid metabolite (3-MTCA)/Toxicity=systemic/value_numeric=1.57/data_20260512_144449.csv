@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Isofetamid metabolite (3-MTCA),EFSA,2015,2761,Human health,chronic/long term toxicity,Dog,Not reported,365.0,NOAEL,=,1.57,mg/kg bw/day,body weight,systemic,1.57,=,,True

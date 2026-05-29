@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+IN-QDY63 (Picoxystrobin metabolite),EFSA,2016,2842,Animal (non-target species) health,subchronic,Rat,oral: unspecified,90.0,NOAEL,=,4.8,mg/kg bw/day,not reported,not reported,4.8,=,,True

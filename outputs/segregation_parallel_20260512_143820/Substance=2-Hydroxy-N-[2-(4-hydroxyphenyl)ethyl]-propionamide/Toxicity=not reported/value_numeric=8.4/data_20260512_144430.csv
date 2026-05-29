@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+2-Hydroxy-N-[2-(4-hydroxyphenyl)ethyl]-propionamide,EFSA CEF,2010,2040,Human health,subchronic,Rat,oral: unspecified,90.0,NOAEL,=,8.4,mg/kg bw/day,not reported,not reported,8.4,=,,True

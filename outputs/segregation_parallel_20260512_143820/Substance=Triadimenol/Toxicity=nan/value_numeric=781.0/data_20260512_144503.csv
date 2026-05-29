@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Triadimenol,EFSA,2008,1143,Ecotox (soil compartment),acute toxicity,Tiger worm,Not reported,,LC50,=,781.0,mg/kg,mortality,,781.0,=,,True

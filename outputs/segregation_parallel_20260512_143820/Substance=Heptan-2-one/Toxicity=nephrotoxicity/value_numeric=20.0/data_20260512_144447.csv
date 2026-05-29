@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Heptan-2-one,EFSA FEEDAP,2015,2700,Animal (target species) health,subchronic,Rat,oral: gavage,91.0,NOAEL,=,20.0,mg/kg bw/day,organ weights,nephrotoxicity,20.0,=,,True

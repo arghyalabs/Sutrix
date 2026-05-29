@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+6-Methylcoumarin,EFSA CEF,2009,2031,Human health,subchronic,Rat,Not reported,91.0,NOEL,=,150.0,mg/kg bw/day,not reported,not reported,150.0,=,,True

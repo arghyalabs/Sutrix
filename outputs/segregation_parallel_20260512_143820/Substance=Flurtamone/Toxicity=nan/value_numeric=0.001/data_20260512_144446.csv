@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Flurtamone,EFSA,2017,2986,Ecotox (water compartment),chronic/long term toxicity,American waterweed (Pondweed) (live plants),Not reported,42.0,NOEC,=,0.001,mg/L,not reported,,0.001,=,,True

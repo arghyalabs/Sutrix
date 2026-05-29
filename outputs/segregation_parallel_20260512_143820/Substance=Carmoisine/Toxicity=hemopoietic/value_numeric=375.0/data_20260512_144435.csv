@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Carmoisine,EFSA FEEDAP,2012,150,Human health,chronic/long term toxicity,Mouse,Not reported,,NOAEL,=,375.0,mg/kg bw/day,haematology,hemopoietic,375.0,=,,True

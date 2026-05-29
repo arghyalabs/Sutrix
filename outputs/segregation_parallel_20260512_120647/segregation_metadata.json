@@ -1,0 +1,24 @@
+{
+  "session_id": "20260512_120647",
+  "timestamp": "2026-05-12T12:08:01.977451",
+  "hierarchy": [
+    "Substance",
+    "Author"
+  ],
+  "statistics": {
+    "input_records": 13354,
+    "input_columns": 19,
+    "hierarchy_levels": 2,
+    "hierarchy_variables": [
+      "Substance",
+      "Author"
+    ],
+    "output_folders": 2218,
+    "output_files": 0,
+    "leaf_nodes": 0,
+    "avg_records_per_file": 13354.0,
+    "min_records_per_file": 0,
+    "max_records_per_file": 0
+  },
+  "leaf_nodes": []
+}

@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Imazosulfuron,EFSA,2017,2927,Ecotox (soil compartment),acute toxicity,Honey bee,oral: unspecified,,LD50,>,41.6,µg/piece,mortality,,41.6,=,,True

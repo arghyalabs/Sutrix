@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Algae interspaced bentonite (PAIB) preparation,EFSA FEEDAP,2016,2879,Animal (target species) health,subchronic,Pig,oral: feed,42.0,dose level,=,10000.0,mg/kg,no adverse effect observed at single/highest dose,,10000.0,=,,True

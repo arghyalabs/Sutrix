@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+"4-(2,5,6,6-Tetramethyl-2-cyclohexenyl)-3-buten-2-one",EFSA FEEDAP,2016,2822,Ecotox (water compartment),acute toxicity,Daphnia magna,Not reported,,LC50,=,0.513,mg/L,mortality,,0.513,=,,True

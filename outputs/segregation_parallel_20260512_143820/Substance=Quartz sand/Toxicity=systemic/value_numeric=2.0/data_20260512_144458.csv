@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Quartz sand,EFSA,2011,1296,Animal (non-target species) health,acute toxicity,Rat,oral: unspecified,,LD50,>,2.0,g/kg bw,mortality,systemic,2.0,=,,True

@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready,PubChem_CID,PubChem_MW,PubChem_CanonicalSMILES,PubChem_InChIKey,PubChem_Ambiguous,PubChem_Candidate_CIDs,PubChem_Error
+CID_8369,EFSA FEEDAP,2016,2888,Animal (target species) health,chronic/long term toxicity,Rat,oral: feed,730.0,NOEL,=,100.0,mg/kg bw/day,not reported,not reported,100.0,=,,True,8369,126.11,,XPCTZQVDEJYUGT-UHFFFAOYSA-N,False,,

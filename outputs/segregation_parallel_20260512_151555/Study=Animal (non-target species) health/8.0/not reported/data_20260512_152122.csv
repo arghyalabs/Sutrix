@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready,PubChem_CID,PubChem_MW,PubChem_CanonicalSMILES,PubChem_InChIKey,PubChem_Ambiguous,PubChem_Candidate_CIDs,PubChem_Error
+CID_27982,EFSA,2009,1140,Animal (non-target species) health,short-term toxicity,Bobwhite quail,oral: feed,8.0,NOEL,>,530.0,mg/kg bw,not reported,not reported,530.0,=,,True,27982,144.49,,UDPGUMQDCGORJQ-UHFFFAOYSA-N,False,,

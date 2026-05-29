@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Lenacil,EFSA,2009,1195,Animal (non-target species) health,reproduction toxicity,Rat,Not reported,,NOEL,=,81.9,mg/kg bw/day,not reported,endocrine,81.9,=,,True

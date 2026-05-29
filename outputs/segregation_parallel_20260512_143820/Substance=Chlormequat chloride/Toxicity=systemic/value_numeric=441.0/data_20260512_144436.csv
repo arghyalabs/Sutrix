@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Chlormequat chloride,EFSA,2009,1145,Animal (non-target species) health,acute toxicity,Japanese quail,oral: unspecified,,LD50,=,441.0,mg/kg bw/day,mortality,systemic,441.0,=,,True

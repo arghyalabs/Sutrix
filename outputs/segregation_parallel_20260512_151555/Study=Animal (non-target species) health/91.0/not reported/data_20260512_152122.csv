@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready,PubChem_CID,PubChem_MW,PubChem_CanonicalSMILES,PubChem_InChIKey,PubChem_Ambiguous,PubChem_Candidate_CIDs,PubChem_Error
+CID_11723625,EFSA,2010,1214,Animal (non-target species) health,subchronic,Rat,Not reported,91.0,NOAEL,=,1000.0,mg/kg bw/day,not reported,not reported,1000.0,=,,True,11723625,322.17,,JSWPGCUMLYJXKD-UHFFFAOYSA-N,False,,

@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Sulfosulfuron,EFSA,2014,2544,Animal (non-target species) health,reproduction toxicity,Mallard duck,oral: feed,,NOEL,=,33.7,mg/kg bw/day,not reported,not reported,33.7,=,,True

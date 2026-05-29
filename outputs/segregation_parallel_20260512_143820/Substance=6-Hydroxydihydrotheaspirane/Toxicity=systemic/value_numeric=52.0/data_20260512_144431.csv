@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+6-Hydroxydihydrotheaspirane,EFSA CEF,2016,2737,Human health,subchronic,Rat,oral: feed,90.0,NOAEL,=,52.0,mg/kg bw/day,food efficiency,systemic,52.0,=,,True

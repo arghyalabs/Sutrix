@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Metaflumizone,EFSA,2013,2431,Ecotox (water compartment),chronic/long term toxicity,Sheepshead minnow,Not reported,41.0,NOEC,=,1.15,µg/L,mortality,,1.15,=,,True

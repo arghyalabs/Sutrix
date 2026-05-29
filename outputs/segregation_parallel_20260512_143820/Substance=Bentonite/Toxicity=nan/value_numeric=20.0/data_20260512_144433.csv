@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Bentonite,EFSA FEEDAP,2011,239,Human health,chronic/long term toxicity,Rat,Not reported,196.0,dose level,=,20.0,g/kg,no adverse effect observed,,20.0,=,,True

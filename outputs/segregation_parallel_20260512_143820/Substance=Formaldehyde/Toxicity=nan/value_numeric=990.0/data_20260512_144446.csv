@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Formaldehyde,EFSA FEEDAP,2004,291,Animal (target species) health,short-term toxicity,Chicken,oral: feed,28.0,dose level,=,990.0,mg/kg,no adverse effect observed,,990.0,=,,True

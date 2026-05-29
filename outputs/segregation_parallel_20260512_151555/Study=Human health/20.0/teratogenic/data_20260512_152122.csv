@@ -1,0 +1,3 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready,PubChem_CID,PubChem_MW,PubChem_CanonicalSMILES,PubChem_InChIKey,PubChem_Ambiguous,PubChem_Candidate_CIDs,PubChem_Error
+CID_7628,EFSA ANS,2013,2370,Human health,reproduction toxicity,Rat,Not reported,20.0,NOAEL,=,55.0,mg/kg bw/day,development,teratogenic,55.0,=,,True,7628,61.84,,KGBXLFKZBHKPEV-UHFFFAOYSA-N,False,,
+CID_10219853,EFSA ANS,2013,2370,Human health,reproduction toxicity,Rat,Not reported,20.0,NOAEL,=,55.0,mg/kg bw/day,development,teratogenic,55.0,=,,True,10219853,201.2,,UQGFMSUEHSUPRD-UHFFFAOYSA-N,False,,

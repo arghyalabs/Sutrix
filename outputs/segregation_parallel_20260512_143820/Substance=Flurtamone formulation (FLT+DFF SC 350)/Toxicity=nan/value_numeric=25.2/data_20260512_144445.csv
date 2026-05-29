@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Flurtamone formulation (FLT+DFF SC 350),EFSA,2016,2825,Ecotox (soil compartment),not reported,Sugar beet,Not reported,,ER50,=,25.2,ml/ha,other,,25.2,=,,True

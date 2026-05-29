@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Paraffin oil formulation (Para Sommer),EFSA,2009,1176,Ecotox (soil compartment),acute toxicity,Honey bee,oral: unspecified,,LD50,>,3813.655,µg/piece,mortality,,3813.655,=,,True

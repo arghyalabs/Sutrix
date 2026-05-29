@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready,PubChem_CID,PubChem_MW,PubChem_CanonicalSMILES,PubChem_InChIKey,PubChem_Ambiguous,PubChem_Candidate_CIDs,PubChem_Error
+CID_9576412,EFSA,2008,1163,Human health,acute toxicity,Dog,oral: unspecified,1.0,NOAEL,=,2.0,mg/kg bw/day,clinical signs,systemic,2.0,=,,True,9576412,421.5,,YYJNOYZRYGDPNH-MFKUBSTISA-N,False,,

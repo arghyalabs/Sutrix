@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Ametoctradin,EFSA,2012,1349,Ecotox (soil compartment),chronic/long term toxicity,Folsomia candida,Not reported,,NOEC,>=,268.0,mg/kg,not reported,,268.0,=,,True

@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Triclopyr-butoxyethyl ester,EFSA,2006,1067,Ecotox (soil compartment),chronic/long term toxicity,Earthworm,Not reported,,NOEC,=,9.6,mg/kg,not reported,,9.6,=,,True

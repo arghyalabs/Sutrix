@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+"1,1-Dichloro-2,2-bis(p-chlorophenyl) ethylene",EFSA CONTAM,2006,73,Animal (target species) health,reproduction toxicity,Mallard duck,Not reported,,LOAEL,=,0.6,mg/kg bw/day,development,developmental,0.6,=,,True

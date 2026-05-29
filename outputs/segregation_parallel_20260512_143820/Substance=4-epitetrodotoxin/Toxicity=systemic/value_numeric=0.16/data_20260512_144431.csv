@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+4-epitetrodotoxin,EFSA CONTAM,2017,2944,Human health,acute toxicity,Mouse,intraperitoneal,,RPF,=,0.16,dimensionless,mortality,systemic,0.16,=,,True

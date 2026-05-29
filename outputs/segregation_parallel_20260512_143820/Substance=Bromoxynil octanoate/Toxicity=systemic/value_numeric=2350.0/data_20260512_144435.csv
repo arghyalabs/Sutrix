@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Bromoxynil octanoate,EFSA,2017,2962,Animal (non-target species) health,acute toxicity,Mallard duck,oral: unspecified,,LD50,=,2350.0,mg/kg bw/day,mortality,systemic,2350.0,=,,True

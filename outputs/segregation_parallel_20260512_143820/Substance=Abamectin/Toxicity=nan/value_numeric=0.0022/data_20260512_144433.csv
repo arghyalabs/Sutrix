@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Abamectin,EFSA,2008,1129,Ecotox (soil compartment),acute toxicity,Honey bee,dermal,2.0,LD50,=,0.0022,µg/piece,mortality,,0.0022,=,,True

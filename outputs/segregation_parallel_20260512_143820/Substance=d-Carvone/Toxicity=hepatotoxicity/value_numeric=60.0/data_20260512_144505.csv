@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+d-Carvone,EFSA,2018,3117,Human health,subchronic,Rat,Not reported,90.0,BMDL10,=,60.0,mg/kg bw/day,organ weights,hepatotoxicity,60.0,=,,True

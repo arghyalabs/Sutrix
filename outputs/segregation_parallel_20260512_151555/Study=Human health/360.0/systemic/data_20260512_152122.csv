@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready,PubChem_CID,PubChem_MW,PubChem_CanonicalSMILES,PubChem_InChIKey,PubChem_Ambiguous,PubChem_Candidate_CIDs,PubChem_Error
+CID_9257,EFSA,2018,3113,Human health,chronic/long term toxicity,Rat,Not reported,360.0,NOAEL,=,6.9,mg/kg bw/day,body weight,systemic,6.9,=,,True,9257,69.07,,NSPMIYGKQJPBQR-UHFFFAOYSA-N,False,,

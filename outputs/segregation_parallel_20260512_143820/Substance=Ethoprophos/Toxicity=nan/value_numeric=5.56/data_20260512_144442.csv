@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Ethoprophos,EFSA,2006,1077,Ecotox (soil compartment),acute toxicity,Honey bee,dermal,,LD50,=,5.56,µg/piece,mortality,,5.56,=,,True

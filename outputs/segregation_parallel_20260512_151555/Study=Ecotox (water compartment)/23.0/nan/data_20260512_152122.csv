@@ -1,0 +1,7 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready,PubChem_CID,PubChem_MW,PubChem_CanonicalSMILES,PubChem_InChIKey,PubChem_Ambiguous,PubChem_Candidate_CIDs,PubChem_Error
+CID_9862076,EFSA,2016,2836,Ecotox (water compartment),chronic/long term toxicity,Harlequin fly,Not reported,23.0,NOEC,=,0.0117,mg/L,reproduction,,0.0117,=,,True,9862076,324.79,,YXKMMRDKEKCERS-UHFFFAOYSA-N,False,,
+CID_9862076,EFSA PPR,2020,3746,Ecotox (water compartment),chronic/long term toxicity,Harlequin fly,Not reported,23.0,NOEC,=,0.0117,mg/L,reproduction,,0.0117,=,,True,9862076,324.79,,YXKMMRDKEKCERS-UHFFFAOYSA-N,False,,
+CID_93539,EFSA,2016,2868,Ecotox (water compartment),chronic/long term toxicity,Harlequin fly,Not reported,23.0,NOEC,=,0.1,mg/L,not reported,,0.1,=,,True,93539,407.33,,HWATZEJQIXKWQS-UHFFFAOYSA-N,False,,
+CID_92425,EFSA,2014,2509,Ecotox (water compartment),chronic/long term toxicity,Harlequin fly,Not reported,23.0,NOEC,=,0.73,mg/kg,other,,0.73,=,,True,92425,354.3,,FOUWCSDKDDHKQP-UHFFFAOYSA-N,False,,
+CID_5430,EFSA,2014,2570,Ecotox (water compartment),chronic/long term toxicity,Harlequin fly,Not reported,23.0,NOEC,=,2.0,mg/L,reproduction,,2.0,=,,True,5430,201.25,,WJCNZQLZVWNLKY-UHFFFAOYSA-N,False,,
+CID_5430,EFSA,2014,2570,Ecotox (water compartment),chronic/long term toxicity,Harlequin fly,Not reported,23.0,NOEC,=,3.0,mg/kg,reproduction,,3.0,=,,True,5430,201.25,,WJCNZQLZVWNLKY-UHFFFAOYSA-N,False,,

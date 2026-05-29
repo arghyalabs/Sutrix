@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Fenamidone metabolite (RPA 412708),EFSA,2016,2776,Ecotox (soil compartment),chronic/long term toxicity,Tiger worm,Not reported,,NOEC,=,100.0,mg/kg,growth,,100.0,=,,True

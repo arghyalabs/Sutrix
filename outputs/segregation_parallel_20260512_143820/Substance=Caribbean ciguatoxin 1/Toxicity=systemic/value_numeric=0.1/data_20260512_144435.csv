@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Caribbean ciguatoxin 1,EFSA CONTAM,2010,133,Human health,acute toxicity,Mouse,intraperitoneal,,TEF,=,0.1,dimensionless,mortality,systemic,0.1,=,,True

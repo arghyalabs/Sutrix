@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+DL-Isobornyl acetate,EFSA FEEDAP,2016,2822,Animal (target species) health,subchronic,Rat,oral: gavage,91.0,NOAEL,=,15.0,mg/kg bw/day,organ weights,nephrotoxicity,15.0,=,,True

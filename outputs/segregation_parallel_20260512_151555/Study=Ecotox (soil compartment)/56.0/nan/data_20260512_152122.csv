@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready,PubChem_CID,PubChem_MW,PubChem_CanonicalSMILES,PubChem_InChIKey,PubChem_Ambiguous,PubChem_Candidate_CIDs,PubChem_Error
+"1,2-Benzisothiazol-3(2H)-one 1,1-dioxide sodium salt",EFSA FEEDAP,2018,3070,Ecotox (soil compartment),reproduction toxicity,Earthworm,Not reported,56.0,NOEC,=,100.0,mg/kg,mortality,,100.0,=,,True,,,,,False,,Not Found

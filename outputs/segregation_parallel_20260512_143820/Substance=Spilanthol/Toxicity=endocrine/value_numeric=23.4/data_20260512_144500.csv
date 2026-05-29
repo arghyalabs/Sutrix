@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Spilanthol,EFSA CEF,2015,2598,Human health,subchronic,Rat,oral: feed,90.0,NOAEL,=,23.4,mg/kg bw/day,histopathology non neoplastic,endocrine,23.4,=,,True

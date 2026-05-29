@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Acrinathrin,EFSA,2013,2434,Ecotox (water compartment),chronic/long term toxicity,Fathead minnow,Not reported,28.0,NOEC,=,1.1e-05,mg/L,not reported,,1.1e-05,=,,True

@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+bis-(2-Methyl-3-furyl) disulfide,EFSA CEF,2015,2620,Human health,subchronic,Rat,oral: feed,90.0,NOEL,=,0.45,mg/kg bw/day,not reported,not reported,0.45,=,,True

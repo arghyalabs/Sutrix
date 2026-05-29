@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Ipconazole,EFSA,2013,2216,Human health,chronic/long term toxicity,Dog,oral: unspecified,365.0,NOAEL,=,1.5,mg/kg bw/day,clinical signs,systemic,1.5,=,,True

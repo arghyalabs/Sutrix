@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Desmedipham,EFSA,2018,3028,Ecotox (soil compartment),acute toxicity,Aphidius rhopalosiphi,Not reported,,LR50,=,63.8,g/ha,mortality,,63.8,=,,True

@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Potassium iodide,EFSA FEEDAP,2013,2186,Animal (target species) health,not reported,Chicken,Not reported,,dose level,=,5.0,mg/kg,no adverse effect observed,,5.0,=,,True

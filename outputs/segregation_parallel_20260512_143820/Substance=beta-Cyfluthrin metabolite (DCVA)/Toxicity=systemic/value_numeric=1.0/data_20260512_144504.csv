@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+beta-Cyfluthrin metabolite (DCVA),EFSA,2018,3131,Human health,short-term toxicity,Rat,oral: unspecified,28.0,NOAEL,=,1.0,mg/kg bw/day,behaviour,systemic,1.0,=,,True

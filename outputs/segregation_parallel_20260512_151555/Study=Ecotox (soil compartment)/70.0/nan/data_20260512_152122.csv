@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready,PubChem_CID,PubChem_MW,PubChem_CanonicalSMILES,PubChem_InChIKey,PubChem_Ambiguous,PubChem_Candidate_CIDs,PubChem_Error
+CID_91773,EFSA,2010,1256,Ecotox (soil compartment),chronic/long term toxicity,Seven-spot ladybird,Not reported,70.0,ER50,>,128.0,g/ha,reproduction,,128.0,=,,True,91773,352.5,,QYPNKSZPJQQLRK-UHFFFAOYSA-N,False,,

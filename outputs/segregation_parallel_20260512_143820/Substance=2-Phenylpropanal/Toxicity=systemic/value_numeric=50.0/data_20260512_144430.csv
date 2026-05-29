@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+2-Phenylpropanal,EFSA FEEDAP,2017,2920,Animal (target species) health,chronic/long term toxicity,Rat,oral: gavage,105.0,NOAEL,=,50.0,mg/kg bw/day,organ weights,systemic,50.0,=,,True

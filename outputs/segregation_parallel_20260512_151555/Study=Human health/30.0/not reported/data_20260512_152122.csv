@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready,PubChem_CID,PubChem_MW,PubChem_CanonicalSMILES,PubChem_InChIKey,PubChem_Ambiguous,PubChem_Candidate_CIDs,PubChem_Error
+CID_92395,EFSA PPR,2012,775,Human health,short-term toxicity,Dog,Not reported,30.0,NOAEL,=,60.0,mg/kg bw/day,not reported,not reported,60.0,=,,True,92395,419.69,,DHAHEVIQIYRFRG-UHFFFAOYSA-N,False,,

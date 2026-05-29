@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Tolclofos-methyl metabolite (TMO-CH2OH),EFSA,2018,3024,Human health,short-term toxicity,Mouse,oral: unspecified,14.0,NOAEL,=,13.8,mg/kg bw/day,organ weights,systemic,13.8,=,,True

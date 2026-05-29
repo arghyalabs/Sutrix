@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Metconazole,EFSA,2006,1075,Ecotox (soil compartment),not reported,Sugar beet,Not reported,,NOEC,=,96.0,g/ha,seedling emergence,,96.0,=,,True

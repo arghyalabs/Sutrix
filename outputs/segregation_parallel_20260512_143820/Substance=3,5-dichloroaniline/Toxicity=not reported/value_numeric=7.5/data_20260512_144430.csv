@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+"3,5-dichloroaniline",EFSA,2016,2894,Human health,short-term toxicity,Rat,oral: gavage,28.0,NOAEL,=,7.5,mg/kg bw/day,not reported,not reported,7.5,=,,True

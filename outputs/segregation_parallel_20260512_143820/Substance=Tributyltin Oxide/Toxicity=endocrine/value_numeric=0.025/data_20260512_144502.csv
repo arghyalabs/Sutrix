@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Tributyltin Oxide,EFSA CONTAM,2004,63,Human health,chronic/long term toxicity,Rat,oral: feed,730.0,NOAEL,=,0.025,mg/kg bw/day,histopathology neoplastic,endocrine,0.025,=,,True

@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Ginger rhizome powder,EFSA,2020,3638,Human health,subchronic,Rat,oral: gavage,35.0,NOAEL,=,1000.0,mg/kg bw,organ weights,systemic,1000.0,=,,True

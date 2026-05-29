@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+"5-Amino-1,2-dihydro-2-isopropyl-4-(otolyl) pyrazol-3-one",EFSA,2012,1307,Animal (non-target species) health,acute toxicity,Rat,oral: unspecified,,LD50,>,500.0,mg/kg bw/day,mortality,systemic,500.0,=,,True

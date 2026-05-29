@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Ethofumesate,EFSA,2016,2756,Ecotox (water compartment),acute toxicity,Eastern oyster,Not reported,,EC50,=,1.7,mg/L,growth,,1.7,=,,True

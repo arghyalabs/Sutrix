@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Ciguatoxins,EFSA CONTAM,2010,133,Human health,study with volunteers,Human,oral: unspecified,,conc. Level,>=,0.1,µg/kg,clinical signs,systemic,0.1,=,,True

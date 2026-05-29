@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+"3,6-dichloropyridine-2-carboxylic acid",EFSA,2018,3116,Human health,reproduction toxicity,Rat,Not reported,,NOAEL,=,15.0,mg/kg bw/day,body weight,systemic,15.0,=,,True

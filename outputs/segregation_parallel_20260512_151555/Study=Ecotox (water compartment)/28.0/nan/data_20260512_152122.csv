@@ -1,0 +1,3 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready,PubChem_CID,PubChem_MW,PubChem_CanonicalSMILES,PubChem_InChIKey,PubChem_Ambiguous,PubChem_Candidate_CIDs,PubChem_Error
+CID_24014,EFSA,2018,3032,Ecotox (water compartment),chronic/long term toxicity,not reported,Not reported,28.0,NOEC,=,16.17,mg/kg,reproduction,,16.17,=,,True,24014,134.45,,ORTQZVOHEJQUHG-UHFFFAOYSA-L,False,,
+CID_92425,EFSA,2014,2509,Ecotox (water compartment),chronic/long term toxicity,not reported,Not reported,28.0,NOEC,=,150.0,µg/L,no adverse effect observed at single/highest dose,,150.0,=,,True,92425,354.3,,FOUWCSDKDDHKQP-UHFFFAOYSA-N,False,,

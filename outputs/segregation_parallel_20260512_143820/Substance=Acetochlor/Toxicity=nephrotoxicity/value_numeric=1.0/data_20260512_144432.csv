@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Acetochlor,EFSA,2008,1135,Human health,chronic/long term toxicity,Mouse,Not reported,546.0,LOAEL,=,1.0,mg/kg bw/day,organ weights,nephrotoxicity,1.0,=,,True

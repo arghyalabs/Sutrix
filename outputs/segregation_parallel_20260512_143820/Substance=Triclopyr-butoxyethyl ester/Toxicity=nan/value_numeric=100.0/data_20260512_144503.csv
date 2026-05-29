@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Triclopyr-butoxyethyl ester,EFSA,2006,1067,Ecotox (soil compartment),acute toxicity,Honey bee,dermal,,conc. Level,>,100.0,µg/piece,not reported,,100.0,=,,True

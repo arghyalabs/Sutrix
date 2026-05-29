@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Propyzamide,EFSA,2016,2844,Animal (non-target species) health,reproduction toxicity,Bobwhite quail,Not reported,154.0,NOEL,=,30.9,mg/kg bw/day,not reported,not reported,30.9,=,,True

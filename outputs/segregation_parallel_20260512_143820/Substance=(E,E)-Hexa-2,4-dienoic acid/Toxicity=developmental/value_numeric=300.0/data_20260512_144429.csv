@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+"(E,E)-Hexa-2,4-dienoic acid",EFSA ANS,2015,2667,Human health,reproduction toxicity,Rat,oral: gavage,,NOAEL,=,300.0,mg/kg bw/day,body weight,developmental,300.0,=,,True

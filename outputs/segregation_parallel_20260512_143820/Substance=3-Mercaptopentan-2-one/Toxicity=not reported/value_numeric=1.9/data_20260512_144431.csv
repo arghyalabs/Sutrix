@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+3-Mercaptopentan-2-one,EFSA CEF,2010,2042,Human health,subchronic,Rat,Not reported,90.0,NOEL,=,1.9,mg/kg bw/day,not reported,not reported,1.9,=,,True

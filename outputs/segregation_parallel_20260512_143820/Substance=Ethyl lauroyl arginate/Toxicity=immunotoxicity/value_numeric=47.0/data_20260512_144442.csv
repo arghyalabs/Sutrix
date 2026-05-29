@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Ethyl lauroyl arginate,EFSA FAF,2019,3220,Human health,subchronic,Rat,oral: unspecified,91.0,NOAEL,=,47.0,mg/kg bw/day,clinical chemistry,immunotoxicity,47.0,=,,True

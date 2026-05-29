@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Thifensulfuron-methyl,EFSA,2015,2680,Ecotox (water compartment),chronic/long term toxicity,Wild celery (water celery) (live plants),Not reported,14.0,EC50,=,0.00023,mg/L,development,,0.00023,=,,True

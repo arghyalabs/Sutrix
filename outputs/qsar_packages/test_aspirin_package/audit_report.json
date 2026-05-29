@@ -1,0 +1,23 @@
+{
+    "timestamp": "2026-05-18T15:25:17.466251",
+    "enrichment_statistics": {
+        "initial_dataset_rows": 1,
+        "final_qsar_rows": 1,
+        "overall_enrichment_retention_pct": 100.0
+    },
+    "preprocessing_log": [
+        "Merged datasets on InChIKey.",
+        "Dropped 0 rows due to broken alignment or missing descriptors.",
+        "Validated 2 mathematical descriptors."
+    ],
+    "descriptor_completeness": {
+        "Molecular_Weight": {
+            "missing": 0,
+            "completeness_pct": 100.0
+        },
+        "XLogP": {
+            "missing": 0,
+            "completeness_pct": 100.0
+        }
+    }
+}

@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Sintofen (aka cintofen),EFSA,2010,1270,Ecotox (soil compartment),acute toxicity,Typhlodromus pyri,Not reported,7.0,LR50,=,1460.0,g/ha,mortality,,1460.0,=,,True

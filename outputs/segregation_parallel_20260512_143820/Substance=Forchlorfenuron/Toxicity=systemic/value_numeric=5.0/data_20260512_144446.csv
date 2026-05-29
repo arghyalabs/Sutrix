@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Forchlorfenuron,EFSA,2017,2966,Animal (non-target species) health,chronic/long term toxicity,Mouse,Not reported,720.0,NOAEL,=,5.0,mg/kg bw/day,histopathology neoplastic,systemic,5.0,=,,True

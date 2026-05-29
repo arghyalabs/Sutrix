@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+"Fumonisins (B1, B2, B3)",EFSA CONTAM,2018,3097,Animal (target species) health,short-term toxicity,Horse,intraveneous,28.0,NOAEL,=,8.8,mg/kg,neurology,nephrotoxicity,8.8,=,,True

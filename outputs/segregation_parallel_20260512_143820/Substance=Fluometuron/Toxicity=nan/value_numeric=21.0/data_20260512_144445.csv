@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Fluometuron,EFSA,2011,1272,Ecotox (soil compartment),not reported,Wild cabbage,Not reported,,ER50,=,21.0,g/ha,other,,21.0,=,,True

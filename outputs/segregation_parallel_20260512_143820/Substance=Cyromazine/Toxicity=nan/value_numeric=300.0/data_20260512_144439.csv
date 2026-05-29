@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Cyromazine,EFSA,2008,1137,Ecotox (soil compartment),acute toxicity,Lettuce,Not reported,21.0,ER50,>,300.0,g/ha,seedling emergence,,300.0,=,,True

@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Silthiofam,EFSA,2016,2867,Ecotox (soil compartment),not reported,Typhlodromus pyri,Not reported,,LR50,>,40.0,g/ha,no adverse effect observed,,40.0,=,,True

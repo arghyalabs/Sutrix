@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Ethyl 3-(2-furfurylthio)propionate,EFSA CEF,2015,2620,Human health,subchronic,Rat,Not reported,90.0,NOEL,=,17.0,mg/kg bw/day,not reported,not reported,17.0,=,,True

@@ -1,0 +1,53 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+.venv/
+.env
+*.egg-info/
+dist/
+build/
+
+# Backend Sensitive & Data
+*.db
+*.sqlite
+*.sqlite3
+exports/
+uploads/
+temp/
+logs/
+cache/
+*.parquet
+*.joblib
+*.pkl
+*.feather
+*.h5
+*.onnx
+
+# Frontend Sensitive
+node_modules/
+.vite/
+.env.local
+.env.production
+coverage/
+
+# System & IDE
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+*.swo
+*.log
+
+# Streamlit
+.streamlit/secrets.toml
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/

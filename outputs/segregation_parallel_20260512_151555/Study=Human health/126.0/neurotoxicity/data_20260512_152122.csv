@@ -1,0 +1,4 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready,PubChem_CID,PubChem_MW,PubChem_CanonicalSMILES,PubChem_InChIKey,PubChem_Ambiguous,PubChem_Candidate_CIDs,PubChem_Error
+"(8,9-Z)-isomer of avermectin B1a",EFSA,2016,2831,Human health,chronic/long term toxicity,Dog,oral: unspecified,126.0,NOAEL,=,0.25,mg/kg bw/day,clinical signs,neurotoxicity,0.25,=,,True,,,,,False,,Not Found
+CID_9920327,EFSA,2008,1129,Human health,chronic/long term toxicity,Dog,oral: unspecified,126.0,NOAEL,=,0.25,mg/kg bw/day,clinical signs,neurotoxicity,0.25,=,,True,9920327,1732.1,,IBSREHMXUMOFBB-JFUDTMANSA-N,False,,
+CID_9920327,EFSA,2016,2831,Human health,chronic/long term toxicity,Dog,oral: unspecified,126.0,NOAEL,=,0.25,mg/kg bw/day,clinical signs,neurotoxicity,0.25,=,,True,9920327,1732.1,,IBSREHMXUMOFBB-JFUDTMANSA-N,False,,

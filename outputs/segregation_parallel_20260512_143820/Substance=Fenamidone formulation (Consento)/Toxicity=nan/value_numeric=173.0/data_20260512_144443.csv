@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Fenamidone formulation (Consento),EFSA,2016,2776,Ecotox (soil compartment),chronic/long term toxicity,Aphidius rhopalosiphi,Not reported,14.0,ER50,=,173.0,ml/ha,not reported,,173.0,=,,True

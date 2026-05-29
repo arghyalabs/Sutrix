@@ -1,0 +1,2509 @@
+
+Plan Created
+
+Scientific Data Orchestrator - Complete Architectural Design
+Project Overview
+This platform will automate the curation, validation, and hierarchical segregation of scientific datasets for AI/ML-ready research applications. The system is designed for academic researchers in toxicology, proteomics, and environmental chemistry domains.
+
+1. PROJECT STRUCTURE & ARCHITECTURE
+
+scientific-data-orchestrator/
+│
+├── app/                          # Streamlit web application
+│   ├── __init__.py
+│   ├── main.py                   # Main Streamlit entry point
+│   ├── pages/                    # Multi-page Streamlit app
+│   │   ├── 01_Upload.py
+│   │   ├── 02_Template_Selection.py
+│   │   ├── 03_Variable_Mapping.py
+│   │   ├── 04_Hierarchy_Builder.py
+│   │   ├── 05_Segregation_Engine.py
+│   │   ├── 06_Audit_Dashboard.py
+│   │   └── 07_Download.py
+│   └── components/               # Reusable UI components
+│       ├── __init__.py
+│       ├── file_uploader.py
+│       ├── column_mapper.py
+│       ├── hierarchy_builder.py
+│       └── download_manager.py
+│
+├── templates/                    # Scientific domain templates
+│   ├── __init__.py
+│   ├── base_template.py          # Base template class
+│   ├── toxicology_template.json
+│   ├── proteomics_template.json
+│   ├── environmental_template.json
+│   └── template_manager.py       # Template loading/validation
+│
+├── segregation/                  # Core segregation engine
+│   ├── __init__.py
+│   ├── engine.py                 # Main segregation logic
+│   ├── hierarchy_builder.py      # Dynamic hierarchy construction
+│   ├── folder_generator.py       # Recursive folder creation
+│   ├── splitter.py               # Dataset splitting logic
+│   └── exporters.py              # Export to Excel/CSV
+│
+├── validation/                   # Scientific validation layer
+│   ├── __init__.py
+│   ├── chemical_validator.py     # CAS/InChI/SMILES validation
+│   ├── species_validator.py      # Taxonomy validation
+│   ├── endpoint_validator.py     # Endpoint consistency
+│   ├── unit_validator.py         # Unit normalization
+│   └── duplicate_detector.py     # Duplicate identification
+│
+├── audit/                        # Audit and reporting system
+│   ├── __init__.py
+│   ├── auditor.py                # Main audit engine
+│   ├── quality_scorer.py         # Data quality metrics
+│   ├── report_generator.py       # PDF/Excel report generation
+│   └── index_generator.py        # Master index creation
+│
+├── api_plugins/                  # External API integrations
+│   ├── __init__.py
+│   ├── base_plugin.py            # Plugin base class
+│   ├── pubchem_plugin.py         # PubChem API integration
+│   ├── chembl_plugin.py          # ChEMBL API integration
+│   ├── uniprot_plugin.py         # UniProt API integration
+│   └── plugin_manager.py         # Plugin orchestration
+│
+├── uploads/                      # Uploaded file storage (gitignored)
+│   └── .gitkeep
+│
+├── outputs/                      # Generated output files (gitignored)
+│   └── .gitkeep
+│
+├── tests/                        # Test suite
+│   ├── __init__.py
+│   ├── conftest.py               # Pytest configuration
+│   ├── test_ingestion.py
+│   ├── test_mapping.py
+│   ├── test_segregation.py
+│   ├── test_validation.py
+│   └── test_audit.py
+│
+├── docs/                         # Documentation
+│   ├── api_reference.md
+│   ├── user_guide.md
+│   ├── deployment.md
+│   └── thesis_positioning.md
+│
+├── utils/                        # Utility modules
+│   ├── __init__.py
+│   ├── file_handler.py           # File I/O operations
+│   ├── encoding_detector.py      # Encoding detection
+│   ├── synonym_mapper.py         # Scientific synonym handling
+│   ├── unit_converter.py         # Unit normalization
+│   ├── logger.py                 # Logging configuration
+│   └── config.py                 # Configuration management
+│
+├── requirements.txt              # Python dependencies
+├── setup.py                      # Package setup
+├── .gitignore                    # Git ignore rules
+├── .streamlit/                   # Streamlit configuration
+│   └── config.toml
+└── README.md                     # Project documentation
+Folder Purposes & Best Practices
+Folder	Purpose	Best Practices
+app/	Streamlit UI components and pages	Keep UI logic separate from business logic
+templates/	Domain-specific configuration templates	Use JSON for human-readable configs
+segregation/	Core hierarchical segregation engine	Implement recursive algorithms with memoization
+validation/	Scientific identifier validation	Use external APIs for validation when possible
+audit/	Quality scoring and report generation	Generate both human-readable and machine-readable reports
+api_plugins/	External API integrations	Implement plugin architecture with base class
+uploads/	Temporary file storage	Add to .gitignore, implement cleanup routine
+outputs/	Generated results	Organize by session ID for traceability
+tests/	Unit and integration tests	Use pytest fixtures for test data
+docs/	Project documentation	Keep documentation close to code
+utils/	Shared utility functions	Follow single-responsibility principle
+2. PHASE 1 — FILE INGESTION SYSTEM
+Architecture Design
+
+# utils/file_handler.py
+from pathlib import Path
+from typing import Dict, List, Optional, Tuple
+import pandas as pd
+import chardet
+from dataclasses import dataclass
+
+@dataclass
+class IngestionResult:
+    """Result of file ingestion operation."""
+    success: bool
+    file_path: str
+    sheet_names: List[str]
+    dataframes: Dict[str, pd.DataFrame]
+    encoding: str
+    errors: List[str]
+    metadata: dict
+
+class FileIngestionEngine:
+    """Handles CSV and XLSX file ingestion with robust error handling."""
+    
+    SUPPORTED_EXTENSIONS = {'.csv', '.xlsx', '.xlsm', '.xls'}
+    MAX_FILE_SIZE_MB = 100
+    
+    def __init__(self, upload_dir: str = "uploads"):
+        self.upload_dir = Path(upload_dir)
+        self.upload_dir.mkdir(parents=True, exist_ok=True)
+    
+    def detect_encoding(self, file_path: str) -> str:
+        """Detect file encoding using chardet."""
+        with open(file_path, 'rb') as f:
+            raw_data = f.read(10000)
+            result = chardet.detect(raw_data)
+            return result.get('encoding', 'utf-8')
+    
+    def validate_file(self, file_path: str) -> Tuple[bool, List[str]]:
+        """Validate file structure and return errors."""
+        errors = []
+        path = Path(file_path)
+        
+        # Check extension
+        if path.suffix.lower() not in self.SUPPORTED_EXTENSIONS:
+            errors.append(f"Unsupported file type: {path.suffix}")
+        
+        # Check file size
+        size_mb = path.stat().st_size / (1024 * 1024)
+        if size_mb > self.MAX_FILE_SIZE_MB:
+            errors.append(f"File too large: {size_mb:.1f}MB (max: {self.MAX_FILE_SIZE_MB}MB)")
+        
+        # Check if file is readable
+        try:
+            if path.suffix.lower() == '.csv':
+                encoding = self.detect_encoding(file_path)
+                pd.read_csv(file_path, encoding=encoding, nrows=1)
+            else:
+                pd.read_excel(file_path, nrows=1)
+        except Exception as e:
+            errors.append(f"Cannot read file: {str(e)}")
+        
+        return len(errors) == 0, errors
+    
+    def ingest_csv(self, file_path: str, **kwargs) -> Dict[str, pd.DataFrame]:
+        """Ingest CSV file with encoding detection."""
+        encoding = kwargs.get('encoding') or self.detect_encoding(file_path)
+        
+        # Default parameters for large file handling
+        default_kwargs = {
+            'encoding': encoding,
+            'low_memory': False,
+            'dtype_backend': 'numpy_nullable',
+        }
+        default_kwargs.update(kwargs)
+        
+        df = pd.read_csv(file_path, **default_kwargs)
+        return {'Sheet1': df}
+    
+    def ingest_excel(self, file_path: str, **kwargs) -> Dict[str, pd.DataFrame]:
+        """Ingest Excel file with multiple sheet support."""
+        xl = pd.ExcelFile(file_path)
+        dataframes = {}
+        
+        for sheet_name in xl.sheet_names:
+            df = pd.read_excel(xl, sheet_name=sheet_name, **kwargs)
+            dataframes[sheet_name] = df
+        
+        return dataframes
+    
+    def ingest(self, file_path: str, **kwargs) -> IngestionResult:
+        """Main ingestion method."""
+        errors = []
+        path = Path(file_path)
+        
+        # Validate file
+        is_valid, validation_errors = self.validate_file(file_path)
+        if not is_valid:
+            return IngestionResult(
+                success=False,
+                file_path=file_path,
+                sheet_names=[],
+                dataframes={},
+                encoding='',
+                errors=validation_errors,
+                metadata={}
+            )
+        
+        try:
+            if path.suffix.lower() == '.csv':
+                dataframes = self.ingest_csv(file_path, **kwargs)
+            else:
+                dataframes = self.ingest_excel(file_path, **kwargs)
+            
+            return IngestionResult(
+                success=True,
+                file_path=file_path,
+                sheet_names=list(dataframes.keys()),
+                dataframes=dataframes,
+                encoding=self.detect_encoding(file_path),
+                errors=[],
+                metadata={
+                    'total_rows': sum(df.shape[0] for df in dataframes.values()),
+                    'total_cols': sum(df.shape[1] for df in dataframes.values()),
+                    'file_size_bytes': path.stat().st_size
+                }
+            )
+        except Exception as e:
+            errors.append(f"Ingestion failed: {str(e)}")
+            return IngestionResult(
+                success=False,
+                file_path=file_path,
+                sheet_names=[],
+                dataframes={},
+                encoding='',
+                errors=errors,
+                metadata={}
+            )
+Recommended Python Modules
+pandas: Data manipulation and Excel/CSV reading
+openpyxl: Excel file handling
+chardet: Encoding detection
+pathlib: Cross-platform path handling
+Error Handling Strategy
+Pre-validation: Check file type, size, and readability before processing
+Graceful degradation: Return partial results when possible
+Detailed error messages: Include file path, line numbers, and suggestions
+Logging: Log all errors for debugging
+Best Practices for Large Files
+Use chunksize parameter for CSV files > 10MB
+Implement progress callbacks for user feedback
+Use dtype specification to reduce memory usage
+Consider using pyarrow backend for better performance
+3. PHASE 2 — SCIENTIFIC VARIABLE MAPPING
+Column Mapping Architecture
+
+# utils/synonym_mapper.py
+from typing import Dict, List, Optional, Set
+from dataclasses import dataclass, field
+import re
+
+@dataclass
+class ColumnMapping:
+    """Represents a mapping between user column and scientific variable."""
+    user_column: str
+    scientific_variable: str
+    confidence: float
+    method: str  # 'exact', 'fuzzy', 'synonym', 'manual'
+
+class ScientificSynonymMapper:
+    """Handles scientific column name recognition and mapping."""
+    
+    # Comprehensive synonym dictionaries
+    SPECIES_SYNONYMS = {
+        'species': ['species', 'animal', 'test_species', 'test animal', 
+                    'organism', 'subject', 'test_subject', 'experimental_species',
+                    'sp.', 'strain', 'breed'],
+        'rat': ['rat', 'rattus', 'rattus norvegicus', 'wistar', 'sprague-dawley',
+               'sd rat', 'wistar rat', 'long-evans'],
+        'mouse': ['mouse', 'mus', 'mus musculus', 'c57bl/6', 'balb/c', 
+                 'cd-1', 'swiss webster', 'nmri'],
+        'human': ['human', 'homo sapiens', 'people', 'patient', 'subject',
+                 'volunteer', 'participant'],
+        'dog': ['dog', 'canis', 'canis familiaris', 'beagle', 'labrador'],
+        'rabbit': ['rabbit', 'oryctolagus', 'oryctolagus cuniculus', 'new zealand white'],
+        'fish': ['fish', 'zebrafish', 'danio rerio', 'fathead minnow', 
+                'oncorhynchus mykiss', 'rainbow trout']
+    }
+    
+    ENDPOINT_SYNONYMS = {
+        'endpoint': ['endpoint', 'effect_type', 'toxicological_endpoint',
+                    'effect', 'outcome', 'response', 'parameter', 'measurement',
+                    'assay_endpoint', 'toxicity_endpoint'],
+        'ld50': ['ld50', 'lethal dose 50', 'median lethal dose', 'ld_50',
+                'ld₅₀', 'acute toxicity'],
+        'lc50': ['lc50', 'lethal concentration 50', 'median lethal concentration',
+                'lc_50', 'lc₅₀'],
+        'noael': ['noael', 'no observed adverse effect level', 'noael',
+                 'noael_value', 'no-observed-adverse-effect-level'],
+        'loael': ['loael', 'lowest observed adverse effect level', 'loael',
+                 'loael_value', 'lowest-observed-adverse-effect-level'],
+        'duration': ['duration', 'exposure_duration', 'treatment_duration',
+                    'time', 'exposure_time', 'study_duration', 'days',
+                    'exposure_period']
+    }
+    
+    CHEMICAL_IDENTIFIER_SYNONYMS = {
+        'chemical_id': ['chemical_id', 'compound_id', 'substance_id',
+                       'chemical', 'compound', 'substance', 'test_article',
+                       'test substance', 'chemical_name'],
+        'cas_number': ['cas', 'cas_number', 'casrn', 'cas registry',
+                      'cas no', 'cas#', 'cas.'],
+        'smiles': ['smiles', 'smiles_string', 'iso_smiles', 'canonical_smiles'],
+        'inchi': ['inchi', 'inchI', 'iupac_inchi'],
+        'inchi_key': ['inchi_key', 'inchI_key', 'inchikey']
+    }
+    
+    QUALIFIER_SYNONYMS = {
+        'qualifier': ['qualifier', 'operator', 'relation', 'comparison',
+                     'inequality', 'ineq'],
+        '=': ['=', 'equals', 'equal to', 'eq', 'exactly'],
+        '>': ['>', 'greater than', 'gt', 'above', 'more than'],
+        '<': ['<', 'less than', 'lt', 'below', 'less than'],
+        '>=': ['>=', 'greater than or equal', 'gte', 'at least', 'minimum'],
+        '<=': ['<=', 'less than or equal', 'lte', 'at most', 'maximum']
+    }
+    
+    TOXICITY_CATEGORY_SYNONYMS = {
+        'toxicity_category': ['toxicity_category', 'toxicity_type', 'category',
+                             'toxicity_class', 'effect_category', 'organ_system'],
+        'hepatotoxicity': ['hepatotoxicity', 'liver toxicity', 'hepatic',
+                          'liver damage', 'hepatocellular'],
+        'nephrotoxicity': ['nephrotoxicity', 'kidney toxicity', 'renal',
+                          'kidney damage', 'nephropathy'],
+        'neurotoxicity': ['neurotoxicity', 'neurological toxicity', 'neural',
+                         'nervous system', 'neurobehavioral'],
+        'reproductive_toxicity': ['reproductive_toxicity', 'reproductive toxicity',
+                                 'reprotoxic', 'developmental toxicity',
+                                 'teratogenicity', 'fertility']
+    }
+    
+    def __init__(self):
+        self._build_synonym_index()
+    
+    def _build_synonym_index(self) -> None:
+        """Build reverse index for fast synonym lookup."""
+        self._synonym_to_variable = {}
+        
+        all_synonyms = [
+            self.SPECIES_SYNONYMS,
+            self.ENDPOINT_SYNONYMS,
+            self.CHEMICAL_IDENTIFIER_SYNONYMS,
+            self.QUALIFIER_SYNONYMS,
+            self.TOXICITY_CATEGORY_SYNONYMS
+        ]
+        
+        for synonym_dict in all_synonyms:
+            for variable, synonyms in synonym_dict.items():
+                for synonym in synonyms:
+                    self._synonym_to_variable[synonym.lower()] = variable
+    
+    def normalize_column_name(self, column_name: str) -> str:
+        """Normalize column name by removing special characters and lowercasing."""
+        normalized = column_name.strip().lower()
+        normalized = re.sub(r'[\s\-_]+', '_', normalized)
+        normalized = re.sub(r'[^a-z0-9_]', '', normalized)
+        return normalized
+    
+    def suggest_mapping(self, column_name: str) -> List[ColumnMapping]:
+        """Suggest scientific variable mappings for a column."""
+        normalized = self.normalize_column_name(column_name)
+        suggestions = []
+        
+        # Exact match
+        if normalized in self._synonym_to_variable:
+            suggestions.append(ColumnMapping(
+                user_column=column_name,
+                scientific_variable=self._synonym_to_variable[normalized],
+                confidence=1.0,
+                method='exact'
+            ))
+        
+        # Check all synonyms for partial matches
+        for synonym, variable in self._synonym_to_variable.items():
+            if normalized in synonym or synonym in normalized:
+                if not any(s.scientific_variable == variable for s in suggestions):
+                    suggestions.append(ColumnMapping(
+                        user_column=column_name,
+                        scientific_variable=variable,
+                        confidence=0.8,
+                        method='fuzzy'
+                    ))
+        
+        return suggestions
+    
+    def get_all_scientific_variables(self) -> Dict[str, List[str]]:
+        """Get all available scientific variables and their synonyms."""
+        return {
+            'species': self.SPECIES_SYNONYMS,
+            'endpoints': self.ENDPOINT_SYNONYMS,
+            'chemical_identifiers': self.CHEMICAL_IDENTIFIER_SYNONYMS,
+            'qualifiers': self.QUALIFIER_SYNONYMS,
+            'toxicity_categories': self.TOXICITY_CATEGORY_SYNONYMS
+        }
+JSON Schema for Variable Mapping
+
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Scientific Variable Mapping",
+  "description": "Schema for mapping user columns to scientific variables",
+  "type": "object",
+  "properties": {
+    "dataset_id": {
+      "type": "string",
+      "description": "Unique identifier for the dataset"
+    },
+    "mappings": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "user_column": {
+            "type": "string",
+            "description": "Original column name from uploaded file"
+          },
+          "scientific_variable": {
+            "type": "string",
+            "enum": ["chemical_id", "cas_number", "smiles", "inchi", "inchi_key",
+                    "species", "endpoint", "duration", "value", "unit",
+                    "qualifier", "toxicity_category", "study_type", "route",
+                    "sex", "strain", "age", "weight"],
+            "description": "Standardized scientific variable name"
+          },
+          "confidence": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 1,
+            "description": "Confidence score of the mapping"
+          },
+          "method": {
+            "type": "string",
+            "enum": ["exact", "fuzzy", "synonym", "manual"],
+            "description": "Method used to determine the mapping"
+          }
+        },
+        "required": ["user_column", "scientific_variable"]
+      }
+    },
+    "created_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "version": {
+      "type": "string",
+      "default": "1.0"
+    }
+  },
+  "required": ["dataset_id", "mappings"]
+}
+Mapping Persistence Strategy
+
+# utils/config.py
+import json
+from pathlib import Path
+from typing import Dict, List, Optional
+from datetime import datetime
+
+class MappingPersistence:
+    """Handles persistence of column mappings."""
+    
+    def __init__(self, storage_dir: str = "outputs/mappings"):
+        self.storage_dir = Path(storage_dir)
+        self.storage_dir.mkdir(parents=True, exist_ok=True)
+    
+    def save_mapping(self, dataset_id: str, mappings: List[dict]) -> str:
+        """Save column mappings to JSON file."""
+        mapping_doc = {
+            "dataset_id": dataset_id,
+            "mappings": mappings,
+            "created_at": datetime.now().isoformat(),
+            "version": "1.0"
+        }
+        
+        file_path = self.storage_dir / f"{dataset_id}_mapping.json"
+        with open(file_path, 'w') as f:
+            json.dump(mapping_doc, f, indent=2)
+        
+        return str(file_path)
+    
+    def load_mapping(self, dataset_id: str) -> Optional[dict]:
+        """Load column mappings from JSON file."""
+        file_path = self.storage_dir / f"{dataset_id}_mapping.json"
+        if file_path.exists():
+            with open(file_path, 'r') as f:
+                return json.load(f)
+        return None
+    
+    def export_mapping_template(self, output_path: str) -> None:
+        """Export a template for manual mapping."""
+        template = {
+            "dataset_id": "your_dataset_id",
+            "mappings": [
+                {
+                    "user_column": "Column_A_From_Excel",
+                    "scientific_variable": "chemical_id",
+                    "confidence": 1.0,
+                    "method": "manual"
+                }
+            ],
+            "available_variables": [
+                "chemical_id", "cas_number", "smiles", "species", 
+                "endpoint", "duration", "value", "unit", "qualifier"
+            ]
+        }
+        
+        with open(output_path, 'w') as f:
+            json.dump(template, f, indent=2)
+4. PHASE 3 — SCIENTIFIC DOMAIN TEMPLATE SYSTEM
+JSON Template Architecture
+
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Scientific Domain Template",
+  "type": "object",
+  "properties": {
+    "template_id": {
+      "type": "string",
+      "pattern": "^[a-z_]+$"
+    },
+    "name": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "version": {
+      "type": "string",
+      "pattern": "^\\d+\\.\\d+\\.\\d+$"
+    },
+    "required_variables": {
+      "type": "array",
+      "items": {"type": "string"}
+    },
+    "optional_variables": {
+      "type": "array",
+      "items": {"type": "string"}
+    },
+    "default_hierarchy": {
+      "type": "array",
+      "items": {"type": "string"}
+    },
+    "validation_rules": {
+      "type": "object"
+    },
+    "metadata_standards": {
+      "type": "object"
+    }
+  },
+  "required": ["template_id", "name", "required_variables", "default_hierarchy"]
+}
+Toxicology Template Example
+
+{
+  "template_id": "toxicology",
+  "name": "Toxicology/Pharmacology",
+  "description": "Template for toxicology and pharmacology datasets including acute, subchronic, and chronic studies",
+  "version": "1.0.0",
+  "required_variables": [
+    "chemical_id",
+    "species",
+    "endpoint",
+    "value",
+    "unit"
+  ],
+  "optional_variables": [
+    "cas_number",
+    "smiles",
+    "inchi",
+    "inchi_key",
+    "duration",
+    "qualifier",
+    "toxicity_category",
+    "study_type",
+    "route",
+    "sex",
+    "strain",
+    "age",
+    "weight",
+    "dose",
+    "frequency"
+  ],
+  "default_hierarchy": ["endpoint", "species", "duration"],
+  "validation_rules": {
+    "chemical_id": {
+      "type": "string",
+      "min_length": 1,
+      "description": "Chemical identifier (name, CAS, or InChI)"
+    },
+    "species": {
+      "type": "categorical",
+      "allowed_values": ["rat", "mouse", "human", "dog", "rabbit", "fish"],
+      "description": "Test species"
+    },
+    "endpoint": {
+      "type": "categorical",
+      "allowed_values": ["ld50", "lc50", "noael", "loael", "aed", "ted"],
+      "description": "Toxicological endpoint"
+    },
+    "value": {
+      "type": "numeric",
+      "min_value": 0,
+      "description": "Numeric value of the measurement"
+    },
+    "unit": {
+      "type": "categorical",
+      "allowed_values": ["mg/kg", "mg/kg/day", "ppm", "ppb", "ug/L", "mg/L", "g/L", "mol/L"],
+      "description": "Unit of measurement"
+    },
+    "duration": {
+      "type": "numeric",
+      "min_value": 0,
+      "description": "Duration of exposure in days"
+    }
+  },
+  "metadata_standards": {
+    "chemical_identification": "Prefer CAS number or InChI Key for unambiguous identification",
+    "species_nomenclature": "Use common name with optional scientific name in parentheses",
+    "unit_standardization": "Convert all units to standard SI-derived units",
+    "endpoint_classification": "Use standardized endpoint abbreviations (LD50, NOAEL, etc.)"
+  },
+  "quality_thresholds": {
+    "min_records_per_chemical": 3,
+    "max_missing_value_pct": 20,
+    "required_identifier_fields": ["chemical_id"]
+  }
+}
+Proteomics Template Example
+
+{
+  "template_id": "proteomics",
+  "name": "Proteomics/Biochemistry",
+  "description": "Template for proteomics and biochemistry datasets including protein expression and binding data",
+  "version": "1.0.0",
+  "required_variables": [
+    "protein_id",
+    "organism",
+    "measurement_type",
+    "value",
+    "unit"
+  ],
+  "optional_variables": [
+    "gene_name",
+    "uniprot_id",
+    "sequence",
+    "molecular_weight",
+    "isoform",
+    "post_translational_modification",
+    "tissue",
+    "cell_type",
+    "condition",
+    "replicate",
+    "p_value",
+    "fold_change"
+  ],
+  "default_hierarchy": ["measurement_type", "organism", "tissue"],
+  "validation_rules": {
+    "protein_id": {
+      "type": "string",
+      "pattern": "^[A-Z0-9_-]+$",
+      "description": "Protein identifier"
+    },
+    "organism": {
+      "type": "categorical",
+      "allowed_values": ["homo_sapiens", "mus_musculus", "rattus_norvegicus", 
+                        "escherichia_coli", "saccharomyces_cerevisiae"],
+      "description": "Source organism"
+    },
+    "measurement_type": {
+      "type": "categorical",
+      "allowed_values": ["expression", "abundance", "binding_affinity", 
+                        "kd", "ic50", "ec50", "kinase_activity"],
+      "description": "Type of measurement"
+    }
+  }
+}
+Environmental Chemistry Template Example
+
+{
+  "template_id": "environmental",
+  "name": "Environmental Chemistry",
+  "description": "Template for environmental chemistry datasets including fate, transport, and ecotoxicology data",
+  "version": "1.0.0",
+  "required_variables": [
+    "chemical_id",
+    "environmental_compartment",
+    "parameter",
+    "value",
+    "unit"
+  ],
+  "optional_variables": [
+    "cas_number",
+    "smiles",
+    "location",
+    "latitude",
+    "longitude",
+    "sampling_date",
+    "depth",
+    "temperature",
+    "ph",
+    "organic_carbon",
+    "method",
+    "detection_limit",
+    "quantification_limit"
+  ],
+  "default_hierarchy": ["environmental_compartment", "parameter", "location"],
+  "validation_rules": {
+    "environmental_compartment": {
+      "type": "categorical",
+      "allowed_values": ["water", "soil", "sediment", "air", "biota", 
+                        "surface_water", "groundwater", "effluent"],
+      "description": "Environmental compartment"
+    },
+    "parameter": {
+      "type": "categorical",
+      "allowed_values": ["concentration", "bioconcentration_factor", 
+                        "bioaccumulation_factor", "half_life", 
+                        "degradation_rate", "partition_coefficient",
+                        "koc", "kow", "vapor_pressure"],
+      "description": "Environmental parameter"
+    }
+  }
+}
+Template Manager Implementation
+
+# templates/template_manager.py
+import json
+from pathlib import Path
+from typing import Dict, List, Optional
+from dataclasses import dataclass
+
+@dataclass
+class DomainTemplate:
+    """Represents a scientific domain template."""
+    template_id: str
+    name: str
+    description: str
+    version: str
+    required_variables: List[str]
+    optional_variables: List[str]
+    default_hierarchy: List[str]
+    validation_rules: dict
+    metadata_standards: dict
+
+class TemplateManager:
+    """Manages scientific domain templates."""
+    
+    def __init__(self, templates_dir: str = "templates"):
+        self.templates_dir = Path(templates_dir)
+        self._templates: Dict[str, DomainTemplate] = {}
+        self._load_templates()
+    
+    def _load_templates(self) -> None:
+        """Load all templates from the templates directory."""
+        for template_file in self.templates_dir.glob("*.json"):
+            try:
+                with open(template_file, 'r') as f:
+                    data = json.load(f)
+                    template = DomainTemplate(
+                        template_id=data['template_id'],
+                        name=data['name'],
+                        description=data['description'],
+                        version=data['version'],
+                        required_variables=data['required_variables'],
+                        optional_variables=data.get('optional_variables', []),
+                        default_hierarchy=data['default_hierarchy'],
+                        validation_rules=data.get('validation_rules', {}),
+                        metadata_standards=data.get('metadata_standards', {})
+                    )
+                    self._templates[template.template_id] = template
+            except (json.JSONDecodeError, KeyError) as e:
+                print(f"Warning: Could not load template {template_file}: {e}")
+    
+    def get_template(self, template_id: str) -> Optional[DomainTemplate]:
+        """Get a template by ID."""
+        return self._templates.get(template_id)
+    
+    def list_templates(self) -> List[Dict[str, str]]:
+        """List all available templates."""
+        return [
+            {
+                'id': t.template_id,
+                'name': t.name,
+                'description': t.description,
+                'version': t.version
+            }
+            for t in self._templates.values()
+        ]
+    
+    def validate_dataset_against_template(self, columns: List[str], 
+                                          template_id: str) -> Dict:
+        """Validate dataset columns against template requirements."""
+        template = self.get_template(template_id)
+        if not template:
+            return {'valid': False, 'error': 'Template not found'}
+        
+        columns_lower = [c.lower() for c in columns]
+        missing_required = []
+        matched_optional = []
+        
+        for req_var in template.required_variables:
+            if not any(req_var.lower() in col for col in columns_lower):
+                missing_required.append(req_var)
+        
+        for opt_var in template.optional_variables:
+            if any(opt_var.lower() in col for col in columns_lower):
+                matched_optional.append(opt_var)
+        
+        return {
+            'valid': len(missing_required) == 0,
+            'template': template.name,
+            'missing_required': missing_required,
+            'matched_optional': matched_optional,
+            'coverage': len(matched_optional) / max(len(template.optional_variables), 1)
+        }
+5. PHASE 4 — HIERARCHICAL SEGREGATION ENGINE
+This is the CORE INNOVATION of the platform.
+
+Architecture Diagram
+
+┌─────────────────────────────────────────────────────────────────┐
+│                    Segregation Engine                            │
+├─────────────────────────────────────────────────────────────────┤
+│                                                                  │
+│  ┌──────────────┐    ┌──────────────┐    ┌──────────────┐      │
+│  │   Hierarchy  │───▶│    Dataset   │───▶│   Folder     │      │
+│  │   Builder    │    │    Splitter  │    │   Generator  │      │
+│  └──────────────┘    └──────────────┘    └──────────────┘      │
+│         │                   │                   │               │
+│         ▼                   ▼                   ▼               │
+│  ┌──────────────┐    ┌──────────────┐    ┌──────────────┐      │
+│  │   Hierarchy  │    │    Export    │    │    Index     │      │
+│  │   Validator  │    │    Manager   │    │   Generator  │      │
+│  └──────────────┘    └──────────────┘    └──────────────┘      │
+│                                                                  │
+└─────────────────────────────────────────────────────────────────┘
+Core Segregation Engine Implementation
+
+# segregation/engine.py
+from pathlib import Path
+from typing import Dict, List, Optional, Any, Tuple
+from dataclasses import dataclass, field
+from collections import defaultdict
+import pandas as pd
+import json
+from datetime import datetime
+
+@dataclass
+class SegregationNode:
+    """Represents a node in the segregation hierarchy."""
+    level: int
+    variable: str
+    value: str
+    data: pd.DataFrame
+    children: List['SegregationNode'] = field(default_factory=list)
+    path: str = ""
+
+@dataclass
+class SegregationResult:
+    """Result of segregation operation."""
+    root_path: str
+    total_folders: int
+    total_files: int
+    hierarchy_levels: int
+    leaf_nodes: List[dict]
+    statistics: dict
+
+class HierarchicalSegregationEngine:
+    """Core engine for hierarchical dataset segregation."""
+    
+    def __init__(self, output_dir: str = "outputs"):
+        self.output_dir = Path(output_dir)
+        self.output_dir.mkdir(parents=True, exist_ok=True)
+    
+    def build_hierarchy_tree(self, df: pd.DataFrame, 
+                             hierarchy: List[str]) -> SegregationNode:
+        """
+        Recursively build a hierarchy tree from dataframe.
+        
+        Args:
+            df: Input dataframe
+            hierarchy: List of column names defining hierarchy order
+            
+        Returns:
+            Root node of the hierarchy tree
+        """
+        if not hierarchy:
+            return SegregationNode(
+                level=0,
+                variable="root",
+                value="all",
+                data=df
+            )
+        
+        current_var = hierarchy[0]
+        remaining_hierarchy = hierarchy[1:]
+        
+        root = SegregationNode(
+            level=0,
+            variable="root",
+            value="all",
+            data=df
+        )
+        
+        # Group by current hierarchy level
+        if current_var not in df.columns:
+            # Skip missing hierarchy levels
+            if remaining_hierarchy:
+                return self.build_hierarchy_tree(df, remaining_hierarchy)
+            return root
+        
+        grouped = df.groupby(current_var, dropna=False)
+        
+        for group_value, group_df in grouped:
+            # Create sanitized folder name
+            safe_value = self._sanitize_folder_name(str(group_value))
+            path = f"{current_var}={safe_value}"
+            
+            child_node = SegregationNode(
+                level=1,
+                variable=current_var,
+                value=str(group_value),
+                data=group_df,
+                path=path
+            )
+            
+            # Recursively build children
+            if remaining_hierarchy:
+                child_tree = self.build_hierarchy_tree(group_df, remaining_hierarchy)
+                child_tree.path = f"{path}/{child_tree.path}"
+                child_node.children.append(child_tree)
+            
+            root.children.append(child_node)
+        
+        return root
+    
+    def _sanitize_folder_name(self, name: str) -> str:
+        """Sanitize string for use as folder name."""
+        # Remove or replace invalid characters
+        invalid_chars = '<>:"/\\|?*'
+        for char in invalid_chars:
+            name = name.replace(char, '_')
+        # Truncate long names
+        if len(name) > 100:
+            name = name[:100]
+        return name.strip('. ')
+    
+    def generate_folders(self, root: SegregationNode, 
+                         base_path: Path,
+                         export_format: str = 'xlsx') -> Tuple[int, int, List[dict]]:
+        """
+        Recursively generate folder structure and export files.
+        
+        Args:
+            root: Root node of hierarchy tree
+            base_path: Base output directory
+            export_format: Output file format (xlsx, csv)
+            
+        Returns:
+            Tuple of (total_folders, total_files, leaf_node_info)
+        """
+        total_folders = 0
+        total_files = 0
+        leaf_nodes = []
+        
+        if not root.children:
+            # Leaf node - export data
+            if not root.data.empty:
+                folder_path = base_path / root.path if root.path != "all" else base_path
+                folder_path.mkdir(parents=True, exist_ok=True)
+                
+                # Generate filename
+                timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+                if export_format == 'xlsx':
+                    filename = f"data_{timestamp}.xlsx"
+                else:
+                    filename = f"data_{timestamp}.csv"
+                
+                file_path = folder_path / filename
+                
+                # Export data
+                if export_format == 'xlsx':
+                    root.data.to_excel(file_path, index=False)
+                else:
+                    root.data.to_csv(file_path, index=False)
+                
+                total_files += 1
+                
+                leaf_nodes.append({
+                    'path': str(folder_path),
+                    'filename': filename,
+                    'records': len(root.data),
+                    'compounds': root.data.iloc[:, 0].nunique() if len(root.data.columns) > 0 else 0
+                })
+        else:
+            # Non-leaf node - create folder and process children
+            folder_path = base_path / root.path if root.path != "all" else base_path
+            folder_path.mkdir(parents=True, exist_ok=True)
+            total_folders += 1
+            
+            for child in root.children:
+                sub_folders, sub_files, sub_leaves = self.generate_folders(
+                    child, base_path, export_format
+                )
+                total_folders += sub_folders
+                total_files += sub_files
+                leaf_nodes.extend(sub_leaves)
+        
+        return total_folders, total_files, leaf_nodes
+    
+    def segregate(self, df: pd.DataFrame, 
+                  hierarchy: List[str],
+                  output_dir: Optional[str] = None,
+                  export_format: str = 'xlsx',
+                  session_id: Optional[str] = None) -> SegregationResult:
+        """
+        Main segregation method.
+        
+        Args:
+            df: Input dataframe
+            hierarchy: List of column names for hierarchy
+            output_dir: Output directory (default: outputs/segregation_{session_id})
+            export_format: Output file format
+            session_id: Optional session identifier
+            
+        Returns:
+            SegregationResult with all metadata
+        """
+        if output_dir is None:
+            session = session_id or datetime.now().strftime("%Y%m%d_%H%M%S")
+            output_dir = str(self.output_dir / f"segregation_{session}")
+        
+        output_path = Path(output_dir)
+        output_path.mkdir(parents=True, exist_ok=True)
+        
+        # Build hierarchy tree
+        root = self.build_hierarchy_tree(df, hierarchy)
+        
+        # Generate folders and export files
+        total_folders, total_files, leaf_nodes = self.generate_folders(
+            root, output_path, export_format
+        )
+        
+        # Calculate statistics
+        statistics = {
+            'input_records': len(df),
+            'input_columns': len(df.columns),
+            'hierarchy_levels': len(hierarchy),
+            'hierarchy_variables': hierarchy,
+            'output_folders': total_folders,
+            'output_files': total_files,
+            'leaf_nodes': len(leaf_nodes),
+            'avg_records_per_file': len(df) / max(total_files, 1),
+            'min_records_per_file': min((ln['records'] for ln in leaf_nodes), default=0),
+            'max_records_per_file': max((ln['records'] for ln in leaf_nodes), default=0)
+        }
+        
+        # Save segregation metadata
+        metadata = {
+            'session_id': session_id or datetime.now().strftime("%Y%m%d_%H%M%S"),
+            'timestamp': datetime.now().isoformat(),
+            'hierarchy': hierarchy,
+            'statistics': statistics,
+            'leaf_nodes': leaf_nodes
+        }
+        
+        metadata_path = output_path / 'segregation_metadata.json'
+        with open(metadata_path, 'w') as f:
+            json.dump(metadata, f, indent=2)
+        
+        return SegregationResult(
+            root_path=str(output_path),
+            total_folders=total_folders,
+            total_files=total_files,
+            hierarchy_levels=len(hierarchy),
+            leaf_nodes=leaf_nodes,
+            statistics=statistics
+        )
+Pseudocode for Recursive Segregation
+
+FUNCTION segregate(dataframe, hierarchy_levels):
+    IF hierarchy_levels is empty:
+        RETURN single node containing all data
+    
+    current_level = hierarchy_levels[0]
+    remaining_levels = hierarchy_levels[1:]
+    
+    root = create_node("root", "all", dataframe)
+    
+    FOR each unique value in current_level column:
+        subset = filter(dataframe, current_level == value)
+        sanitized_value = sanitize(value)
+        path = current_level + "=" + sanitized_value
+        
+        child_node = create_node(current_level, value, subset, path)
+        
+        IF remaining_levels is not empty:
+            child_tree = segregate(subset, remaining_levels)
+            child_node.children.append(child_tree)
+        
+        root.children.append(child_node)
+    
+    RETURN root
+
+FUNCTION export_tree(node, base_path):
+    IF node has no children:
+        # Leaf node - export data
+        folder = base_path / node.path
+        create_folder(folder)
+        export_dataframe(node.data, folder / "data.xlsx")
+        RETURN (1 folder, 1 file, leaf_info)
+    ELSE:
+        # Non-leaf node
+        folder = base_path / node.path
+        create_folder(folder)
+        
+        total_folders = 1
+        total_files = 0
+        all_leaves = []
+        
+        FOR each child in node.children:
+            folders, files, leaves = export_tree(child, base_path)
+            total_folders += folders
+            total_files += files
+            all_leaves.extend(leaves)
+        
+        RETURN (total_folders, total_files, all_leaves)
+Performance Optimization Ideas
+Lazy Evaluation: Only build tree nodes that will be exported
+Parallel Processing: Use concurrent.futures for independent subtree exports
+Memory Efficiency: Use chunked reading for large datasets
+Caching: Cache groupby results to avoid recomputation
+Index Optimization: Set appropriate indices before groupby operations
+
+# segregation/splitter.py - Optimized splitting with chunking
+from concurrent.futures import ProcessPoolExecutor, as_completed
+import multiprocessing
+
+class OptimizedSegregationEngine(HierarchicalSegregationEngine):
+    """Optimized segregation engine with parallel processing."""
+    
+    def __init__(self, output_dir: str = "outputs", 
+                 max_workers: int = None,
+                 chunk_size: int = 10000):
+        super().__init__(output_dir)
+        self.max_workers = max_workers or multiprocessing.cpu_count()
+        self.chunk_size = chunk_size
+    
+    def segregate_parallel(self, df: pd.DataFrame,
+                          hierarchy: List[str],
+                          output_dir: str) -> SegregationResult:
+        """Parallel segregation for large datasets."""
+        if len(df) < self.chunk_size:
+            # Small dataset - use standard method
+            return self.segregate(df, hierarchy, output_dir)
+        
+        # Large dataset - use parallel processing
+        # Implementation would use ProcessPoolExecutor
+        # for independent subtree exports
+        pass
+6. PHASE 5 — TOXICOLOGY SCIENTIFIC INTELLIGENCE LAYER
+Endpoint Normalization System
+
+# validation/endpoint_validator.py
+from typing import Dict, List, Optional, Tuple
+from enum import Enum
+from dataclasses import dataclass
+
+class EndpointCategory(Enum):
+    ACUTE_TOXICITY = "acute_toxicity"
+    CHRONIC_TOXICITY = "chronic_toxicity"
+    DEVELOPMENTAL_TOXICITY = "developmental_toxicity"
+    GENOTOXICITY = "genotoxicity"
+    CARCINOGENICITY = "carcinogenicity"
+
+@dataclass
+class EndpointDefinition:
+    """Definition of a toxicological endpoint."""
+    name: str
+    category: EndpointCategory
+    synonyms: List[str]
+    unit_requirements: List[str]
+    typical_range: Tuple[float, float]
+    description: str
+
+class EndpointValidator:
+    """Validates and normalizes toxicological endpoints."""
+    
+    ENDPOINT_DEFINITIONS = {
+        'ld50': EndpointDefinition(
+            name='LD50',
+            category=EndpointCategory.ACUTE_TOXICITY,
+            synonyms=['ld50', 'lethal dose 50', 'median lethal dose', 
+                     'acute oral ld50', 'acute dermal ld50'],
+            unit_requirements=['mg/kg', 'g/kg'],
+            typical_range=(0.01, 50000),
+            description='Median lethal dose - dose required to kill 50% of test population'
+        ),
+        'lc50': EndpointDefinition(
+            name='LC50',
+            category=EndpointCategory.ACUTE_TOXICITY,
+            synonyms=['lc50', 'lethal concentration 50', 'median lethal concentration'],
+            unit_requirements=['mg/L', 'ppm', 'mg/m3'],
+            typical_range=(0.001, 10000),
+            description='Median lethal concentration - concentration killing 50% of test population'
+        ),
+        'noael': EndpointDefinition(
+            name='NOAEL',
+            category=EndpointCategory.CHRONIC_TOXICITY,
+            synonyms=['noael', 'no observed adverse effect level', 
+                     'no-observed-adverse-effect-level'],
+            unit_requirements=['mg/kg/day', 'mg/kg', 'ppm'],
+            typical_range=(0.001, 1000),
+            description='No Observed Adverse Effect Level'
+        ),
+        'loael': EndpointDefinition(
+            name='LOAEL',
+            category=EndpointCategory.CHRONIC_TOXICITY,
+            synonyms=['loael', 'lowest observed adverse effect level',
+                     'lowest-observed-adverse-effect-level'],
+            unit_requirements=['mg/kg/day', 'mg/kg', 'ppm'],
+            typical_range=(0.001, 1000),
+            description='Lowest Observed Adverse Effect Level'
+        ),
+        'noel': EndpointDefinition(
+            name='NOEL',
+            category=EndpointCategory.CHRONIC_TOXICITY,
+            synonyms=['noel', 'no observed effect level',
+                     'no-observed-effect-level'],
+            unit_requirements=['mg/kg/day', 'mg/kg', 'ppm'],
+            typical_range=(0.001, 1000),
+            description='No Observed Effect Level'
+        ),
+        'aed': EndpointDefinition(
+            name='AED',
+            category=EndpointCategory.DEVELOPMENTAL_TOXICITY,
+            synonyms=['aed', 'adverse effect dose', 'developmental aed'],
+            unit_requirements=['mg/kg/day', 'mg/kg'],
+            typical_range=(0.001, 1000),
+            description='Adverse Effect Dose for developmental toxicity'
+        )
+    }
+    
+    def normalize_endpoint(self, endpoint_str: str) -> Optional[str]:
+        """Normalize endpoint string to standard name."""
+        normalized = endpoint_str.strip().lower().replace('_', ' ').replace('-', ' ')
+        
+        for key, definition in self.ENDPOINT_DEFINITIONS.items():
+            if normalized == key:
+                return key
+            for synonym in definition.synonyms:
+                if normalized == synonym.lower():
+                    return key
+        
+        return None
+    
+    def get_endpoint_category(self, endpoint: str) -> Optional[EndpointCategory]:
+        """Get the category of an endpoint."""
+        definition = self.ENDPOINT_DEFINITIONS.get(endpoint)
+        return definition.category if definition else None
+    
+    def validate_endpoint_value(self, endpoint: str, value: float, 
+                                unit: str) -> Tuple[bool, List[str]]:
+        """Validate an endpoint value against expected range."""
+        errors = []
+        definition = self.ENDPOINT_DEFINITIONS.get(endpoint)
+        
+        if not definition:
+            errors.append(f"Unknown endpoint: {endpoint}")
+            return False, errors
+        
+        # Check unit
+        if unit not in definition.unit_requirements:
+            errors.append(f"Unexpected unit '{unit}' for {endpoint}. "
+                         f"Expected: {definition.unit_requirements}")
+        
+        # Check value range
+        if value < definition.typical_range[0] or value > definition.typical_range[1]:
+            errors.append(f"Value {value} outside typical range "
+                         f"{definition.typical_range} for {endpoint}")
+        
+        return len(errors) == 0, errors
+Species Normalization System
+
+# validation/species_validator.py
+from typing import Dict, List, Optional
+
+class SpeciesNormalizer:
+    """Normalizes and validates species names."""
+    
+    SPECIES_DATABASE = {
+        'rat': {
+            'common_name': 'Rat',
+            'scientific_name': 'Rattus norvegicus',
+            'synonyms': ['rat', 'rattus', 'rattus norvegicus', 'wistar',
+                        'sprague-dawley', 'sd rat', 'wistar rat', 'long-evans',
+                        'fischer 344', 'f344', 'brown norway'],
+            'taxonomy_id': '10116'
+        },
+        'mouse': {
+            'common_name': 'Mouse',
+            'scientific_name': 'Mus musculus',
+            'synonyms': ['mouse', 'mus', 'mus musculus', 'c57bl/6', 'balb/c',
+                        'cd-1', 'swiss webster', 'nmri', 'c3h', 'dba/2',
+                        '129/sv', 'fvb'],
+            'taxonomy_id': '10090'
+        },
+        'human': {
+            'common_name': 'Human',
+            'scientific_name': 'Homo sapiens',
+            'synonyms': ['human', 'homo sapiens', 'people', 'patient',
+                        'subject', 'volunteer', 'participant', 'man', 'woman'],
+            'taxonomy_id': '9606'
+        },
+        'dog': {
+            'common_name': 'Dog',
+            'scientific_name': 'Canis familiaris',
+            'synonyms': ['dog', 'canis', 'canis familiaris', 'beagle',
+                        'labrador', 'german shepherd'],
+            'taxonomy_id': '9615'
+        },
+        'rabbit': {
+            'common_name': 'Rabbit',
+            'scientific_name': 'Oryctolagus cuniculus',
+            'synonyms': ['rabbit', 'oryctolagus', 'oryctolagus cuniculus',
+                        'new zealand white', 'dutch belted', 'flemish giant'],
+            'taxonomy_id': '9986'
+        },
+        'fish': {
+            'common_name': 'Fish',
+            'scientific_name': 'Various',
+            'synonyms': ['fish', 'zebrafish', 'danio rerio', 'fathead minnow',
+                        'pimephales promelas', 'rainbow trout', 
+                        'oncorhynchus mykiss', 'medaka', 'oryzias latipes'],
+            'subtypes': {
+                'zebrafish': 'Danio rerio',
+                'fathead_minnow': 'Pimephales promelas',
+                'rainbow_trout': 'Oncorhynchus mykiss'
+            }
+        }
+    }
+    
+    def normalize_species(self, species_str: str) -> Optional[str]:
+        """Normalize species string to standard key."""
+        normalized = species_str.strip().lower().replace('_', ' ').replace('-', ' ')
+        
+        for key, info in self.SPECIES_DATABASE.items():
+            if normalized == key:
+                return key
+            for synonym in info['synonyms']:
+                if normalized == synonym:
+                    return key
+        
+        return None
+    
+    def get_scientific_name(self, species_key: str) -> Optional[str]:
+        """Get scientific name for a species."""
+        info = self.SPECIES_DATABASE.get(species_key)
+        return info['scientific_name'] if info else None
+    
+    def get_taxonomy_id(self, species_key: str) -> Optional[str]:
+        """Get NCBI taxonomy ID for a species."""
+        info = self.SPECIES_DATABASE.get(species_key)
+        return info.get('taxonomy_id') if info else None
+Toxicity Classification System
+
+# validation/toxicity_classifier.py
+from typing import Dict, List, Set
+from enum import Enum
+from dataclasses import dataclass
+
+class ToxicitySystem(Enum):
+    HEPATOTOXICITY = "hepatotoxicity"
+    NEPHROTOXICITY = "nephrotoxicity"
+    NEUROTOXICITY = "neurotoxicity"
+    CARDIOTOXICITY = "cardiotoxicity"
+    REPRODUCTIVE_TOXICITY = "reproductive_toxicity"
+    DEVELOPMENTAL_TOXICITY = "developmental_toxicity"
+    GENOTOXICITY = "genotoxicity"
+    CARCINOGENICITY = "carcinogenicity"
+    IMMUNOTOXICITY = "immunotoxicity"
+    DERMAL_TOXICITY = "dermal_toxicity"
+    RESPIRATORY_TOXICITY = "respiratory_toxicity"
+    GASTROINTESTINAL_TOXICITY = "gastrointestinal_toxicity"
+    HEMATOLOGICAL_TOXICITY = "hematological_toxicity"
+    ENDOCRINE_TOXICITY = "endocrine_toxicity"
+
+@dataclass
+class ToxicityKeywords:
+    """Keywords associated with a toxicity system."""
+    system: ToxicitySystem
+    keywords: List[str]
+    related_endpoints: List[str]
+
+class ToxicityClassifier:
+    """Classifies toxicity based on keywords and endpoints."""
+    
+    TOXICITY_KEYWORDS = {
+        ToxicitySystem.HEPATOTOXICITY: ToxicityKeywords(
+            system=ToxicitySystem.HEPATOTOXICITY,
+            keywords=['liver', 'hepatic', 'hepatocyte', 'hepatotoxicity',
+                     'liver enzyme', 'alt', 'ast', 'alp', 'bilirubin',
+                     'hepatocellular', 'cholestasis', 'steatosis',
+                     'liver weight', 'relative liver weight'],
+            related_endpoints=['noael', 'loael', 'aed']
+        ),
+        ToxicitySystem.NEPHROTOXICITY: ToxicityKeywords(
+            system=ToxicitySystem.NEPHROTOXICITY,
+            keywords=['kidney', 'renal', 'nephrotoxicity', 'nephron',
+                     'creatinine', 'bun', 'blood urea nitrogen',
+                     'urine', 'proteinuria', 'glomerular',
+                     'kidney weight', 'relative kidney weight'],
+            related_endpoints=['noael', 'loael', 'aed']
+        ),
+        ToxicitySystem.NEUROTOXICITY: ToxicityKeywords(
+            system=ToxicitySystem.NEUROTOXICITY,
+            keywords=['neuro', 'neural', 'neuron', 'neurotoxicity',
+                     'behavior', 'motor', 'cognitive', 'memory',
+                     'nerve', 'axon', 'synapse', 'neurobehavioral',
+                     'functional observation battery', 'fob'],
+            related_endpoints=['noael', 'loael', 'aed']
+        ),
+        ToxicitySystem.REPRODUCTIVE_TOXICITY: ToxicityKeywords(
+            system=ToxicitySystem.REPRODUCTIVE_TOXICITY,
+            keywords=['reproductive', 'fertility', 'sperm', 'ovary',
+                     'testis', 'estrous', 'menstrual', 'gestation',
+                     'lactation', 'mating', 'conception', 'implantation',
+                     'reprotoxic', 'gonad'],
+            related_endpoints=['noael', 'loael', 'aed']
+        ),
+        ToxicitySystem.DEVELOPMENTAL_TOXICITY: ToxicityKeywords(
+            system=ToxicitySystem.DEVELOPMENTAL_TOXICITY,
+            keywords=['developmental', 'teratogenic', 'embryo', 'fetus',
+                     'malformation', 'variation', 'ossification',
+                     'skeletal', 'visceral', 'external',
+                     'prenatal', 'postnatal', 'weanling'],
+            related_endpoints=['aed', 'noael', 'loael']
+        ),
+        ToxicitySystem.ENDOCRINE_TOXICITY: ToxicityKeywords(
+            system=ToxicitySystem.ENDOCRINE_TOXICITY,
+            keywords=['endocrine', 'hormone', 'thyroid', 'estrogen',
+                     'androgen', 'steroid', 'hpg axis', 'hpt axis',
+                     't4', 't3', 'tsh', 'endocrine disruptor'],
+            related_endpoints=['noael', 'loael', 'aed']
+        )
+    }
+    
+    def classify_toxicity(self, text: str) -> Set[ToxicitySystem]:
+        """Classify toxicity systems from text description."""
+        text_lower = text.lower()
+        classified = set()
+        
+        for toxicity_info in self.TOXICITY_KEYWORDS.values():
+            for keyword in toxicity_info.keywords:
+                if keyword.lower() in text_lower:
+                    classified.add(toxicity_info.system)
+                    break
+        
+        return classified
+    
+    def get_toxicity_metadata(self, systems: Set[ToxicitySystem]) -> List[dict]:
+        """Get metadata for classified toxicity systems."""
+        return [
+            {
+                'system': system.value,
+                'keywords': self.TOXICITY_KEYWORDS[system].keywords,
+                'related_endpoints': self.TOXICITY_KEYWORDS[system].related_endpoints
+            }
+            for system in systems
+        ]
+7. PHASE 6 — QUALIFIER ENGINE
+Qualifier Parser Implementation
+
+# utils/qualifier_parser.py
+from typing import Tuple, Optional, List
+from dataclasses import dataclass
+from enum import Enum
+import re
+
+class QualifierType(Enum):
+    EXACT = "="
+    GREATER_THAN = ">"
+    LESS_THAN = "<"
+    GREATER_OR_EQUAL = ">="
+    LESS_OR_EQUAL = "<="
+    NOT_DETECTED = "ND"
+    BELOW_LOD = "<LOD"
+    ABOVE_LOQ = ">LOQ"
+
+@dataclass
+class QualifiedValue:
+    """Represents a value with its qualifier."""
+    value: float
+    qualifier: QualifierType
+    original_string: str
+    is_censored: bool
+    
+    @property
+    def qsar_ready(self) -> bool:
+        """Whether this value is suitable for QSAR modeling."""
+        return self.qualifier == QualifierType.EXACT and not self.is_censored
+
+class QualifierParser:
+    """Parses and normalizes scientific qualifiers."""
+    
+    QUALIFIER_PATTERNS = {
+        QualifierType.EXACT: [r'^=\s*([\d.eE+-]+)$', r'^([\d.eE+-]+)$'],
+        QualifierType.GREATER_THAN: [r'^>\s*([\d.eE+-]+)$'],
+        QualifierType.LESS_THAN: [r'^<\s*([\d.eE+-]+)$'],
+        QualifierType.GREATER_OR_EQUAL: [r'^>=\s*([\d.eE+-]+)$', r'^≥\s*([\d.eE+-]+)$'],
+        QualifierType.LESS_OR_EQUAL: [r'^<=\s*([\d.eE+-]+)$', r'^≤\s*([\d.eE+-]+)$'],
+        QualifierType.NOT_DETECTED: [r'^nd$', r'^n\.d\.$', r'^not detected$', r'^nondetected$'],
+        QualifierType.BELOW_LOD: [r'^<lod$', r'^<lod$', r'^below lod$', r'^below detection$'],
+        QualifierType.ABOVE_LOQ: [r'^>loq$', r'^>loq$', r'^above loq$', r'^above quantification$']
+    }
+    
+    def parse(self, value_str: str, detection_limit: Optional[float] = None) -> Optional[QualifiedValue]:
+        """Parse a qualified value string."""
+        if not value_str or not value_str.strip():
+            return None
+        
+        original = value_str.strip()
+        value_str = original.lower()
+        
+        for qualifier_type, patterns in self.QUALIFIER_PATTERNS.items():
+            for pattern in patterns:
+                match = re.match(pattern, value_str, re.IGNORECASE)
+                if match:
+                    if qualifier_type in [QualifierType.NOT_DETECTED, 
+                                         QualifierType.BELOW_LOD]:
+                        # Censored value - use detection limit if available
+                        value = detection_limit if detection_limit else 0.0
+                        return QualifiedValue(
+                            value=value,
+                            qualifier=qualifier_type,
+                            original_string=original,
+                            is_censored=True
+                        )
+                    elif qualifier_type == QualifierType.ABOVE_LOQ:
+                        # Above quantification - special handling
+                        return QualifiedValue(
+                            value=float('inf'),
+                            qualifier=qualifier_type,
+                            original_string=original,
+                            is_censored=True
+                        )
+                    else:
+                        try:
+                            numeric_value = float(match.group(1))
+                            return QualifiedValue(
+                                value=numeric_value,
+                                qualifier=qualifier_type,
+                                original_string=original,
+                                is_censored=False
+                            )
+                        except (ValueError, IndexError):
+                            continue
+        
+        # Try parsing as plain number
+        try:
+            return QualifiedValue(
+                value=float(value_str),
+                qualifier=QualifierType.EXACT,
+                original_string=original,
+                is_censored=False
+            )
+        except ValueError:
+            return None
+    
+    def parse_column(self, values: List[str], 
+                     detection_limit: Optional[float] = None) -> List[Optional[QualifiedValue]]:
+        """Parse a column of values."""
+        return [self.parse(str(v), detection_limit) for v in values]
+    
+    def get_qsar_ready_mask(self, qualified_values: List[Optional[QualifiedValue]]) -> List[bool]:
+        """Get boolean mask for QSAR-ready values."""
+        return [qv is not None and qv.qsar_ready for qv in qualified_values]
+    
+    def separate_censored(self, qualified_values: List[Optional[QualifiedValue]]
+                         ) -> Tuple[List[QualifiedValue], List[QualifiedValue]]:
+        """Separate exact values from censored values."""
+        exact = []
+        censored = []
+        
+        for qv in qualified_values:
+            if qv is None:
+                continue
+            if qv.is_censored:
+                censored.append(qv)
+            else:
+                exact.append(qv)
+        
+        return exact, censored
+Unit Consistency Strategy
+
+# utils/unit_converter.py
+from typing import Dict, Optional, Tuple
+from dataclasses import dataclass
+
+@dataclass
+class UnitDefinition:
+    """Definition of a unit with conversion factors."""
+    name: str
+    category: str  # mass, concentration, dose, etc.
+    base_unit: str
+    conversion_factor: float  # Factor to convert to base unit
+    aliases: list
+
+class UnitConverter:
+    """Handles unit normalization and conversion."""
+    
+    UNIT_DEFINITIONS = {
+        # Mass units (base: mg)
+        'mg': UnitDefinition('mg', 'mass', 'mg', 1.0, ['milligram', 'milligrams']),
+        'g': UnitDefinition('g', 'mass', 'mg', 1000.0, ['gram', 'grams']),
+        'kg': UnitDefinition('kg', 'mass', 'mg', 1000000.0, ['kilogram', 'kilograms']),
+        'ug': UnitDefinition('ug', 'mass', 'mg', 0.001, ['microgram', 'micrograms', 'μg']),
+        
+        # Concentration units (base: mg/L)
+        'mg/L': UnitDefinition('mg/L', 'concentration', 'mg/L', 1.0, 
+                              ['milligram per liter', 'mg/l']),
+        'ug/L': UnitDefinition('ug/L', 'concentration', 'mg/L', 0.001,
+                              ['microgram per liter', 'ug/l', 'μg/L']),
+        'ppm': UnitDefinition('ppm', 'concentration', 'mg/L', 1.0,
+                             ['parts per million', 'ppm']),  # For water
+        'ppb': UnitDefinition('ppb', 'concentration', 'mg/L', 0.001,
+                             ['parts per billion', 'ppb']),  # For water
+        
+        # Dose units (base: mg/kg)
+        'mg/kg': UnitDefinition('mg/kg', 'dose', 'mg/kg', 1.0,
+                               ['milligram per kilogram', 'milligram/kilogram']),
+        'g/kg': UnitDefinition('g/kg', 'dose', 'mg/kg', 1000.0,
+                              ['gram per kilogram', 'gram/kilogram']),
+        'ug/kg': UnitDefinition('ug/kg', 'dose', 'mg/kg', 0.001,
+                               ['microgram per kilogram', 'microgram/kilogram']),
+        
+        # Dose rate units (base: mg/kg/day)
+        'mg/kg/day': UnitDefinition('mg/kg/day', 'dose_rate', 'mg/kg/day', 1.0,
+                                   ['milligram per kilogram per day']),
+        'mg/kg/d': UnitDefinition('mg/kg/d', 'dose_rate', 'mg/kg/day', 1.0,
+                                 ['milligram per kilogram per day']),
+    }
+    
+    def normalize_unit(self, unit_str: str) -> Optional[str]:
+        """Normalize unit string to standard form."""
+        normalized = unit_str.strip().lower().replace(' ', '')
+        
+        for key, definition in self.UNIT_DEFINITIONS.items():
+            if normalized == key.lower():
+                return key
+            for alias in definition.aliases:
+                if normalized == alias.lower().replace(' ', ''):
+                    return key
+        
+        return None
+    
+    def convert(self, value: float, from_unit: str, to_unit: str) -> Optional[float]:
+        """Convert value from one unit to another."""
+        from_def = self.UNIT_DEFINITIONS.get(from_unit)
+        to_def = self.UNIT_DEFINITIONS.get(to_unit)
+        
+        if not from_def or not to_def:
+            return None
+        
+        if from_def.category != to_def.category:
+            return None  # Incompatible units
+        
+        # Convert to base unit, then to target unit
+        base_value = value * from_def.conversion_factor
+        target_value = base_value / to_def.conversion_factor
+        
+        return target_value
+    
+    def validate_unit_consistency(self, values: list, units: list) -> Dict:
+        """Validate unit consistency across a dataset."""
+        normalized_units = [self.normalize_unit(u) for u in units]
+        unique_units = set(u for u in normalized_units if u is not None)
+        
+        return {
+            'is_consistent': len(unique_units) <= 1,
+            'unique_units': list(unique_units),
+            'unit_counts': {u: normalized_units.count(u) for u in unique_units},
+            'missing_units': normalized_units.count(None)
+        }
+8. PHASE 7 — MASTER INDEX GENERATION
+Schema Design
+
+# audit/index_generator.py
+import pandas as pd
+from pathlib import Path
+from typing import Dict, List, Optional
+from dataclasses import dataclass, asdict
+from datetime import datetime
+import json
+
+@dataclass
+class IndexEntry:
+    """Entry in the master index."""
+    filename: str
+    hierarchy_path: str
+    record_count: int
+    compound_count: int
+    endpoint: Optional[str]
+    species: Optional[str]
+    duration: Optional[str]
+    filters_applied: List[str]
+    quality_notes: List[str]
+    generated_at: str
+
+class MasterIndexGenerator:
+    """Generates master index for segregated datasets."""
+    
+    def __init__(self, output_dir: str = "outputs"):
+        self.output_dir = Path(output_dir)
+    
+    def generate_from_segregation_result(self, result, 
+                                         segregation_metadata: dict) -> str:
+        """Generate master index from segregation result."""
+        entries = []
+        
+        for leaf in result.leaf_nodes:
+            # Parse hierarchy path
+            path_parts = leaf['path'].split('/')
+            hierarchy_info = self._parse_hierarchy_path(path_parts)
+            
+            entry = IndexEntry(
+                filename=leaf['filename'],
+                hierarchy_path=leaf['path'],
+                record_count=leaf['records'],
+                compound_count=leaf['compounds'],
+                endpoint=hierarchy_info.get('endpoint'),
+                species=hierarchy_info.get('species'),
+                duration=hierarchy_info.get('duration'),
+                filters_applied=[f"{k}={v}" for k, v in hierarchy_info.items()],
+                quality_notes=[],
+                generated_at=datetime.now().isoformat()
+            )
+            entries.append(entry)
+        
+        # Create DataFrame
+        df = pd.DataFrame([asdict(e) for e in entries])
+        
+        # Add summary statistics
+        summary = {
+            'total_files': len(entries),
+            'total_records': sum(e.record_count for e in entries),
+            'total_compounds': sum(e.compound_count for e in entries),
+            'unique_endpoints': len(set(e.endpoint for e in entries if e.endpoint)),
+            'unique_species': len(set(e.species for e in entries if e.species)),
+            'generated_at': datetime.now().isoformat()
+        }
+        
+        # Save index
+        index_path = self.output_dir / 'master_index.xlsx'
+        with pd.ExcelWriter(index_path, engine='openpyxl') as writer:
+            df.to_excel(writer, sheet_name='File Index', index=False)
+            
+            # Add summary sheet
+            summary_df = pd.DataFrame([summary])
+            summary_df.to_excel(writer, sheet_name='Summary', index=False)
+        
+        return str(index_path)
+    
+    def _parse_hierarchy_path(self, path_parts: List[str]) -> Dict[str, str]:
+        """Parse hierarchy path into key-value pairs."""
+        hierarchy = {}
+        for part in path_parts:
+            if '=' in part:
+                key, value = part.split('=', 1)
+                hierarchy[key] = value
+        return hierarchy
+    
+    def generate_json_index(self, entries: List[IndexEntry]) -> str:
+        """Generate JSON format index."""
+        index_data = {
+            'version': '1.0',
+            'generated_at': datetime.now().isoformat(),
+            'total_entries': len(entries),
+            'entries': [asdict(e) for e in entries]
+        }
+        
+        index_path = self.output_dir / 'master_index.json'
+        with open(index_path, 'w') as f:
+            json.dump(index_data, f, indent=2)
+        
+        return str(index_path)
+9. PHASE 8 — VALIDATION AND AUDIT SYSTEM
+Audit Engine Implementation
+
+# audit/auditor.py
+import pandas as pd
+import numpy as np
+from typing import Dict, List, Optional, Tuple
+from dataclasses import dataclass, asdict
+from pathlib import Path
+import json
+
+@dataclass
+class AuditFinding:
+    """Represents a single audit finding."""
+    category: str
+    severity: str  # 'critical', 'warning', 'info'
+    description: str
+    affected_records: int
+    details: dict
+
+@dataclass
+class AuditReport:
+    """Complete audit report."""
+    dataset_id: str
+    total_records: int
+    total_columns: int
+    findings: List[AuditFinding]
+    quality_score: float
+    summary: dict
+
+class ScientificAuditor:
+    """Performs comprehensive audit of scientific datasets."""
+    
+    def __init__(self):
+        self.findings: List[AuditFinding] = []
+    
+    def audit(self, df: pd.DataFrame, 
+              column_mappings: dict,
+              dataset_id: str = "unknown") -> AuditReport:
+        """Run complete audit on dataset."""
+        self.findings = []
+        
+        # Run all audit checks
+        self._check_missing_values(df)
+        self._check_duplicates(df, column_mappings)
+        self._check_unit_consistency(df, column_mappings)
+        self._check_endpoint_consistency(df, column_mappings)
+        self._check_value_ranges(df, column_mappings)
+        self._check_data_types(df)
+        
+        # Calculate quality score
+        quality_score = self._calculate_quality_score(df)
+        
+        # Generate summary
+        summary = {
+            'total_findings': len(self.findings),
+            'critical_findings': len([f for f in self.findings if f.severity == 'critical']),
+            'warning_findings': len([f for f in self.findings if f.severity == 'warning']),
+            'info_findings': len([f for f in self.findings if f.severity == 'info'])
+        }
+        
+        return AuditReport(
+            dataset_id=dataset_id,
+            total_records=len(df),
+            total_columns=len(df.columns),
+            findings=self.findings,
+            quality_score=quality_score,
+            summary=summary
+        )
+    
+    def _check_missing_values(self, df: pd.DataFrame) -> None:
+        """Check for missing values in each column."""
+        missing_counts = df.isnull().sum()
+        total = len(df)
+        
+        for col, count in missing_counts.items():
+            pct = (count / total) * 100
+            if pct > 0:
+                severity = 'critical' if pct > 30 else 'warning' if pct > 10 else 'info'
+                self.findings.append(AuditFinding(
+                    category='missing_values',
+                    severity=severity,
+                    description=f"Column '{col}' has {count} missing values ({pct:.1f}%)",
+                    affected_records=int(count),
+                    details={'column': col, 'missing_count': int(count), 'percentage': round(pct, 2)}
+                ))
+    
+    def _check_duplicates(self, df: pd.DataFrame, 
+                         column_mappings: dict) -> None:
+        """Check for exact and near duplicates."""
+        # Exact duplicates
+        duplicate_mask = df.duplicated(keep=False)
+        exact_duplicates = duplicate_mask.sum()
+        
+        if exact_duplicates > 0:
+            self.findings.append(AuditFinding(
+                category='duplicates',
+                severity='warning',
+                description=f"Found {exact_duplicates} exact duplicate rows",
+                affected_records=int(exact_duplicates),
+                details={'duplicate_count': int(exact_duplicates)}
+            ))
+        
+        # Check for duplicate chemical identifiers
+        if 'chemical_id' in column_mappings:
+            col = column_mappings['chemical_id']
+            if col in df.columns:
+                dup_chemicals = df[col].duplicated(keep=False).sum()
+                if dup_chemicals > 0:
+                    self.findings.append(AuditFinding(
+                        category='duplicate_chemicals',
+                        severity='info',
+                        description=f"Found {dup_chemicals} records with duplicate chemical identifiers",
+                        affected_records=int(dup_chemicals),
+                        details={'column': col}
+                    ))
+    
+    def _check_unit_consistency(self, df: pd.DataFrame,
+                                column_mappings: dict) -> None:
+        """Check for unit consistency."""
+        if 'unit' in column_mappings:
+            col = column_mappings['unit']
+            if col in df.columns:
+                unique_units = df[col].nunique()
+                if unique_units > 1:
+                    unit_counts = df[col].value_counts().to_dict()
+                    self.findings.append(AuditFinding(
+                        category='unit_inconsistency',
+                        severity='warning',
+                        description=f"Found {unique_units} different units in column '{col}'",
+                        affected_records=len(df),
+                        details={'unique_units': unique_units, 'unit_distribution': unit_counts}
+                    ))
+    
+    def _check_endpoint_consistency(self, df: pd.DataFrame,
+                                    column_mappings: dict) -> None:
+        """Check for endpoint consistency."""
+        if 'endpoint' in column_mappings:
+            col = column_mappings['endpoint']
+            if col in df.columns:
+                unique_endpoints = df[col].nunique()
+                endpoint_counts = df[col].value_counts().to_dict()
+                
+                if unique_endpoints > 5:
+                    self.findings.append(AuditFinding(
+                        category='endpoint_variety',
+                        severity='info',
+                        description=f"Found {unique_endpoints} different endpoints",
+                        affected_records=len(df),
+                        details={'unique_endpoints': unique_endpoints, 
+                                'endpoint_distribution': endpoint_counts}
+                    ))
+    
+    def _check_value_ranges(self, df: pd.DataFrame,
+                           column_mappings: dict) -> None:
+        """Check for values outside expected ranges."""
+        if 'value' in column_mappings:
+            col = column_mappings['value']
+            if col in df.columns:
+                numeric_col = pd.to_numeric(df[col], errors='coerce')
+                
+                # Check for negative values (usually invalid for toxicity)
+                negative_count = (numeric_col < 0).sum()
+                if negative_count > 0:
+                    self.findings.append(AuditFinding(
+                        category='negative_values',
+                        severity='warning',
+                        description=f"Found {negative_count} negative values in '{col}'",
+                        affected_records=int(negative_count),
+                        details={'column': col}
+                    ))
+                
+                # Check for extreme outliers
+                if numeric_col.notna().any():
+                    q1 = numeric_col.quantile(0.25)
+                    q3 = numeric_col.quantile(0.75)
+                    iqr = q3 - q1
+                    upper_bound = q3 + 3 * iqr
+                    
+                    outlier_count = (numeric_col > upper_bound).sum()
+                    if outlier_count > 0:
+                        self.findings.append(AuditFinding(
+                            category='outliers',
+                            severity='info',
+                            description=f"Found {outlier_count} potential outliers in '{col}'",
+                            affected_records=int(outlier_count),
+                            details={'column': col, 'upper_bound': float(upper_bound)}
+                        ))
+    
+    def _check_data_types(self, df: pd.DataFrame) -> None:
+        """Check for data type issues."""
+        for col in df.columns:
+            # Check for mixed types
+            type_counts = df[col].apply(type).value_counts()
+            if len(type_counts) > 1:
+                self.findings.append(AuditFinding(
+                    category='mixed_types',
+                    severity='info',
+                    description=f"Column '{col}' contains mixed data types",
+                    affected_records=len(df),
+                    details={'column': col, 'types': {str(k): int(v) for k, v in type_counts.items()}}
+                ))
+    
+    def _calculate_quality_score(self, df: pd.DataFrame) -> float:
+        """Calculate overall data quality score (0-100)."""
+        score = 100.0
+        
+        # Deduct for missing values
+        missing_pct = df.isnull().sum().sum() / (len(df) * len(df.columns)) * 100
+        score -= missing_pct * 0.5
+        
+        # Deduct for duplicates
+        dup_pct = df.duplicated().sum() / len(df) * 100
+        score -= dup_pct * 0.3
+        
+        # Deduct for critical findings
+        critical_count = len([f for f in self.findings if f.severity == 'critical'])
+        score -= critical_count * 5
+        
+        # Deduct for warnings
+        warning_count = len([f for f in self.findings if f.severity == 'warning'])
+        score -= warning_count * 2
+        
+        return max(0, min(100, round(score, 1)))
+10. PHASE 9 — SCIENTIFIC ENRICHMENT PLUGIN SYSTEM
+Plugin Architecture
+
+# api_plugins/base_plugin.py
+from abc import ABC, abstractmethod
+from typing import Any, Dict, List, Optional
+from dataclasses import dataclass
+import time
+
+@dataclass
+class PluginResult:
+    """Result from a plugin operation."""
+    success: bool
+    data: Any
+    error: Optional[str]
+    cached: bool
+
+class BaseAPIPlugin(ABC):
+    """Base class for API plugins."""
+    
+    def __init__(self, cache_enabled: bool = True, 
+                 rate_limit_delay: float = 0.1):
+        self.cache_enabled = cache_enabled
+        self.rate_limit_delay = rate_limit_delay
+        self._cache: Dict[str, PluginResult] = {}
+        self._last_request_time = 0
+    
+    def _respect_rate_limit(self) -> None:
+        """Ensure rate limiting is respected."""
+        elapsed = time.time() - self._last_request_time
+        if elapsed < self.rate_limit_delay:
+            time.sleep(self.rate_limit_delay - elapsed)
+        self._last_request_time = time.time()
+    
+    def _get_cache_key(self, identifier: str) -> str:
+        """Generate cache key for identifier."""
+        return f"{self.__class__.__name__}:{identifier.lower().strip()}"
+    
+    def _get_cached(self, identifier: str) -> Optional[PluginResult]:
+        """Get cached result if available."""
+        if not self.cache_enabled:
+            return None
+        return self._cache.get(self._get_cache_key(identifier))
+    
+    def _cache_result(self, identifier: str, result: PluginResult) -> None:
+        """Cache a result."""
+        if self.cache_enabled:
+            self._cache[self._get_cache_key(identifier)] = result
+    
+    @abstractmethod
+    def fetch(self, identifier: str, **kwargs) -> PluginResult:
+        """Fetch data for an identifier."""
+        pass
+    
+    @abstractmethod
+    def validate(self, identifier: str) -> bool:
+        """Validate an identifier."""
+        pass
+PubChem Plugin Example
+
+# api_plugins/pubchem_plugin.py
+import requests
+from typing import Optional
+from .base_plugin import BaseAPIPlugin, PluginResult
+
+class PubChemPlugin(BaseAPIPlugin):
+    """Plugin for PubChem API integration."""
+    
+    BASE_URL = "https://pubchem.ncbi.nlm.nih.gov/rest/pug"
+    
+    def fetch(self, identifier: str, 
+              identifier_type: str = "name",
+              properties: list = None,
+              **kwargs) -> PluginResult:
+        """Fetch compound data from PubChem."""
+        # Check cache first
+        cached = self._get_cached(identifier)
+        if cached:
+            return cached
+        
+        if properties is None:
+            properties = ['MolecularWeight', 'MolecularFormula', 'CanonicalSMILES', 
+                         'IsomericSMILES', 'InChI', 'InChIKey', 'IUPACName']
+        
+        try:
+            self._respect_rate_limit()
+            
+            # Build URL
+            props_str = ','.join(properties)
+            url = f"{self.BASE_URL}/compound/{identifier_type}/{identifier}/property/{props_str}/json"
+            
+            response = requests.get(url, timeout=30)
+            response.raise_for_status()
+            
+            data = response.json()
+            
+            if 'PropertyTable' in data and 'Properties' in data['PropertyTable']:
+                result_data = data['PropertyTable']['Properties'][0]
+                result = PluginResult(
+                    success=True,
+                    data=result_data,
+                    error=None,
+                    cached=False
+                )
+            else:
+                result = PluginResult(
+                    success=False,
+                    data=None,
+                    error="No properties found",
+                    cached=False
+                )
+            
+            self._cache_result(identifier, result)
+            return result
+            
+        except requests.RequestException as e:
+            return PluginResult(
+                success=False,
+                data=None,
+                error=str(e),
+                cached=False
+            )
+    
+    def validate(self, identifier: str, 
+                 identifier_type: str = "name") -> bool:
+        """Validate a chemical identifier."""
+        result = self.fetch(identifier, identifier_type)
+        return result.success
+    
+    def get_smiles(self, identifier: str) -> Optional[str]:
+        """Get SMILES string for a compound."""
+        result = self.fetch(identifier, properties=['CanonicalSMILES'])
+        if result.success:
+            return result.data.get('CanonicalSMILES')
+        return None
+    
+    def get_molecular_weight(self, identifier: str) -> Optional[float]:
+        """Get molecular weight for a compound."""
+        result = self.fetch(identifier, properties=['MolecularWeight'])
+        if result.success:
+            try:
+                return float(result.data.get('MolecularWeight', 0))
+            except (ValueError, TypeError):
+                return None
+        return None
+11. PHASE 10 — STREAMLIT DASHBOARD
+Main Application Structure
+
+# app/main.py
+import streamlit as st
+from pathlib import Path
+
+st.set_page_config(
+    page_title="Scientific Data Orchestrator",
+    page_icon="🔬",
+    layout="wide",
+    initial_sidebar_state="expanded"
+)
+
+# Custom CSS for academic styling
+st.markdown("""
+<style>
+    .main-header {
+        font-size: 2.5rem;
+        font-weight: 700;
+        color: #1a1a2e;
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+    .section-header {
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: #16213e;
+        margin-top: 1.5rem;
+        margin-bottom: 1rem;
+    }
+    .metric-card {
+        background-color: #f8f9fa;
+        border-radius: 8px;
+        padding: 1rem;
+        border-left: 4px solid #4a90d9;
+    }
+    .stButton>button {
+        background-color: #4a90d9;
+        color: white;
+        font-weight: 600;
+    }
+</style>
+""", unsafe_allow_html=True)
+
+# Sidebar
+with st.sidebar:
+    st.image("https://via.placeholder.com/150x50?text=SDO", use_column_width=True)
+    st.markdown("### Navigation")
+    
+    pages = {
+        "📁 Upload Data": "pages/01_Upload.py",
+        "📋 Template Selection": "pages/02_Template_Selection.py",
+        "🔗 Variable Mapping": "pages/03_Variable_Mapping.py",
+        "🏗️ Hierarchy Builder": "pages/04_Hierarchy_Builder.py",
+        "⚙️ Segregation Engine": "pages/05_Segregation_Engine.py",
+        "📊 Audit Dashboard": "pages/06_Audit_Dashboard.py",
+        "📥 Download Results": "pages/07_Download.py"
+    }
+    
+    for page_name, page_path in pages.items():
+        if st.button(page_name, key=page_name, use_container_width=True):
+            st.session_state.current_page = page_path
+
+# Main content
+st.markdown('<p class="main-header">🔬 Scientific Data Orchestrator</p>', 
+            unsafe_allow_html=True)
+st.markdown("""
+### Automated Curation, Validation, and Hierarchical Segregation of Scientific Datasets
+
+This platform helps researchers:
+- **Upload** Excel/CSV datasets
+- **Map** scientific variables automatically
+- **Validate** data quality and consistency
+- **Segregate** data into hierarchical structures
+- **Export** AI/ML-ready datasets
+""")
+Upload Page
+
+# app/pages/01_Upload.py
+import streamlit as st
+import pandas as pd
+from pathlib import Path
+import sys
+
+sys.path.append(str(Path(__file__).parent.parent.parent))
+from utils.file_handler import FileIngestionEngine
+
+st.markdown("## 📁 Data Upload")
+st.markdown("Upload your scientific dataset (CSV or Excel format)")
+
+# File uploader
+uploaded_file = st.file_uploader(
+    "Choose a file",
+    type=['csv', 'xlsx', 'xlsm'],
+    help="Supported formats: CSV, XLSX, XLSM"
+)
+
+if uploaded_file is not None:
+    # Save uploaded file
+    upload_dir = Path("uploads")
+    upload_dir.mkdir(exist_ok=True)
+    file_path = upload_dir / uploaded_file.name
+    
+    with open(file_path, 'wb') as f:
+        f.write(uploaded_file.getvalue())
+    
+    # Ingest file
+    engine = FileIngestionEngine()
+    result = engine.ingest(str(file_path))
+    
+    if result.success:
+        st.success(f"File '{uploaded_file.name}' uploaded successfully!")
+        
+        # Store in session state
+        st.session_state.uploaded_file = file_path
+        st.session_state.ingestion_result = result
+        st.session_state.sheet_names = result.sheet_names
+        
+        # Show file info
+        col1, col2, col3 = st.columns(3)
+        with col1:
+            st.metric("Total Rows", result.metadata['total_rows'])
+        with col2:
+            st.metric("Total Columns", result.metadata['total_cols'])
+        with col3:
+            st.metric("File Size", f"{result.metadata['file_size_bytes'] / 1024:.1f} KB")
+        
+        # Sheet selection for Excel files
+        if len(result.sheet_names) > 1:
+            selected_sheet = st.selectbox(
+                "Select sheet to process",
+                result.sheet_names
+            )
+            st.session_state.selected_sheet = selected_sheet
+            df = result.dataframes[selected_sheet]
+        elif result.sheet_names:
+            df = result.dataframes[result.sheet_names[0]]
+        else:
+            df = pd.DataFrame()
+        
+        if not df.empty:
+            st.markdown("### Data Preview")
+            st.dataframe(df.head(10), use_container_width=True)
+            
+            # Column info
+            st.markdown("### Column Information")
+            col_info = pd.DataFrame({
+                'Column Name': df.columns.tolist(),
+                'Data Type': [str(df[col].dtype) for col in df.columns],
+                'Non-Null Count': [df[col].notna().sum() for col in df.columns],
+                'Null Count': [df[col].isna().sum() for col in df.columns],
+                'Unique Values': [df[col].nunique() for col in df.columns]
+            })
+            st.dataframe(col_info, use_container_width=True)
+    else:
+        st.error("Failed to process file:")
+        for error in result.errors:
+            st.write(f"- {error}")
+12. PHASE 11 — TESTING STRATEGY
+Test Structure
+
+# tests/conftest.py
+import pytest
+import pandas as pd
+from pathlib import Path
+
+@pytest.fixture
+def sample_toxicology_data():
+    """Sample toxicology dataset for testing."""
+    return pd.DataFrame({
+        'chemical_name': ['Chemical A', 'Chemical B', 'Chemical C', 'Chemical A'],
+        'cas_number': ['123-45-6', '234-56-7', '345-67-8', '123-45-6'],
+        'species': ['rat', 'mouse', 'rat', 'rat'],
+        'endpoint': ['ld50', 'ld50', 'noael', 'ld50'],
+        'value': [500, 250, 10, 500],
+        'unit': ['mg/kg', 'mg/kg', 'mg/kg/day', 'mg/kg'],
+        'duration': [1, 1, 90, 1],
+        'qualifier': ['=', '=', '=', '=']
+    })
+
+@pytest.fixture
+def sample_mapping():
+    """Sample column mapping for testing."""
+    return {
+        'chemical_id': 'chemical_name',
+        'cas_number': 'cas_number',
+        'species': 'species',
+        'endpoint': 'endpoint',
+        'value': 'value',
+        'unit': 'unit',
+        'duration': 'duration',
+        'qualifier': 'qualifier'
+    }
+
+@pytest.fixture
+def temp_output_dir(tmp_path):
+    """Temporary output directory."""
+    output_dir = tmp_path / "outputs"
+    output_dir.mkdir()
+    return output_dir
+Unit Tests
+
+# tests/test_segregation.py
+import pytest
+import pandas as pd
+from segregation.engine import HierarchicalSegregationEngine
+
+def test_build_hierarchy_tree(sample_toxicology_data):
+    """Test hierarchy tree construction."""
+    engine = HierarchicalSegregationEngine()
+    hierarchy = ['endpoint', 'species']
+    
+    root = engine.build_hierarchy_tree(sample_toxicology_data, hierarchy)
+    
+    assert root.variable == 'root'
+    assert len(root.children) == 2  # ld50 and noael
+    
+    # Check ld50 children
+    ld50_node = next(n for n in root.children if n.value == 'ld50')
+    assert len(ld50_node.children) == 2  # rat and mouse
+
+def test_segregate_creates_output(sample_toxicology_data, temp_output_dir):
+    """Test segregation creates proper output structure."""
+    engine = HierarchicalSegregationEngine(str(temp_output_dir))
+    hierarchy = ['endpoint', 'species']
+    
+    result = engine.segregate(
+        sample_toxicology_data,
+        hierarchy,
+        session_id='test_session'
+    )
+    
+    assert result.total_files > 0
+    assert result.statistics['input_records'] == len(sample_toxicology_data)
+
+def test_sanitize_folder_name():
+    """Test folder name sanitization."""
+    engine = HierarchicalSegregationEngine()
+    
+    assert engine._sanitize_folder_name('test/name') == 'test_name'
+    assert engine._sanitize_folder_name('name<invalid>') == 'name_invalid_'
+13. PHASE 12 — DEPLOYMENT
+Requirements File
+
+# requirements.txt
+# Core dependencies
+pandas>=2.0.0
+openpyxl>=3.1.0
+numpy>=1.24.0
+streamlit>=1.28.0
+
+# File handling
+chardet>=5.2.0
+pathlib2>=2.3.0
+
+# API integrations
+requests>=2.31.0
+
+# Validation
+jsonschema>=4.19.0
+
+# Reporting
+reportlab>=4.0.0
+xlsxwriter>=3.1.0
+
+# Testing
+pytest>=7.4.0
+pytest-cov>=4.1.0
+
+# Utilities
+python-dotenv>=1.0.0
+Streamlit Cloud Deployment
+Push code to GitHub repository
+Go to share.streamlit.io
+Connect GitHub repository
+Set main file path to app/main.py
+Add requirements.txt
+Deploy
+File Storage Strategy
+For Streamlit Cloud:
+
+Use session state for temporary file storage
+Files are deleted when session ends
+For persistent storage, integrate with:
+AWS S3
+Google Cloud Storage
+Azure Blob Storage
+14. PHASE 13 — THESIS & RESEARCH POSITIONING
+Research Framing
+Title: "Development of an Automated Computational Framework for the Curation, Validation, and Hierarchical Segregation of Scientific Databases for AI-Ready Research Applications"
+
+Novelty Explanation
+Automated Scientific Variable Mapping: Intelligent synonym detection for scientific column names
+Dynamic Hierarchical Segregation: Configurable multi-level data organization without hardcoding
+Domain-Specific Templates: Extensible template system for different scientific domains
+Integrated Validation Pipeline: Comprehensive audit system with quality scoring
+QSAR-Ready Data Preparation: Automatic handling of censored values and qualifiers
+Innovation Highlights
+Plugin Architecture: Extensible API integration system for chemical databases
+Qualifier Engine: Intelligent handling of censored and limit values
+Master Index Generation: Comprehensive metadata tracking for reproducibility
+Quality Scoring Algorithm: Quantitative assessment of dataset reliability
+Future Scope
+Machine Learning Integration: AutoML for endpoint prediction
+Ontology Integration: OBO Foundry ontologies for semantic enrichment
+Workflow Automation: Integration with ELN/LIMS systems
+Collaborative Features: Multi-user annotation and curation
+Publication Potential
+Target venues:
+
+Journal of Chemical Information and Modeling (JCIM)
+Bioinformatics
+Scientific Data (Nature)
+Journal of Cheminformatics
+Limitations
+Limited to structured tabular data
+Requires manual template configuration for new domains
+API rate limits for external integrations
+No support for unstructured data (images, spectra)
+RECOMMENDED DEVELOPMENT ORDER
+Week 1-2: Project structure, file ingestion, basic utilities
+Week 3-4: Scientific variable mapping, synonym system
+Week 5-6: Template system, domain configurations
+Week 7-8: Hierarchical segregation engine (CORE)
+Week 9-10: Validation and audit system
+Week 11-12: Streamlit dashboard
+Week 13-14: Testing, documentation, deployment

@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Smoke Flavouring Smoke Concentrate 809045,EFSA CEF,2009,2315,Human health,subchronic,Rat,oral: feed,90.0,NOAEL,=,1000.0,mg/kg bw/day,not reported,not reported,1000.0,=,,True

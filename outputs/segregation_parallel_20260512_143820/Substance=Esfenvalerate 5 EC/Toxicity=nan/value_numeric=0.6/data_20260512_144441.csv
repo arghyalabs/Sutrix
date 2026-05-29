@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Esfenvalerate 5 EC,EFSA,2014,2569,Ecotox (soil compartment),not reported,Soybean,Not reported,,ER50,>,0.6,g/ha,other,,0.6,=,,True

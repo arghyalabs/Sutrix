@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Eugenol,EFSA AFC,2009,2311,Human health,chronic/long term toxicity,Rat,Not reported,730.0,NOAEL,=,300.0,mg/kg bw/day,body weight,systemic,300.0,=,,True

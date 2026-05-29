@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Azadirachtin extract (Sipcam S.p.A source),EFSA,2018,3120,Animal (non-target species) health,reproduction toxicity,Bobwhite quail,Not reported,,NOEC,=,71.2,mg/kg bw/day,not reported,not reported,71.2,=,,True

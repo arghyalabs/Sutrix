@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+3-chloroacrylic acid,EFSA,2006,1083,Ecotox (water compartment),acute toxicity,Rainbow trout,Not reported,4.0,LC50,=,69.5,mg/L,mortality,,69.5,=,,True

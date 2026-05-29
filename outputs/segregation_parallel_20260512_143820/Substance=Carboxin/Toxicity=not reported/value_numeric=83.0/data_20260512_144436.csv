@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Carboxin,EFSA,2010,1252,Animal (non-target species) health,reproduction toxicity,Bobwhite quail,Not reported,,NOEC,=,83.0,mg/kg bw/day,not reported,not reported,83.0,=,,True

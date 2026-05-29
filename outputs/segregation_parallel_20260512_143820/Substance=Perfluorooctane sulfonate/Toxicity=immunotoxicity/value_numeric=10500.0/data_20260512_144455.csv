@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Perfluorooctane sulfonate,EFSA CONTAM,2018,3153,Human health,study with volunteers,Human,Not reported,,BMDL05,=,10500.0,ng/L,immunology,immunotoxicity,10500.0,=,,True

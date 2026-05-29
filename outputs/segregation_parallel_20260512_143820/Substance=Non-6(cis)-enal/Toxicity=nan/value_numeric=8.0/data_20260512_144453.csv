@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Non-6(cis)-enal,EFSA FEEDAP,2016,2864,Ecotox (water compartment),acute toxicity,Daphnia magna,Not reported,,LC50,=,8.0,mg/L,mortality,,8.0,=,,True

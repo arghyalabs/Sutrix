@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+L-Arginine,EFSA FEEDAP,2007,160,Animal (non-target species) health,subchronic,Rat,Not reported,91.0,NOAEL,=,3.131,mg/kg bw/day,no adverse effect observed at single/highest dose,,3.131,=,,True

@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+"3,4-Dimethylcyclopentan-1,2-dione",EFSA FEEDAP,2016,2887,Ecotox (water compartment),acute toxicity,not reported,Not reported,,EC50,=,76.0,mg/L,mortality,,76.0,=,,True

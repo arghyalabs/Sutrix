@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Prothioconazole,EFSA,2007,1103,Ecotox (water compartment),chronic/long term toxicity,Harlequin fly,Not reported,,NOEC,=,9.14,mg/L,not reported,,9.14,=,,True

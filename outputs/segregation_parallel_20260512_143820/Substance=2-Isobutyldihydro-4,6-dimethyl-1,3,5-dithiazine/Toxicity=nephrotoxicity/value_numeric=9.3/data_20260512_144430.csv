@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+"2-Isobutyldihydro-4,6-dimethyl-1,3,5-dithiazine",EFSA CEF,2015,2634,Human health,subchronic,Rat,oral: feed,90.0,NOAEL,=,9.3,mg/kg bw/day,histopathology non neoplastic,nephrotoxicity,9.3,=,,True

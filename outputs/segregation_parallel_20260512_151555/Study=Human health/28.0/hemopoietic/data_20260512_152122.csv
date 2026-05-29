@@ -1,0 +1,4 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready,PubChem_CID,PubChem_MW,PubChem_CanonicalSMILES,PubChem_InChIKey,PubChem_Ambiguous,PubChem_Candidate_CIDs,PubChem_Error
+CID_5351619,EFSA NDA,2016,2890,Human health,short-term toxicity,Rat,oral: gavage,28.0,NOAEL,=,800.0,mg/kg bw/day,haematology,hemopoietic,800.0,=,,True,5351619,229.3,,SSISHJJTAXXQAX-ZETCQYMHSA-N,False,,
+CID_5351619,EFSA NDA,2017,3010,Human health,short-term toxicity,Rat,oral: gavage,28.0,NOAEL,=,800.0,mg/kg bw/day,haematology,hemopoietic,800.0,=,,True,5351619,229.3,,SSISHJJTAXXQAX-ZETCQYMHSA-N,False,,
+CID_93422,EFSA,2009,1159,Human health,short-term toxicity,Rat,oral: unspecified,28.0,NOAEL,=,1.5,mg/kg bw/day,haematology,hemopoietic,1.5,=,,True,93422,247.64,,IQGKIPDJXCAMSM-UHFFFAOYSA-N,False,,

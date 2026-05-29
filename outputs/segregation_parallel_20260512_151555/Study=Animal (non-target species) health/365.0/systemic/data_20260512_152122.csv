@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready,PubChem_CID,PubChem_MW,PubChem_CanonicalSMILES,PubChem_InChIKey,PubChem_Ambiguous,PubChem_Candidate_CIDs,PubChem_Error
+Beta-Cypermethrin,EFSA,2014,2520,Animal (non-target species) health,chronic/long term toxicity,Dog,Not reported,365.0,NOAEL,=,0.3,mg/kg bw/day,body weight,systemic,0.3,=,,True,,,,,True,"2912,93357,6455379,57006186,12617364,12617363",Ambiguous Identity

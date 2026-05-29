@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Fluopyram,EFSA,2013,2177,Ecotox (soil compartment),chronic/long term toxicity,Hypoaspis aculeifer,Not reported,14.0,NOEC,>,415.0,mg/kg,reproduction,,415.0,=,,True

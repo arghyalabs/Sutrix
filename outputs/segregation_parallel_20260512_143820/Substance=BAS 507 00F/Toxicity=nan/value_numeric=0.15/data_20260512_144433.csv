@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+BAS 507 00F,EFSA,2005,1060,Ecotox (water compartment),acute toxicity,Fathead minnow,Not reported,4.0,LC50,=,0.15,mg/L,mortality,,0.15,=,,True

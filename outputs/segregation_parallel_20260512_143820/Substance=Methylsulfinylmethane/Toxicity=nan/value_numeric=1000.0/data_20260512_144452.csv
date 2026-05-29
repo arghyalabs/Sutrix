@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Methylsulfinylmethane,EFSA FEEDAP,2013,2224,Animal (target species) health,other,Rat,oral: gavage,,NOAEL,=,1000.0,mg/kg bw/day,no adverse effect observed at single/highest dose,,1000.0,=,,True

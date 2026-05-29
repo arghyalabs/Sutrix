@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready,PubChem_CID,PubChem_MW,PubChem_CanonicalSMILES,PubChem_InChIKey,PubChem_Ambiguous,PubChem_Candidate_CIDs,PubChem_Error
+CID_10788,EFSA,2010,1249,Ecotox (soil compartment),chronic/long term toxicity,Aleochara bilineata,Not reported,77.0,dose level,=,485000.0,g/ha,reproduction,,485000.0,=,,True,10788,162.3,,QAYICIQNSGETAS-UHFFFAOYSA-N,False,,

@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+L-Threonate,EFSA ANS,2008,556,Human health,chronic/long term toxicity,Dog,oral: unspecified,168.0,NOAEL,=,1.0,g/kg bw/day,histopathology non neoplastic,endocrine,1.0,=,,True

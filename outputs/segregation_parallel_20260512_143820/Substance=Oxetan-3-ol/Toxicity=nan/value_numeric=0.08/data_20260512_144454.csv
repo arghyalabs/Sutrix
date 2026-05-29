@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Oxetan-3-ol,EFSA,2017,2929,Ecotox (water compartment),not reported,Swollen duckweed,Not reported,14.0,EC50,>,0.08,mg/L,other,,0.08,=,,True

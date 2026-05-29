@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready,PubChem_CID,PubChem_MW,PubChem_CanonicalSMILES,PubChem_InChIKey,PubChem_Ambiguous,PubChem_Candidate_CIDs,PubChem_Error
+CID_9920327,EFSA,2016,2831,Ecotox (soil compartment),chronic/long term toxicity,not reported,Not reported,28.0,EC10,=,0.08,mg/kg,not reported,,0.08,=,,True,9920327,1732.1,,IBSREHMXUMOFBB-JFUDTMANSA-N,False,,

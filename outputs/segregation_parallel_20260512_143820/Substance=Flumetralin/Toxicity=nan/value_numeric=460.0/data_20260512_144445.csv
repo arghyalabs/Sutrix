@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Flumetralin,EFSA,2014,2583,Ecotox (soil compartment),not reported,Perennial ryegrass,Not reported,,ER50,=,460.0,g/ha,other,,460.0,=,,True

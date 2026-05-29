@@ -1,0 +1,4 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready,PubChem_CID,PubChem_MW,PubChem_CanonicalSMILES,PubChem_InChIKey,PubChem_Ambiguous,PubChem_Candidate_CIDs,PubChem_Error
+CID_222285,EFSA ANS,2010,435,Human health,study with volunteers,Human,oral: drinking water,810.0,NOAEL,=,0.71,g/kg bw/day,clinical signs,systemic,0.71,=,,True,222285,122.12,,UNXHWFMMPAWVPI-ZXZARUISSA-N,False,,
+CID_222285,EFSA ANS,2013,2196,Human health,study with volunteers,Human,oral: drinking water,810.0,NOAEL,=,0.71,g/kg bw/day,clinical signs,systemic,0.71,=,,True,222285,122.12,,UNXHWFMMPAWVPI-ZXZARUISSA-N,False,,
+CID_222285,EFSA ANS,2015,2627,Human health,study with volunteers,Human,oral: drinking water,810.0,NOAEL,=,0.71,g/kg bw/day,clinical signs,systemic,0.71,=,,True,222285,122.12,,UNXHWFMMPAWVPI-ZXZARUISSA-N,False,,

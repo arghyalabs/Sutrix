@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Fluometuron,EFSA,2011,1272,Human health,chronic/long term toxicity,Rat,Not reported,728.0,NOAEL,=,0.553,mg/kg bw/day,haematology,hemopoietic,0.553,=,,True

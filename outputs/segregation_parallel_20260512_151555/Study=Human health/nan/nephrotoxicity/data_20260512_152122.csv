@@ -1,0 +1,4 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready,PubChem_CID,PubChem_MW,PubChem_CanonicalSMILES,PubChem_InChIKey,PubChem_Ambiguous,PubChem_Candidate_CIDs,PubChem_Error
+CID_50465,EFSA,2011,1287,Human health,subchronic,Rat,oral: unspecified,,NOAEL,=,80.0,mg/kg bw/day,not reported,nephrotoxicity,80.0,=,,True,50465,255.03,,MEFQWPUMEMWTJP-UHFFFAOYSA-N,False,,
+CID_2733487,EFSA CONTAM,2005,55,Human health,subchronic,Rat,Not reported,,NOAEL,=,0.2,mg/kg bw/day,not reported,nephrotoxicity,0.2,=,,True,2733487,721.8,,UVBUBMSSQKOIBE-DSLOAKGESA-N,False,,
+"Fumonisins (B1, B2, B3)",EFSA CONTAM,2005,55,Human health,subchronic,Rat,Not reported,,NOAEL,=,0.2,mg/kg bw/day,not reported,nephrotoxicity,0.2,=,,True,,,,,False,,Not Found

@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+1-Methylpyrrolidine,EFSA AFC,2009,2310,Human health,short-term toxicity,Rat,Not reported,28.0,NOAEL,=,50.0,mg/kg bw/day,mortality,systemic,50.0,=,,True

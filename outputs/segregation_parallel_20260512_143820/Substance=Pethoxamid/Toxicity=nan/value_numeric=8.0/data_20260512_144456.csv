@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Pethoxamid,EFSA,2017,2995,Ecotox (water compartment),chronic/long term toxicity,Aquatic plants group,Not reported,120.0,NOAEC,=,8.0,µg/L,not reported,,8.0,=,,True

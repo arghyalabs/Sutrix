@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Kofa Grain pH5,EFSA FEEDAP,2011,236,Animal (target species) health,subchronic,Turkey,oral: feed,56.0,dose level,=,22.0,g/kg,no adverse effect observed,,22.0,=,,True

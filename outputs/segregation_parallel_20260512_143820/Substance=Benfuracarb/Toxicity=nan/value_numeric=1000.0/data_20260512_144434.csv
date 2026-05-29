@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Benfuracarb,EFSA,2009,1179,Ecotox (soil compartment),chronic/long term toxicity,Hypoaspis aculeifer,Not reported,14.0,dose level,=,1000.0,g/ha,reproduction,,1000.0,=,,True

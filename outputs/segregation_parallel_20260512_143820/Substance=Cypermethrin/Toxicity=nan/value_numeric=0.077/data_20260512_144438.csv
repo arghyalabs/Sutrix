@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Cypermethrin,EFSA,2018,3129,Ecotox (water compartment),chronic/long term toxicity,Fathead minnow,Not reported,300.0,NOEC,=,0.077,µg/L,other,,0.077,=,,True

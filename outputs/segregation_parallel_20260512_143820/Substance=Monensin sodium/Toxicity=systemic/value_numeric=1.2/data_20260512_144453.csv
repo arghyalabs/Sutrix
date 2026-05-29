@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Monensin sodium,EFSA FEEDAP,2004,269,Animal (non-target species) health,chronic/long term toxicity,Mouse,Not reported,730.0,NOEL,=,1.2,mg/kg bw/day,body weight,systemic,1.2,=,,True

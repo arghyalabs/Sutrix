@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Hymexazol,EFSA,2010,1220,Ecotox (soil compartment),chronic/long term toxicity,Typhlodromus pyri,Not reported,14.0,NOEC,=,400.0,g/ha,reproduction,,400.0,=,,True

@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+"3-Acetyl-2,5-dimethylthiophene",EFSA FEEDAP,2013,2353,Ecotox (water compartment),acute toxicity,Daphnia magna,Not reported,,LC50,=,6.95,mg/L,mortality,,6.95,=,,True

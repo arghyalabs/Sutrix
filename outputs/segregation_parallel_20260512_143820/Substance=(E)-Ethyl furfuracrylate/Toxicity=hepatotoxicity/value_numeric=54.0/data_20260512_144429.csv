@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+(E)-Ethyl furfuracrylate,EFSA CEF,2011,2110,Human health,subchronic,Rat,oral: feed,90.0,NOEL,=,54.0,mg/kg bw/day,haematology,hepatotoxicity,54.0,=,,True

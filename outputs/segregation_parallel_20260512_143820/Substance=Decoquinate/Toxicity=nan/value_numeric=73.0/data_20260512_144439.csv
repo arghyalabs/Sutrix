@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Decoquinate,EFSA FEEDAP,2019,3138,Ecotox (water compartment),acute toxicity,Pseudokirchneriella subcapitata,Not reported,3.0,NOEC,=,73.0,µg/L,growth,,73.0,=,,True

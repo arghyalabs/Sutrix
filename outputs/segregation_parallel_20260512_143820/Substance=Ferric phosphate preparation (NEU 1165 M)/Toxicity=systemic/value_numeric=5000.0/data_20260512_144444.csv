@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Ferric phosphate preparation (NEU 1165 M),EFSA,2015,2609,Animal (non-target species) health,acute toxicity,Rat,Not reported,,LD50,>,5000.0,mg/kg bw/day,mortality,systemic,5000.0,=,,True

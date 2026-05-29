@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready,PubChem_CID,PubChem_MW,PubChem_CanonicalSMILES,PubChem_InChIKey,PubChem_Ambiguous,PubChem_Candidate_CIDs,PubChem_Error
+CID_14010333,EFSA FEEDAP,2009,286,Animal (non-target species) health,chronic/long term toxicity,Rhesus monkey,oral: gavage,365.0,NOAEL,=,125.0,µg/kg bw/day,clinical signs,pulmonary and cardiac,125.0,=,,True,14010333,337.8,,JHGSLSLUFMZUMK-UHFFFAOYSA-N,False,,

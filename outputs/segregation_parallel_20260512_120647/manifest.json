@@ -1,0 +1,17 @@
+{
+    "metadata": {
+        "dataset_name": "Reference Data.xlsx",
+        "session_id": "20260512_120647",
+        "generated_at": "2026-05-12T06:38:01.978642Z",
+        "software_version": "SDO-v1.0.0",
+        "template_used": "Toxicology_Standard_v1",
+        "original_file_sha256": "bada96b0d8b0bb9375080faaaa5ffa551d85717158c56940d3282d91404ca2a5",
+        "final_audit_score": 70.0
+    },
+    "segregation_stats": {
+        "total_folders": 2218,
+        "total_files": 0,
+        "hierarchy_levels": 2
+    },
+    "index": []
+}

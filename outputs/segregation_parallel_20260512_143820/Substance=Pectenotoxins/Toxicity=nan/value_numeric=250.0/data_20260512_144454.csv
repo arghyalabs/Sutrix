@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Pectenotoxins,EFSA CONTAM,2009,129,Human health,acute toxicity,Mouse,oral: unspecified,,LOAEL,=,250.0,µg/kg bw/day,histopathology non neoplastic,,250.0,=,,True

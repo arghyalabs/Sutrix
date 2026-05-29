@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Thifensulfuron-methyl,EFSA,2015,2680,Ecotox (soil compartment),not reported,Sugar beet,Not reported,,ER50,=,0.613,g/ha,seedling emergence,,0.613,=,,True

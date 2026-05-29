@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Florasulam,EFSA,2015,2593,Ecotox (water compartment),acute toxicity,Eastern oyster,Not reported,4.0,EC50,>,125.0,mg/L,mortality,,125.0,=,,True

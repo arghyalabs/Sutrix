@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Dichlorprop-P-2-ethylhexyl,EFSA,2018,3110,Ecotox (soil compartment),not reported,Cucumber,Not reported,,ER50,=,109.3,g/ha,other,,109.3,=,,True

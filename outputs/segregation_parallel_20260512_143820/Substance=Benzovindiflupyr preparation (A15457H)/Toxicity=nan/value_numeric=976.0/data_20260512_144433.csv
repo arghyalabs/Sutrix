@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Benzovindiflupyr preparation (A15457H),EFSA,2015,2628,Ecotox (soil compartment),not reported,Onion,Not reported,,NOEC,=,976.0,g/ha,seedling emergence,,976.0,=,,True

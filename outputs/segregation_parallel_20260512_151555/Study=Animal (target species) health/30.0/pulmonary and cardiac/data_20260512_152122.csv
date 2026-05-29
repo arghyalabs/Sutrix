@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready,PubChem_CID,PubChem_MW,PubChem_CanonicalSMILES,PubChem_InChIKey,PubChem_Ambiguous,PubChem_Candidate_CIDs,PubChem_Error
+CID_3503,EFSA CONTAM,2009,106,Animal (target species) health,subchronic,Sheep,oral: capsule,30.0,LOAEL,ca.,3.0,mg/kg bw/day,gross pathology,pulmonary and cardiac,3.0,=,,True,3503,518.6,,QBKSWRVVCFFDOT-UHFFFAOYSA-N,False,,

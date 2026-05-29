@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Sulfoxaflor,EFSA,2014,2749,Ecotox (water compartment),chronic/long term toxicity,Sheepshead minnow,Not reported,38.0,NOEC,=,1.21,mg/L,mortality,,1.21,=,,True

@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Azoxystrobin,EFSA,2010,1209,Ecotox (water compartment),chronic/long term toxicity,Harlequin fly,Not reported,28.0,NOEC,=,0.8,mg/L,not reported,,0.8,=,,True

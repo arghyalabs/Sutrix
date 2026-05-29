@@ -1,0 +1,2 @@
+Substance,Author,Year,OutputID,Study,TestType,Species,Route,DurationDays,Endpoint,qualifier,value,unit,Effect,Toxicity,value_numeric,value_qualifier,value_unit,value_qsar_ready
+Maduramicin ammonium,EFSA CONTAM,2008,92,Animal (non-target species) health,not reported,Pig,oral: feed,,dose level,=,37.5,mg/kg,mortality,systemic,37.5,=,,True
