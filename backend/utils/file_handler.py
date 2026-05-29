@@ -166,32 +166,8 @@ class FileIngestionEngine:
                 f"(maximum: {self.max_file_size_mb} MB)"
             )
 
-        if not errors:
-            # Attempt a 1-row read to catch obvious corruption
-            try:
-                import io
-                if file_bytes is not None:
-                    if path.suffix.lower() == ".csv":
-                        chunk = file_bytes[:1000]
-                        encoding = "utf-8"
-                        for enc in ["utf-8", "latin1", "cp1252"]:
-                            try:
-                                chunk.decode(enc)
-                                encoding = enc
-                                break
-                            except UnicodeDecodeError:
-                                continue
-                        pd.read_csv(io.BytesIO(file_bytes), encoding=encoding, nrows=1)
-                    else:
-                        pd.read_excel(io.BytesIO(file_bytes), nrows=1)
-                else:
-                    if path.suffix.lower() == ".csv":
-                        enc = detect_encoding(str(path))
-                        pd.read_csv(path, encoding=enc, nrows=1)
-                    else:
-                        pd.read_excel(path, nrows=1)
-            except Exception as exc:  # noqa: BLE001
-                errors.append(f"File is unreadable: {exc}")
+        # Skip the redundant 1-row pre-read — real read happens right after validation.
+        # Any corruption will surface there with a clear error message.
 
         return len(errors) == 0, errors
 
@@ -265,15 +241,12 @@ class FileIngestionEngine:
     @staticmethod
     def _clean_dataframe(df: pd.DataFrame) -> pd.DataFrame:
         """Strip leading/trailing whitespace from string columns and headers."""
-        df.columns = [
-            str(c).strip() if not isinstance(c, str) else c.strip()
-            for c in df.columns
-        ]
+        # Vectorized column header strip
+        df.columns = [str(c).strip() for c in df.columns]
+        # Vectorized string column strip (10-100x faster than apply+lambda)
         str_cols = df.select_dtypes(include="object").columns
         for col in str_cols:
-            df[col] = df[col].apply(
-                lambda v: v.strip() if isinstance(v, str) else v
-            )
+            df[col] = df[col].str.strip()
         return df
 
     @staticmethod

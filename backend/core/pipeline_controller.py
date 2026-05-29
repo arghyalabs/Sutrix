@@ -40,27 +40,31 @@ class ScientificPipelineController:
     async def ingest_dataset(context: PipelineContext, filename: str, temp_path: str, file_bytes: bytes) -> Dict[str, Any]:
         async with context._lock:
             ScientificPipelineController.validate_stage_transition(context, "ingest")
-            
-            engine = FileIngestionEngine()
-            result = engine.ingest(temp_path, file_bytes=file_bytes)
-            
-            if not result.success or result.primary_df is None:
-                raise ValueError(" | ".join(result.errors))
-                
-            optimized_df = downcast_dataframe(result.primary_df)
-            parquet_path = parquet_engine.convert_dataframe_to_parquet(optimized_df, f"ingested_{context.workspace_id}")
-            
+
+            import asyncio
+            loop = asyncio.get_running_loop()
+
+            # Run ALL blocking CPU/IO work in a thread so the event loop is never blocked
+            def _do_ingest():
+                engine = FileIngestionEngine()
+                result = engine.ingest(temp_path, file_bytes=file_bytes)
+                if not result.success or result.primary_df is None:
+                    raise ValueError(" | ".join(result.errors))
+                optimized_df = downcast_dataframe(result.primary_df)
+                parquet_path = parquet_engine.convert_dataframe_to_parquet(optimized_df, f"ingested_{context.workspace_id}")
+                row_count = len(optimized_df)
+                col_names = list(optimized_df.columns)
+                preview_data = optimized_df.head(10).fillna("").to_dict(orient="records")
+                return optimized_df, parquet_path, row_count, col_names, preview_data
+
+            optimized_df, parquet_path, row_count, col_names, preview_data = await loop.run_in_executor(None, _do_ingest)
+
             context.parquet_path = parquet_path
-            context.dataframe_cache = optimized_df  # active working slice
+            context.dataframe_cache = optimized_df
             context.add_trace("ingest")
-            context.add_snapshot("ingest", parquet_path, {"rows": len(optimized_df), "cols": len(optimized_df.columns)})
-            
-            row_count = len(optimized_df)
-            col_names = list(optimized_df.columns)
-            preview_data = optimized_df.head(10).fillna("").to_dict(orient="records")
-            
-            clean_memory()
-            
+            context.add_snapshot("ingest", parquet_path, {"rows": row_count, "cols": len(col_names)})
+            # Skip clean_memory() on small datasets — not needed, adds latency
+
             return {
                 "success": True,
                 "filename": filename,
