@@ -112,6 +112,20 @@ class HierarchyEngine:
     ) -> dict:
         if df is None or df.empty:
             raise ValueError("HierarchyEngine.build() received an empty DataFrame.")
+
+        # Truncate hierarchy columns exactly before any unique compound/chemical identifiers
+        # (since each chemical is unique with 1 record, splitting on it renders redundant 1-row charts)
+        clean_cols = []
+        for col in hierarchy_cols:
+            role = self.mappings.get(col)
+            if role in {"chemical_name", "canonical_smiles", "smiles", "cas_number", "chemical_id"}:
+                logger.info(f"Truncating hierarchy columns exactly before compound identifier column '{col}' (role: '{role}')")
+                break
+            clean_cols.append(col)
+        
+        if clean_cols:
+            hierarchy_cols = clean_cols
+
         if not hierarchy_cols:
             raise ValueError("hierarchy_cols must have at least one column.")
 
