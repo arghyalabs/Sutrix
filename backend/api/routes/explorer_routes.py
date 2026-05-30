@@ -216,6 +216,8 @@ async def render_structure_svg(smiles: str = Query(..., description="SMILES stri
 
         drawer = rdMolDraw2D.MolDraw2DSVG(300, 200)
         drawer.drawOptions().addStereoAnnotation = True
+        drawer.drawOptions().bondLineWidth = 3.0
+        drawer.drawOptions().minFontSize = 14
         drawer.DrawMolecule(mol)
         drawer.FinishDrawing()
         svg_content = drawer.GetDrawingText()

@@ -644,12 +644,12 @@ export const CompoundExplorer: React.FC<CompoundExplorerProps> = ({
               >
                 
                 {/* ── SECTION 1: Compound Identity Card ── */}
-                <div className="rounded-xl border border-white/[0.05] bg-black/40 p-5 relative overflow-hidden">
+                <div className="rounded-xl border border-white/[0.05] bg-black/40 p-6 pt-7 mt-4 relative overflow-hidden">
                   <div className="absolute top-0 right-0 w-48 h-48 bg-gradient-to-bl from-cyan-500/5 to-violet-500/5 rounded-bl-full pointer-events-none" />
                   
                   <div className="flex justify-between items-start gap-4">
-                    <div>
-                      <h2 className="text-2xl font-extrabold text-white tracking-tight leading-normal py-1">
+                    <div className="flex-1 min-w-0">
+                      <h2 className="text-2xl font-extrabold text-white tracking-tight leading-normal pt-2 pb-1 break-words">
                         {detail.name || 'Unnamed Chemical Subgroup'}
                       </h2>
                       <div className="flex items-center gap-2 mt-2 flex-wrap">
@@ -732,11 +732,11 @@ export const CompoundExplorer: React.FC<CompoundExplorerProps> = ({
                       )}
                     </div>
                     
-                    <div className="flex-1 flex items-center justify-center relative overflow-hidden bg-[#0a0f1d] border border-white/[0.03] rounded-lg mt-2.5">
+                    <div className="flex-1 flex items-center justify-center relative overflow-hidden bg-white border border-white/[0.08] rounded-lg mt-2.5 shadow-inner">
                       {usePubChem ? (
-                        <div className="w-full h-full flex items-center justify-center bg-white p-2.5 shadow-inner">
+                        <div className="w-full h-full flex items-center justify-center bg-white p-2.5">
                           <img
-                            src={`https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/smiles/${encodeURIComponent(detail.smiles)}/PNG`}
+                            src={`https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/smiles/${encodeURIComponent(detail.smiles)}/PNG?image_size=400x400`}
                             alt={`${detail.name || 'Compound'} 2D Structure`}
                             className="max-w-full max-h-full object-contain filter drop-shadow-[0_2px_8px_rgba(0,0,0,0.08)]"
                             onError={() => {
@@ -1127,13 +1127,15 @@ export const CompoundExplorer: React.FC<CompoundExplorerProps> = ({
             className="fixed inset-0 z-50 bg-[#060a13]/98 backdrop-blur-2xl flex flex-col p-6 xl:p-8 overflow-hidden gap-6 select-none"
           >
             {/* Header */}
-            <div className="flex justify-between items-center shrink-0 border-b border-white/[0.06] pb-4">
-              <div>
+            <div className="flex justify-between items-start gap-4 shrink-0 border-b border-white/[0.06] pb-4">
+              <div className="flex-1 min-w-0">
                 <span className="text-[10px] font-extrabold uppercase tracking-widest text-cyan-400 font-mono">
                   High-Density Chemical Intelligence Workspace
                 </span>
-                <h1 className="text-2xl font-extrabold text-white mt-1 flex items-center gap-3">
+                <h1 className="text-2xl font-extrabold text-white mt-1 leading-normal break-words">
                   {detail.name || 'Unnamed Chemical Subgroup'}
+                </h1>
+                <div className="flex items-center gap-2 mt-2 flex-wrap">
                   <span className="text-xs px-2.5 py-0.5 rounded-lg bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 font-mono font-bold">
                     CAS: {detail.cas || 'N/A'}
                   </span>
@@ -1143,7 +1145,7 @@ export const CompoundExplorer: React.FC<CompoundExplorerProps> = ({
                   <span className="text-xs px-2.5 py-0.5 rounded-lg bg-white/[0.03] border border-white/[0.06] text-white/50 font-mono font-bold">
                     MW: {detail.mw.toFixed(2)} g/mol
                   </span>
-                </h1>
+                </div>
               </div>
               
               <button
@@ -1174,11 +1176,11 @@ export const CompoundExplorer: React.FC<CompoundExplorerProps> = ({
                       <RefreshCw className="w-3.5 h-3.5" />
                     </button>
                   </div>
-                  <div className="flex-1 flex items-center justify-center relative overflow-hidden bg-[#0a0f1d] border border-white/[0.03] rounded-lg mt-3">
+                  <div className="flex-1 flex items-center justify-center relative overflow-hidden bg-white border border-white/[0.08] rounded-lg mt-3 shadow-inner">
                     {usePubChem ? (
-                      <div className="w-full h-full flex items-center justify-center bg-white p-3.5 shadow-inner">
+                      <div className="w-full h-full flex items-center justify-center bg-white p-3.5">
                         <img
-                          src={`https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/smiles/${encodeURIComponent(detail.smiles)}/PNG`}
+                          src={`https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/smiles/${encodeURIComponent(detail.smiles)}/PNG?image_size=600x600`}
                           alt={`${detail.name || 'Compound'} 2D Structure`}
                           className="max-w-full max-h-full object-contain filter drop-shadow-[0_2px_8px_rgba(0,0,0,0.08)]"
                           onError={() => {
