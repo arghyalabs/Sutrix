@@ -132,88 +132,93 @@ export const FullscreenPieModal: React.FC<FullscreenPieModalProps> = ({
               </div>
             </div>
 
-            <div className="flex-1 min-h-0 relative flex items-center justify-center">
+            <div className="flex-1 min-h-0 relative w-full h-full">
               {viewMode === 'chart' ? (
-                <div className="relative w-full h-full flex items-center justify-center">
-                  <div className="absolute flex flex-col items-center justify-center pointer-events-none" style={{ left: '42%', top: '50%', transform: 'translate(-50%, -50%)' }}>
-                    <span className="text-[10px] uppercase tracking-wider text-white/40 font-bold">TOTAL</span>
-                    <span className="text-2xl font-extrabold text-white leading-none my-0.5">
-                      {metrics.total.toLocaleString()}
-                    </span>
-                    <span className="text-[9px] uppercase tracking-wider text-cyan-400 font-bold">
-                      Records
-                    </span>
+                <div className="grid grid-cols-12 gap-6 w-full h-full p-4">
+                  {/* Left Panel: Mathematically Centered Pie Visual (8/12 cols) */}
+                  <div className="col-span-8 relative w-full h-full flex items-center justify-center">
+                    <div className="absolute flex flex-col items-center justify-center pointer-events-none" style={{ top: '50%', left: '50%', transform: 'translate(-50%, -50%)' }}>
+                      <span className="text-[10px] uppercase tracking-wider text-white/40 font-bold">TOTAL</span>
+                      <span className="text-2xl font-extrabold text-white leading-none my-0.5">
+                        {metrics.total.toLocaleString()}
+                      </span>
+                      <span className="text-[9px] uppercase tracking-wider text-cyan-400 font-bold">
+                        Records
+                      </span>
+                    </div>
+                    <ResponsiveContainer width="100%" height="100%">
+                      <PieChart>
+                        <Pie
+                          data={metrics.enrichedData}
+                          cx="50%"
+                          cy="50%"
+                          innerRadius="40%"
+                          outerRadius="72%"
+                          paddingAngle={2}
+                          dataKey="value"
+                          labelLine={true}
+                          label={({ name, value, percentage }) => `${name} (${value.toLocaleString()} | ${percentage.toFixed(1)}%)`}
+                        >
+                          {metrics.enrichedData.map((_, index) => (
+                            <Cell key={`cell-${index}`} fill={colors[index % colors.length]} stroke="rgba(255,255,255,0.05)" />
+                          ))}
+                        </Pie>
+                        <Tooltip 
+                          content={({ active, payload }: any) => {
+                            if (active && payload && payload.length) {
+                              const d = payload[0].payload;
+                              const displayLabel = title.replace("Composition Analysis: ", "").replace("Pie Chart Analysis", "").trim();
+                              const finalLabel = displayLabel ? displayLabel : 'Category';
+                              return (
+                                <div className="bg-[#0d1a30] border border-white/[0.08] rounded-xl px-4 py-3 shadow-2xl space-y-1 font-mono">
+                                  <p className="text-white text-xs font-semibold">
+                                    <span className="text-white/50">{finalLabel}: </span>
+                                    <span className="text-cyan-400 font-bold">{d.name}</span>
+                                  </p>
+                                  <p className="text-white text-xs">
+                                    <span className="text-white/50">Count: </span>
+                                    <span className="font-bold text-white">{d.value.toLocaleString()}</span>
+                                  </p>
+                                  <p className="text-white text-xs">
+                                    <span className="text-white/50">Percentage: </span>
+                                    <span className="font-bold text-cyan-400">{d.percentage.toFixed(1)}%</span>
+                                  </p>
+                                </div>
+                              );
+                            }
+                            return null;
+                          }}
+                        />
+                      </PieChart>
+                    </ResponsiveContainer>
                   </div>
-                  <ResponsiveContainer width="100%" height="100%">
-                    <PieChart>
-                      <Pie
-                        data={metrics.enrichedData}
-                        cx="42%"
-                        cy="50%"
-                        innerRadius="38%"
-                        outerRadius="70%"
-                        paddingAngle={2}
-                        dataKey="value"
-                        labelLine={true}
-                        label={({ name, value, percentage }) => `${name} (${value.toLocaleString()} | ${percentage.toFixed(1)}%)`}
-                      >
-                        {metrics.enrichedData.map((_, index) => (
-                          <Cell key={`cell-${index}`} fill={colors[index % colors.length]} stroke="rgba(255,255,255,0.05)" />
-                        ))}
-                      </Pie>
-                      <Tooltip 
-                        content={({ active, payload }: any) => {
-                          if (active && payload && payload.length) {
-                            const d = payload[0].payload;
-                            const displayLabel = title.replace("Composition Analysis: ", "").replace("Pie Chart Analysis", "").trim();
-                            const finalLabel = displayLabel ? displayLabel : 'Category';
-                            return (
-                              <div className="bg-[#0d1a30] border border-white/[0.08] rounded-xl px-4 py-3 shadow-2xl space-y-1">
-                                <p className="text-white text-xs font-semibold">
-                                  <span className="text-white/50">{finalLabel}: </span>
-                                  <span className="text-cyan-400 font-bold">{d.name}</span>
-                                </p>
-                                <p className="text-white text-xs">
-                                  <span className="text-white/50">Count: </span>
-                                  <span className="font-bold text-white">{d.value.toLocaleString()}</span>
-                                </p>
-                                <p className="text-white text-xs">
-                                  <span className="text-white/50">Percentage: </span>
-                                  <span className="font-bold text-cyan-400">{d.percentage.toFixed(1)}%</span>
-                                </p>
-                              </div>
-                            );
-                          }
-                          return null;
-                        }}
-                      />
-                    </PieChart>
-                  </ResponsiveContainer>
 
-                  {/* Right-aligned Scientific Legend Overlay */}
-                  <ul className="absolute right-10 top-1/2 -translate-y-1/2 space-y-2 w-80 max-h-[75%] overflow-y-auto pr-1 custom-scrollbar bg-[#0b1220]/90 p-5 border border-white/[0.06] rounded-xl backdrop-blur-md z-10 shadow-2xl">
-                    <li className="text-[10px] uppercase tracking-wider font-extrabold text-white/40 mb-3 border-b border-white/[0.05] pb-2 flex justify-between font-mono">
-                      <span>Subgroup</span>
-                      <span>Distribution</span>
-                    </li>
-                    {metrics.enrichedData.map((entry: any, index: number) => {
-                      const count = entry.value;
-                      const pct = entry.percentage;
-                      const color = colors[index % colors.length];
-                      return (
-                        <li key={`item-${index}`} className="flex items-center justify-between w-full text-xs font-mono py-0.5">
-                          <span className="flex items-center gap-2 text-white/80">
-                            <span className="w-2.5 h-2.5 rounded-full shrink-0" style={{ backgroundColor: color }} />
-                            <span className="truncate max-w-[130px]" title={entry.name}>{entry.name}</span>
-                          </span>
-                          <span className="flex-1 mx-2 border-b border-dotted border-white/20 align-bottom h-3" />
-                          <span className="text-white/60 shrink-0 font-bold">
-                            {count.toLocaleString()} ({pct.toFixed(1)}%)
-                          </span>
-                        </li>
-                      );
-                    })}
-                  </ul>
+                  {/* Right Panel: Clean Sidebar Legend (4/12 cols) */}
+                  <div className="col-span-4 flex items-center justify-center pr-2">
+                    <ul className="w-full max-h-[85%] overflow-y-auto pr-1 custom-scrollbar bg-[#0b1220]/90 p-5 border border-white/[0.06] rounded-xl shadow-2xl">
+                      <li className="text-[10px] uppercase tracking-wider font-extrabold text-white/40 mb-3 border-b border-white/[0.05] pb-2 flex justify-between font-mono">
+                        <span>Subgroup</span>
+                        <span>Distribution</span>
+                      </li>
+                      {metrics.enrichedData.map((entry: any, index: number) => {
+                        const count = entry.value;
+                        const pct = entry.percentage;
+                        const color = colors[index % colors.length];
+                        return (
+                          <li key={`item-${index}`} className="flex items-center justify-between w-full text-xs font-mono py-1">
+                            <span className="flex items-center gap-2 text-white/80">
+                              <span className="w-2.5 h-2.5 rounded-full shrink-0" style={{ backgroundColor: color }} />
+                              <span className="truncate max-w-[120px]" title={entry.name}>{entry.name}</span>
+                            </span>
+                            <span className="flex-1 mx-2 border-b border-dotted border-white/20 align-bottom h-3" />
+                            <span className="text-white/60 shrink-0 font-bold">
+                              {count.toLocaleString()} ({pct.toFixed(1)}%)
+                            </span>
+                          </li>
+                        );
+                      })}
+                    </ul>
+                  </div>
                 </div>
               ) : (
                 <div className="w-full h-full overflow-auto custom-scrollbar pr-4">

@@ -687,11 +687,8 @@ export const NodeVisualization: React.FC<NodeVisualizationProps> = ({ nodeDetail
                                 outerRadius={68}
                                 paddingAngle={3}
                                 dataKey="value"
-                                labelLine={true}
-                                label={({ name, value, pct }) => {
-                                  const displayName = name.length > 10 ? `${name.substring(0, 8)}...` : name;
-                                  return `${displayName} (${value.toLocaleString()} | ${pct.toFixed(1)}%)`;
-                                }}
+                                labelLine={false}
+                                label={false}
                               >
                                 {pieData.map((_, index) => (
                                   <Cell key={`cell-${index}`} fill={CHART_COLORS[index % CHART_COLORS.length]} />
