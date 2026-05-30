@@ -428,8 +428,15 @@ async def _stream_parquet_as_format(
         df.to_csv(buf, index=False)
         buf.seek(0)
     elif fmt == "xlsx":
-        df.to_excel(buf, index=False, engine="openpyxl")
-        buf.seek(0)
+        try:
+            from backend.core.hierarchy_engine import save_df_as_dual_sheet_xlsx
+            save_df_as_dual_sheet_xlsx(df, buf, engine.mappings)
+            buf.seek(0)
+        except Exception as e:
+            logger.warning(f"Dual-sheet XLSX stream failed, using openpyxl fallback: {e}")
+            buf = io.BytesIO()
+            df.to_excel(buf, index=False, engine="openpyxl")
+            buf.seek(0)
     elif fmt == "parquet":
         df.to_parquet(buf, index=False, compression="snappy")
         buf.seek(0)

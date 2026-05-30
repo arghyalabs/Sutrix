@@ -2,7 +2,7 @@ import React, { useRef, useCallback, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
   PieChart, Pie, Cell, BarChart, Bar, XAxis, YAxis,
-  CartesianGrid, Tooltip, ResponsiveContainer, Legend
+  CartesianGrid, Tooltip, ResponsiveContainer, Legend, LabelList
 } from 'recharts';
 import { Download, Image, FileText, Maximize2 } from 'lucide-react';
 import { toPng } from 'html-to-image';
@@ -40,25 +40,49 @@ interface NodeVisualizationProps {
 
 const CHART_COLORS = ['#22d3ee', '#8b5cf6', '#10b981', '#f59e0b', '#f43f5e', '#3b82f6', '#ec4899', '#84cc16'];
 
-const CustomPieTooltip = ({ active, payload }: any) => {
+const CustomPieTooltip = ({ active, payload, categoryLabel }: any) => {
   if (active && payload && payload.length) {
+    const d = payload[0].payload;
+    const displayLabel = categoryLabel ? categoryLabel.charAt(0).toUpperCase() + categoryLabel.slice(1) : 'Category';
     return (
-      <div className="bg-[#0d1a30] border border-white/[0.08] rounded-xl px-3 py-2 shadow-2xl">
-        <p className="text-cyan-400 font-bold text-sm">{payload[0].name}</p>
-        <p className="text-white text-sm">{payload[0].value.toLocaleString()}</p>
-        <p className="text-white/40 text-xs">{payload[0].payload?.pct?.toFixed(1)}%</p>
+      <div className="bg-[#0d1a30] border border-white/[0.08] rounded-xl px-4 py-3 shadow-2xl space-y-1">
+        <p className="text-white text-xs font-semibold">
+          <span className="text-white/50">{displayLabel}: </span>
+          <span className="text-cyan-400 font-bold">{d.name}</span>
+        </p>
+        <p className="text-white text-xs">
+          <span className="text-white/50">Count: </span>
+          <span className="font-bold text-white">{d.value.toLocaleString()}</span>
+        </p>
+        <p className="text-white text-xs">
+          <span className="text-white/50">Percentage: </span>
+          <span className="font-bold text-cyan-400">{(d.pct !== undefined ? d.pct : d.percentage)?.toFixed(1)}%</span>
+        </p>
       </div>
     );
   }
   return null;
 };
 
-const CustomBarTooltip = ({ active, payload, label }: any) => {
+const CustomBarTooltip = ({ active, payload, label, categoryLabel, total }: any) => {
   if (active && payload && payload.length) {
+    const value = payload[0].value;
+    const pct = total > 0 ? (value / total) * 100 : 0;
+    const displayLabel = categoryLabel ? categoryLabel.charAt(0).toUpperCase() + categoryLabel.slice(1) : 'Category';
     return (
-      <div className="bg-[#0d1a30] border border-white/[0.08] rounded-xl px-3 py-2 shadow-2xl">
-        <p className="text-white/60 text-xs mb-1">{label}</p>
-        <p className="text-cyan-400 font-bold text-sm">{payload[0].value.toLocaleString()}</p>
+      <div className="bg-[#0d1a30] border border-white/[0.08] rounded-xl px-4 py-3 shadow-2xl space-y-1">
+        <p className="text-white text-xs font-semibold">
+          <span className="text-white/50">{displayLabel}: </span>
+          <span className="text-cyan-400 font-bold">{label}</span>
+        </p>
+        <p className="text-white text-xs">
+          <span className="text-white/50">Count: </span>
+          <span className="font-bold text-white">{value.toLocaleString()}</span>
+        </p>
+        <p className="text-white text-xs">
+          <span className="text-white/50">Percentage: </span>
+          <span className="font-bold text-cyan-400">{pct.toFixed(1)}%</span>
+        </p>
       </div>
     );
   }
@@ -348,6 +372,37 @@ export const NodeVisualization: React.FC<NodeVisualizationProps> = ({ nodeDetail
       }))
     : [];
 
+  const renderCustomBarLabel = (props: any) => {
+    const { x, y, width, value } = props;
+    if (value === undefined || value === null) return null;
+    const total = barData.reduce((sum, item) => sum + item.value, 0);
+    const pct = total > 0 ? (value / total) * 100 : 0;
+    return (
+      <g>
+        <text
+          x={x + width / 2}
+          y={y - 12}
+          fill="rgba(255,255,255,0.9)"
+          fontSize={9}
+          fontWeight="bold"
+          textAnchor="middle"
+        >
+          {value.toLocaleString()}
+        </text>
+        <text
+          x={x + width / 2}
+          y={y - 2}
+          fill="rgba(34,211,238,0.9)"
+          fontSize={8}
+          fontWeight="semibold"
+          textAnchor="middle"
+        >
+          ({pct.toFixed(1)}%)
+        </text>
+      </g>
+    );
+  };
+
   const distributions = charts.distributions ? Object.entries(charts.distributions) : [];
 
   // Build subtitle from backend title (e.g., "endpoint" → shown as small column badge)
@@ -608,30 +663,65 @@ export const NodeVisualization: React.FC<NodeVisualizationProps> = ({ nodeDetail
                       onExpand={() => setIsPieFullscreen(true)}
                       downloadIcon={<Image className="w-3 h-3" />}
                     >
-                      <ResponsiveContainer width="100%" height={300}>
-                        <PieChart margin={{ top: 16, right: 10, bottom: 0, left: 10 }}>
-                          <Pie
-                            data={pieData}
-                            cx="50%"
-                            cy="47%"
-                            innerRadius={54}
-                            outerRadius={82}
-                            paddingAngle={3}
-                            dataKey="value"
-                          >
-                            {pieData.map((_, index) => (
-                              <Cell key={`cell-${index}`} fill={CHART_COLORS[index % CHART_COLORS.length]} />
-                            ))}
-                          </Pie>
-                          <Tooltip content={<CustomPieTooltip />} />
-                          <Legend
-                            wrapperStyle={{ paddingTop: '12px' }}
-                            formatter={(value) => (
-                              <span style={{ color: 'rgba(255,255,255,0.6)', fontSize: '11px' }}>{value}</span>
-                            )}
-                          />
-                        </PieChart>
-                      </ResponsiveContainer>
+                      <div className="relative w-full h-[300px]">
+                        <div className="absolute inset-0 flex flex-col items-center justify-center pointer-events-none" style={{ top: 'calc(47% - 20px)' }}>
+                          <span className="text-[9px] uppercase tracking-wider text-white/40 font-bold">TOTAL</span>
+                          <span className="text-lg font-extrabold text-white leading-none my-0.5">
+                            {((stats.unique_compounds && stats.unique_compounds > 0) ? stats.unique_compounds : stats.total_rows).toLocaleString()}
+                          </span>
+                          <span className="text-[8px] uppercase tracking-wider text-cyan-400 font-bold">
+                            {(stats.unique_compounds && stats.unique_compounds > 0) ? "Compounds" : "Records"}
+                          </span>
+                        </div>
+                        <ResponsiveContainer width="100%" height="100%">
+                          <PieChart margin={{ top: 16, right: 10, bottom: 0, left: 10 }}>
+                            <Pie
+                              data={pieData}
+                              cx="50%"
+                              cy="47%"
+                              innerRadius={54}
+                              outerRadius={82}
+                              paddingAngle={3}
+                              dataKey="value"
+                              labelLine={true}
+                              label={({ name, value, pct }) => `${name} (${value.toLocaleString()} | ${pct.toFixed(1)}%)`}
+                            >
+                              {pieData.map((_, index) => (
+                                <Cell key={`cell-${index}`} fill={CHART_COLORS[index % CHART_COLORS.length]} />
+                              ))}
+                            </Pie>
+                            <Tooltip content={<CustomPieTooltip categoryLabel={charts.composition_pie?.title || 'Category'} />} />
+                            <Legend
+                              content={(props) => {
+                                const { payload } = props;
+                                if (!payload) return null;
+                                return (
+                                  <ul className="space-y-1.5 w-full mt-4 max-h-[140px] overflow-y-auto pr-1 custom-scrollbar">
+                                    {payload.map((entry: any, index: number) => {
+                                      const dataVal = entry.payload;
+                                      const total = payload.reduce((sum: number, e: any) => sum + (e.payload?.value || 0), 0);
+                                      const count = dataVal?.value ?? 0;
+                                      const pct = total > 0 ? (count / total) * 100 : 0;
+                                      return (
+                                        <li key={`item-${index}`} className="flex items-center justify-between w-full text-xs font-mono">
+                                          <span className="flex items-center gap-2 text-white/80">
+                                            <span className="w-2 h-2 rounded-full shrink-0" style={{ backgroundColor: entry.color }} />
+                                            <span className="truncate max-w-[120px]">{entry.value}</span>
+                                          </span>
+                                          <span className="flex-1 mx-2 border-b border-dotted border-white/20 align-bottom h-3" />
+                                          <span className="text-white/60 shrink-0 font-bold">
+                                            {count.toLocaleString()} ({pct.toFixed(1)}%)
+                                          </span>
+                                        </li>
+                                      );
+                                    })}
+                                  </ul>
+                                );
+                              }}
+                            />
+                          </PieChart>
+                        </ResponsiveContainer>
+                      </div>
                     </ChartCard>
                   </motion.div>
                 )}
@@ -647,7 +737,7 @@ export const NodeVisualization: React.FC<NodeVisualizationProps> = ({ nodeDetail
                       downloadIcon={<Image className="w-3 h-3" />}
                     >
                       <ResponsiveContainer width="100%" height={260}>
-                        <BarChart data={barData} margin={{ top: 10, right: 6, left: -20, bottom: 0 }}>
+                        <BarChart data={barData} margin={{ top: 30, right: 6, left: -20, bottom: 0 }}>
                           <CartesianGrid strokeDasharray="3 3" stroke="rgba(255,255,255,0.04)" />
                           <XAxis
                             dataKey="name"
@@ -660,8 +750,10 @@ export const NodeVisualization: React.FC<NodeVisualizationProps> = ({ nodeDetail
                             axisLine={false}
                             tickLine={false}
                           />
-                          <Tooltip content={<CustomBarTooltip />} />
-                          <Bar dataKey="value" fill="#22d3ee" radius={[4, 4, 0, 0]} />
+                          <Tooltip content={<CustomBarTooltip categoryLabel={charts.composition_bar?.title || 'Category'} total={barData.reduce((sum, item) => sum + item.value, 0)} />} />
+                          <Bar dataKey="value" fill="#22d3ee" radius={[4, 4, 0, 0]}>
+                            <LabelList dataKey="value" content={renderCustomBarLabel} />
+                          </Bar>
                         </BarChart>
                       </ResponsiveContainer>
                     </ChartCard>
@@ -689,7 +781,7 @@ export const NodeVisualization: React.FC<NodeVisualizationProps> = ({ nodeDetail
                     <table className="w-full text-xs">
                       <thead>
                         <tr className="border-b border-white/[0.06]">
-                          {['Subgroup', 'Count', '%', 'Missing', 'Duplicates'].map(h => (
+                          {['Category', 'Count', 'Percentage', 'Missing', 'Duplicates'].map(h => (
                             <th key={h} className="text-left px-3 py-2.5 text-white/40 font-bold uppercase tracking-wider">{h}</th>
                           ))}
                         </tr>

@@ -37,6 +37,74 @@ _POTENCY_ROLES = frozenset({
 _COMPOUND_ID_ROLES = frozenset({
     "canonical_smiles", "smiles", "cas_number", "chemical_id",
 })
+def save_df_as_dual_sheet_xlsx(df: pd.DataFrame, target, mappings: Dict[str, str]) -> None:
+    """
+    Saves a DataFrame as a professional, publication-quality dual-sheet Excel file.
+    Sheet 1 ("Raw Data") contains the raw DataFrame rows.
+    Sheet 2 ("Summary Statistics") contains high-value dataset health indicators.
+    Works for both filepaths (str) and buffer streams (e.g. BytesIO).
+    """
+    import math
+    import pandas as pd
+    import numpy as np
+
+    # Resolve grouping column: first categorical column that is not a structure/chemical identifier
+    cat_cols = df.select_dtypes(exclude=[np.number]).columns.tolist()
+    smiles_cols = {c for c in cat_cols if c.lower() in ["smiles", "canonical_smiles", "structure", "cas", "cas_number", "chemical_id", "chemical_name"]}
+    group_cols = [c for c in cat_cols if c not in smiles_cols]
+    split_col = group_cols[0] if group_cols else (cat_cols[0] if cat_cols else df.columns[0])
+
+    total_records = len(df)
+    
+    # Calculate statistics based on the resolved column
+    if total_records > 0 and split_col in df.columns:
+        col_str = df[split_col].astype(str)
+        vc = col_str.value_counts()
+        unique_categories = len(vc)
+        dominant_category = vc.index[0] if len(vc) > 0 else "N/A"
+        dominant_count = int(vc.values[0]) if len(vc) > 0 else 0
+        dominant_pct = (dominant_count / total_records * 100) if total_records > 0 else 0.0
+        
+        rare_category = vc.index[-1] if len(vc) > 0 else "N/A"
+        rare_count = int(vc.values[-1]) if len(vc) > 0 else 0
+        rare_pct = (rare_count / total_records * 100) if total_records > 0 else 0.0
+
+        shannon = 0.0
+        for count in vc.values:
+            p = count / total_records
+            if p > 0:
+                shannon -= p * math.log(p)
+
+        max_entropy = math.log(unique_categories) if unique_categories > 1 else 1.0
+        evenness = shannon / max_entropy if unique_categories > 1 else 1.0
+    else:
+        unique_categories = 0
+        dominant_category = "N/A"
+        dominant_count = 0
+        dominant_pct = 0.0
+        rare_category = "N/A"
+        rare_count = 0
+        rare_pct = 0.0
+        shannon = 0.0
+        evenness = 1.0
+
+    stats_data = [
+        {"Metric": "Total Records", "Value": total_records},
+        {"Metric": "Unique Categories", "Value": unique_categories},
+        {"Metric": "Dominant Category", "Value": dominant_category},
+        {"Metric": "Dominant Category Count", "Value": dominant_count},
+        {"Metric": "Dominant Category %", "Value": f"{dominant_pct:.1f}%"},
+        {"Metric": "Rare Category", "Value": rare_category},
+        {"Metric": "Rare Category Count", "Value": rare_count},
+        {"Metric": "Rare Category %", "Value": f"{rare_pct:.1f}%"},
+        {"Metric": "Shannon Entropy (H)", "Value": round(shannon, 3)},
+        {"Metric": "Evenness Index (E)", "Value": round(evenness, 3)}
+    ]
+
+    with pd.ExcelWriter(target, engine="xlsxwriter") as writer:
+        df.to_excel(writer, sheet_name="Raw Data", index=False)
+        df_stats = pd.DataFrame(stats_data)
+        df_stats.to_excel(writer, sheet_name="Summary Statistics", index=False)
 
 
 # ─────────────────────────────────────────────────────────────────────────────
@@ -258,7 +326,11 @@ class HierarchyEngine:
                     logger.warning(f"CSV write failed for node {node_id}: {e}")
 
                 try:
-                    df_slice.to_excel(os.path.join(out_dir, "dataset.xlsx"), index=False)
+                    save_df_as_dual_sheet_xlsx(
+                        df_slice,
+                        os.path.join(out_dir, "dataset.xlsx"),
+                        self.mappings
+                    )
                 except Exception as e:
                     logger.warning(f"Excel write failed for node {node_id}: {e}")
 
