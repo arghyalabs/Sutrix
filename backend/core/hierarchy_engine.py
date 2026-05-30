@@ -225,12 +225,28 @@ class HierarchyEngine:
             except Exception as e:
                 logger.warning(f"Parquet write failed for node {node_id}: {e}")
 
-            # CSV only for leaf nodes
+            try:
+                df_slice.to_feather(os.path.join(out_dir, "dataset.feather"))
+            except Exception as e:
+                logger.warning(f"Feather write failed for node {node_id}: {e}")
+
+            # CSV, XLSX, and SDF only for leaf nodes
             if node.is_leaf:
                 try:
                     df_slice.to_csv(os.path.join(out_dir, "dataset.csv"), index=False)
                 except Exception as e:
                     logger.warning(f"CSV write failed for node {node_id}: {e}")
+
+                try:
+                    df_slice.to_excel(os.path.join(out_dir, "dataset.xlsx"), index=False)
+                except Exception as e:
+                    logger.warning(f"Excel write failed for node {node_id}: {e}")
+
+                if smiles_col and smiles_col in df_slice.columns:
+                    try:
+                        self._write_sdf(df_slice, smiles_col, os.path.join(out_dir, "dataset.sdf"))
+                    except Exception as e:
+                        logger.warning(f"SDF write failed for node {node_id}: {e}")
 
             if node_id in self.node_details:
                 self.node_details[node_id]["_export_dir"] = out_dir

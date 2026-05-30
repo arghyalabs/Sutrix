@@ -32,7 +32,7 @@ class MappingConfidenceEngine:
             confidence = min(1.0, confidence + 0.1)
             reasons.append("Contextual boost: Valid unit bounds biological value.")
             
-        if confidence < 0.5:
+        if confidence < 0.50:
             best_key = "none"
             reasons = ["Below 50% confidence threshold. Manual verification required."]
             
@@ -40,5 +40,9 @@ class MappingConfidenceEngine:
             "column": column_name,
             "mapped_to": best_key,
             "confidence": round(confidence, 2),
+            "confidence_score": int(confidence * 100),
+            "exact_match": best_score >= 0.99,
+            "fuzzy_match": 0.70 <= best_score < 0.99,
+            "semantic_match": best_key != "none" and best_score >= 0.50,
             "reasons": reasons
         }

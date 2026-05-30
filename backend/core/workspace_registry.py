@@ -55,6 +55,9 @@ class PipelineContext:
     # Typed as Any to avoid circular import at runtime
     hierarchy_engine: Optional[Any] = None
     
+    # Fast search index for Google-style compound exploration
+    search_index: Optional[List[Dict[str, Any]]] = None
+
     # Platform status telemetry and job tracking
     job_state: Dict[str, Any] = field(default_factory=dict)
     websocket_connections: List[str] = field(default_factory=list)
@@ -74,17 +77,18 @@ class PipelineContext:
         for d in dirs:
             os.makedirs(os.path.join(base_dir, d), exist_ok=True)
             
-    def touch(self):
+    def touch(self, save_to_disk: bool = False):
         self.last_accessed = time.time()
-        try:
-            from backend.core.session_state_manager import session_manager
-            session_manager.save_session(self)
-        except Exception as e:
-            logger.debug(f"Circular session save deferred: {e}")
+        if save_to_disk:
+            try:
+                from backend.core.session_state_manager import session_manager
+                session_manager.save_session(self)
+            except Exception as e:
+                logger.debug(f"Circular session save deferred: {e}")
         
     def add_trace(self, action: str):
         self.execution_trace.append(action)
-        self.touch()
+        self.touch(save_to_disk=True)
         
     def add_snapshot(self, stage: str, parquet_path: str, metadata: dict = None, warnings: list = None):
         self.snapshots.append(PipelineSnapshot(
@@ -94,10 +98,12 @@ class PipelineContext:
             metadata=metadata or {},
             warnings=warnings or []
         ))
+        self.touch(save_to_disk=True)
         
     def flush_memory(self):
-        """Flushes the dataframe cache and hierarchy engine to free RAM (Hybrid Model)."""
+        """Flushes the dataframe cache, hierarchy engine, and search index to free RAM (Hybrid Model)."""
         self.dataframe_cache = None
+        self.search_index = None
         # Release the engine's in-memory node dataframe slices (already persisted to disk)
         if self.hierarchy_engine is not None:
             try:
@@ -113,7 +119,8 @@ class PipelineContext:
             return self.dataframe_cache
         if not self.parquet_path or not os.path.exists(self.parquet_path):
             raise ValueError(f"No source of truth parquet found for workspace {self.workspace_id}")
-        return pd.read_parquet(self.parquet_path)
+        self.dataframe_cache = pd.read_parquet(self.parquet_path)
+        return self.dataframe_cache
 
 class WorkspaceRegistry:
     def __init__(self, ttl_seconds: int = 3600):

@@ -100,11 +100,11 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onLaunch }) => {
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
-            className="text-5xl lg:text-[4.5rem] font-bold text-white leading-[1.05] tracking-tight"
+            className="text-5xl lg:text-[3.8rem] font-extrabold text-white leading-[1.1] tracking-tight"
           >
-            AI-Ready Scientific<br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-gray-300 via-gray-100 to-gray-400">
-              Data Engineering
+            Transform Scientific Data<br />
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-white to-violet-400">
+              into QSAR-Ready Intelligence
             </span>
           </motion.h1>
 
@@ -112,9 +112,9 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onLaunch }) => {
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
-            className="text-lg lg:text-[1.2rem] text-white/50 leading-relaxed max-w-lg font-medium tracking-wide"
+            className="text-lg lg:text-[1.15rem] text-white/50 leading-relaxed max-w-xl font-medium tracking-wide"
           >
-            Curate, standardize, enrich, and optimize scientific datasets for predictive modeling workflows.
+            Upload, organize, enrich, validate and optimize scientific datasets for predictive modeling, regulatory science and AI-driven research.
           </motion.p>
 
           <motion.div

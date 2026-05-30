@@ -1,16 +1,28 @@
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState, useEffect, useCallback, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { toPng } from 'html-to-image';
 import { OptimizedPlotly } from '../charts/OptimizedPlotly';
 import {
   Brain, AlertTriangle, CheckCircle2, XCircle, ChevronDown,
   Zap, RefreshCw, Download, FileJson, FileSpreadsheet, FileText,
   Code2, TrendingUp, Shield, Layers, Target, Activity, FlaskConical,
-  Cpu
+  Cpu, BarChart3, Scale, GitMerge, Maximize2, Minimize2
 } from 'lucide-react';
 import { modelingApi } from '../../services/modelingApi';
 import toast from 'react-hot-toast';
 import type { ModelingAnalysis } from '../../types';
 import { ChemicalSpace3D } from './ChemicalSpace3D';
+// ── Tab components ───────────────────────────────────────────────────────────
+import { PCATab } from './tabs/PCATab';
+import { CorrelationTab } from './tabs/CorrelationTab';
+import { VarianceTab } from './tabs/VarianceTab';
+import { CoverageTab } from './tabs/CoverageTab';
+import { MissingDescriptorsTab } from './tabs/MissingDescriptorsTab';
+import { ApplicabilityDomainTab } from './tabs/ApplicabilityDomainTab';
+import { OutlierTab } from './tabs/OutlierTab';
+import { ImbalanceTab } from './tabs/ImbalanceTab';
+import { LeakageTab } from './tabs/LeakageTab';
+import { OECDTab } from './tabs/OECDTab';
 
 // ─── Shared Plotly config & layout base ────────────────────────────────────
 const PC = { responsive: true, displaylogo: false, modeBarButtonsToRemove: ['sendDataToCloud'] as any };
@@ -105,15 +117,160 @@ const SectionHeader: React.FC<{ title: string; subtitle?: string; icon: React.FC
 // ─── Chart card wrapper ──────────────────────────────────────────────────────
 const ChartCard: React.FC<{
   title: string; subtitle?: string; children: React.ReactNode; className?: string;
-}> = ({ title, subtitle, children, className = '' }) => (
-  <div className={`rounded-2xl border border-white/[0.05] bg-white/[0.02] backdrop-blur-xl overflow-hidden hover:border-white/[0.08] transition-colors ${className}`}>
-    <div className="px-5 pt-4 pb-2">
-      <h3 className="text-sm font-medium text-white/70">{title}</h3>
-      {subtitle && <p className="text-xs text-white/30 mt-0.5">{subtitle}</p>}
-    </div>
-    <div className="px-4 pb-4">{children}</div>
-  </div>
-);
+}> = ({ title, subtitle, children, className = '' }) => {
+  const [isFullscreen, setIsFullscreen] = useState(false);
+  const expandedCardRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape' && isFullscreen) {
+        setIsFullscreen(false);
+      }
+    };
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [isFullscreen]);
+
+  const handleDownloadPng = async () => {
+    const el = expandedCardRef.current;
+    if (!el) return;
+
+    // Filter out buttons from the captured PNG
+    const filter = (node: Element) =>
+      !(node instanceof HTMLElement && node.dataset.downloadIgnore === 'true');
+
+    try {
+      const toastId = toast.loading('Exporting high-resolution PNG...');
+      // Warmup style capture pass
+      await toPng(el, { pixelRatio: 2, cacheBust: true, filter });
+      const dataUrl = await toPng(el, { pixelRatio: 2, cacheBust: true, filter });
+
+      const a = document.createElement('a');
+      a.download = `sdo_readiness_chart_${title.toLowerCase().replace(/[^a-z0-9]/g, '_')}.png`;
+      a.href = dataUrl;
+      a.click();
+      toast.success('PNG exported successfully!', { id: toastId });
+    } catch (err) {
+      console.error('PNG export failed:', err);
+      toast.error('PNG export failed.');
+    }
+  };
+
+  return (
+    <>
+      <div className={`rounded-2xl border border-white/[0.05] bg-white/[0.02] backdrop-blur-xl overflow-hidden hover:border-white/[0.08] transition-colors flex flex-col ${className}`}>
+        <div className="px-5 pt-4 pb-2 flex items-center justify-between shrink-0">
+          <div>
+            <h3 className="text-sm font-medium text-white/70">{title}</h3>
+            {subtitle && <p className="text-xs text-white/30 mt-0.5">{subtitle}</p>}
+          </div>
+          <button
+            onClick={() => setIsFullscreen(true)}
+            className="p-1.5 rounded-lg bg-white/[0.02] border border-white/[0.06] text-white/40 hover:text-white hover:bg-white/[0.06] transition-all"
+            title="Maximize Chart"
+          >
+            <Maximize2 className="w-3.5 h-3.5" />
+          </button>
+        </div>
+        <div className="px-4 pb-4 flex-1 flex flex-col justify-center">{children}</div>
+      </div>
+
+      <AnimatePresence>
+        {isFullscreen && (
+          <div className="fixed inset-0 z-50 flex items-center justify-center p-6 md:p-10">
+            {/* Backdrop */}
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              onClick={() => setIsFullscreen(false)}
+              className="absolute inset-0 bg-black/90 backdrop-blur-md"
+            />
+
+            {/* Expanded Chart Card */}
+            <motion.div
+              ref={expandedCardRef}
+              initial={{ opacity: 0, scale: 0.95, y: 15 }}
+              animate={{ opacity: 1, scale: 1, y: 0 }}
+              exit={{ opacity: 0, scale: 0.95, y: 15 }}
+              className="relative w-full max-w-6xl h-[85vh] rounded-3xl border border-white/[0.08] bg-[#0c1224] p-6 md:p-8 shadow-2xl flex flex-col overflow-hidden z-10"
+            >
+              {/* Decorative glows */}
+              <div className="absolute -top-12 -left-12 w-48 h-48 bg-cyan-500/10 rounded-full blur-3xl pointer-events-none" />
+              <div className="absolute -bottom-12 -right-12 w-48 h-48 bg-violet-500/10 rounded-full blur-3xl pointer-events-none" />
+
+              {/* Header */}
+              <div className="flex justify-between items-start shrink-0 border-b border-white/[0.06] pb-4 mb-6">
+                <div>
+                  <h3 className="text-xl font-bold text-white bg-gradient-to-r from-cyan-400 to-violet-400 bg-clip-text text-transparent">{title}</h3>
+                  {subtitle && <p className="text-sm text-white/40 mt-1">{subtitle}</p>}
+                </div>
+                
+                <div className="flex items-center gap-3">
+                  <button
+                    onClick={handleDownloadPng}
+                    data-download-ignore="true"
+                    className="flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 hover:bg-cyan-500/20 text-xs font-bold uppercase tracking-wider transition-all"
+                    title="Download high-resolution PNG"
+                  >
+                    <Download className="w-3.5 h-3.5" />
+                    Download PNG
+                  </button>
+                  <span className="text-[10px] text-white/30 uppercase tracking-widest bg-white/[0.03] border border-white/[0.06] px-2.5 py-1 rounded-full">Interactive Mode</span>
+                  <button
+                    onClick={() => setIsFullscreen(false)}
+                    data-download-ignore="true"
+                    className="p-2 rounded-xl bg-white/[0.03] border border-white/[0.08] text-white/40 hover:text-white hover:bg-white/[0.06] transition-all"
+                    title="Close Fullscreen"
+                  >
+                    <Minimize2 className="w-4 h-4" />
+                  </button>
+                </div>
+              </div>
+
+              {/* Children (Plotly Chart container) */}
+              <div className="flex-1 min-y-0 w-full flex items-center justify-center relative select-none">
+                {React.isValidElement(children) ? (
+                  React.cloneElement(children as React.ReactElement<any>, {
+                    layout: {
+                      ...(children.props as any).layout,
+                      height: undefined, // Let it use container width/height fluidly
+                      font: {
+                        ...((children.props as any).layout?.font || {}),
+                        size: 13, // Significantly larger font size for maximum clarity
+                      },
+                      xaxis: {
+                        ...((children.props as any).layout?.xaxis || {}),
+                        tickfont: { size: 11, color: 'rgba(255,255,255,0.5)' },
+                        title: {
+                          ...((children.props as any).layout?.xaxis?.title || {}),
+                          font: { size: 12, color: 'rgba(255,255,255,0.4)' },
+                        }
+                      },
+                      yaxis: {
+                        ...((children.props as any).layout?.yaxis || {}),
+                        tickfont: { size: 11, color: 'rgba(255,255,255,0.5)' },
+                        title: {
+                          ...((children.props as any).layout?.yaxis?.title || {}),
+                          font: { size: 12, color: 'rgba(255,255,255,0.4)' },
+                        }
+                      },
+                      margin: { t: 20, b: 60, l: 80, r: 40 },
+                    },
+                    style: { width: '100%', height: '100%' },
+                    className: 'flex-1 h-full w-full',
+                  })
+                ) : (
+                  children
+                )}
+              </div>
+            </motion.div>
+          </div>
+        )}
+      </AnimatePresence>
+    </>
+  );
+};
 
 // ─── Score bar ───────────────────────────────────────────────────────────────
 const ScoreBar: React.FC<{ label: string; value: number; delay?: number }> = ({ label, value, delay = 0 }) => {
@@ -241,10 +398,12 @@ interface Props {
 const ModelingReadinessWorkspace: React.FC<Props> = ({
   clientId, modelingAnalysis, modelingLoading, onRunAnalysis,
 }) => {
+  // ── ALL HOOKS MUST COME FIRST (Rules of Hooks) ────────────────────────────
   const [exportLoading, setExportLoading] = useState<string | null>(null);
   const [openRisk, setOpenRisk] = useState<string | null>(null);
   const [embeddingData, setEmbeddingData] = useState<any[]>([]);
   const [isFullscreen, setIsFullscreen] = useState(false);
+  const [activeTab, setActiveTab] = useState('overview');
 
   useEffect(() => {
     if (clientId && modelingAnalysis) {
@@ -267,16 +426,16 @@ const ModelingReadinessWorkspace: React.FC<Props> = ({
     finally { setExportLoading(null); }
   }, [clientId]);
 
-  // ── Empty / Loading states ──────────────────────────────────────────────
+  // ── Early returns AFTER all hooks ─────────────────────────────────────────
   if (modelingLoading) return <LoadingState />;
   if (!modelingAnalysis) return <EmptyState onRun={onRunAnalysis} />;
 
+  // ── Data derivations (safe — modelingAnalysis is guaranteed non-null here) ─
   const d = modelingAnalysis;
   const r = d.readiness;
   const viz = d.visualizations;
   const tierColor = TIER_COLOR[r.confidence_tier] || '#6B7280';
 
-  // Interpretation text based on score
   const interpretation =
     r.ai_score >= 80
       ? `Dataset demonstrates strong descriptor completeness and balanced endpoint representation. Suitable for initial QSAR experimentation with moderate overfitting risk given N:P = ${r.n_to_p_ratio.toFixed(1)}.`
@@ -284,10 +443,24 @@ const ModelingReadinessWorkspace: React.FC<Props> = ({
         ? `Dataset shows adequate readiness for exploratory modeling. Address high-priority feature engineering recommendations before training. N:P ratio of ${r.n_to_p_ratio.toFixed(1)} requires regularization.`
         : `Dataset has significant quality gaps that must be resolved before reliable QSAR modeling is possible. Focus on CRITICAL and HIGH severity recommendations first.`;
 
+  const TABS = [
+    { id: 'overview',     label: 'Overview',      icon: Brain },
+    { id: 'pca',         label: 'PCA',            icon: Activity },
+    { id: 'correlation', label: 'Correlation',    icon: GitMerge },
+    { id: 'variance',    label: 'Variance',       icon: BarChart3 },
+    { id: 'coverage',    label: 'Coverage',       icon: Layers },
+    { id: 'missing',     label: 'Missing',        icon: AlertTriangle },
+    { id: 'domain',      label: 'AD Domain',      icon: Target },
+    { id: 'outliers',    label: 'Outliers',       icon: Zap },
+    { id: 'imbalance',   label: 'Imbalance',      icon: Scale },
+    { id: 'leakage',     label: 'Leakage',        icon: Shield },
+    { id: 'oecd',        label: 'OECD',           icon: CheckCircle2 },
+  ];
+
   // ────────────────────────────────────────────────────────────────────────
   return (
-    <div className="min-h-full pb-16">
-      <div className="max-w-[1700px] mx-auto px-6 xl:px-10 pt-8 space-y-10">
+    <div className="h-full overflow-y-auto custom-scrollbar pb-16">
+      <div className="max-w-[1700px] mx-auto px-6 xl:px-10 pt-8 space-y-6">
 
         {/* ── Top bar: title + re-run ─────────────────────────────────── */}
         <div className="flex items-center justify-between">
@@ -322,7 +495,57 @@ const ModelingReadinessWorkspace: React.FC<Props> = ({
             sub={`${d.risks.length} total identified`} color={d.risks.some(r => r.severity === 'CRITICAL') ? '#EF4444' : '#F59E0B'} icon={AlertTriangle} delay={0.24} />
         </div>
 
-        {/* ── Hero Score Section ───────────────────────────────────────── */}
+        {/* ── Tab navigation ────────────────────────────────────── */}
+        <div className="rounded-2xl border border-white/[0.06] bg-white/[0.02] p-2 overflow-x-auto scrollbar-hide">
+          <div className="flex items-center gap-1.5 min-w-max">
+            {TABS.map(tab => (
+              <button
+                key={tab.id}
+                onClick={() => setActiveTab(tab.id)}
+                className={`relative flex items-center gap-2 px-4 py-2.5 rounded-xl text-sm font-medium whitespace-nowrap transition-all duration-200 select-none
+                  ${activeTab === tab.id
+                    ? 'bg-cyan-500/20 text-cyan-300 border border-cyan-500/30 shadow-[0_0_12px_rgba(34,211,238,0.15)]'
+                    : 'text-white/45 hover:text-white/80 hover:bg-white/[0.06] border border-transparent'
+                  }`}
+              >
+                <tab.icon className={`w-4 h-4 flex-shrink-0 ${activeTab === tab.id ? 'text-cyan-400' : 'text-white/40'}`} />
+                <span>{tab.label}</span>
+                {activeTab === tab.id && (
+                  <motion.span
+                    layoutId="tabPill"
+                    className="absolute inset-0 rounded-xl ring-1 ring-cyan-400/20"
+                    transition={{ type: 'spring', stiffness: 400, damping: 30 }}
+                  />
+                )}
+              </button>
+            ))}
+          </div>
+        </div>
+
+
+        {/* ── Tab content ───────────────────────────────────────── */}
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={activeTab}
+            initial={{ opacity: 0, y: 8 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -8 }}
+            transition={{ duration: 0.14 }}
+          >
+          {activeTab === 'pca' && <PCATab clientId={clientId} />}
+          {activeTab === 'correlation' && <CorrelationTab clientId={clientId} />}
+          {activeTab === 'variance' && <VarianceTab clientId={clientId} />}
+          {activeTab === 'coverage' && <CoverageTab clientId={clientId} />}
+          {activeTab === 'missing' && <MissingDescriptorsTab clientId={clientId} />}
+          {activeTab === 'domain' && <ApplicabilityDomainTab clientId={clientId} />}
+          {activeTab === 'outliers' && <OutlierTab clientId={clientId} />}
+          {activeTab === 'imbalance' && <ImbalanceTab clientId={clientId} />}
+          {activeTab === 'leakage' && <LeakageTab clientId={clientId} />}
+          {activeTab === 'oecd' && <OECDTab clientId={clientId} analysis={d} />}
+          {activeTab === 'overview' && (
+            <div className="space-y-10">
+
+        {/* ── Hero Score Section ──────────────────────────────────── */}
         <section className="grid grid-cols-1 lg:grid-cols-3 gap-6">
           {/* Gauge + tier */}
           <div className="rounded-2xl border border-white/[0.05] bg-white/[0.02] backdrop-blur-xl p-8 flex flex-col items-center justify-center gap-4">
@@ -722,7 +945,7 @@ const ModelingReadinessWorkspace: React.FC<Props> = ({
           </div>
         </section>
 
-        {/* ── Score Deductions ────────────────────────────────────────── */}
+        {/* ── Scientific Findings ─────────────────────────────────────── */}
         {r.deductions.length > 0 && (
           <section>
             <SectionHeader title="Scientific Findings" subtitle="Score deduction reasons" icon={TrendingUp} />
@@ -767,6 +990,11 @@ const ModelingReadinessWorkspace: React.FC<Props> = ({
             ))}
           </div>
         </section>
+
+            </div>
+          )}
+          </motion.div>
+        </AnimatePresence>
 
       </div>
     </div>

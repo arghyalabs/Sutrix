@@ -471,7 +471,7 @@ export const HierarchyBuilder: React.FC<HierarchyBuilderProps> = ({ clientId, so
               <div className="flex items-center gap-3">
                 <div className="relative flex items-center justify-center">
                   <div className="absolute inset-0 bg-cyan-400/20 blur-md rounded-full animate-pulse" />
-                  <SUTRIXLogo className="w-5 h-5 relative z-10" isSpinning3D />
+                  <SUTRIXLogo className="w-5 h-5 relative z-10" />
                 </div>
                 <span className="text-white font-bold text-sm tracking-wide">Building Hierarchy Graph...</span>
               </div>
@@ -522,7 +522,7 @@ export const HierarchyBuilder: React.FC<HierarchyBuilderProps> = ({ clientId, so
             >
               {isDownloading ? (
                 <>
-                  <SUTRIXLogo className="w-4 h-4" isSpinning3D />
+                  <SUTRIXLogo className="w-4 h-4" />
                   Generating ZIP...
                 </>
               ) : (

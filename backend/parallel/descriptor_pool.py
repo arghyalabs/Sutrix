@@ -25,6 +25,8 @@ def calculate_descriptors_multiprocess(
     primary engine because ProcessPoolExecutor is unreliable when spawned
     from within an asyncio thread-pool executor on Windows (bootstrap error).
     Falls back to synchronous calculation if threading also fails.
+    
+    Progress callback fires per-compound (not per-chunk) for smooth UI updates.
     """
     results = {}
     if not smiles_list:
@@ -37,9 +39,20 @@ def calculate_descriptors_multiprocess(
     
     # Split dataset into sub-batches
     chunks = split_into_batches(smiles_list, chunk_size)
-    logger.info(f"Submitting {len(chunks)} chunks to ThreadPoolExecutor (Workers={workers}, selected={selected_descriptors})")
+    logger.info(f"Submitting {len(chunks)} chunks to ThreadPoolExecutor (Workers={workers}, chunk_size={chunk_size}, selected={selected_descriptors})")
     
     completed_compounds = 0
+
+    def _fire_callback(count):
+        """Fire progress callback safely, suppressing cancellation signals."""
+        nonlocal completed_compounds
+        completed_compounds = count
+        if progress_callback:
+            try:
+                progress_callback(min(count, total_count), total_count)
+            except Exception as cb_err:
+                logger.warning(f"Progress callback error: {cb_err}")
+                raise  # Re-raise so cancellation propagates
 
     # ── Primary: ThreadPoolExecutor ───────────────────────────────────────────
     # RDKit's C++ core releases the GIL during heavy computation, so threads
@@ -55,23 +68,21 @@ def calculate_descriptors_multiprocess(
                 chunk = future_to_chunk[future]
                 try:
                     chunk_results = future.result()
+                    # Fire callback PER COMPOUND for granular UI progress
                     for smiles, res in chunk_results:
                         results[smiles] = res
+                        completed_compounds += 1
+                        _fire_callback(completed_compounds)
                 except Exception as e:
-                    logger.error(f"Thread worker crashed for chunk: {str(e)}")
+                    logger.error(f"Thread worker crashed for chunk of {len(chunk)}: {str(e)}")
                     for smiles in chunk:
                         results[smiles] = {
                             "success": False,
                             "error": f"THREAD_CRASHED: {str(e)}",
                             "data": {}
                         }
-                
-                completed_compounds += len(chunk)
-                if progress_callback:
-                    try:
-                        progress_callback(min(completed_compounds, total_count), total_count)
-                    except Exception as cb_err:
-                        logger.warning(f"Error in progress callback: {cb_err}")
+                        completed_compounds += 1
+                        _fire_callback(completed_compounds)
                         
     except Exception as pool_err:
         logger.error(f"ThreadPoolExecutor failed: {pool_err}. Falling back to synchronous calculation.")
@@ -82,5 +93,7 @@ def calculate_descriptors_multiprocess(
                 results[smiles] = compute_smiles_descriptors(smiles, include_mordred, mode, selected_descriptors)
             except Exception as fe:
                 results[smiles] = {"success": False, "error": f"FALLBACK_FAILED: {fe}", "data": {}}
+            completed_compounds += 1
+            _fire_callback(completed_compounds)
                 
     return results

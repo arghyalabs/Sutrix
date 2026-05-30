@@ -204,83 +204,89 @@ export const DescriptorEnrichment: React.FC<DescriptorEnrichmentProps> = ({
           </p>
         </div>
 
-        <div className="flex-1 overflow-y-auto custom-scrollbar">
-          {/* Modes Presets */}
-          <div className="p-5 border-b border-white/[0.06]">
-            <p className="text-[10px] font-bold uppercase tracking-wider text-white/30 mb-3">
-              Compute Presets
-            </p>
-            <div className="space-y-2">
-              {modes.map(mode => {
-                const Icon = mode.icon;
-                const isActive = enrichmentMode === mode.id;
-                return (
-                  <button
-                    key={mode.id}
-                    onClick={() => handleModeSelect(mode.id)}
-                    className={`w-full text-left p-3 rounded-xl border transition-all ${
-                      isActive
-                        ? `bg-gradient-to-br ${mode.color} ring-1 ring-inset ${mode.color.includes('cyan') ? 'ring-cyan-500/20' : mode.color.includes('violet') ? 'ring-violet-500/20' : 'ring-rose-500/20'}`
-                        : 'bg-white/[0.02] border-white/[0.06] hover:border-white/[0.12]'
-                    }`}
-                  >
-                    <div className="flex items-center gap-3">
-                      <Icon className={`w-4 h-4 ${isActive ? mode.activeText : 'text-white/30'}`} />
-                      <div>
-                        <span className={`text-sm font-bold block ${isActive ? mode.activeText : 'text-white/60'}`}>
-                          {mode.label}
-                        </span>
-                        <span className="text-[10px] text-white/40">{mode.desc}</span>
+        <div className="flex-1 flex flex-col overflow-hidden">
+          {/* Modes Presets & Custom Selection Header (Sticky/Shrink-0) */}
+          <div className="shrink-0">
+            {/* Modes Presets */}
+            <div className="p-5 border-b border-white/[0.06]">
+              <p className="text-[10px] font-bold uppercase tracking-wider text-white/30 mb-3">
+                Compute Presets
+              </p>
+              <div className="space-y-2">
+                {modes.map(mode => {
+                  const Icon = mode.icon;
+                  const isActive = enrichmentMode === mode.id;
+                  return (
+                    <button
+                      key={mode.id}
+                      onClick={() => handleModeSelect(mode.id)}
+                      className={`w-full text-left p-3 rounded-xl border transition-all ${
+                        isActive
+                          ? `bg-gradient-to-br ${mode.color} ring-1 ring-inset ${mode.color.includes('cyan') ? 'ring-cyan-500/20' : mode.color.includes('violet') ? 'ring-violet-500/20' : 'ring-rose-500/20'}`
+                          : 'bg-white/[0.02] border-white/[0.06] hover:border-white/[0.12]'
+                      }`}
+                    >
+                      <div className="flex items-center gap-3">
+                        <Icon className={`w-4 h-4 ${isActive ? mode.activeText : 'text-white/30'}`} />
+                        <div>
+                          <span className={`text-sm font-bold block ${isActive ? mode.activeText : 'text-white/60'}`}>
+                            {mode.label}
+                          </span>
+                          <span className="text-[10px] text-white/40">{mode.desc}</span>
+                        </div>
+                        {isActive && (
+                          <span className={`ml-auto shrink-0 text-[9px] font-bold px-2 py-0.5 rounded-full ${
+                            mode.accent === 'cyan' ? 'bg-cyan-500/20 text-cyan-300' :
+                            mode.accent === 'violet' ? 'bg-violet-500/20 text-violet-300' :
+                            'bg-rose-500/20 text-rose-300'
+                          }`}>
+                            ACTIVE
+                          </span>
+                        )}
                       </div>
-                      {isActive && (
-                        <span className={`ml-auto shrink-0 text-[9px] font-bold px-2 py-0.5 rounded-full ${
-                          mode.accent === 'cyan' ? 'bg-cyan-500/20 text-cyan-300' :
-                          mode.accent === 'violet' ? 'bg-violet-500/20 text-violet-300' :
-                          'bg-rose-500/20 text-rose-300'
-                        }`}>
-                          ACTIVE
-                        </span>
-                      )}
-                    </div>
-                  </button>
-                );
-              })}
+                    </button>
+                  );
+                })}
+              </div>
+            </div>
+
+            {/* Custom Selection Header, Search, and Action Buttons (Sticky/Shrink-0) */}
+            <div className="p-5 pb-2 border-b border-white/[0.06] bg-[#080f1f]">
+              <div className="flex items-center gap-2 mb-3">
+                <ListFilter className="w-4 h-4 text-white/30" />
+                <p className="text-[10px] font-bold uppercase tracking-wider text-white/30">
+                  Custom Selection
+                </p>
+                <span className="ml-auto text-[10px] text-white/30">{selectedDescriptors.length} total selected</span>
+              </div>
+              
+              <div className="relative mb-3">
+                <Search className="w-4 h-4 text-white/30 absolute left-3 top-1/2 -translate-y-1/2" />
+                <input
+                  type="text"
+                  placeholder="Search keywords (e.g. 'log', 'ring')..."
+                  value={searchQuery}
+                  onChange={e => setSearchQuery(e.target.value)}
+                  className="w-full bg-white/[0.02] border border-white/[0.06] rounded-xl pl-9 pr-4 py-2 text-sm text-white placeholder:text-white/30 focus:outline-none focus:border-cyan-500/50 transition-colors"
+                />
+              </div>
+
+              <div className="flex gap-2 overflow-x-auto custom-scrollbar pb-1">
+                <button onClick={selectAllRdkit} className="whitespace-nowrap px-3 py-1 rounded-lg bg-cyan-500/10 text-cyan-400 text-[11px] font-semibold hover:bg-cyan-500/20 transition-colors">
+                  + All RDKit
+                </button>
+                <button onClick={selectAllMordred} className="whitespace-nowrap px-3 py-1 rounded-lg bg-violet-500/10 text-violet-400 text-[11px] font-semibold hover:bg-violet-500/20 transition-colors">
+                  + All Mordred
+                </button>
+                <button onClick={clearAll} className="whitespace-nowrap px-3 py-1 rounded-lg bg-white/5 text-white/60 text-[11px] font-semibold hover:bg-white/10 hover:text-white transition-colors">
+                  Clear All
+                </button>
+              </div>
             </div>
           </div>
 
-          {/* Checklist */}
-          <div className="p-5">
-            <div className="flex items-center gap-2 mb-3">
-              <ListFilter className="w-4 h-4 text-white/30" />
-              <p className="text-[10px] font-bold uppercase tracking-wider text-white/30">
-                Custom Selection
-              </p>
-              <span className="ml-auto text-[10px] text-white/30">{selectedDescriptors.length} total selected</span>
-            </div>
-            
-            <div className="relative mb-3">
-              <Search className="w-4 h-4 text-white/30 absolute left-3 top-1/2 -translate-y-1/2" />
-              <input
-                type="text"
-                placeholder="Search keywords (e.g. 'log', 'ring')..."
-                value={searchQuery}
-                onChange={e => setSearchQuery(e.target.value)}
-                className="w-full bg-white/[0.02] border border-white/[0.06] rounded-xl pl-9 pr-4 py-2 text-sm text-white placeholder:text-white/30 focus:outline-none focus:border-cyan-500/50 transition-colors"
-              />
-            </div>
-
-            <div className="flex gap-2 mb-4 overflow-x-auto custom-scrollbar pb-1">
-              <button onClick={selectAllRdkit} className="whitespace-nowrap px-3 py-1 rounded-lg bg-cyan-500/10 text-cyan-400 text-[11px] font-semibold hover:bg-cyan-500/20 transition-colors">
-                + All RDKit
-              </button>
-              <button onClick={selectAllMordred} className="whitespace-nowrap px-3 py-1 rounded-lg bg-violet-500/10 text-violet-400 text-[11px] font-semibold hover:bg-violet-500/20 transition-colors">
-                + All Mordred
-              </button>
-              <button onClick={clearAll} className="whitespace-nowrap px-3 py-1 rounded-lg bg-white/5 text-white/60 text-[11px] font-semibold hover:bg-white/10 hover:text-white transition-colors">
-                Clear All
-              </button>
-            </div>
-
+          {/* Bottom section: Scrollable Checklist Grid (Flex-1) */}
+          <div className="flex-1 overflow-y-auto custom-scrollbar p-5 pt-3">
             {loading ? (
               <div className="flex flex-col items-center justify-center py-14">
                 <LogoLoader size="w-16 h-16" label="Loading Descriptor Library..." />

@@ -2,13 +2,13 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Upload, Grid, BarChart2, Zap, Activity, Download,
-  LogOut, HelpCircle, FileDigit, Scale, Network
+  LogOut, HelpCircle, FileDigit, Scale, Network, CheckSquare, Settings
 } from 'lucide-react';
 import * as Tooltip from '@radix-ui/react-tooltip';
 import { SUTRIXLogo, LogoLoader } from '../ui/SUTRIXLogo';
 
 // Tabs that need true fullscreen (no scroll wrapper, no padding)
-const FULLSCREEN_TABS = new Set(['hierarchy', 'analysis', 'enrichment']);
+const FULLSCREEN_TABS = new Set(['hierarchy', 'analysis', 'enrichment', 'readiness', 'verification']);
 
 interface SidebarItem {
   id: string;
@@ -24,6 +24,7 @@ interface DashboardLayoutProps {
   onExit: () => void;
   onGoHome: () => void;
   onOpenLicense: () => void;
+  onOpenSystem?: () => void;
   telemetryData?: {
     ram_usage_pct: number;
     fps: number;
@@ -38,20 +39,21 @@ export const DashboardLayout: React.FC<DashboardLayoutProps> = ({
   onExit,
   onGoHome,
   onOpenLicense,
+  onOpenSystem,
   telemetryData = { ram_usage_pct: 42, fps: 60, active_jobs_count: 0 }
 }) => {
   const [collapsed, setCollapsed] = useState(true);
   const [showHelp, setShowHelp] = useState(false);
 
   const sidebarItems: SidebarItem[] = [
-    { id: 'ingest', name: 'Upload Dataset', icon: <Upload className="w-5 h-5" />, stepNum: 1 },
-    { id: 'mapping', name: 'Variable Map', icon: <Grid className="w-5 h-5" />, stepNum: 2 },
-    { id: 'hierarchy', name: 'Hierarchy Builder', icon: <Network className="w-5 h-5" />, stepNum: 3 },
-    { id: 'analysis', name: 'Data Analysis', icon: <BarChart2 className="w-5 h-5" />, stepNum: 4 },
-    { id: 'enrichment', name: 'Enrichment', icon: <Zap className="w-5 h-5" />, stepNum: 5 },
-    { id: 'readiness', name: 'Readiness', icon: <FileDigit className="w-5 h-5" />, stepNum: 6 },
-    { id: 'benchmark', name: 'System', icon: <Activity className="w-5 h-5" />, stepNum: 7 },
-    { id: 'reports', name: 'Export', icon: <Download className="w-5 h-5" />, stepNum: 8 },
+    { id: 'ingest',       name: 'Upload Dataset',      icon: <Upload className="w-5 h-5" />,    stepNum: 1 },
+    { id: 'mapping',      name: 'Variable Map',         icon: <Grid className="w-5 h-5" />,      stepNum: 2 },
+    { id: 'hierarchy',    name: 'Hierarchy Builder',    icon: <Network className="w-5 h-5" />,   stepNum: 3 },
+    { id: 'analysis',     name: 'Data Analysis',        icon: <BarChart2 className="w-5 h-5" />, stepNum: 4 },
+    { id: 'enrichment',   name: 'Enrichment',           icon: <Zap className="w-5 h-5" />,       stepNum: 5 },
+    { id: 'readiness',    name: 'Readiness',            icon: <FileDigit className="w-5 h-5" />, stepNum: 6 },
+    { id: 'verification', name: 'Compound Explorer',    icon: <CheckSquare className="w-5 h-5" />, stepNum: 7 },
+    { id: 'reports',      name: 'Export',               icon: <Download className="w-5 h-5" />,  stepNum: 8 },
   ];
 
   const currentStep = sidebarItems.find(i => i.id === activeTab);
@@ -153,6 +155,42 @@ export const DashboardLayout: React.FC<DashboardLayoutProps> = ({
 
           {/* Footer */}
           <div className="p-3 border-t border-white/[0.06] space-y-1 shrink-0">
+            {/* System Monitor — utility shortcut, not a workflow step */}
+            <Tooltip.Root>
+              <Tooltip.Trigger asChild>
+                <button
+                  onClick={() => onOpenSystem ? onOpenSystem() : setActiveTab('benchmark')}
+                  className={`w-full flex items-center h-12 rounded-xl transition-colors
+                    ${collapsed ? 'justify-center' : 'justify-start'}
+                    ${activeTab === 'benchmark' ? 'bg-white/[0.08] text-white' : 'text-secondary hover:bg-white/[0.04] hover:text-white'}
+                  `}
+                >
+                  <div className="w-12 h-12 flex items-center justify-center shrink-0">
+                    <Activity className={`w-5 h-5 ${activeTab === 'benchmark' ? 'text-cyan-400' : ''}`} />
+                  </div>
+                  <AnimatePresence>
+                    {!collapsed && (
+                      <motion.span
+                        initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}
+                        className="font-medium text-sm truncate"
+                      >
+                        System Monitor
+                      </motion.span>
+                    )}
+                  </AnimatePresence>
+                </button>
+              </Tooltip.Trigger>
+              {collapsed && (
+                <Tooltip.Portal>
+                  <Tooltip.Content side="right" sideOffset={16}
+                    className="glass px-3 py-1.5 rounded-lg text-xs font-medium text-white shadow-xl animate-in fade-in zoom-in-95 z-50"
+                  >
+                    System Monitor
+                    <Tooltip.Arrow className="fill-[rgba(10,15,30,0.8)]" />
+                  </Tooltip.Content>
+                </Tooltip.Portal>
+              )}
+            </Tooltip.Root>
             <button 
               onClick={onOpenLicense}
               className={`w-full flex items-center h-12 rounded-xl text-secondary hover:bg-white/[0.04] hover:text-white transition-colors

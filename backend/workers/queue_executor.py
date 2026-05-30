@@ -222,19 +222,20 @@ async def process_enrichment_task(job_id: str, payload: Dict[str, Any]):
         # Get active running loop in main event thread to safe-schedule async broadcasts from executor threads
         loop = asyncio.get_running_loop()
 
-        # Progress callback called by ThreadPoolExecutor workers — posts directly to job_registry
-        # and schedules WS broadcast on main asyncio loop via run_coroutine_threadsafe
+        # State shared between callback and heartbeat
+        _phase3_state = {"progress": 52, "processed": 0, "total": len(smiles_to_calculate)}
+
         def process_pool_callback(completed_count, total_count):
             cur_job = job_registry.get_job(job_id)
             if cur_job and cur_job.get("status") == "CANCELLED":
                 raise Exception("JOB_CANCELLED")
                 
             total_processed = cache_hits + completed_count
-            # Map progress to 52-88% — always update job_registry for HTTP polling
             m_prog = 52 + int((completed_count / max(total_count, 1)) * 36)
+            _phase3_state["progress"] = m_prog
+            _phase3_state["processed"] = completed_count
             job_registry.update_job(job_id, progress=m_prog)
 
-            # Throttle WebSocket broadcasts to avoid flooding
             if tracker.should_broadcast():
                 tracker.rows_processed = total_processed
                 tel = tracker.calculate_telemetry(total_processed)
@@ -245,17 +246,33 @@ async def process_enrichment_task(job_id: str, payload: Dict[str, Any]):
                     loop
                 )
 
+        # Heartbeat: keeps the UI alive even if callbacks are slow (large chunks)
+        async def _phase3_heartbeat():
+            while True:
+                await asyncio.sleep(3)
+                pct = _phase3_state["progress"]
+                done = _phase3_state["processed"]
+                total_c = _phase3_state["total"]
+                tel = tracker.calculate_telemetry(cache_hits + done)
+                tel["progress_pct"] = pct
+                tel["phase"] = f"⚗️ Phase 3: Computing descriptors… ({done}/{total_c})"
+                await ws_broadcaster.broadcast({"job_id": job_id, "type": "PROGRESS", "data": tel})
+
         try:
-            # Execute Process Pool in worker executor threads to avoid blocking asyncio loop
-            calculation_results = await loop.run_in_executor(
-                None, 
-                calculate_descriptors_multiprocess,
-                smiles_to_calculate,
-                mode,
-                include_mordred,
-                process_pool_callback,
-                payload.get("selected_descriptors")
-            )
+            heartbeat_task = asyncio.create_task(_phase3_heartbeat())
+            try:
+                # Execute the thread-pool computation — no hard timeout so large datasets complete
+                calculation_results = await loop.run_in_executor(
+                    None,
+                    calculate_descriptors_multiprocess,
+                    smiles_to_calculate,
+                    mode,
+                    include_mordred,
+                    process_pool_callback,
+                    payload.get("selected_descriptors")
+                )
+            finally:
+                heartbeat_task.cancel()
             
             # Write new calculation data back to sqlite cache
             tracker.log("💾 Writing calculated descriptors back to persistent SQLite cache database...")

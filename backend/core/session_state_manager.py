@@ -41,6 +41,8 @@ class SessionStateManager:
                 "segmentation_results": context.segmentation_results,
                 "readiness_results": context.readiness_results,
                 "active_job_id": context.active_job_id,
+                "active_lineage": context.active_lineage,
+                "node_details": context.hierarchy_engine.node_details if (context.hierarchy_engine and hasattr(context.hierarchy_engine, "node_details")) else None,
                 "last_accessed": context.last_accessed,
                 "saved_at": time.time()
             }
@@ -90,6 +92,20 @@ class SessionStateManager:
             context.readiness_results = state_data.get("readiness_results", {})
             context.active_job_id = state_data.get("active_job_id")
             context.last_accessed = state_data.get("last_accessed", time.time())
+            
+            # Restore active lineage & hierarchy engine details
+            context.active_lineage = state_data.get("active_lineage")
+            context.active_segregation_result = context.active_lineage
+            
+            node_details = state_data.get("node_details")
+            if node_details:
+                try:
+                    from backend.core.hierarchy_engine import HierarchyEngine
+                    engine = HierarchyEngine(context.workspace_id, context.mappings)
+                    engine.node_details = node_details
+                    context.hierarchy_engine = engine
+                except Exception as e:
+                    logger.error(f"Failed to restore hierarchy engine in load_session: {e}")
             
             # Re-seed into global registry
             registry.workspaces[workspace_id] = context

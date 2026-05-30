@@ -15,7 +15,7 @@ class Settings(BaseModel):
     # Security
     SECRET_KEY: str = os.getenv("SECRET_KEY", "dev_secret_key")
     JWT_SECRET: str = os.getenv("JWT_SECRET", "dev_jwt_secret")
-    CORS_ORIGINS: List[str] = [origin.strip() for origin in os.getenv("CORS_ORIGINS", "http://localhost:5173,http://127.0.0.1:5173").split(",")]
+    CORS_ORIGINS: List[str] = [origin.strip() for origin in os.getenv("CORS_ORIGINS", "http://localhost:5173,http://127.0.0.1:5173,http://localhost:5174,http://127.0.0.1:5174").split(",")]
     
     # Paths
     UPLOAD_DIR: str = os.getenv("UPLOAD_DIR", "uploads")

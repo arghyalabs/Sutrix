@@ -33,6 +33,7 @@ from backend.api.validators.request_validator import (
 from backend.api.routes.hierarchy_routes import router as hierarchy_router
 from backend.api.routes.descriptor_routes import router as descriptor_router
 from backend.api.routes.modeling_routes import router as modeling_router
+from backend.api.routes.explorer_routes import router as explorer_router
 from backend.core.config import settings
 
 app = FastAPI(title="Scientific Data Orchestrator", version="4.0")
@@ -49,6 +50,7 @@ app.add_middleware(
 app.include_router(hierarchy_router)
 app.include_router(descriptor_router)
 app.include_router(modeling_router)
+app.include_router(explorer_router)
 
 memory_guard = MemoryGuard()
 

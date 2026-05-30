@@ -2,6 +2,7 @@
 Modeling Routes — /api/modeling/* endpoints.
 Orchestrates all existing + new analysis engines into a single unified response.
 """
+import asyncio
 import logging
 import io
 import json
@@ -611,3 +612,504 @@ async def export_modeling_report(client_id: str, format: str = "json"):
         )
 
     raise HTTPException(status_code=400, detail="Unsupported format. Use: json, csv, xlsx")
+
+
+# ─── Background Analysis Helpers ──────────────────────────────────────────────
+
+async def _broadcast_progress(client_id: str, job_id: str, section: str, pct: int, phase: str):
+    """Broadcasts analysis progress via WebSocket to the specific client."""
+    try:
+        from backend.workers.websocket_manager import ws_broadcaster
+        await ws_broadcaster.send_to_client(client_id, {
+            "type": "ANALYSIS_PROGRESS",
+            "job_id": job_id,
+            "section": section,
+            "progress_pct": pct,
+            "phase": phase,
+        })
+    except Exception:
+        pass
+
+
+async def _broadcast_complete(client_id: str, job_id: str, section: str):
+    """Broadcasts 100% progress then an ANALYSIS_COMPLETE event."""
+    await _broadcast_progress(client_id, job_id, section, 100, "Complete")
+    try:
+        from backend.workers.websocket_manager import ws_broadcaster
+        await ws_broadcaster.send_to_client(client_id, {
+            "type": "ANALYSIS_COMPLETE",
+            "job_id": job_id,
+            "section": section,
+        })
+    except Exception:
+        pass
+
+
+async def _broadcast_error(client_id: str, job_id: str, section: str, error: str):
+    """Broadcasts an ANALYSIS_ERROR event."""
+    try:
+        from backend.workers.websocket_manager import ws_broadcaster
+        await ws_broadcaster.send_to_client(client_id, {
+            "type": "ANALYSIS_ERROR",
+            "job_id": job_id,
+            "section": section,
+            "error": error,
+        })
+    except Exception:
+        pass
+
+
+def _get_descriptor_cols(df, mappings):
+    """Returns (smiles_col, val_col, descriptor_cols) from df + mappings."""
+    sci_to_user = {v: k for k, v in mappings.items()}
+    smiles_col = sci_to_user.get("canonical_smiles")
+    val_col = sci_to_user.get("value")
+    system_cols = {smiles_col, val_col, "audit_flag", "session_id"}
+    descriptor_cols = [
+        c for c in df.select_dtypes(include=["number"]).columns
+        if c not in system_cols and c
+    ]
+    return smiles_col, val_col, descriptor_cols
+
+
+# ─── 1. PCA ───────────────────────────────────────────────────────────────────
+
+@router.post("/pca")
+async def run_pca_analysis(payload: BaseClientPayload):
+    """Runs PCA analysis as a background job. Returns job_id immediately."""
+    client_id = payload.client_id
+    context = registry.get_context(client_id)
+    if not context:
+        raise HTTPException(status_code=404, detail=f"Workspace '{client_id}' not found")
+
+    job_id = f"{client_id}_pca_{int(time.time())}"
+
+    async def _run():
+        try:
+            await _broadcast_progress(client_id, job_id, "pca", 5, "Preparing descriptor matrix")
+
+            df = await asyncio.get_event_loop().run_in_executor(None, context.load_slice)
+            mappings = context.mappings or {}
+            smiles_col, val_col, descriptor_cols = _get_descriptor_cols(df, mappings)
+
+            await _broadcast_progress(client_id, job_id, "pca", 25, "Missing value handling")
+            await asyncio.sleep(0.1)
+            await _broadcast_progress(client_id, job_id, "pca", 40, "Descriptor scaling")
+
+            from backend.core.pca_engine import PCAEngine
+
+            def _compute():
+                engine = PCAEngine(n_components=10)
+                return engine.run_full_analysis(df, descriptor_cols, smiles_col=smiles_col, label_col=val_col)
+
+            result = await asyncio.get_event_loop().run_in_executor(None, _compute)
+
+            await _broadcast_progress(client_id, job_id, "pca", 90, "Finalizing")
+            _results_cache.setdefault(client_id, {})["pca"] = _sanitize_for_json(result)
+            await _broadcast_complete(client_id, job_id, "pca")
+
+        except Exception as e:
+            logger.error(f"PCA analysis failed for {client_id}: {e}", exc_info=True)
+            await _broadcast_error(client_id, job_id, "pca", str(e))
+
+    asyncio.create_task(_run())
+    return {"job_id": job_id, "section": "pca", "status": "started"}
+
+
+# ─── 2. CORRELATION ───────────────────────────────────────────────────────────
+
+@router.post("/correlation")
+async def run_correlation_analysis(payload: BaseClientPayload):
+    """Runs full Pearson + Spearman correlation analysis as a background job."""
+    client_id = payload.client_id
+    context = registry.get_context(client_id)
+    if not context:
+        raise HTTPException(status_code=404, detail=f"Workspace '{client_id}' not found")
+
+    job_id = f"{client_id}_correlation_{int(time.time())}"
+
+    async def _run():
+        try:
+            await _broadcast_progress(client_id, job_id, "correlation", 10, "Preparing matrix")
+
+            df = await asyncio.get_event_loop().run_in_executor(None, context.load_slice)
+            mappings = context.mappings or {}
+            smiles_col, val_col, descriptor_cols = _get_descriptor_cols(df, mappings)
+
+            await _broadcast_progress(client_id, job_id, "correlation", 40, "Computing Pearson")
+            await asyncio.sleep(0.1)
+            await _broadcast_progress(client_id, job_id, "correlation", 65, "Computing Spearman")
+            await asyncio.sleep(0.1)
+            await _broadcast_progress(client_id, job_id, "correlation", 85, "Finding redundant pairs")
+
+            from backend.core.correlation_engine import CorrelationEngine
+
+            def _compute():
+                engine = CorrelationEngine()
+                return engine.run_full_analysis(df, descriptor_cols)
+
+            result = await asyncio.get_event_loop().run_in_executor(None, _compute)
+
+            _results_cache.setdefault(client_id, {})["correlation"] = _sanitize_for_json(result)
+            await _broadcast_complete(client_id, job_id, "correlation")
+
+        except Exception as e:
+            logger.error(f"Correlation analysis failed for {client_id}: {e}", exc_info=True)
+            await _broadcast_error(client_id, job_id, "correlation", str(e))
+
+    asyncio.create_task(_run())
+    return {"job_id": job_id, "section": "correlation", "status": "started"}
+
+
+# ─── 3. VARIANCE ──────────────────────────────────────────────────────────────
+
+@router.post("/variance")
+async def run_variance_analysis(payload: BaseClientPayload):
+    """Runs variance threshold analysis as a background job."""
+    client_id = payload.client_id
+    context = registry.get_context(client_id)
+    if not context:
+        raise HTTPException(status_code=404, detail=f"Workspace '{client_id}' not found")
+
+    job_id = f"{client_id}_variance_{int(time.time())}"
+
+    async def _run():
+        try:
+            await _broadcast_progress(client_id, job_id, "variance", 20, "Loading features")
+
+            df = await asyncio.get_event_loop().run_in_executor(None, context.load_slice)
+            mappings = context.mappings or {}
+            smiles_col, val_col, descriptor_cols = _get_descriptor_cols(df, mappings)
+
+            await _broadcast_progress(client_id, job_id, "variance", 60, "Computing variances")
+            await asyncio.sleep(0.1)
+            await _broadcast_progress(client_id, job_id, "variance", 85, "Generating histogram")
+
+            from backend.core.variance_analyzer import VarianceThresholdAnalyzer
+
+            def _compute():
+                analyzer = VarianceThresholdAnalyzer()
+                return analyzer.analyze(df, descriptor_cols)
+
+            result = await asyncio.get_event_loop().run_in_executor(None, _compute)
+
+            _results_cache.setdefault(client_id, {})["variance"] = _sanitize_for_json(result)
+            await _broadcast_complete(client_id, job_id, "variance")
+
+        except Exception as e:
+            logger.error(f"Variance analysis failed for {client_id}: {e}", exc_info=True)
+            await _broadcast_error(client_id, job_id, "variance", str(e))
+
+    asyncio.create_task(_run())
+    return {"job_id": job_id, "section": "variance", "status": "started"}
+
+
+# ─── 4. COVERAGE ──────────────────────────────────────────────────────────────
+
+@router.post("/coverage")
+async def run_coverage_analysis(payload: BaseClientPayload):
+    """Runs descriptor coverage/family classification as a background job."""
+    client_id = payload.client_id
+    context = registry.get_context(client_id)
+    if not context:
+        raise HTTPException(status_code=404, detail=f"Workspace '{client_id}' not found")
+
+    job_id = f"{client_id}_coverage_{int(time.time())}"
+
+    async def _run():
+        try:
+            await _broadcast_progress(client_id, job_id, "coverage", 20, "Loading descriptors")
+
+            df = await asyncio.get_event_loop().run_in_executor(None, context.load_slice)
+            mappings = context.mappings or {}
+            smiles_col, val_col, descriptor_cols = _get_descriptor_cols(df, mappings)
+
+            await _broadcast_progress(client_id, job_id, "coverage", 60, "Classifying families")
+            await asyncio.sleep(0.1)
+            await _broadcast_progress(client_id, job_id, "coverage", 85, "Building recommendations")
+
+            from backend.core.descriptor_coverage_engine import DescriptorCoverageEngine
+
+            def _compute():
+                engine = DescriptorCoverageEngine()
+                return engine.classify_columns(descriptor_cols)
+
+            result = await asyncio.get_event_loop().run_in_executor(None, _compute)
+
+            _results_cache.setdefault(client_id, {})["coverage"] = _sanitize_for_json(result)
+            await _broadcast_complete(client_id, job_id, "coverage")
+
+        except Exception as e:
+            logger.error(f"Coverage analysis failed for {client_id}: {e}", exc_info=True)
+            await _broadcast_error(client_id, job_id, "coverage", str(e))
+
+    asyncio.create_task(_run())
+    return {"job_id": job_id, "section": "coverage", "status": "started"}
+
+
+# ─── 5. DOMAIN ────────────────────────────────────────────────────────────────
+
+@router.post("/domain")
+async def run_domain_analysis(payload: BaseClientPayload):
+    """Runs applicability domain analysis as a background job."""
+    client_id = payload.client_id
+    context = registry.get_context(client_id)
+    if not context:
+        raise HTTPException(status_code=404, detail=f"Workspace '{client_id}' not found")
+
+    job_id = f"{client_id}_domain_{int(time.time())}"
+
+    async def _run():
+        try:
+            await _broadcast_progress(client_id, job_id, "domain", 10, "Preparing")
+
+            df = await asyncio.get_event_loop().run_in_executor(None, context.load_slice)
+            mappings = context.mappings or {}
+            smiles_col, val_col, descriptor_cols = _get_descriptor_cols(df, mappings)
+
+            await _broadcast_progress(client_id, job_id, "domain", 30, "Computing leverage")
+            await asyncio.sleep(0.1)
+            await _broadcast_progress(client_id, job_id, "domain", 55, "Classifying compounds")
+            await asyncio.sleep(0.1)
+            await _broadcast_progress(client_id, job_id, "domain", 75, "kNN domain")
+            await asyncio.sleep(0.1)
+            await _broadcast_progress(client_id, job_id, "domain", 90, "Building plots")
+
+            from backend.core.applicability_domain_engine import ApplicabilityDomainEngine
+
+            def _compute():
+                engine = ApplicabilityDomainEngine()
+                return engine.run_full_analysis(df, descriptor_cols, smiles_col=smiles_col, target_col=val_col)
+
+            result = await asyncio.get_event_loop().run_in_executor(None, _compute)
+
+            _results_cache.setdefault(client_id, {})["domain"] = _sanitize_for_json(result)
+            await _broadcast_complete(client_id, job_id, "domain")
+
+        except Exception as e:
+            logger.error(f"Applicability domain analysis failed for {client_id}: {e}", exc_info=True)
+            await _broadcast_error(client_id, job_id, "domain", str(e))
+
+    asyncio.create_task(_run())
+    return {"job_id": job_id, "section": "domain", "status": "started"}
+
+
+# ─── 6. OUTLIERS ──────────────────────────────────────────────────────────────
+
+@router.post("/outliers")
+async def run_outlier_analysis(payload: BaseClientPayload):
+    """Runs multi-method outlier detection (IsolationForest, LOF, ZScore, IQR) as a background job."""
+    client_id = payload.client_id
+    context = registry.get_context(client_id)
+    if not context:
+        raise HTTPException(status_code=404, detail=f"Workspace '{client_id}' not found")
+
+    job_id = f"{client_id}_outliers_{int(time.time())}"
+
+    async def _run():
+        try:
+            await _broadcast_progress(client_id, job_id, "outliers", 10, "Preparing")
+
+            df = await asyncio.get_event_loop().run_in_executor(None, context.load_slice)
+            mappings = context.mappings or {}
+            smiles_col, val_col, descriptor_cols = _get_descriptor_cols(df, mappings)
+
+            await _broadcast_progress(client_id, job_id, "outliers", 25, "IsolationForest")
+            await asyncio.sleep(0.1)
+            await _broadcast_progress(client_id, job_id, "outliers", 45, "LOF")
+            await asyncio.sleep(0.1)
+            await _broadcast_progress(client_id, job_id, "outliers", 65, "ZScore")
+            await asyncio.sleep(0.1)
+            await _broadcast_progress(client_id, job_id, "outliers", 80, "IQR")
+            await asyncio.sleep(0.1)
+            await _broadcast_progress(client_id, job_id, "outliers", 90, "Aggregating")
+
+            from backend.core.outlier_engine import OutlierEngine
+
+            def _compute():
+                engine = OutlierEngine()
+                return engine.run_full_analysis(df, descriptor_cols, smiles_col=smiles_col)
+
+            result = await asyncio.get_event_loop().run_in_executor(None, _compute)
+
+            _results_cache.setdefault(client_id, {})["outliers"] = _sanitize_for_json(result)
+            await _broadcast_complete(client_id, job_id, "outliers")
+
+        except Exception as e:
+            logger.error(f"Outlier analysis failed for {client_id}: {e}", exc_info=True)
+            await _broadcast_error(client_id, job_id, "outliers", str(e))
+
+    asyncio.create_task(_run())
+    return {"job_id": job_id, "section": "outliers", "status": "started"}
+
+
+# ─── 7. IMBALANCE ─────────────────────────────────────────────────────────────
+
+@router.post("/imbalance")
+async def run_imbalance_analysis(payload: BaseClientPayload):
+    """Runs class imbalance analysis on the target column as a background job."""
+    client_id = payload.client_id
+    context = registry.get_context(client_id)
+    if not context:
+        raise HTTPException(status_code=404, detail=f"Workspace '{client_id}' not found")
+
+    job_id = f"{client_id}_imbalance_{int(time.time())}"
+
+    async def _run():
+        try:
+            await _broadcast_progress(client_id, job_id, "imbalance", 20, "Analyzing distribution")
+
+            df = await asyncio.get_event_loop().run_in_executor(None, context.load_slice)
+            mappings = context.mappings or {}
+            smiles_col, val_col, descriptor_cols = _get_descriptor_cols(df, mappings)
+
+            await _broadcast_progress(client_id, job_id, "imbalance", 60, "Computing metrics")
+            await asyncio.sleep(0.1)
+            await _broadcast_progress(client_id, job_id, "imbalance", 85, "Generating recommendations")
+
+            from backend.core.class_imbalance_engine import ClassImbalanceEngine
+
+            def _compute():
+                engine = ClassImbalanceEngine()
+                return engine.analyze(df, val_col)
+
+            result = await asyncio.get_event_loop().run_in_executor(None, _compute)
+
+            _results_cache.setdefault(client_id, {})["imbalance"] = _sanitize_for_json(result)
+            await _broadcast_complete(client_id, job_id, "imbalance")
+
+        except Exception as e:
+            logger.error(f"Class imbalance analysis failed for {client_id}: {e}", exc_info=True)
+            await _broadcast_error(client_id, job_id, "imbalance", str(e))
+
+    asyncio.create_task(_run())
+    return {"job_id": job_id, "section": "imbalance", "status": "started"}
+
+
+# ─── 8. LEAKAGE ───────────────────────────────────────────────────────────────
+
+@router.post("/leakage")
+async def run_leakage_analysis(payload: BaseClientPayload):
+    """Runs leakage detection (identifier check, correlation, duplicate, risk) as a background job."""
+    client_id = payload.client_id
+    context = registry.get_context(client_id)
+    if not context:
+        raise HTTPException(status_code=404, detail=f"Workspace '{client_id}' not found")
+
+    job_id = f"{client_id}_leakage_{int(time.time())}"
+
+    async def _run():
+        try:
+            await _broadcast_progress(client_id, job_id, "leakage", 20, "Checking identifiers")
+
+            df = await asyncio.get_event_loop().run_in_executor(None, context.load_slice)
+            mappings = context.mappings or {}
+            smiles_col, val_col, descriptor_cols = _get_descriptor_cols(df, mappings)
+
+            await _broadcast_progress(client_id, job_id, "leakage", 45, "Correlation analysis")
+            await asyncio.sleep(0.1)
+            await _broadcast_progress(client_id, job_id, "leakage", 70, "Duplicate check")
+            await asyncio.sleep(0.1)
+            await _broadcast_progress(client_id, job_id, "leakage", 90, "Risk assessment")
+
+            from backend.core.leakage_detection_engine import LeakageDetectionEngine
+
+            def _compute():
+                engine = LeakageDetectionEngine()
+                return engine.run_full_analysis(df, descriptor_cols, smiles_col=smiles_col, target_col=val_col)
+
+            result = await asyncio.get_event_loop().run_in_executor(None, _compute)
+
+            _results_cache.setdefault(client_id, {})["leakage"] = _sanitize_for_json(result)
+            await _broadcast_complete(client_id, job_id, "leakage")
+
+        except Exception as e:
+            logger.error(f"Leakage analysis failed for {client_id}: {e}", exc_info=True)
+            await _broadcast_error(client_id, job_id, "leakage", str(e))
+
+    asyncio.create_task(_run())
+    return {"job_id": job_id, "section": "leakage", "status": "started"}
+
+
+# ─── 9. OECD ──────────────────────────────────────────────────────────────────
+
+@router.post("/oecd")
+async def run_oecd_analysis(payload: BaseClientPayload):
+    """Runs full OECD 5-principle evaluation as a background job.
+    Automatically pulls cached domain, coverage, and baseline_r2 results if available."""
+    client_id = payload.client_id
+    context = registry.get_context(client_id)
+    if not context:
+        raise HTTPException(status_code=404, detail=f"Workspace '{client_id}' not found")
+
+    job_id = f"{client_id}_oecd_{int(time.time())}"
+
+    async def _run():
+        try:
+            await _broadcast_progress(client_id, job_id, "oecd", 20, "P1 Endpoint")
+
+            df = await asyncio.get_event_loop().run_in_executor(None, context.load_slice)
+            mappings = context.mappings or {}
+            smiles_col, val_col, descriptor_cols = _get_descriptor_cols(df, mappings)
+
+            await _broadcast_progress(client_id, job_id, "oecd", 35, "P2 Algorithm")
+            await asyncio.sleep(0.1)
+            await _broadcast_progress(client_id, job_id, "oecd", 50, "P3 Domain")
+            await asyncio.sleep(0.1)
+            await _broadcast_progress(client_id, job_id, "oecd", 65, "P4 Fit")
+            await asyncio.sleep(0.1)
+            await _broadcast_progress(client_id, job_id, "oecd", 80, "P5 Mechanism")
+            await asyncio.sleep(0.1)
+            await _broadcast_progress(client_id, job_id, "oecd", 95, "Scoring")
+
+            # Pull cached results for cross-section enrichment
+            cached = _results_cache.get(client_id, {})
+            domain_result = cached.get("domain")
+            coverage_result = cached.get("coverage")
+            baseline_r2 = (
+                cached.get("analyze", {})
+                .get("readiness", {})
+                .get("baseline_performance")
+            )
+
+            from backend.core.oecd_principle_evaluator import OECDPrincipleEvaluator
+
+            def _compute():
+                evaluator = OECDPrincipleEvaluator()
+                return evaluator.run_full_evaluation(
+                    df,
+                    descriptor_cols,
+                    smiles_col=smiles_col,
+                    label_col=val_col,
+                    mappings=mappings,
+                    domain_result=domain_result,
+                    coverage_result=coverage_result,
+                    baseline_r2=baseline_r2,
+                )
+
+            result = await asyncio.get_event_loop().run_in_executor(None, _compute)
+
+            _results_cache.setdefault(client_id, {})["oecd"] = _sanitize_for_json(result)
+            await _broadcast_complete(client_id, job_id, "oecd")
+
+        except Exception as e:
+            logger.error(f"OECD analysis failed for {client_id}: {e}", exc_info=True)
+            await _broadcast_error(client_id, job_id, "oecd", str(e))
+
+    asyncio.create_task(_run())
+    return {"job_id": job_id, "section": "oecd", "status": "started"}
+
+
+# ─── SECTION RESULTS GETTER ───────────────────────────────────────────────────
+
+@router.get("/{client_id}/results/{section}")
+async def get_section_results(client_id: str, section: str):
+    """Returns cached section analysis result (pca, correlation, variance, etc.)."""
+    cached = _results_cache.get(client_id, {})
+    if section not in cached:
+        raise HTTPException(
+            status_code=404,
+            detail=f"Section '{section}' not yet computed for workspace '{client_id}'. "
+                   f"POST to /api/modeling/{section} first.",
+        )
+    return cached[section]

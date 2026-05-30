@@ -25,6 +25,7 @@ import ModelingReadinessWorkspace from './components/modeling/ModelingReadinessW
 import { modelingApi } from './services/modelingApi';
 import { ReportsExport } from './components/reports/ReportsExport';
 import { BenchmarkPanel } from './components/telemetry/BenchmarkPanel';
+import { CompoundExplorer } from './components/reports/CompoundExplorer';
 
 // AGPL-3.0 Compliance Views
 import { LicenseGate } from './components/license/LicenseGate';
@@ -200,7 +201,7 @@ const App: React.FC = () => {
   React.useEffect(() => {
     const handlePopState = () => {
     const hash = window.location.hash.replace('#', '');
-      const validTabs = ['ingest', 'mapping', 'hierarchy', 'analysis', 'enrichment', 'readiness', 'benchmark', 'reports'];
+      const validTabs = ['ingest', 'mapping', 'hierarchy', 'analysis', 'enrichment', 'readiness', 'verification', 'reports'];
       if (validTabs.includes(hash)) {
         setActiveTab(hash);
       }
@@ -575,6 +576,13 @@ const App: React.FC = () => {
             }}
             activePanel={modelingActivePanel}
             setActivePanel={setModelingActivePanel}
+          />
+        );
+      case 'verification':
+        return (
+          <CompoundExplorer
+            clientId={clientId}
+            activeJobId={activeJobId || null}
           />
         );
       case 'benchmark':

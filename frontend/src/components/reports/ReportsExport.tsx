@@ -4,7 +4,6 @@ import { Download, FileText, Archive, ArrowRight, RotateCcw, GitBranch, FolderOp
 import { hierarchyApi } from '../../services/hierarchyApi';
 import { useWorkspaceStore } from '../../store/useWorkspaceStore';
 import { SUTRIXLogo } from '../ui/SUTRIXLogo';
-import { CompoundPreview } from './CompoundPreview';
 
 interface ReportsExportProps {
   clientId: string;
@@ -76,21 +75,58 @@ export const ReportsExport: React.FC<ReportsExportProps> = ({
         </p>
       </div>
 
-      {/* FINAL OUTPUT: Enriched Dataset */}
+      {/* FINAL OUTPUT: Full Compliance Package (Highlighted) */}
       <motion.div
         initial={{ opacity: 0, y: 10 }}
         animate={{ opacity: 1, y: 0 }}
-        className="glass p-8 rounded-2xl border-2 border-cyan-500/50 bg-cyan-500/5 relative overflow-hidden shadow-[0_0_40px_rgba(6,182,212,0.15)]"
+        className="glass p-8 rounded-2xl border-2 border-emerald-500/50 bg-emerald-500/5 relative overflow-hidden shadow-[0_0_40px_rgba(16,185,129,0.15)]"
       >
-        <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-cyan-400 to-violet-500" />
+        <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-emerald-400 to-teal-500" />
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-6">
           <div className="flex items-start gap-4">
-            <div className="w-14 h-14 rounded-2xl bg-cyan-500/20 flex items-center justify-center shrink-0">
-              <Download className="w-7 h-7 text-cyan-400" />
+            <div className="w-14 h-14 rounded-2xl bg-emerald-500/20 flex items-center justify-center shrink-0">
+              <Archive className="w-7 h-7 text-emerald-400" />
             </div>
             <div>
               <div className="flex items-center gap-2 mb-1">
-                <h2 className="text-white font-bold text-lg">Final Enriched Dataset (QSAR Ready)</h2>
+                <h2 className="text-white font-bold text-lg">Full Compliance Package</h2>
+                <span className="px-2 py-0.5 rounded-full bg-emerald-500/20 text-emerald-400 text-[10px] font-bold uppercase tracking-wider">
+                  Complete
+                </span>
+              </div>
+              <p className="text-white/60 text-sm max-w-xl leading-relaxed">
+                Download the complete regulatory compliance package containing the manifest metadata, master index, and all segregated target datasets structured for toxicological submissions.
+              </p>
+            </div>
+          </div>
+          
+          <div className="shrink-0">
+            <a
+              href={downloadZipUrl}
+              download
+              className="flex items-center gap-2 px-8 py-4 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-void font-bold shadow-[0_0_20px_rgba(16,185,129,0.4)] hover:shadow-[0_0_30px_rgba(16,185,129,0.6)] transition-all hover:-translate-y-0.5"
+            >
+              Download ZIP <ArrowRight className="w-5 h-5" />
+            </a>
+          </div>
+        </div>
+      </motion.div>
+
+      {/* Final Enriched Dataset (QSAR Ready) - Unhighlighted */}
+      <motion.div
+        initial={{ opacity: 0, y: 10 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.05 }}
+        className="glass p-6 rounded-2xl group hover:border-cyan-500/20 transition-all border border-white/[0.06]"
+      >
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-6">
+          <div className="flex items-start gap-4">
+            <div className="w-10 h-10 rounded-xl bg-cyan-500/10 flex items-center justify-center shrink-0">
+              <Download className="w-5 h-5 text-cyan-400" />
+            </div>
+            <div>
+              <div className="flex items-center gap-2 mb-1">
+                <h3 className="text-white font-bold text-sm">Final Enriched Dataset (QSAR Ready)</h3>
                 {activeJobId ? (
                   <span className="px-2 py-0.5 rounded-full bg-emerald-500/20 text-emerald-400 text-[10px] font-bold uppercase tracking-wider">
                     Ready
@@ -101,8 +137,8 @@ export const ReportsExport: React.FC<ReportsExportProps> = ({
                   </span>
                 )}
               </div>
-              <p className="text-white/60 text-sm max-w-xl leading-relaxed">
-                Snappy-compressed Parquet matrix containing all selected molecular descriptors and topology fingerprints. This is your final, optimized dataset ready for AI/QSAR modeling.
+              <p className="text-white/40 text-xs max-w-xl leading-relaxed">
+                Snappy-compressed Parquet matrix containing all selected molecular descriptors and topology fingerprints. Optimized for AI/QSAR modeling.
               </p>
             </div>
           </div>
@@ -112,17 +148,18 @@ export const ReportsExport: React.FC<ReportsExportProps> = ({
               <a
                 href={downloadParquetUrl}
                 download
-                className="flex items-center gap-2 px-8 py-4 rounded-xl bg-cyan-500 hover:bg-cyan-400 text-void font-bold shadow-[0_0_20px_rgba(6,182,212,0.4)] hover:shadow-[0_0_30px_rgba(6,182,212,0.6)] transition-all hover:-translate-y-0.5"
+                className="flex items-center gap-2 px-4 py-2.5 rounded-xl
+                  bg-white/[0.04] text-white text-xs font-semibold
+                  hover:bg-cyan-500/10 hover:text-cyan-400 transition-colors"
               >
-                <Download className="w-5 h-5" />
-                Download Enriched Dataset
+                Download Parquet <ArrowRight className="w-4 h-4" />
               </a>
             ) : (
               <button
                 disabled
-                className="flex items-center gap-2 px-8 py-4 rounded-xl bg-white/[0.04] text-white/30 font-bold cursor-not-allowed border border-white/[0.06]"
+                className="flex items-center gap-2 px-4 py-2.5 rounded-xl bg-white/[0.02] text-white/20 text-xs font-semibold cursor-not-allowed border border-white/[0.04]"
               >
-                <AlertCircle className="w-5 h-5 opacity-50" />
+                <AlertCircle className="w-4 h-4 opacity-40" />
                 Run Enrichment First
               </button>
             )}
@@ -130,11 +167,7 @@ export const ReportsExport: React.FC<ReportsExportProps> = ({
         </div>
       </motion.div>
 
-      {/* Data Verification / Compound Preview */}
-      <CompoundPreview clientId={clientId} activeJobId={activeJobId} />
-
-      {/* Section 1: Hierarchy Export */}
-
+      {/* Section 1: Raw Hierarchy Export */}
       <motion.div
         initial={{ opacity: 0, y: 10 }}
         animate={{ opacity: 1, y: 0 }}
@@ -215,7 +248,7 @@ export const ReportsExport: React.FC<ReportsExportProps> = ({
           </div>
         ) : isLoadingHierarchy ? (
           <div className="px-6 py-8 text-center">
-            <SUTRIXLogo className="w-8 h-8 mx-auto mb-3" isSpinning3D />
+            <SUTRIXLogo className="w-8 h-8 mx-auto mb-3" />
             <p className="text-white/30 text-sm">Loading hierarchy tree...</p>
           </div>
         ) : (
@@ -233,7 +266,7 @@ export const ReportsExport: React.FC<ReportsExportProps> = ({
       <motion.div
         initial={{ opacity: 0, y: 10 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.05 }}
+        transition={{ delay: 0.08 }}
         className="glass p-6 rounded-2xl group hover:border-violet-500/20 transition-all border border-white/[0.06]"
       >
         <div className="flex items-center gap-3 mb-4">
@@ -257,35 +290,6 @@ export const ReportsExport: React.FC<ReportsExportProps> = ({
         >
           Download PDF Report <ArrowRight className="w-4 h-4" />
         </a>
-      </motion.div>
-
-      {/* Section 3: Compliance Package */}
-      <motion.div
-        initial={{ opacity: 0, y: 10 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.1 }}
-        className="glass p-6 rounded-2xl group hover:border-emerald-500/20 transition-all border border-white/[0.06]"
-      >
-        <div className="flex items-center justify-between">
-          <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-xl bg-emerald-500/10 flex items-center justify-center">
-              <Archive className="w-5 h-5 text-emerald-400" />
-            </div>
-            <div>
-              <h3 className="text-white font-bold text-sm">Full Compliance Package</h3>
-              <p className="text-white/40 text-xs">Manifest + Master Index + all segregated directories</p>
-            </div>
-          </div>
-          <a
-            href={downloadZipUrl}
-            download
-            className="flex items-center gap-2 px-4 py-2.5 rounded-xl
-              bg-white/[0.04] text-white text-xs font-semibold
-              hover:bg-emerald-500/10 hover:text-emerald-400 transition-colors"
-          >
-            Download ZIP <ArrowRight className="w-4 h-4" />
-          </a>
-        </div>
       </motion.div>
 
       {/* Reset */}
