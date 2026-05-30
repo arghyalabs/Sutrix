@@ -83,7 +83,9 @@ class ErrorBoundary extends React.Component<
 }
 
 const App: React.FC = () => {
-  const clientId = useRef(`SDO_CORE_${Math.random().toString(36).substring(2, 9)}`).current;
+  const storeWorkspaceId = useWorkspaceStore(s => s.workspaceId);
+  const generatedClientId = useRef(`SDO_CORE_${Math.random().toString(36).substring(2, 9)}`).current;
+  const clientId = storeWorkspaceId || generatedClientId;
   
   const [hasLaunched, setHasLaunched] = useState(false);
   const [isAppLoading, setIsAppLoading] = useState(false);
