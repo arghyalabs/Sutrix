@@ -7,6 +7,7 @@ import {
 import { Download, Image, FileText, Maximize2 } from 'lucide-react';
 import { toPng } from 'html-to-image';
 import { FullscreenPieModal } from './FullscreenPieModal';
+import { FullscreenBarModal } from './FullscreenBarModal';
 import { LogoLoader } from '../ui/SUTRIXLogo';
 
 interface NodeDetail {
@@ -312,6 +313,7 @@ export const NodeVisualization: React.FC<NodeVisualizationProps> = ({ nodeDetail
   const pieRef = useRef<HTMLDivElement>(null);
   const barRef = useRef<HTMLDivElement>(null);
   const [isPieFullscreen, setIsPieFullscreen] = useState(false);
+  const [isBarFullscreen, setIsBarFullscreen] = useState(false);
 
   const handleDownloadPie = useCallback(() => {
     downloadChartAsPng(pieRef, `sdo_pie_chart_${nodeDetail?.id ?? 'node'}.png`);
@@ -663,64 +665,63 @@ export const NodeVisualization: React.FC<NodeVisualizationProps> = ({ nodeDetail
                       onExpand={() => setIsPieFullscreen(true)}
                       downloadIcon={<Image className="w-3 h-3" />}
                     >
-                      <div className="relative w-full h-[300px]">
-                        <div className="absolute inset-0 flex flex-col items-center justify-center pointer-events-none" style={{ top: 'calc(47% - 20px)' }}>
-                          <span className="text-[9px] uppercase tracking-wider text-white/40 font-bold">TOTAL</span>
-                          <span className="text-lg font-extrabold text-white leading-none my-0.5">
-                            {((stats.unique_compounds && stats.unique_compounds > 0) ? stats.unique_compounds : stats.total_rows).toLocaleString()}
-                          </span>
-                          <span className="text-[8px] uppercase tracking-wider text-cyan-400 font-bold">
-                            {(stats.unique_compounds && stats.unique_compounds > 0) ? "Compounds" : "Records"}
-                          </span>
+                      <div className="flex flex-col h-[340px]">
+                        {/* 1. Pie Chart Visual */}
+                        <div className="relative w-full h-[200px] flex-shrink-0">
+                          <div className="absolute inset-0 flex flex-col items-center justify-center pointer-events-none" style={{ top: '50%', transform: 'translateY(-50%)' }}>
+                            <span className="text-[9px] uppercase tracking-wider text-white/40 font-bold">TOTAL</span>
+                            <span className="text-lg font-extrabold text-white leading-none my-0.5">
+                              {((stats.unique_compounds && stats.unique_compounds > 0) ? stats.unique_compounds : stats.total_rows).toLocaleString()}
+                            </span>
+                            <span className="text-[8px] uppercase tracking-wider text-cyan-400 font-bold">
+                              {(stats.unique_compounds && stats.unique_compounds > 0) ? "Compounds" : "Records"}
+                            </span>
+                          </div>
+                          <ResponsiveContainer width="100%" height="100%">
+                            <PieChart>
+                              <Pie
+                                data={pieData}
+                                cx="50%"
+                                cy="50%"
+                                innerRadius={46}
+                                outerRadius={68}
+                                paddingAngle={3}
+                                dataKey="value"
+                                labelLine={true}
+                                label={({ name, value, pct }) => {
+                                  const displayName = name.length > 10 ? `${name.substring(0, 8)}...` : name;
+                                  return `${displayName} (${value.toLocaleString()} | ${pct.toFixed(1)}%)`;
+                                }}
+                              >
+                                {pieData.map((_, index) => (
+                                  <Cell key={`cell-${index}`} fill={CHART_COLORS[index % CHART_COLORS.length]} />
+                                ))}
+                              </Pie>
+                              <Tooltip content={<CustomPieTooltip categoryLabel={charts.composition_pie?.title || 'Category'} />} />
+                            </PieChart>
+                          </ResponsiveContainer>
                         </div>
-                        <ResponsiveContainer width="100%" height="100%">
-                          <PieChart margin={{ top: 16, right: 10, bottom: 0, left: 10 }}>
-                            <Pie
-                              data={pieData}
-                              cx="50%"
-                              cy="47%"
-                              innerRadius={54}
-                              outerRadius={82}
-                              paddingAngle={3}
-                              dataKey="value"
-                              labelLine={true}
-                              label={({ name, value, pct }) => `${name} (${value.toLocaleString()} | ${pct.toFixed(1)}%)`}
-                            >
-                              {pieData.map((_, index) => (
-                                <Cell key={`cell-${index}`} fill={CHART_COLORS[index % CHART_COLORS.length]} />
-                              ))}
-                            </Pie>
-                            <Tooltip content={<CustomPieTooltip categoryLabel={charts.composition_pie?.title || 'Category'} />} />
-                            <Legend
-                              content={(props) => {
-                                const { payload } = props;
-                                if (!payload) return null;
-                                return (
-                                  <ul className="space-y-1.5 w-full mt-4 max-h-[140px] overflow-y-auto pr-1 custom-scrollbar">
-                                    {payload.map((entry: any, index: number) => {
-                                      const dataVal = entry.payload;
-                                      const total = payload.reduce((sum: number, e: any) => sum + (e.payload?.value || 0), 0);
-                                      const count = dataVal?.value ?? 0;
-                                      const pct = total > 0 ? (count / total) * 100 : 0;
-                                      return (
-                                        <li key={`item-${index}`} className="flex items-center justify-between w-full text-xs font-mono">
-                                          <span className="flex items-center gap-2 text-white/80">
-                                            <span className="w-2 h-2 rounded-full shrink-0" style={{ backgroundColor: entry.color }} />
-                                            <span className="truncate max-w-[120px]">{entry.value}</span>
-                                          </span>
-                                          <span className="flex-1 mx-2 border-b border-dotted border-white/20 align-bottom h-3" />
-                                          <span className="text-white/60 shrink-0 font-bold">
-                                            {count.toLocaleString()} ({pct.toFixed(1)}%)
-                                          </span>
-                                        </li>
-                                      );
-                                    })}
-                                  </ul>
-                                );
-                              }}
-                            />
-                          </PieChart>
-                        </ResponsiveContainer>
+
+                        {/* 2. Legend List */}
+                        <ul className="space-y-1.5 w-full mt-2 max-h-[120px] overflow-y-auto pr-1 custom-scrollbar flex-1">
+                          {pieData.map((entry: any, index: number) => {
+                            const count = entry.value;
+                            const pct = entry.pct;
+                            const color = CHART_COLORS[index % CHART_COLORS.length];
+                            return (
+                              <li key={`item-${index}`} className="flex items-center justify-between w-full text-xs font-mono">
+                                <span className="flex items-center gap-2 text-white/80">
+                                  <span className="w-2 h-2 rounded-full shrink-0" style={{ backgroundColor: color }} />
+                                  <span className="truncate max-w-[120px]">{entry.name}</span>
+                                </span>
+                                <span className="flex-1 mx-2 border-b border-dotted border-white/20 align-bottom h-3" />
+                                <span className="text-white/60 shrink-0 font-bold">
+                                  {count.toLocaleString()} ({pct.toFixed(1)}%)
+                                </span>
+                              </li>
+                            );
+                          })}
+                        </ul>
                       </div>
                     </ChartCard>
                   </motion.div>
@@ -734,6 +735,7 @@ export const NodeVisualization: React.FC<NodeVisualizationProps> = ({ nodeDetail
                       title="Bar Chart"
                       subtitle={barSubtitle}
                       onDownload={handleDownloadBar}
+                      onExpand={() => setIsBarFullscreen(true)}
                       downloadIcon={<Image className="w-3 h-3" />}
                     >
                       <ResponsiveContainer width="100%" height={260}>
@@ -836,6 +838,13 @@ export const NodeVisualization: React.FC<NodeVisualizationProps> = ({ nodeDetail
         data={pieData}
         title={charts.composition_pie?.title ? `Composition Analysis: ${charts.composition_pie.title}` : "Pie Chart Analysis"}
         colors={CHART_COLORS}
+      />
+
+      <FullscreenBarModal
+        isOpen={isBarFullscreen}
+        onClose={() => setIsBarFullscreen(false)}
+        data={pieData} // barData contains name and value which matches metrics expectations perfectly!
+        title={charts.composition_bar?.title ? `Composition Analysis: ${charts.composition_bar.title}` : "Bar Chart Analysis"}
       />
     </div>
   );

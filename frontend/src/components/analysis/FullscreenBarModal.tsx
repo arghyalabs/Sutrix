@@ -1,19 +1,18 @@
 import React, { useState, useMemo, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { X, Table2, PieChart as PieChartIcon, Download, Image as ImageIcon, Beaker, BarChart2 } from 'lucide-react';
-import { PieChart, Pie, Cell, ResponsiveContainer, Tooltip, Legend } from 'recharts';
+import { X, Table2, BarChart3, Download, Image as ImageIcon, Beaker, BarChart2 } from 'lucide-react';
+import { BarChart, Bar, XAxis, YAxis, CartesianGrid, ResponsiveContainer, Tooltip, Cell, LabelList } from 'recharts';
 import { toPng } from 'html-to-image';
 
-interface FullscreenPieModalProps {
+interface FullscreenBarModalProps {
   isOpen: boolean;
   onClose: () => void;
   data: Array<{ name: string; value: number }>;
   title: string;
-  colors: string[];
 }
 
-export const FullscreenPieModal: React.FC<FullscreenPieModalProps> = ({
-  isOpen, onClose, data, title, colors
+export const FullscreenBarModal: React.FC<FullscreenBarModalProps> = ({
+  isOpen, onClose, data, title
 }) => {
   const [viewMode, setViewMode] = useState<'chart' | 'table'>('chart');
   const chartRef = useRef<HTMLDivElement>(null);
@@ -47,8 +46,6 @@ export const FullscreenPieModal: React.FC<FullscreenPieModalProps> = ({
       return { ...item, percentage: p * 100 };
     });
 
-    // Shannon Diversity Index: H = -sum(p * ln(p))
-    // Evenness: E = H / ln(S) where S is number of categories
     const maxEntropy = Math.log(data.length) || 1;
     const evenness = shannonEntropy / maxEntropy;
     const richness = data.length;
@@ -74,7 +71,7 @@ export const FullscreenPieModal: React.FC<FullscreenPieModalProps> = ({
       const filter = (node: Element) => !(node instanceof HTMLElement && node.dataset.downloadIgnore === 'true');
       const dataUrl = await toPng(chartRef.current, { pixelRatio: 2, filter });
       const a = document.createElement('a');
-      a.download = `sdo_pie_${title.replace(/\s+/g, '_')}.png`;
+      a.download = `sdo_bar_${title.replace(/\s+/g, '_')}.png`;
       a.href = dataUrl;
       a.click();
     } catch (err) {
@@ -90,12 +87,67 @@ export const FullscreenPieModal: React.FC<FullscreenPieModalProps> = ({
     const url = URL.createObjectURL(blob);
     const a = document.createElement('a');
     a.href = url;
-    a.download = `sdo_pie_${title.replace(/\s+/g, '_')}.csv`;
+    a.download = `sdo_bar_${title.replace(/\s+/g, '_')}.csv`;
     a.click();
     URL.revokeObjectURL(url);
   };
 
   if (!isOpen || !metrics) return null;
+
+  const CustomBarTooltip = ({ active, payload }: any) => {
+    if (active && payload && payload.length) {
+      const d = payload[0].payload;
+      return (
+        <div className="bg-[#0d1a30] border border-white/[0.08] rounded-xl px-4 py-3 shadow-2xl space-y-1 font-mono">
+          <p className="text-white text-xs font-semibold">
+            <span className="text-white/50">Category: </span>
+            <span className="text-cyan-400 font-bold">{d.name}</span>
+          </p>
+          <p className="text-white text-xs">
+            <span className="text-white/50">Count: </span>
+            <span className="font-bold text-white">{d.value.toLocaleString()}</span>
+          </p>
+          <p className="text-white text-xs">
+            <span className="text-white/50">Percentage: </span>
+            <span className="font-bold text-cyan-400">{d.percentage.toFixed(1)}%</span>
+          </p>
+        </div>
+      );
+    }
+    return null;
+  };
+
+  const renderCustomBarLabel = (props: any) => {
+    const { x, y, width, value } = props;
+    if (value === undefined || value === null) return null;
+    const pct = metrics.total > 0 ? (value / metrics.total) * 100 : 0;
+    return (
+      <g>
+        <text
+          x={x + width / 2}
+          y={y - 12}
+          fill="rgba(255,255,255,0.9)"
+          textAnchor="middle"
+          fontSize={11}
+          fontWeight="bold"
+          className="font-mono"
+        >
+          {value.toLocaleString()}
+        </text>
+        <text
+          x={x + width / 2}
+          y={y - 25}
+          fill="rgba(34,211,238,0.8)"
+          textAnchor="middle"
+          fontSize={9}
+          fontWeight="bold"
+          className="font-mono"
+        >
+          {`${pct.toFixed(1)}%`}
+        </text>
+      </g>
+    );
+  };
 
   return (
     <AnimatePresence>
@@ -121,7 +173,7 @@ export const FullscreenPieModal: React.FC<FullscreenPieModalProps> = ({
                   onClick={() => setViewMode('chart')}
                   className={`flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-semibold transition-all ${viewMode === 'chart' ? 'bg-cyan-500/20 text-cyan-400' : 'text-white/40 hover:text-white'}`}
                 >
-                  <PieChartIcon className="w-4 h-4" /> Chart
+                  <BarChart3 className="w-4 h-4" /> Chart
                 </button>
                 <button
                   onClick={() => setViewMode('table')}
@@ -134,86 +186,41 @@ export const FullscreenPieModal: React.FC<FullscreenPieModalProps> = ({
 
             <div className="flex-1 min-h-0 relative flex items-center justify-center">
               {viewMode === 'chart' ? (
-                <div className="relative w-full h-full flex items-center justify-center">
-                  <div className="absolute flex flex-col items-center justify-center pointer-events-none" style={{ left: '42%', top: '50%', transform: 'translate(-50%, -50%)' }}>
-                    <span className="text-[10px] uppercase tracking-wider text-white/40 font-bold">TOTAL</span>
-                    <span className="text-2xl font-extrabold text-white leading-none my-0.5">
-                      {metrics.total.toLocaleString()}
-                    </span>
-                    <span className="text-[9px] uppercase tracking-wider text-cyan-400 font-bold">
-                      Records
-                    </span>
-                  </div>
-                  <ResponsiveContainer width="100%" height="100%">
-                    <PieChart>
-                      <Pie
-                        data={metrics.enrichedData}
-                        cx="42%"
-                        cy="50%"
-                        innerRadius="38%"
-                        outerRadius="70%"
-                        paddingAngle={2}
-                        dataKey="value"
-                        labelLine={true}
-                        label={({ name, value, percentage }) => `${name} (${value.toLocaleString()} | ${percentage.toFixed(1)}%)`}
-                      >
-                        {metrics.enrichedData.map((_, index) => (
-                          <Cell key={`cell-${index}`} fill={colors[index % colors.length]} stroke="rgba(255,255,255,0.05)" />
-                        ))}
-                      </Pie>
-                      <Tooltip 
-                        content={({ active, payload }: any) => {
-                          if (active && payload && payload.length) {
-                            const d = payload[0].payload;
-                            const displayLabel = title.replace("Composition Analysis: ", "").replace("Pie Chart Analysis", "").trim();
-                            const finalLabel = displayLabel ? displayLabel : 'Category';
-                            return (
-                              <div className="bg-[#0d1a30] border border-white/[0.08] rounded-xl px-4 py-3 shadow-2xl space-y-1">
-                                <p className="text-white text-xs font-semibold">
-                                  <span className="text-white/50">{finalLabel}: </span>
-                                  <span className="text-cyan-400 font-bold">{d.name}</span>
-                                </p>
-                                <p className="text-white text-xs">
-                                  <span className="text-white/50">Count: </span>
-                                  <span className="font-bold text-white">{d.value.toLocaleString()}</span>
-                                </p>
-                                <p className="text-white text-xs">
-                                  <span className="text-white/50">Percentage: </span>
-                                  <span className="font-bold text-cyan-400">{d.percentage.toFixed(1)}%</span>
-                                </p>
-                              </div>
-                            );
-                          }
-                          return null;
-                        }}
+                <div className="relative w-full h-full flex items-center justify-center p-4">
+                  <ResponsiveContainer width="100%" height="90%">
+                    <BarChart data={metrics.enrichedData} margin={{ top: 40, right: 20, left: 10, bottom: 20 }}>
+                      <defs>
+                        <linearGradient id="barGradient" x1="0" y1="0" x2="0" y2="1">
+                          <stop offset="0%" stopColor="#22d3ee" stopOpacity={0.8} />
+                          <stop offset="100%" stopColor="#0284c7" stopOpacity={0.2} />
+                        </linearGradient>
+                      </defs>
+                      <CartesianGrid strokeDasharray="3 3" stroke="rgba(255,255,255,0.04)" vertical={false} />
+                      <XAxis
+                        dataKey="name"
+                        tick={{ fill: 'rgba(255,255,255,0.6)', fontSize: 11 }}
+                        axisLine={{ stroke: 'rgba(255,255,255,0.1)' }}
+                        tickLine={false}
                       />
-                    </PieChart>
+                      <YAxis
+                        tick={{ fill: 'rgba(255,255,255,0.5)', fontSize: 11 }}
+                        axisLine={false}
+                        tickLine={false}
+                      />
+                      <Tooltip content={<CustomBarTooltip />} cursor={{ fill: 'rgba(255,255,255,0.02)' }} />
+                      <Bar dataKey="value" fill="url(#barGradient)" radius={[6, 6, 0, 0]}>
+                        <LabelList dataKey="value" content={renderCustomBarLabel} />
+                        {metrics.enrichedData.map((_, index) => (
+                          <Cell 
+                            key={`cell-${index}`} 
+                            stroke="#22d3ee" 
+                            strokeWidth={1.5}
+                            strokeOpacity={0.4}
+                          />
+                        ))}
+                      </Bar>
+                    </BarChart>
                   </ResponsiveContainer>
-
-                  {/* Right-aligned Scientific Legend Overlay */}
-                  <ul className="absolute right-10 top-1/2 -translate-y-1/2 space-y-2 w-80 max-h-[75%] overflow-y-auto pr-1 custom-scrollbar bg-[#0b1220]/90 p-5 border border-white/[0.06] rounded-xl backdrop-blur-md z-10 shadow-2xl">
-                    <li className="text-[10px] uppercase tracking-wider font-extrabold text-white/40 mb-3 border-b border-white/[0.05] pb-2 flex justify-between font-mono">
-                      <span>Subgroup</span>
-                      <span>Distribution</span>
-                    </li>
-                    {metrics.enrichedData.map((entry: any, index: number) => {
-                      const count = entry.value;
-                      const pct = entry.percentage;
-                      const color = colors[index % colors.length];
-                      return (
-                        <li key={`item-${index}`} className="flex items-center justify-between w-full text-xs font-mono py-0.5">
-                          <span className="flex items-center gap-2 text-white/80">
-                            <span className="w-2.5 h-2.5 rounded-full shrink-0" style={{ backgroundColor: color }} />
-                            <span className="truncate max-w-[130px]" title={entry.name}>{entry.name}</span>
-                          </span>
-                          <span className="flex-1 mx-2 border-b border-dotted border-white/20 align-bottom h-3" />
-                          <span className="text-white/60 shrink-0 font-bold">
-                            {count.toLocaleString()} ({pct.toFixed(1)}%)
-                          </span>
-                        </li>
-                      );
-                    })}
-                  </ul>
                 </div>
               ) : (
                 <div className="w-full h-full overflow-auto custom-scrollbar pr-4">
@@ -228,8 +235,8 @@ export const FullscreenPieModal: React.FC<FullscreenPieModalProps> = ({
                     <tbody>
                       {metrics.enrichedData.map((row, idx) => (
                         <tr key={idx} className="hover:bg-white/[0.02] border-b border-white/[0.02] transition-colors">
-                          <td className="py-3 px-4 text-sm font-medium text-white flex items-center gap-3">
-                            <span className="w-3 h-3 rounded-full" style={{ backgroundColor: colors[idx % colors.length] }} />
+                          <td className="py-3 px-4 text-sm font-medium text-white flex items-center gap-3 font-mono">
+                            <span className="w-3 h-3 rounded-full bg-cyan-400" />
                             {row.name}
                           </td>
                           <td className="py-3 px-4 text-sm text-white/80 text-right font-mono">{row.value.toLocaleString()}</td>
