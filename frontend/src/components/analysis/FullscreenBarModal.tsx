@@ -120,32 +120,18 @@ export const FullscreenBarModal: React.FC<FullscreenBarModalProps> = ({
   const renderCustomBarLabel = (props: any) => {
     const { x, y, width, value } = props;
     if (value === undefined || value === null) return null;
-    const pct = metrics.total > 0 ? (value / metrics.total) * 100 : 0;
     return (
-      <g>
-        <text
-          x={x + width / 2}
-          y={y - 12}
-          fill="rgba(255,255,255,0.9)"
-          textAnchor="middle"
-          fontSize={11}
-          fontWeight="bold"
-          className="font-mono"
-        >
-          {value.toLocaleString()}
-        </text>
-        <text
-          x={x + width / 2}
-          y={y - 25}
-          fill="rgba(34,211,238,0.8)"
-          textAnchor="middle"
-          fontSize={9}
-          fontWeight="bold"
-          className="font-mono"
-        >
-          {`${pct.toFixed(1)}%`}
-        </text>
-      </g>
+      <text
+        x={x + width / 2}
+        y={y - 10}
+        fill="rgba(255,255,255,0.95)"
+        textAnchor="middle"
+        fontSize={12}
+        fontWeight="bold"
+        className="font-mono"
+      >
+        {value.toLocaleString()}
+      </text>
     );
   };
 
@@ -198,12 +184,12 @@ export const FullscreenBarModal: React.FC<FullscreenBarModalProps> = ({
                       <CartesianGrid strokeDasharray="3 3" stroke="rgba(255,255,255,0.04)" vertical={false} />
                       <XAxis
                         dataKey="name"
-                        tick={{ fill: 'rgba(255,255,255,0.6)', fontSize: 11 }}
-                        axisLine={{ stroke: 'rgba(255,255,255,0.1)' }}
+                        tick={{ fill: 'rgba(255,255,255,0.8)', fontSize: 13, fontWeight: 600 }}
+                        axisLine={{ stroke: 'rgba(255,255,255,0.15)' }}
                         tickLine={false}
                       />
                       <YAxis
-                        tick={{ fill: 'rgba(255,255,255,0.5)', fontSize: 11 }}
+                        tick={{ fill: 'rgba(255,255,255,0.7)', fontSize: 13, fontWeight: 600 }}
                         axisLine={false}
                         tickLine={false}
                       />

@@ -367,6 +367,8 @@ export const NodeVisualization: React.FC<NodeVisualizationProps> = ({ nodeDetail
       })
     : [];
 
+  const pieTotal = pieData.reduce((sum, item) => sum + item.value, 0);
+
   const barData = charts.composition_bar
     ? charts.composition_bar.x.map((x, i) => ({
         name: x,
@@ -377,31 +379,18 @@ export const NodeVisualization: React.FC<NodeVisualizationProps> = ({ nodeDetail
   const renderCustomBarLabel = (props: any) => {
     const { x, y, width, value } = props;
     if (value === undefined || value === null) return null;
-    const total = barData.reduce((sum, item) => sum + item.value, 0);
-    const pct = total > 0 ? (value / total) * 100 : 0;
     return (
-      <g>
-        <text
-          x={x + width / 2}
-          y={y - 12}
-          fill="rgba(255,255,255,0.9)"
-          fontSize={9}
-          fontWeight="bold"
-          textAnchor="middle"
-        >
-          {value.toLocaleString()}
-        </text>
-        <text
-          x={x + width / 2}
-          y={y - 2}
-          fill="rgba(34,211,238,0.9)"
-          fontSize={8}
-          fontWeight="semibold"
-          textAnchor="middle"
-        >
-          ({pct.toFixed(1)}%)
-        </text>
-      </g>
+      <text
+        x={x + width / 2}
+        y={y - 8}
+        fill="rgba(255,255,255,0.95)"
+        fontSize={11}
+        fontWeight="bold"
+        textAnchor="middle"
+        className="font-mono"
+      >
+        {value.toLocaleString()}
+      </text>
     );
   };
 
@@ -484,12 +473,12 @@ export const NodeVisualization: React.FC<NodeVisualizationProps> = ({ nodeDetail
                     <CartesianGrid strokeDasharray="3 3" stroke="rgba(255,255,255,0.03)" />
                     <XAxis
                       dataKey="bin"
-                      tick={{ fill: 'rgba(255,255,255,0.3)', fontSize: 9 }}
+                      tick={{ fill: 'rgba(255,255,255,0.6)', fontSize: 11, fontWeight: 600 }}
                       axisLine={false}
                       tickLine={false}
                     />
                     <YAxis
-                      tick={{ fill: 'rgba(255,255,255,0.3)', fontSize: 9 }}
+                      tick={{ fill: 'rgba(255,255,255,0.5)', fontSize: 11, fontWeight: 600 }}
                       axisLine={false}
                       tickLine={false}
                     />
@@ -671,10 +660,10 @@ export const NodeVisualization: React.FC<NodeVisualizationProps> = ({ nodeDetail
                           <div className="absolute inset-0 flex flex-col items-center justify-center pointer-events-none" style={{ top: '50%', transform: 'translateY(-50%)' }}>
                             <span className="text-[9px] uppercase tracking-wider text-white/40 font-bold">TOTAL</span>
                             <span className="text-lg font-extrabold text-white leading-none my-0.5">
-                              {((stats.unique_compounds && stats.unique_compounds > 0) ? stats.unique_compounds : stats.total_rows).toLocaleString()}
+                              {pieTotal.toLocaleString()}
                             </span>
                             <span className="text-[8px] uppercase tracking-wider text-cyan-400 font-bold">
-                              {(stats.unique_compounds && stats.unique_compounds > 0) ? "Compounds" : "Records"}
+                              Records
                             </span>
                           </div>
                           <ResponsiveContainer width="100%" height="100%">
@@ -736,12 +725,12 @@ export const NodeVisualization: React.FC<NodeVisualizationProps> = ({ nodeDetail
                       downloadIcon={<Image className="w-3 h-3" />}
                     >
                       <ResponsiveContainer width="100%" height={260}>
-                        <BarChart data={barData} margin={{ top: 30, right: 6, left: -20, bottom: 0 }}>
-                          <CartesianGrid strokeDasharray="3 3" stroke="rgba(255,255,255,0.04)" />
+                        <BarChart data={barData} margin={{ top: 35, right: 10, left: -10, bottom: 5 }}>
+                          <CartesianGrid strokeDasharray="3 3" stroke="rgba(255,255,255,0.04)" vertical={false} />
                           <XAxis
                             dataKey="name"
-                            tick={{ fill: 'rgba(255,255,255,0.4)', fontSize: 10 }}
-                            axisLine={false}
+                            tick={{ fill: 'rgba(255,255,255,0.6)', fontSize: 11, fontWeight: 600 }}
+                            axisLine={{ stroke: 'rgba(255,255,255,0.1)' }}
                             tickLine={false}
                           />
                           <YAxis

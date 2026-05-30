@@ -795,8 +795,8 @@ export const CompoundExplorer: React.FC<CompoundExplorerProps> = ({
                       <ResponsiveContainer width="100%" height="100%">
                         <RadarChart cx="50%" cy="50%" outerRadius="75%" data={radarData}>
                           <PolarGrid stroke="rgba(255,255,255,0.03)" />
-                          <PolarAngleAxis dataKey="subject" tick={{ fill: 'rgba(255,255,255,0.4)', fontSize: 9, fontWeight: 600 }} />
-                          <PolarRadiusAxis angle={30} domain={[0, 100]} tick={{ fill: 'rgba(255,255,255,0.2)', fontSize: 7 }} axisLine={false} />
+                          <PolarAngleAxis dataKey="subject" tick={{ fill: 'rgba(255,255,255,0.7)', fontSize: 11, fontWeight: 700 }} />
+                          <PolarRadiusAxis angle={30} domain={[0, 100]} tick={{ fill: 'rgba(255,255,255,0.4)', fontSize: 9, fontWeight: 600 }} axisLine={false} />
                           <Radar name={detail.name || 'Compound'} dataKey="value" stroke="#8b5cf6" fill="#8b5cf6" fillOpacity={0.15} />
                           <Tooltip
                             contentStyle={{ backgroundColor: '#0d1627', border: '1px solid rgba(255,255,255,0.08)', borderRadius: '10px', fontSize: '10px' }}
@@ -837,8 +837,8 @@ export const CompoundExplorer: React.FC<CompoundExplorerProps> = ({
                         <ResponsiveContainer width="100%" height="100%">
                           <BarChart data={distributionData.histogram} margin={{ top: 10, right: 10, left: -25, bottom: 5 }}>
                             <CartesianGrid strokeDasharray="3 3" stroke="rgba(255,255,255,0.02)" vertical={false} />
-                            <XAxis dataKey="binLabel" tick={{ fill: 'rgba(255,255,255,0.3)', fontSize: 7 }} axisLine={false} tickLine={false} />
-                            <YAxis tick={{ fill: 'rgba(255,255,255,0.3)', fontSize: 8 }} axisLine={false} tickLine={false} />
+                            <XAxis dataKey="binLabel" tick={{ fill: 'rgba(255,255,255,0.6)', fontSize: 9, fontWeight: 600 }} axisLine={false} tickLine={false} />
+                            <YAxis tick={{ fill: 'rgba(255,255,255,0.6)', fontSize: 9, fontWeight: 600 }} axisLine={false} tickLine={false} />
                             <Tooltip
                               contentStyle={{ backgroundColor: '#0d1627', border: '1px solid rgba(255,255,255,0.08)', borderRadius: '10px', fontSize: '10px' }}
                               labelStyle={{ color: 'rgba(255,255,255,0.4)', fontSize: '8px' }}
